@@ -181,7 +181,8 @@
           <div class="tour-cap">
             <p class="tour-step">Step 2 of 3</p>
             <h3>Your short list, already screened.</h3>
-            <p>Matches arrive on your dashboard and its map, each with a match score and ratings. Open a profile for skills and reviews, then short list.</p>
+            <p>Jobility’s AI-driven matching finds candidates who fit your requirements, and a person on our team reviews every match before you see it. Matches arrive on your dashboard and its map, each with a match score and ratings. Open a profile for skills and reviews, then short list.</p>
+            <p class="qnote">Parmi to confirm the wording “AI-driven matching”. It is the only use of “AI” on the site, taken from Jobility’s own product tour.</p>
             <ul><li>Screened for skills, availability and work history</li><li>Every match reviewed by a person on our team</li><li>Background checks are an add-on through sales</li></ul>
             <button class="btn btn--secondary btn--sm tour-next" type="button" data-tab-next="tab-3">Next: Interview and hire</button>
           </div>
@@ -207,7 +208,40 @@
         </div>
       </div>
     </div>
-    <p class="held" data-q="Q18">Held until Q18 (the explainer is re-voiced and carries a true transcript): “Prefer a voiceover? Watch the product tour (1 minute 20).” It opens in a lightbox and never autoplays.</p>
+    <div class="vtour" id="tour" aria-labelledby="vtour-h">
+      <div class="vtour-hd">
+        <h3 class="vtour-h" id="vtour-h">Watch the product tour</h3>
+        <p class="vtour-len">Jobility’s product tour, 1 minute 19 seconds.</p>
+      </div>
+      <div class="vtour-frame" data-vtour>
+        <video class="vtour-video" controls preload="none" playsinline width="1280" height="828" poster="assets/video/jobility-product-tour-poster.jpg" aria-label="Jobility’s product tour">
+          <source src="assets/video/jobility-product-tour.mp4" type="video/mp4">
+          <track kind="captions" srclang="en" label="English" src="assets/video/jobility-product-tour.en.vtt" default>
+          <p>Your browser can’t play this video. <a href="assets/video/jobility-product-tour.mp4">Download the product tour (MP4, 9 MB)</a>.</p>
+        </video>
+        <button class="vtour-play" type="button" data-vtour-play aria-label="Play the product tour, 1 minute 19 seconds, with captions">
+          <picture><source type="image/webp" srcset="assets/video/jobility-product-tour-poster.webp"><img src="assets/video/jobility-product-tour-poster.jpg" width="1280" height="828" alt="" loading="lazy" decoding="async"></picture>
+          <span class="vtour-btn" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
+        </button>
+      </div>
+      <details class="vtour-tx">
+        <summary>Read the transcript</summary>
+        <div class="vtour-txb">
+        <p><span class="vt-ts">0:00</span> I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on other costly staffing services.</p>
+        <p><span class="vt-ts">0:09</span> On Jobility’s AI-driven platform, you post once and we quickly find the best matches, curate the talent and pre-qualify and vet them to bring you only the most qualified workers.</p>
+        <p><span class="vt-ts">0:21</span> Just log into your dashboard and click to add a new job. Create templates for jobs you post often or create a new post.</p>
+        <p><span class="vt-ts">0:29</span> Select to pay for a post, sign up for a subscription to save even more the more you post, or pick placement fee to pay a low fee only after you hire.</p>
+        <p><span class="vt-ts">0:39</span> Choose full or part time, gig or Jobility W2 if you need us to be employer of record.</p>
+        <p><span class="vt-ts">0:46</span> Select job title, create or paste description and add required skills, requirements and nice to haves.</p>
+        <p><span class="vt-ts">0:54</span> Tell us where, when and terms of the job and then simply review and post.</p>
+        <p><span class="vt-ts">1:00</span> You will quickly begin to see matches and can manage all of your workforce from one central dashboard.</p>
+        <p><span class="vt-ts">1:06</span> We offer pricing options for every size business and serve every industry.</p>
+        <p><span class="vt-ts">1:11</span> Sign up today or reach out to us for a custom setup to meet the needs of your business.</p>
+        <p><span class="vt-ts">1:16</span> Start hiring smarter with Jobility.</p>
+        </div>
+      </details>
+      <p class="qnote">Client-supplied video, embedded as supplied. Kim to confirm the dashboard shot near 1:06 is demo data.</p>
+    </div>
     <p class="qnote">Q12 answered: all three tabs are redrawn from Jobility’s portal recordings (Oct 22) in the brand, with fictional people and numbers. Not shown yet: posting a shift and approving hours (optional ask).</p>
   </div>
 </section>
@@ -405,6 +439,10 @@
 
 <script src="assets/site.js"></script><!-- whimsy-p2 --><script src="assets/whimsy-p2.js" defer></script><!-- /whimsy-p2 --><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
 <script defer src="assets/walkthrough.js"></script>
+<script>/* Product tour (#tour): poster button swaps to the native player. Never autoplays; captions track is default. */
+(function(){var f=document.querySelector('[data-vtour]');if(!f)return;var b=f.querySelector('[data-vtour-play]'),v=f.querySelector('video');
+b.addEventListener('click',function(){f.classList.add('is-playing');b.hidden=true;v.preload='auto';try{for(var i=0;i<v.textTracks.length;i++){if(v.textTracks[i].kind==='captions')v.textTracks[i].mode='showing';}}catch(e){}var p=v.play();if(p&&p.catch)p.catch(function(){});v.focus();});})();
+</script>
 <script>/* n-jumps on How it works: tuck the sticky bar while the walkthrough is on screen (the player only allows for the header) */
 (function(){var bar=document.querySelector('.hiw-jumps'),t=document.querySelector('#walkthrough .tour');if(!bar||!t||!('IntersectionObserver' in window))return;new IntersectionObserver(function(es){bar.classList.toggle('is-tucked',es[0].isIntersecting);},{rootMargin:'-60px 0px 0px 0px'}).observe(t);})();</script>
 </body>

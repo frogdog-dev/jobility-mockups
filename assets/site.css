@@ -3512,3 +3512,31 @@ html.fd-calm a.fd-pen-a:hover,html.fd-calm a.fd-pen-a:focus-visible{text-decorat
 .wkp-card.is-done::after{content:"";position:absolute;right:12px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--energy)}
 .wk-phone .ex-note{margin-top:10px}
 @media (max-width:767px){.wk-phone{max-width:260px;margin-top:22px}}
+
+/* ===== Product tour video (How it works #tour) =====
+   Jobility's explainer, embedded as supplied. Poster button and native player share one 1280/828 box (no shift on swap).
+   Never autoplays, so reduced motion needs nothing. Captions track is default. */
+.vtour{max-width:920px;margin-top:clamp(48px,6vw,80px);scroll-margin-top:96px}
+.vtour-hd{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin-bottom:16px}
+.vtour-h{margin:0;font-size:var(--fs-26);line-height:1.15;letter-spacing:-.015em;font-weight:800}
+.vtour-len{margin:0;font-size:var(--fs-15);color:var(--ink-2)}
+.vtour-frame{position:relative;aspect-ratio:1280/828;border-radius:var(--r);overflow:hidden;background:var(--night);box-shadow:var(--shadow)}
+.vtour-video{display:block;width:100%;height:100%;background:#000}
+.vtour-play{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer}
+.vtour-play img{display:block;width:100%;height:100%;object-fit:cover}
+.vtour-btn{position:absolute;left:50%;top:50%;display:grid;place-items:center;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--passion);color:var(--white);box-shadow:0 12px 30px -10px rgba(31,44,65,.55);transition:transform var(--t-micro) var(--ease),background-color var(--t-micro) var(--ease)}
+.vtour-btn svg{width:36px;height:36px;margin-left:5px}
+.vtour-play:hover .vtour-btn{transform:scale(1.06);background:var(--passion-dk)}
+.vtour-play:focus-visible{outline-offset:-6px}
+.vtour-frame.is-playing .vtour-play,html:not(.js) .vtour-play{display:none}
+.vtour-tx{margin-top:14px;border-top:1px solid rgba(31,44,65,.14)}
+.vtour-tx>summary{display:inline-flex;align-items:center;gap:10px;min-height:48px;font-weight:600;color:var(--passion);cursor:pointer;list-style:none;text-decoration:underline;text-underline-offset:.22em}
+.vtour-tx>summary::-webkit-details-marker{display:none}
+.vtour-tx>summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform var(--t-micro) var(--ease)}
+.vtour-tx[open]>summary::after{transform:translateY(1px) rotate(-135deg)}
+.vtour-txb{padding:4px 0 8px;max-width:68ch;font-size:var(--fs-17);line-height:1.55;color:var(--ink-2)}
+.vtour-txb p{margin:0 0 10px}
+.vt-ts{display:inline-block;min-width:3.2em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--night)}
+@media (max-width:767px){.vtour-btn{width:64px;height:64px;margin:-32px 0 0 -32px}.vtour-btn svg{width:28px;height:28px}}
+@media (prefers-reduced-motion:reduce){.vtour-btn,.vtour-tx>summary::after{transition:none}}
+/* ===== /Product tour video ===== */
