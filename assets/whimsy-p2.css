@@ -1,0 +1,101 @@
+/* =====================================================================
+   Whimsy P2 (2026-10-23): copy pages. Linked only from the 11 Package 2 pages by _lib/whimsy_p2.py, after site.css.
+   Plan: jobility_v1/20261023_Jobility_MotionWhimsy_Plan_v01.md section 4 (Package 2).
+   Rules: transform, opacity and SVG stroke-dashoffset only; every motion ends in 1.0s or less and plays once;
+   the finished state is the default markup. html.fd-p2-pre is the start state, set by the head script only when
+   motion is allowed (not reduced, not ?capture=1, not the site motion switch) and removed within 2.5s regardless.
+   Hooks: .fd-loop .fd-gap .fd-tline-pen .fd-kinds-line .fd-edison .fd-toc-dot .fd-motion-switch
+   ===================================================================== */
+:root{--ease-land:cubic-bezier(.19,1,.22,1)}
+
+/* ---- shared: drawn overlays never take a click and never read aloud ---- */
+.fd-loop,.fd-kinds-line{position:absolute;left:0;top:0;overflow:visible;pointer-events:none}
+.fd-loop path,.fd-kinds-line path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- pricing: the pen circles $0 (.fd-loop over .fd-loop-t) ---- */
+.tile--lead{position:relative}
+.fd-loop-t{display:inline-block}
+.js .fd-loop-t{margin-right:.22em}   /* room for the loop between $0 and "to post" (review: .34em read as a double space) */
+
+/* ---- the honest calculator: one sentence when the visitor's agency quote is lower than Jobility managed ---- */
+.fd-honest{margin-top:6px;font-size:var(--fs-15);line-height:1.4;font-weight:600;color:var(--night)}
+.fd-honest[hidden]{display:none}
+.fd-honest.is-in{animation:fd-p2-in var(--t-micro) var(--ease) both}
+@keyframes fd-p2-in{from{opacity:0}to{opacity:1}}
+
+/* ---- compare + LP1: the hero bars measure the gap (.fd-gap). Static markup = the finished picture. ---- */
+.fd-gap{position:relative;margin:6px 0 0 40%;padding-top:12px}
+.fd-gap-line{position:absolute;left:0;right:0;top:0;height:9px;border:2px solid var(--night);border-top:0;border-right:0;border-radius:0 0 0 3px;transform-origin:0 50%}
+.fd-gap-tick{position:absolute;right:0;top:0;width:2px;height:9px;background:var(--night);border-radius:0 0 1px 1px}
+.fd-gap-dot{position:absolute;left:-5px;top:-5px;z-index:1;width:10px;height:10px;border-radius:50%;background:var(--purpose);box-shadow:0 0 0 2px var(--white)}
+.fd-gap-n{display:block;text-align:right;font-size:var(--fs-15);line-height:1.3;font-weight:700;color:var(--night)}
+.fd-p2-pre .fd-feebars .fill,.fd-gap-pre .fill{transform:scaleX(0)}
+.fd-p2-pre .fd-gap-line,.fd-gap-pre .fd-gap-line{transform:scaleX(0)}
+.fd-p2-pre .fd-gap-tick,.fd-p2-pre .fd-gap-dot,.fd-p2-pre .fd-gap-n,.fd-gap-pre .fd-gap-tick,.fd-gap-pre .fd-gap-dot,.fd-gap-pre .fd-gap-n{opacity:0}
+
+/* ---- how it works: the pen walks the steps (.fd-tline-pen). Nodes light hollow to Night. ---- */
+.fd-tline{position:relative}
+.fd-tline li::after{transition:background-color var(--t-micro) var(--ease)}
+.fd-tline li.is-lit::after,.on-day .fd-tline li.is-lit::after{background:var(--night)}
+/* the pen is node-sized (18px) and Purpose; the key node waits hollow, then fills Purpose as the pen lands (0.25s land) */
+.fd-tline .is-key.is-landed::after,.on-day .fd-tline .is-key.is-landed::after{background:var(--purpose);border-color:var(--purpose);transition:background-color .25s var(--ease-land),border-color .25s var(--ease-land)}
+.fd-tline.is-walk .is-key:not(.is-landed)::after{background:var(--white)}
+.on-day .fd-tline.is-walk .is-key:not(.is-landed)::after{background:var(--day)}
+.fd-tline-pen{position:absolute;left:2px;top:0;width:18px;height:18px;z-index:1;border-radius:50%;background:var(--purpose);pointer-events:none;opacity:0}
+.fd-tline-pen.is-on{opacity:1}
+
+/* ---- for workers: one profile, three kinds of work (.fd-kinds-line in the rows' left gutter) ---- */
+.fd-kinds{position:relative;padding-left:36px}
+.fd-kinds-bead{fill:var(--white);stroke:var(--night);stroke-width:3}
+.on-day .fd-kinds-bead{fill:var(--day)}
+.fd-kinds-dot{fill:var(--purpose)}
+.fd-gigee{display:block;margin-top:2px;color:var(--night);font-weight:600}
+
+/* ---- about: Edison on the map (.fd-edison). Stylized, not a map tile. ---- */
+.fd-edison{position:relative;margin-top:28px;max-width:400px;aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:var(--white);border:1.5px solid var(--line)}
+.fd-edison svg{position:absolute;inset:0;width:100%;height:100%}
+.fd-ed-land{fill:var(--white)}
+.fd-ed-road{fill:none;stroke:var(--day);stroke-opacity:.6;stroke-width:2;stroke-linecap:round}   /* review: 2px Day at 60%, no water band */
+.fd-ed-ring{fill:none;stroke:var(--passion);stroke-width:2.5}
+/* the brand guide's "Location" icon (Backstory), traced: Night stroke, Purpose dot */
+.fd-ed-pin{fill:none;stroke:var(--night);stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
+.fd-ed-pindot{fill:var(--purpose)}
+.fd-ed-l{position:absolute;padding:3px 9px;border-radius:6px;background:var(--white);box-shadow:0 0 0 1px var(--line);font-size:var(--fs-15);line-height:1.2;font-weight:700;color:var(--night);white-space:nowrap}
+.fd-ed-l--ed{left:56%;top:57%}
+.fd-ed-pinw{transform-box:fill-box;transform-origin:50% 100%}
+.fd-edison.is-pre .fd-ed-pinw{opacity:0;transform:translateY(-22px)}
+.fd-edison.is-pre .fd-ed-ring{stroke-dashoffset:1.05}
+.fd-edison.is-pre .fd-ed-l{opacity:0}
+@media (max-width:1199px){.fd-edison{max-width:520px}}
+
+/* ---- FAQ: the byline (the read map was cut after the whimsy review) ---- */
+.fd-by{display:block;margin-top:4px;font-size:var(--fs-15);line-height:1.4;color:var(--ink-2)}
+
+/* ---- legal: the dot keeps your place on the contents rail (.fd-toc-dot), 1200px and up ---- */
+.fd-toc-dot{display:none}
+@media (min-width:1200px){
+  .fd-legal-body .legal-toc ol{position:relative}
+  .fd-toc-dot{display:block;position:absolute;left:-19px;top:0;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--purpose);pointer-events:none;opacity:0;transition:transform var(--t-micro) var(--ease),opacity var(--t-micro) var(--ease)}
+  .fd-toc-dot.is-on{opacity:1}
+}
+
+/* ---- accessibility: the site motion switch (.fd-motion-switch, role=switch) ---- */
+html:not(.js) .fd-js-only{display:none}
+.fd-motion-row p{margin:0}
+.fd-motion-switch{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin-top:10px;padding:4px;border-radius:var(--r);background:var(--white);border:1.5px solid var(--night);cursor:pointer;font:600 var(--fs-17,17px)/1.15 var(--f);color:var(--night);-webkit-tap-highlight-color:transparent}
+.fd-ms-opt{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-width:72px;min-height:44px;padding:0 16px;transition:color var(--t-micro) var(--ease)}
+.fd-ms-thumb{position:absolute;z-index:0;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:var(--r-s);background:var(--night);transition:transform var(--t-micro) var(--ease)}
+.fd-motion-switch[aria-checked="true"] .fd-ms-opt--on,.fd-motion-switch[aria-checked="false"] .fd-ms-opt--off{color:var(--white)}
+.fd-motion-switch[aria-checked="false"] .fd-ms-thumb{transform:translateX(100%)}
+.fd-motion-switch:focus-visible{outline:3px solid var(--night);outline-offset:3px;box-shadow:0 0 0 6px var(--optimism)}
+.fd-ms-note{margin-top:8px!important;font-size:var(--fs-15);color:var(--ink-2)}
+.fd-ms-note[hidden]{display:none}
+
+/* ---- calm: reduced motion, the site switch (html.fd-calm) and ?capture=1 show the finished state with no transition ---- */
+@media (prefers-reduced-motion:reduce){
+  .fd-tline li::after,.fd-toc-dot,.fd-ms-opt,.fd-ms-thumb{transition:none!important}
+  .fd-honest.is-in{animation:none}
+}
+html.fd-calm .fd-tline li::after,html.fd-calm .fd-toc-dot,html.fd-calm .fd-ms-opt,html.fd-calm .fd-ms-thumb,
+html.capture .fd-tline li::after,html.capture .fd-toc-dot{transition:none!important}
+html.fd-calm .fd-honest.is-in{animation:none}
