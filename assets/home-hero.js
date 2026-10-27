@@ -161,7 +161,7 @@
     if((window.FD && FD.reduced && FD.reduced()) || root.classList.contains('capture') || !('IntersectionObserver' in window)) return;
     plArmed = true;
     plPath.style.transition = 'none'; plPath.style.strokeDashoffset = '1';
-    num.textContent = '0';
+    count(1);   /* pre-mortem: never rest on "0 vetted matches" (screenshots, Atarim pins); the tick runs 1 to n */
     var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.disconnect(); phonePlay(); } }); }, {threshold:.4});
     io.observe(panel); plIO = io;
   }
@@ -173,7 +173,7 @@
     var g = plGeo, span = Math.max(1, g.y1 - g.y0), beads = [].slice.call(plBeads.children);
     g.cys.forEach(function(cy, i){
       var u = Math.min(1, Math.max(0, (cy - g.y0) / span)), t = 900 * (u < .5 ? Math.cbrt(u / 4) : 1 - Math.cbrt((1 - u) / 4));   /* inverse of the ease, near enough */
-      plT.push(setTimeout(function(){ if(beads[i]){ beads[i].style.transition = 'opacity .2s'; beads[i].style.opacity = '1'; } num.textContent = String(i + 1); }, t));
+      plT.push(setTimeout(function(){ if(beads[i]){ beads[i].style.transition = 'opacity .2s'; beads[i].style.opacity = '1'; } count(i + 1); }, t));
     });
     plT.push(setTimeout(phoneSettle, 1000));
   }
