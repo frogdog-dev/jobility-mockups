@@ -3540,3 +3540,43 @@ html.fd-calm a.fd-pen-a:hover,html.fd-calm a.fd-pen-a:focus-visible{text-decorat
 @media (max-width:767px){.vtour-btn{width:64px;height:64px;margin:-32px 0 0 -32px}.vtour-btn svg{width:28px;height:28px}}
 @media (prefers-reduced-motion:reduce){.vtour-btn,.vtour-tx>summary::after{transition:none}}
 /* ===== /Product tour video ===== */
+
+/* ===== Oct 28 answers: the proof strip goes live, store badges, the offer line =====
+   .proof.is-live (fd-proof): jobility.com testimonials, verbatim, first name + business type only. Editorial, not cards:
+   a 2px Night rule over each quote (the vetting list's rule), the quote in Night, the opening mark hung in the margin.
+   proof--trio (Home): the lead quote at 26px across 8 of 12 columns, two at 19px beside each other under it.
+   proof--one (offering pages, For workers): one quote at 26px across 8 of 12 columns. No photos, stars, last names, cities, or brand line. */
+.proof.is-live{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(28px,3vw,44px) clamp(24px,3vw,48px);margin-top:clamp(36px,4vw,60px)}
+.proof.is-live .proof-k{grid-column:1 / -1;margin-bottom:-6px;font-size:var(--fs-17);font-weight:700;color:var(--night)}
+.proof.is-live .proof-q{grid-column:span 6;display:flex;flex-direction:column;gap:16px;margin:0;padding:20px 0 0;border:0;border-top:2px solid var(--night);border-radius:0;background:none}
+.proof.is-live .proof-q blockquote{margin:0}
+.proof.is-live .proof-q blockquote p{font-size:var(--fs-19);line-height:1.45;font-weight:600;letter-spacing:-.004em;color:var(--night);text-wrap:pretty;text-indent:-.42em}
+.proof.is-live .proof-by{display:flex;flex-direction:column;gap:2px;margin-top:auto;font-size:var(--fs-15);line-height:1.35;color:var(--ink-2)}
+.proof.is-live .proof-name{font-size:var(--fs-17);font-weight:800;color:var(--night)}
+.proof--trio .proof-q:first-of-type{grid-column:1 / span 8}
+.proof.is-live.proof--trio .proof-q:first-of-type blockquote p,.proof.is-live.proof--one .proof-q blockquote p{font-size:var(--fs-26);line-height:1.32;font-weight:700;letter-spacing:-.012em}
+.proof--one{margin-top:clamp(36px,4vw,56px)}
+.proof.is-live.proof--one .proof-q{grid-column:1 / span 8}
+.founder--facts .proof.is-live{grid-column:1 / -1}
+.founder .proof.is-live blockquote{max-width:none;margin-top:0;font-size:inherit;letter-spacing:normal}
+.wrap>.proof.is-live+.qnote{margin-top:14px}
+@media (max-width:899px){
+  .proof.is-live{grid-template-columns:minmax(0,1fr);gap:28px}
+  .proof.is-live .proof-q,.proof.is-live.proof--trio .proof-q:first-of-type,.proof.is-live.proof--one .proof-q{grid-column:1 / -1}
+}
+@media (max-width:699px){.proof.is-live .proof-q blockquote p{text-indent:0}}
+
+/* store badges: text buttons in the brand (not Apple or Google artwork), one height, Night on light, keyboard ring as everywhere */
+.badges.fd-badges{gap:10px}
+.badge.fd-badge{min-width:150px;min-height:52px;padding:7px 16px 8px;gap:1px;align-items:flex-start;justify-content:center;font-size:var(--fs-17);letter-spacing:-.005em;transition:background-color .2s}
+.badge.fd-badge small{font-size:12px;font-weight:500;letter-spacing:.005em}
+.badge.fd-badge:hover{background:#2B3A54}
+.site-foot .foot-badges{margin-top:10px}
+.site-foot .foot-badges .badge{display:inline-flex;flex-direction:column;align-items:flex-start;min-height:48px;min-width:140px;color:var(--white)!important;text-decoration:none}
+.site-foot .foot-badges .badge:hover{text-decoration:none;color:var(--white)!important}
+.login-card .login-badges{margin-top:12px}
+
+/* the offer, in Jobility's words */
+.lp-offer .lp-offer-sub{display:block;margin-top:4px;font-size:var(--fs-19);font-weight:600;color:var(--ink-2)}
+.offer-terms.fd-offer{border-width:2px}
+.ck-after{margin-top:14px;max-width:52ch;color:var(--ink-2)}
