@@ -4591,6 +4591,18 @@ caption.sr-only{display:block;width:1px!important;max-width:1px;inset:0 auto aut
 .fv-hiw-hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(32px,5vw,80px);align-items:center}
 .fv-spot--hero{width:200px;padding:56px;box-sizing:content-box;border-radius:50%;background:var(--sky);justify-self:center}
 @media (max-width:1023px){ .fv-hiw-hero-grid{grid-template-columns:minmax(0,1fr)} .fv-spot--hero{display:none} .fv-hcspot .fv-spot{padding:28px;width:130px} }
+
+/* Home "Get workers, not resumes." (restored Nov 5 after the client call). Treatment DV: the switch plus a count that encodes
+   what each source sends (214 resumes vs 3 people). Both figures share one grid cell, so the swap never shifts layout. */
+.fv-wnr .fv-wnr-count{display:grid;margin:0;text-align:right;line-height:1}
+.fv-wnr .fv-wnr-count>span{grid-area:1/1;display:flex;flex-direction:column;align-items:flex-end;gap:6px;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.fv-wnr .fv-wnr-count b{font-size:clamp(40px,4.4vw,64px);font-weight:600;letter-spacing:-.03em;color:var(--night)}
+.fv-wnr .fv-wnr-count-j b::after{content:".";color:var(--passion)}
+.fv-wnr .fv-wnr-count span span{font-size:var(--fs-15);font-weight:500;color:var(--ink-2)}
+.fv-wnr .sw:has(.switch[aria-checked="true"]) .fv-wnr-count-b,
+.fv-wnr .sw:has(.switch[aria-checked="false"]) .fv-wnr-count-j{opacity:0;transform:translateY(6px)}
+@media (max-width:767px){ .fv-wnr .fv-wnr-count b{font-size:36px} .fv-wnr .fv-wnr-count span span{font-size:13px;white-space:nowrap} .fv-wnr .sw-top{flex-wrap:nowrap} }
+@media (prefers-reduced-motion:reduce){ .fv-wnr .fv-wnr-count>span{transition:none} }
 /* ===== /FV pages A ===== */
 
 /* ===== FV pages B, Nov 2026 ===== */

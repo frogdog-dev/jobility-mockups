@@ -141,9 +141,57 @@
   </div>
 </section>
 
+<!-- 3b. GET WORKERS, NOT RESUMES (DV): heading, two short lines, "No charge per click" and the Job board / Jobility
+     switch (user-triggered only; site.js 'switch'). Restored after the Nov 5 call. White; the section after it gets a hairline. -->
+<section class="sec fv-wnr" id="workers" data-fv="DV" aria-labelledby="wnr-h">
+  <div class="wrap split fv-wnr-grid v2-wnr fd-wnr-calm">
+    <div>
+      <h2 class="h-sec" id="wnr-h">Get workers, not resumes.</h2>
+      <p class="lede">Job boards send everyone who clicks apply. We send a short list of people who match.</p>
+      <ul class="wnr-facts fv-wnr-facts" role="list"><li>No charge per click.</li><li>No pile of resumes to sort.</li></ul>
+    </div>
+    <div class="sw-wrap">
+      <div class="sw" data-switch data-board-text="Job board: 214 applicants, every one of them yours to read." data-jobility-text="Jobility: 3 screened people who match what you asked for.">
+        <div class="sw-top">
+          <button class="switch fd-switch" type="button" role="switch" aria-checked="true" aria-label="Show the Jobility short list. Off shows a job board pile." aria-describedby="sw-state">
+            <span class="thumb" aria-hidden="true"><span class="thumb-in"><span>Job board</span><span>Jobility</span></span></span><span class="opt o-b" aria-hidden="true">Job board</span><span class="opt o-j" aria-hidden="true">Jobility</span>
+          </button>
+          <p class="fv-wnr-count" aria-hidden="true"><span class="fv-wnr-count-b"><b>214</b><span>resumes to read</span></span><span class="fv-wnr-count-j"><b>3</b><span>people to meet</span></span></p>
+        </div>
+        <p class="sw-hint">Flip the switch to compare what each one sends you.</p>
+        <div class="sw-canvas fd-canvas" data-state="jobility">
+          <div class="sw-pile" aria-hidden="true">
+            <div class="sw-sheet fd-sheet" style="--l:4;--t:10;--r:-12deg"><i></i><span></span><span style="width:80%"></span><span style="width:64%"></span></div>
+            <div class="sw-sheet fd-sheet" style="--l:46;--t:2;--r:9deg"><i></i><span></span><span style="width:88%"></span><span style="width:52%"></span></div>
+            <div class="sw-sheet fd-sheet" style="--l:20;--t:34;--r:-5deg"><i></i><span></span><span style="width:60%"></span><span style="width:76%"></span></div>
+            <div class="sw-sheet fd-sheet" style="--l:40;--t:38;--r:12deg"><i></i><span></span><span style="width:84%"></span><em>Applied 8 min ago</em></div>
+            <div class="sw-sheet fd-sheet" style="--l:10;--t:46;--r:6deg"><i></i><span></span><span style="width:92%"></span><em>Resume_final_v2.pdf</em></div>
+            <div class="sw-sheet fd-sheet" style="--l:28;--t:6;--r:-15deg"><i></i><span></span><span style="width:58%"></span><em>Applied 1 hr ago</em></div>
+            <div class="sw-sheet fd-sheet" style="--l:32;--t:20;--r:-3deg"><i></i><span></span><span style="width:56%"></span><em>Applied 3 min ago</em></div>
+          </div>
+          <ol class="sw-cards" role="list" aria-label="Example short list">
+            <li class="sw-card fd-card"><span class="av" style="--bg:#FCEBF2;--fg:#B8004F" aria-hidden="true">MR</span><p class="nm">Maria R.</p><p class="rl">Warehouse supervisor, full-time hire. 7 years running a day shift.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available now</span></p></li>
+            <li class="sw-card fd-card"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">DP</span><p class="nm">Dev P.</p><p class="rl">Warehouse associate, temp for 6 weeks. Can start Monday.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available Mon.</span></p></li>
+            <li class="sw-card fd-card"><span class="av" style="--bg:#D3005B;--fg:#fff" aria-hidden="true">AT</span><p class="nm">Ana T.</p><p class="rl">CNA, Saturday shift at 7 a.m. Lives 12 minutes away.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available Sat.</span></p></li>
+            <li class="sw-more" aria-hidden="true">And 1 more on your short list</li>
+          </ol>
+          <svg class="sw-line" hidden aria-hidden="true" focusable="false">
+            <defs><linearGradient id="sw-rib" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="470"><stop offset="0" stop-color="#FF9241"/><stop offset=".3" stop-color="#FF6634"/><stop offset=".65" stop-color="#FF3B58"/><stop offset="1" stop-color="#D3005B"/></linearGradient></defs>
+            <path class="fd-draw" pathLength="1" stroke="url(#sw-rib)" d="M0 0"/>
+            <g class="sw-beads"></g>
+            <circle class="fd-dot" cx="0" cy="0" r="12"/>
+          </svg>
+        </div>
+        <p class="sw-state" id="sw-state" aria-live="polite">Jobility: 3 screened people who match what you asked for.</p>
+        <p class="sw-illo ex-note">Example view. Names and numbers are made up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 4. WHAT DO YOU NEED RIGHT NOW (CH): whole-tile links, each with a miniature of that offering's hero object; direct hire
      leads (1.4x, pink wash). Then the healthcare link out for shift staffing. White. -->
-<section class="sec" id="solutions" data-fv="CH" aria-labelledby="need-h">
+<section class="sec fv-sec--rule" id="solutions" data-fv="CH" aria-labelledby="need-h">
   <div class="wrap">
     <div class="fv-head"><h2 class="h-sec" id="need-h">What do you need right now?</h2></div>
     <ul class="fv-choose fd-solutions" role="list">
