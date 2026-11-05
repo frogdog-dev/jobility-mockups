@@ -249,8 +249,15 @@
     var a = $('[data-rate-link]', form), kind = form.getAttribute('data-rate-kind') || 'shift';
     var ROLE = kind === 'temp'
       ? { warehouse: 'a warehouse associate', picker: 'a picker and packer', forklift: 'a forklift operator', production: 'a production worker', laborer: 'a general laborer' }
-      : { cna: 'a CNA', lpn: 'an LPN', rn: 'an RN', 'med-aide': 'a med aide' };
-    function val(n){ var el = form.querySelector('[name="' + n + '"]'); if(!el) return ''; if(el.type === 'radio'){ var c = form.querySelector('[name="' + n + '"]:checked'); return c ? c.value : ''; } return (el.value || '').trim(); }
+      : { warehouse: 'a warehouse associate', labor: 'a general labor', event: 'an event staff', cleaning: 'a cleaning', admin: 'an admin',
+          cna: 'a CNA', lpn: 'an LPN', rn: 'an RN', 'med-aide': 'a med aide' };
+    /* v2 fix (Nov 5): Gig work's role chips are general; the healthcare chips (?v=healthcare, the January ad landing) sit in a
+       disabled fieldset, enabled only on that variant, so exactly one role group is live. */
+    var hcV = document.documentElement.classList.contains('fd-v-healthcare');
+    [].forEach.call(form.querySelectorAll('[data-rate-roles]'), function(fs){ fs.disabled = (fs.getAttribute('data-rate-roles') === 'healthcare') !== hcV; });
+    if(hcV){ var hd = form.querySelector('[data-v-hc-default]'); if(hd) hd.checked = true; }
+    if(hcV) [].forEach.call(document.querySelectorAll('[data-v-healthcare-aria]'), function(el){ el.setAttribute('aria-label', el.getAttribute('data-v-healthcare-aria')); });
+    function val(n){ var el = form.querySelector('[name="' + n + '"]:not(:disabled)'); if(!el) return ''; if(el.type === 'radio'){ var c = form.querySelector('[name="' + n + '"]:checked:not(:disabled)'); return c ? c.value : ''; } return (el.value || '').trim(); }
     function sync(){
       var v = val('rate-role'), e = encodeURIComponent, q = 'contact.html?topic=' + kind + '&role=' + e(v);
       var zip = val('zip').replace(/\D/g, '').slice(0, 5); if(zip.length === 5) q += '&zip=' + zip;

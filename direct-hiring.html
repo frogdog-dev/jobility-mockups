@@ -155,7 +155,7 @@
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="price-h">What one hire costs, three ways.</h2>
       <p class="lede">Pick a role and a salary. Compare Jobility with a staffing agency and with hiring on your own.</p></div>
-    <div class="qq qq--v2 fd-calc3" data-quote data-layout="a">
+    <div class="qq qq--v2 fd-calc3" data-quote data-layout="a" data-own-mode="empty">
       <div class="qq-switch fd-calc-layout" role="group" aria-label="For review: calculator layout">
         <span class="qq-switch-k">For review: layout</span>
         <button type="button" data-layout-set="a" aria-pressed="true">A. Bars</button>
@@ -186,22 +186,17 @@
           </div>
         </fieldset>
         <details class="qq-own fd-own" id="qq-own-a">
-          <summary>On your own: cost per hire</summary>
+          <summary>On your own: add your costs to compare</summary>
           <div class="qq-own-body">
-            <label class="own-f own-f--total"><span>Your cost for one hire</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="total" value="4,129"></span></label>
-            <p class="qq-own-note">Starts at the SHRM average cost per hire.<sup class="fn"><a href="#qq-fn1" aria-label="Source 2">2</a></sup> Use your own number if you know it. <button type="button" class="own-reset" data-own-reset hidden>Back to the SHRM average</button> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder until Parmi’s white paper</span></p>
-            <details class="qq-own-parts">
-              <summary>Or add it up yourself</summary>
-              <div class="qq-own-grid">
-                <label class="own-f"><span>Job board post fees</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="boards" placeholder="0"></span></label>
-                <label class="own-f"><span>Software, this hire’s share</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="subs" placeholder="0"></span></label>
-                <label class="own-f"><span>Background check</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="check" placeholder="0"></span></label>
-                <label class="own-f"><span>Hours your team spends screening and scheduling</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="hours" placeholder="0"><span class="per">hours</span></span></label>
-                <label class="own-f"><span>Cost of one hour of your team’s time</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="rate" placeholder="0"></span></label>
-              </div>
-              <p class="qq-own-how">Fill in any of these and we use their total instead.</p>
-            </details>
-            <label class="own-f own-f--days"><span>Days to fill the role (shown, not priced)</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="3" data-own="days" value="42"><span class="per">days</span></span></label>
+            <p class="qq-own-note">Add what one hire costs you today. We only compare the numbers you enter. <span class="confirm qchip" data-q="Q20" data-clean="" title="Time to fill from SHRM until Parmi’s white paper on the cost comparison">Placeholder until Parmi’s white paper</span></p>
+            <div class="qq-own-grid">
+              <label class="own-f"><span>Job board posts and ads</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="boards" placeholder="0"></span></label>
+              <label class="own-f"><span>Recruiting software and licenses, this hire’s share</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="subs" placeholder="0"></span></label>
+              <label class="own-f"><span>Background and other checks</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="check" placeholder="0"></span></label>
+              <label class="own-f"><span>Hours your team spends screening and scheduling</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="hours" placeholder="0"><span class="per">hours</span></span></label>
+              <label class="own-f"><span>Cost of one hour of your team’s time</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="rate" placeholder="0"></span></label>
+            </div>
+            <p class="qq-own-how">Your numbers stay on this page. <button type="button" class="own-reset" data-own-reset hidden>Clear my costs</button></p>
           </div>
         </details>
       </div>
@@ -209,12 +204,13 @@
       <div class="qq-out">
         <p class="qq-scale-h">One hire at <span data-out="salary">$45,000</span> a year</p>
         <div class="qq-a">
-          <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, on your own, and the common agency fee">
+          <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, the common agency fee, and on your own">
             <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
             <li class="bar bar--us" data-tier="pick"><span class="bl"><b>Jobility, <span data-out="pickname">8% placement fee</span>.</b> Only if you hire.</span><span class="num" data-out="pick">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="pick" style="--s:.4"></span></span></li>
             <li class="bar bar--agency"><span class="bl"><b>Staffing agency, 20%.</b> The most common fee.<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
-            <li class="bar bar--own"><span class="bl"><b>On your own.</b> <span data-out="ownSrc">SHRM average cost per hire</span>,<sup class="fn">2</sup> and about <span data-out="days">42</span> days to fill. <a class="tlink" href="#qq-own-a" data-own-open>Change it</a></span><span class="num" data-out="own">$4,129</span><span class="track" aria-hidden="true"><span class="fill" data-bar="own" style="--s:.4588"></span></span></li>
+            <li class="bar bar--own"><span class="bl"><b>On your own.</b> About <span data-out="days">42</span> days to fill, on average.<sup class="fn"><a href="#qq-fn1" aria-label="Source 2">2</a></sup> <span class="own-if-empty">You post on several job boards, screen every applicant, run the checks and schedule each interview.</span><span class="own-if-cost">Your costs, as you entered them.</span> <a class="tlink" href="#qq-own-a" data-own-open><span class="own-if-empty">Add your costs to compare</span><span class="own-if-cost">Change your costs</span></a></span><span class="num"><span class="own-if-cost" data-out="own">$0</span></span><span class="track" aria-hidden="true"><span class="fill" data-bar="own" style="--s:0"></span></span></li>
           </ul>
+          <p class="qq-cmp own-if-cost" data-out="ownCmp"></p>
           <div class="btn-row qq-cta"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
         </div>
         <div class="qq-b">
@@ -235,21 +231,21 @@
             </li>
             <li class="col3 col3--own">
               <h3 class="col3-h">On your own</h3>
-              <p class="col3-n" data-out="own">$4,129</p>
-              <p class="col3-sub"><b class="col3-wk">About <span data-out="days">42</span> days to fill</b> <span data-out="ownSrc">SHRM average cost per hire</span>.<sup class="fn">2</sup> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder</span></p>
-              <dl class="col3-break" data-own-parts-view hidden><dt>Job board post fees</dt><dd data-out="ownBoards">$0</dd><dt>Software, this hire’s share</dt><dd data-out="ownSubs">$0</dd><dt>Background check</dt><dd data-out="ownCheck">$0</dd><dt>Your team’s time, <span data-out="hours">0</span> hours</dt><dd data-out="ownTime">$0</dd></dl>
-              <ul class="col3-get" role="list"><li>You post on each job board</li><li>You read every application</li><li>You screen and schedule</li></ul>
-              <a class="tlink" href="#qq-own-a" data-own-open>Change it</a>
+              <p class="col3-n"><span class="own-if-empty">About <span data-out="days">42</span> days</span><span class="own-if-cost" data-out="own">$0</span></p>
+              <p class="col3-sub"><span class="own-if-empty">Average time to fill a role.</span><span class="own-if-cost">Your costs, and about <span data-out="days">42</span> days to fill.</span><sup class="fn"><a href="#qq-fn1" aria-label="Source 2">2</a></sup> <span class="confirm qchip" data-q="Q20" data-clean="" title="Time to fill from SHRM until Parmi’s white paper on the cost comparison">Placeholder</span></p>
+              <dl class="col3-break own-if-cost"><dt>Job board posts and ads</dt><dd data-out="ownBoards">$0</dd><dt>Software and licenses</dt><dd data-out="ownSubs">$0</dd><dt>Checks</dt><dd data-out="ownCheck">$0</dd><dt>Your team’s time, <span data-out="hours">0</span> hours</dt><dd data-out="ownTime">$0</dd></dl>
+              <p class="col3-cmp own-if-cost" data-out="ownCmp"></p>
+              <ul class="col3-get" role="list"><li>You post on several job boards</li><li>You screen every applicant</li><li>You run the checks</li><li>You schedule each interview</li></ul>
+              <a class="tlink" href="#qq-own-a" data-own-open><span class="own-if-empty">Add your costs to compare</span><span class="own-if-cost">Change your costs</span></a>
             </li>
           </ul>
         </div>
         <p class="sr-only" aria-live="polite" data-live></p>
       </div>
       <div class="qq-notes">
-        <p class="sales-line">Subscriptions, enterprise pricing, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
-        <p class="qq-foot" id="qq-fn1"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%. Hourly roles: we convert the pay rate to a yearly amount.<br><sup class="fn">2</sup> SHRM average cost per hire, $4,129, and average time to fill, 42 days: SHRM Human Capital Benchmarking Report, 2016 (fiscal 2015 data). Not Jobility data; change it to your own figures above.</p>
+        <p class="qq-foot" id="qq-fn1"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%. Hourly roles: we convert the pay rate to a yearly amount.<br><sup class="fn">2</sup> SHRM average time to fill, 42 days: SHRM Human Capital Benchmarking Report, August 2016 (fiscal 2015 data). Not Jobility data. On your own, we compare only the costs you add.</p>
       </div>
-      <p class="qnote">Open: Q20. “On your own” starts at SHRM’s average cost per hire ($4,129) and time to fill (42 days), from SHRM’s 2016 benchmarking report, until Parmi’s white paper (Nov 5 call). One editable figure, with an optional breakdown. At $45,000 it sits above the 8% fee and under the 15% fee. Layout A or B: client to choose (switch above, review mode or ?calc=b). The $350 to $400 nursing and allied range as approved on Oct 15.</p>
+      <p class="qnote">Open: Q20. “On your own” shows time to fill (SHRM, 42 days, 2016 report) and the work you take on, with cost fields that start empty, so any dollar comparison uses the visitor’s own numbers. No default dollar total (the flat SHRM $4,129 cost per hire is retired: against a percentage fee it made doing it yourself look cheaper above about $52,000). Placeholder until Parmi’s white paper (Nov 5 call). Layout A or B: client to choose (switch above, review mode or ?calc=b). The $350 to $400 nursing and allied range as approved on Oct 15.</p>
     </div>
   </div>
 <div class="wrap"><p class="qnote"><span class="qnote-body">Published as approved on Oct 15: posts stay live for up to 30 days or until all slots are filled.</span></p></div>
@@ -361,7 +357,7 @@
       <p class="lede">Pay nothing up front and pay only if you hire, or pay a flat price per post.</p>
       <div class="promo fd-promo" role="note" aria-label="New customer offer">
         <span class="promo-mark" aria-hidden="true"></span>
-        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span></p>
+        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span><span class="promo-fine">On pay-per-post plans.</span></p>
       </div>
       <div class="btn-row">
         <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>

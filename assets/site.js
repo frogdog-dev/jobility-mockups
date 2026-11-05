@@ -56,11 +56,14 @@
     salary: { min:20000, max:200000, step:1000, start:45000 },
     /* example salary each role starts at in the quote (illustrative, editable by the visitor) */
     salaryByRole: { labor:45000, it:85000, hcadmin:50000, nursing:65000, adv:125000 },
-    /* System v2 (Nov 2026, v2.1): "on your own" for one hire. Default = SHRM's average cost per hire, $4,129, and average time to
+    /* System v2 (Nov 2026, v2.2): "on your own" for one hire shows SHRM's average time to fill (42 days) and the work the visitor
+       takes on; its cost fields start EMPTY, so any dollar comparison is the visitor's own numbers (no default dollar total). The
+       flat SHRM $4,129 cost per hire (v2.1) is retired: against a percentage fee it made DIY look cheaper above about $52k.
+       Review chip Q20: placeholder until Parmi's white paper. Earlier note (v2.1): Default = SHRM's average cost per hire, $4,129, and average time to
        fill, 42 days (SHRM Human Capital Benchmarking Report, Aug 2016, fiscal 2015 data; shrm.org, "SHRM Benchmarking Report:
        $4,129 Average Cost-per-Hire"). One editable figure; an optional breakdown (boards, subs, check, hours x rate) replaces it
        once any part is filled. Time to fill is shown, not priced. Review chip Q20: placeholder until Parmi's white paper. */
-    own: { total:4129, days:42 },
+    own: { days:42 },
     signup: 'https://enterprise.jobility.com/signup'   /* no query parameters (portal sign-up, 2026-10-21) */
   };
   FD.money = function(n){ return '$'+Math.round(n).toLocaleString('en-US'); };
@@ -339,11 +342,11 @@
      with direct-hiring.html); also drives the one-row quote on pricing.html and the library demos. Works with any role radios
      whose value is a key of FD.PRICES.post (or select[name=role]), any salary pair ([data-sal-num]/[data-sal-range]), an
      optional "who does the work" pair (radios valued self / managed) and optional "on your own" assumption inputs
-     ([data-own=total|days], optional breakdown [data-own=boards|subs|check|hours|rate]; defaults in FD.PRICES.own = SHRM's
-     average cost per hire and time to fill, placeholder until Parmi's white paper; [data-own-reset], [data-own-parts-view]).
+     ([data-own=boards|subs|check|hours|rate], all empty by default; FD.PRICES.own.days = SHRM's average time to fill, shown, not
+     priced; placeholder until Parmi's white paper; [data-own-reset]; .own-if-empty / .own-if-cost toggle on [data-own-mode]).
      Every [data-out] key may appear more than once (layout A bars and layout B columns share one state). Outputs:
      salary, post, postbar, postrole, self, managed, agency, pick (the chosen placement fee), pickname, picksub, own, ownBoards,
-     ownSubs, ownCheck, ownTime, ownSrc, hours, days, weeks. Bars: [data-bar=post|self|managed|pick|own|agency], scaled to the largest bar shown.
+     ownSubs, ownCheck, ownTime, ownSrc, ownCmp, hours, days, weeks. Bars: [data-bar=post|self|managed|pick|own|agency], scaled to the largest bar shown.
      Layout: [data-layout=a|b] on the .qq; review-only switch [data-layout-set] (shown in review mode or with ?calc=a|b).
      Every number on screen is computed from the ONE salary on screen, every frame: a role change tweens the salary (0.45s);
      slider, typing and assumption edits snap. List prices (the post) snap with a short roll. ---- */
@@ -365,8 +368,8 @@
       var rsel = $('select[name=role]', qq); if(rsel && !P.post[rsel.value]) rsel = null;   /* Buildout A: one-row quick quote */
       var state = { role:'labor', salary:S.start, who:'self', own:{} }, shownSal = null, touched = false, lt, tw = {};
       Object.keys(OWN).forEach(function(k){ state.own[k] = OWN[k]; });
-      var PARTS = ['boards','subs','check','hours','rate'], ownMode = 'avg';   /* avg (SHRM default) | total (edited) | parts (breakdown) */
-      var partsView = $$('[data-own-parts-view]', qq), resetB = $$('[data-own-reset]', qq), totalIn = $('[data-own=total]', qq);
+      var PARTS = ['boards','subs','check','hours','rate'], ownMode = 'empty';   /* empty (no costs entered: time to fill only) | parts (visitor's costs) */
+      var partsView = $$('[data-own-parts-view]', qq), resetB = $$('[data-own-reset]', qq);
       function r10(n){ return Math.round(n/10)*10; }
       function clamp(n){ n = Math.round((+n||0)/S.step)*S.step; return Math.min(S.max, Math.max(S.min, n)); }
       function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
@@ -378,11 +381,19 @@
       function ownCost(){ var o = state.own; return { boards:+o.boards||0, subs:+o.subs||0, check:+o.check||0, time:(+o.hours||0)*(+o.rate||0) }; }
       function partsSum(){ var oc = ownCost(); return oc.boards + oc.subs + oc.check + oc.time; }
       function anyPart(){ return PARTS.some(function(k){ return (+state.own[k]||0) > 0; }); }
-      function ownSrc(){ return ownMode === 'parts' ? 'Your breakdown' : ownMode === 'total' ? 'Your cost per hire' : 'SHRM average cost per hire'; }
+      function ownSrc(){ return ownMode === 'parts' ? 'Your costs' : 'No costs entered'; }
+      function diff(a, b, label){ var d = a - b; return d > 0 ? money(d)+' more than '+label : d < 0 ? money(-d)+' less than '+label : 'the same as '+label; }
+      function cmpTxt(f){
+        if(ownMode !== 'parts') return '';
+        var pp = 'Jobility pay per post ('+money(f.post)+')', pk = 'the '+(state.who === 'managed' ? '15%' : '8%')+' placement fee ('+money(f.pick)+')';
+        var t = 'Your costs: '+money(f.own)+' for one hire. That is '+diff(f.own, f.post, pp)+', and '+diff(f.own, f.pick, pk)+'.';
+        if((+state.own.hours||0) > 0 && !(+state.own.rate||0)) t += ' Add the cost of one hour to count your team’s time.';
+        return t;
+      }
       function fees(sal){
         var s = r10(sal), oc = ownCost(), f = { sal:s, post:post()[1], self:r10(s*P.placement.self), managed:r10(s*P.placement.managed), agency:r10(s*P.agency) };
         f.pick = state.who === 'managed' ? f.managed : f.self;
-        f.own = ownMode === 'parts' ? partsSum() : (+state.own.total || 0); f.oc = oc;
+        f.own = ownMode === 'parts' ? partsSum() : null; f.oc = oc;
         return f;
       }
       function recHTML(f){
@@ -393,12 +404,13 @@
       function fill(sal){ if(range) range.style.setProperty('--p', ((sal-S.min)/(S.max-S.min)*100)+'%'); }
       function scale(f){
         var max = 1; Object.keys(bars).forEach(function(k){ if(f[k] != null && f[k] > max) max = f[k]; });
-        Object.keys(bars).forEach(function(k){ if(f[k] != null) bars[k].forEach(function(b){ b.style.setProperty('--s', (f[k]/max).toFixed(4)); }); });
+        Object.keys(bars).forEach(function(k){ bars[k].forEach(function(b){ b.style.setProperty('--s', f[k] != null ? (f[k]/max).toFixed(4) : '0'); }); });
       }
       /* one frame: everything that depends on salary, from one value */
       function frame(sal){
         var f = fees(sal);
-        ['self','managed','agency','pick','own'].forEach(function(k){ set(k, money(f[k])); });
+        ['self','managed','agency','pick'].forEach(function(k){ set(k, money(f[k])); });
+        set('own', f.own == null ? '' : money(f.own)); set('ownCmp', cmpTxt(f));
         set('salary', money(f.sal));
         if(rec) rec.innerHTML = recHTML(f);
         if(num && doc.activeElement !== num) num.value = fmt(f.sal);
@@ -416,9 +428,8 @@
         set('hours', fmt(+state.own.hours || 0)); set('days', fmt(+state.own.days || 0)); set('weeks', fmt(Math.round((+state.own.days || 0)/7)));
         set('ownSrc', ownSrc());
         partsView.forEach(function(el){ el.hidden = ownMode !== 'parts'; });
-        resetB.forEach(function(el){ el.hidden = ownMode === 'avg'; });
+        resetB.forEach(function(el){ el.hidden = ownMode !== 'parts'; });
         qq.setAttribute('data-own-mode', ownMode);
-        if(totalIn && ownMode === 'parts' && doc.activeElement !== totalIn) totalIn.value = fmt(partsSum());
         tiers.forEach(function(t){ var k = t.getAttribute('data-tier'); t.classList.toggle('is-pick', k === 'pick' || (state.who === 'managed' ? k === 'managed' : (k === 'self' || k === 'post'))); });
         if(nurse) nurse.hidden = state.role !== 'nursing';
         if(postCta) postCta.textContent = 'Post for '+pt;
@@ -428,7 +439,7 @@
         clearTimeout(lt);
         lt = setTimeout(function(){
           var f = fees(state.salary), p = post();
-          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+'Pay per post: '+postTxt()+', no fee when you hire. '+(state.who === 'managed' ? 'Placement fee, 15%: '+money(f.managed) : 'Placement fee, 8%: '+money(f.self))+', only if you hire. Common agency fee: '+money(f.agency)+'.'+(owns.length ? ' On your own, '+ownSrc().toLowerCase()+': '+money(f.own)+', about '+fmt(+state.own.days||0)+' days to fill.' : '');
+          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+'Pay per post: '+postTxt()+', no fee when you hire. '+(state.who === 'managed' ? 'Placement fee, 15%: '+money(f.managed) : 'Placement fee, 8%: '+money(f.self))+', only if you hire. Common agency fee: '+money(f.agency)+'.'+(owns.length ? ' On your own: about '+fmt(+state.own.days||0)+' days to fill, on average.'+(ownMode === 'parts' ? ' '+cmpTxt(f) : ' Add your costs to compare.') : '');
         }, 450);
       }
       function go(how){
@@ -458,26 +469,24 @@
           num.value = fmt(state.salary); go('snap');
         });
       }
-      /* on your own: whole numbers, 0 to 99,999. The total is one editable figure (SHRM's average by default). Filling any part
-         of the optional breakdown switches the total to the sum of the parts; clearing every part returns to the total. */
-      function syncMode(){ ownMode = anyPart() ? 'parts' : (+state.own.total === OWN.total ? 'avg' : 'total'); }
+      /* on your own: whole numbers, 0 to 99,999. Every cost field starts empty; filling any of them compares their sum.
+         Clearing every field (or "Clear my costs") goes back to time to fill only. */
+      function syncMode(){ ownMode = anyPart() ? 'parts' : 'empty'; }
       owns.forEach(function(inp){
         var k = inp.getAttribute('data-own');
         if(inp.value) state.own[k] = +String(inp.value).replace(/[^0-9]/g,'') || 0;
-        else if(state.own[k] != null && PARTS.indexOf(k) < 0) inp.value = fmt(state.own[k]);
         inp.addEventListener('input', function(){
           var v = String(inp.value).replace(/[^0-9]/g,'');
           state.own[k] = Math.min(99999, +v || 0);
-          if(k === 'total' && ownMode === 'parts'){ PARTS.forEach(function(pk){ state.own[pk] = 0; }); owns.forEach(function(o){ if(PARTS.indexOf(o.getAttribute('data-own')) > -1) o.value = ''; }); }
           syncMode(); go('snap');
         });
-        inp.addEventListener('change', function(){ if(PARTS.indexOf(k) > -1 && !(+state.own[k])) inp.value = ''; else inp.value = fmt(state.own[k]); go('snap'); });
+        inp.addEventListener('change', function(){ if(!(+state.own[k])) inp.value = ''; else inp.value = fmt(state.own[k]); go('snap'); });
       });
       syncMode();
       resetB.forEach(function(b){ b.addEventListener('click', function(){
-        state.own.total = OWN.total; PARTS.forEach(function(pk){ state.own[pk] = 0; });
-        owns.forEach(function(o){ var k = o.getAttribute('data-own'); o.value = PARTS.indexOf(k) > -1 ? '' : fmt(state.own[k]); });
-        syncMode(); go('snap'); if(totalIn) totalIn.focus();
+        PARTS.forEach(function(pk){ state.own[pk] = 0; });
+        owns.forEach(function(o){ o.value = ''; });
+        syncMode(); go('snap'); var f0 = owns[0]; if(f0) f0.focus();
       }); });
       /* "Assumptions" link in the bars: open the disclosure and take focus to it (no jump if it is already on screen) */
       $$('[data-own-open]', qq).forEach(function(a){ a.addEventListener('click', function(e){ var d = $('details.qq-own', qq); if(!d) return; e.preventDefault(); d.open = true; var s = $('summary', d); try{ s.focus({preventScroll:true}); }catch(x){ s.focus(); } var r = d.getBoundingClientRect(); if(r.top < 80 || r.top > innerHeight - 120) d.scrollIntoView({block:'center', behavior:FD.reduced() ? 'auto' : 'smooth'}); }); });

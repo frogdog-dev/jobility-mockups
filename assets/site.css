@@ -4047,4 +4047,32 @@ a .ext{display:inline-block;width:.8em;height:.8em;margin-left:4px;vertical-alig
 /* the sliding segment thumb (whimsy) follows the light selected state: white, hairline ring, night text */
 .fd-thumb{background:var(--white);box-shadow:var(--shadow-s),0 0 0 1px var(--line-2)}
 .seg.fd-has-thumb button[aria-checked="true"]{box-shadow:none;color:var(--night)}
+/* ---- v2 fix round (Nov 5, after both v2 red teams): "on your own" = time to fill + the work, costs start empty ---- */
+.qq--v2[data-own-mode="empty"] .own-if-cost,.qq--v2:not([data-own-mode]) .own-if-cost{display:none}
+.qq--v2[data-own-mode="parts"] .own-if-empty{display:none}
+.qq--v2[data-own-mode="empty"] .bar--own .track{background:none;box-shadow:none;border-top:1.5px dashed var(--line-2);height:0;border-radius:0;margin-top:6px}
+.qq-cmp{margin:18px 0 0;padding:12px 16px;border-radius:12px;background:var(--white);box-shadow:0 0 0 1px var(--line-2);font-size:var(--fs-15);line-height:1.5;color:var(--night)}
+.qq-cmp:empty,.col3-cmp:empty{display:none}
+.col3-cmp{margin:2px 0 0;padding:10px 12px;border-radius:10px;background:var(--sky);font-size:14px;line-height:1.45;color:var(--night)}
+.col3--own .col3-n .own-if-empty{font-size:clamp(26px,2.2vw,34px)}
+.qq-own-body .qq-own-grid{padding:0}
+.qq-own-body .qq-own-how{padding:0;margin:0}
+/* how it works: the tour poster has no black letterbox; the frame never shows black */
+.vtour-frame,.vtour-play,.vtour-video{background:var(--white)}
+/* header utility bar: quieter, one 36px row */
+.site-util .wrap{min-height:36px}
+.site-util a{min-height:36px}
+.site-util .u-first{font-size:14px;color:var(--ink-2)}
+/* gig work: the healthcare link out under the rate card */
+.ra-hc-out{margin:14px 0 0;font-size:var(--fs-15);color:var(--ink-2)}
+.ra-hc-out a{font-weight:600;white-space:nowrap}
+/* gig work ?v=healthcare (January ad landing, unlinked): its healthcare content stays as it was */
+html:not(.fd-v-healthcare) .v-hc-only,.fd-v-healthcare .v-gen-only{display:none!important}
+/* pricing hero tiles: one structure (label, price, one line) */
+.pr-hero .tile{gap:0}
+.pr-hero .tile-k{font-size:var(--fs-15);font-weight:var(--fw-label);color:var(--ink-2)}
+.pr-hero .tile-n{margin-top:10px}
+.pr-hero .tile-v{margin-top:12px}
+/* calculator cost fields: the .money ring shows focus; no inner glow over the "$" */
+.money input:focus-visible{box-shadow:none;outline:none}
 /* ===== /System v2 pages ===== */
