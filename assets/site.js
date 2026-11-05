@@ -182,8 +182,9 @@
       if(href === '#'){ e.preventDefault(); FD.note(FD.MSG_PAGE); return; }
       if(href.charAt(0) === '#') return;
       if(/^https?:/i.test(href)) return;   /* integration: every external link opens (the legal pages cite the FTC, Checkr, Stripe) */
-      var file = href.split('#')[0].split('?')[0].replace(/^\.\//,'');
-      if(!file || IN.test(file)) return;
+      var file = href.split('#')[0].split('?')[0].replace(/^\.\//,'').replace(/^\//,'').replace(/\/$/,'');
+      /* hosts like Netlify rewrite links to pretty URLs (/pricing), so accept the name with or without .html */
+      if(!file || IN.test(file) || IN.test(file + '.html')) return;
       e.preventDefault(); FD.note(FD.MSG_PAGE);
     });
   });
