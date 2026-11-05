@@ -234,7 +234,7 @@ body .lib-qdemo .qcallout{display:block!important}
 <section class="lib-top" id="intro" aria-labelledby="lib-h1"><div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Component library</span></li></ol></nav>
   <h1 class="h-page" id="lib-h1">Component library<span class="stop">.</span></h1>
-  <p class="lede lib-intro-lede">Every building block the Jobility site needs, live, with its class names and hooks, when to use it, which pages use it, and what not to do. Built for Nasir to rebuild the remaining pages in WordPress and Divi without guessing. 101 components, 64 of them new for the copy-only pages.</p>
+  <p class="lede lib-intro-lede">Every building block the Jobility site needs, live, with its class names and hooks, when to use it, which pages use it, and what not to do. Built for Nasir to rebuild the remaining pages in WordPress and Divi without guessing. 108 components, 64 of them new for the copy-only pages and 7 in the System v2 group (start there).</p>
   <div class="lib-how">
     <div>
       <h2 class="h-item">How to use it</h2>
@@ -250,8 +250,8 @@ body .lib-qdemo .qcallout{display:block!important}
     <div>
       <h2 class="h-item">At a glance</h2>
       <dl class="lib-glance">
-        <dt>Type</dt><dd>Figtree (stand-in for Riposte), 68 / 56 / 36 / 26 / 19 / 15. Body 19px, 17px on phones.</dd>
-        <dt>Color</dt><dd><span class="lib-mini" style="background:#1F2C41"></span>Night Shift ink and the one dark band; <span class="lib-mini" style="background:#F6E5DA"></span>Day Shift bands; <span class="lib-mini" style="background:#D3005B"></span>Passion for every action.</dd>
+        <dt>Type</dt><dd>Figtree. System v2: h1 40 to 66, h2 28 to 40, items 19 to 22, body 18 (16 and 15 small). Weights 600 headings and numbers, 500 labels and chips, 400 body.</dd>
+        <dt>Color</dt><dd>System v2: white page; <span class="lib-mini" style="background:#F4F7FB;box-shadow:inset 0 0 0 1px #CFD8E3"></span>tint 1 bands and cards; <span class="lib-mini" style="background:#D3005B"></span>Passion, the one color pop; <span class="lib-mini" style="background:#1F2C41"></span>Night Shift as ink only, never a band. Day Shift is retired.</dd>
         <dt>Radii</dt><dd>14 panels, 10 buttons and inputs, 6 chips.</dd>
         <dt>Layout</dt><dd>1320px row, 32px gutter (20 on phones). Stacks at 1200, 900 and 700px; tables at 480.</dd>
         <dt>Standards</dt><dd>WCAG 2.2 AA, 44px touch targets, visible focus (Night Shift ring with an Optimism halo), reduced motion respected, noindex on the prototype.</dd>
@@ -267,6 +267,15 @@ body .lib-qdemo .qcallout{display:block!important}
     <p class="lib-toc-h" aria-hidden="true">Contents</p>
 <ol class="lib-toc-list" id="lib-toc-list">
 <li><a class="grp" href="#intro">How to use this library</a></li>
+<li><a class="grp" href="#system-v2">System v2 (light)</a><ol>
+<li><a href="#v2-tokens">Tokens: color, weight and space <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#v2-steps">Steps, 1-2-3 <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#v2-sol">Solution cards <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#v2-checks">Check list <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#v2-hc">Healthcare link out <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#v2-promo">The offer <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#v2-calc">Calculator: one hire, three ways <span class="lib-dot" aria-label="new">new</span></a></li>
+</ol></li>
 <li><a class="grp" href="#foundations">Foundations</a><ol>
 <li><a href="#f-color">Color roles and contrast</a></li>
 <li><a href="#f-type">Type scale</a></li>
@@ -302,7 +311,7 @@ body .lib-qdemo .qcallout{display:block!important}
 <li><a class="grp" href="#content">Content blocks</a><ol>
 <li><a href="#c-section">Section frame, headings and bands</a></li>
 <li><a href="#c-pghero">Page hero for copy-only pages <span class="lib-dot" aria-label="new">new</span></a></li>
-<li><a href="#c-ohero">Offering hero with chips</a></li>
+<li><a href="#c-ohero">Offering hero with chips <span class="lib-ret-dot">retired</span></a></li>
 <li><a href="#c-lphero">Landing-page hero <span class="lib-dot" aria-label="new">new</span></a></li>
 <li><a href="#c-steps">Steps</a></li>
 <li><a href="#c-tline">Timeline <span class="lib-dot" aria-label="new">new</span></a></li>
@@ -350,23 +359,23 @@ body .lib-qdemo .qcallout{display:block!important}
 <li><a href="#t-data">Worked examples data table <span class="lib-dot" aria-label="new">new</span></a></li>
 </ol></li>
 <li><a class="grp" href="#motion">Motion components</a><ol>
-<li><a href="#m-hero">Hero line (Home)</a></li>
+<li><a href="#m-hero">Hero line (Home) <span class="lib-ret-dot">retired</span></a></li>
 <li><a href="#m-qq">Quick quote: Which plan fits you?</a></li>
 <li><a href="#m-switch">Workers, not resumes: the switch</a></li>
 <li><a href="#m-tour">Walkthrough tabs (v4, the j thread)</a></li>
 <li><a href="#m-offer">Offer letter (Direct hiring hero)</a></li>
 <li><a href="#m-roster">Crew roster (Contingent labor hero) <span class="lib-dot" aria-label="new">new</span></a></li>
-<li><a href="#m-stub">Pay stub: signature section (Contingent labor)</a></li>
+<li><a href="#m-stub">Pay stub: signature section (Contingent labor) <span class="lib-ret-dot">retired</span></a></li>
 <li><a href="#m-shift">Shift card (Gig work hero)</a></li>
 </ol></li>
 <li><a class="grp" href="#signatures">Offering signatures and compact rows</a><ol>
-<li><a href="#s-s2d">From short list to day one (Direct hiring) <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#s-s2d">From short list to day one (Direct hiring) <span class="lib-dot" aria-label="new">new</span> <span class="lib-ret-dot">retired</span></a></li>
 <li><a href="#s-shiftline">Shift timeline (Gig work) <span class="lib-dot" aria-label="new">new</span></a></li>
 <li><a href="#s-frow">Founder facts card (library only) <span class="lib-dot" aria-label="new">new</span></a></li>
 <li><a href="#s-stack">Comparison as stacked cards <span class="lib-dot" aria-label="new">new</span></a></li>
 </ol></li>
 <li><a class="grp" href="#offer-r5">Offering heroes and bands (R5)</a><ol>
-<li><a href="#r5-hero">Offering hero on Night Shift, with one piece of the j line <span class="lib-dot" aria-label="new">new</span></a></li>
+<li><a href="#r5-hero">Offering hero on Night Shift, with one piece of the j line <span class="lib-dot" aria-label="new">new</span> <span class="lib-ret-dot">retired</span></a></li>
 <li><a href="#r5-band">Photo band: .pband (one per page, Home included) <span class="lib-dot" aria-label="new">new</span></a></li>
 <li><a href="#r5-ruled">Ruled type pairs: the one vetting list (and where the triad went) <span class="lib-dot" aria-label="new">new</span></a></li>
 <li><a href="#r5-rate">Get a rate: the request preview (Gig work and Contingent labor) <span class="lib-dot" aria-label="new">new</span></a></li>
@@ -401,9 +410,260 @@ body .lib-qdemo .qcallout{display:block!important}
 <li><a class="grp" href="#templates">Page templates</a></li></ol>
   </nav>
   <div class="lib-body">
+<!-- v2-library-2026-11-05 -->
+<section class="lib-group" id="system-v2" aria-labelledby="system-v2-h"><h2 class="h-sec" id="system-v2-h">System v2 (light)</h2><div class="lib-gintro"><p class="lede">The Nov 5 review call: light everywhere, one pink, lighter type, more air, less on each page. These components and tokens replace every dark and Day Shift rule further down; entries marked “Retired in System v2” stay as history. Source: the last block of <code>assets/site.css</code> (from <code>_lib/v2_light.css</code>). The Home hero (<code>.v2-hero</code>, the rotating role word) is live on <a href="index.html">Home</a>.</p></div>
+<article class="lib-entry" id="v2-tokens" aria-labelledby="v2-tokens-h">
+<header class="lib-head"><h3 id="v2-tokens-h">Tokens: color, weight and space</h3><span class="lib-id">v2</span><span class="lib-new">System v2</span></header>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>--white</code> <code>--sky</code> <code>--sky-2</code> <code>--passion</code> <code>--passion-tint</code> <code>--night</code> <code>--ink-2</code> <code>--line</code> <code>--line-2</code> <code>--fw-head</code> <code>--fw-strong</code> <code>--fw-label</code> <code>--sec</code></dd><dt>Use when</dt><dd>Every surface, text color and weight. White page; tint 1 for alternate bands and cards; Passion as the only color pop.</dd><dt>Used on</dt><dd>Every page.</dd></dl>
+<div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>Headings 600, labels and chips 500, body 400.</li><li>Passion text on tint 2 only at 15px and up.</li><li>Section padding <code>var(--sec)</code>: let sections breathe.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>Night Shift as a section or band background, even a small one.</li><li>Day Shift (peach) anywhere: <code>--day</code> now points to tint 1.</li><li>Energy or Purpose for text (2.9:1 and 3.5:1 on white).</li></ul></div></div>
+<p class="lib-label"><span>Desktop</span></p>
+<div class="lib-desk" data-demo="v2-tokens" role="group" aria-label="Live example: Tokens: color, weight and space"><ul class="lib-swatches" role="list"><li class="lib-sw"><span class="lib-chip" style="background:#FFFFFF;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3">#FFFFFF</span><b>White</b><code>--white</code><span>The page. Every section is white or tint 1</span></li><li class="lib-sw"><span class="lib-chip" style="background:#F4F7FB;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3">#F4F7FB</span><b>Tint 1 (sky)</b><code>--sky</code><span>Alternate bands, the CTA band, cards on white. Night 13.1, ink-2 7.1, Passion 5.0</span></li><li class="lib-sw"><span class="lib-chip" style="background:#E8EEF5;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3">#E8EEF5</span><b>Tint 2</b><code>--sky-2</code><span>Chips, tracks, icon wells, selected rows. Passion 4.6: 15px and up only</span></li><li class="lib-sw"><span class="lib-chip" style="background:#D3005B;color:#FFFFFF;box-shadow:inset 0 0 0 1px #CFD8E3">#D3005B</span><b>Passion</b><code>--passion</code><span>The one color pop: buttons, links, selected, stops, step numbers</span></li><li class="lib-sw"><span class="lib-chip" style="background:#FCEBF2;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3">#FCEBF2</span><b>Passion tint</b><code>--passion-tint</code><span>Pink as a surface: selected choice, offer mark, founder mark</span></li><li class="lib-sw"><span class="lib-chip" style="background:#1F2C41;color:#FFFFFF;box-shadow:inset 0 0 0 1px #CFD8E3">#1F2C41</span><b>Night Shift</b><code>--night</code><span>Ink only. Never a section or band background</span></li><li class="lib-sw"><span class="lib-chip" style="background:#4A5466;color:#FFFFFF;box-shadow:inset 0 0 0 1px #CFD8E3">#4A5466</span><b>Ink 2</b><code>--ink-2</code><span>Body on white, 7.6:1</span></li><li class="lib-sw"><span class="lib-chip" style="background:#CFD8E3;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3">#CFD8E3</span><b>Line 2</b><code>--line-2</code><span>Card edges; --line #E1E7EF hairlines</span></li></ul>
+<table class="lib-tk-table"><caption class="sr-only">Type tokens</caption><thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Use</th></tr></thead><tbody><tr><td><code>--fw-head</code></td><td>600</td><td>Every heading</td></tr><tr><td><code>--fw-strong</code></td><td>600</td><td>Emphasis, numbers, names</td></tr><tr><td><code>--fw-label</code></td><td>500</td><td>Chips, choices, nav sub-labels</td></tr><tr><td>body</td><td>400</td><td>Body copy, 18px / 1.6</td></tr><tr><td><code>--fs-h1</code> / <code>--fs-h2</code></td><td>clamp(40px, 4.6vw, 66px) / clamp(28px, 2.6vw, 40px)</td><td>Page and section headings</td></tr><tr><td><code>--sec</code></td><td>clamp(64px, 8vw, 120px)</td><td>Section padding: more air</td></tr></tbody></table></div>
+<details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;ul class=&quot;lib-swatches&quot; role=&quot;list&quot;&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#FFFFFF;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#FFFFFF&lt;/span&gt;&lt;b&gt;White&lt;/b&gt;&lt;code&gt;--white&lt;/code&gt;&lt;span&gt;The page. Every section is white or tint 1&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#F4F7FB;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#F4F7FB&lt;/span&gt;&lt;b&gt;Tint 1 (sky)&lt;/b&gt;&lt;code&gt;--sky&lt;/code&gt;&lt;span&gt;Alternate bands, the CTA band, cards on white. Night 13.1, ink-2 7.1, Passion 5.0&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#E8EEF5;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#E8EEF5&lt;/span&gt;&lt;b&gt;Tint 2&lt;/b&gt;&lt;code&gt;--sky-2&lt;/code&gt;&lt;span&gt;Chips, tracks, icon wells, selected rows. Passion 4.6: 15px and up only&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#D3005B;color:#FFFFFF;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#D3005B&lt;/span&gt;&lt;b&gt;Passion&lt;/b&gt;&lt;code&gt;--passion&lt;/code&gt;&lt;span&gt;The one color pop: buttons, links, selected, stops, step numbers&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#FCEBF2;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#FCEBF2&lt;/span&gt;&lt;b&gt;Passion tint&lt;/b&gt;&lt;code&gt;--passion-tint&lt;/code&gt;&lt;span&gt;Pink as a surface: selected choice, offer mark, founder mark&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#1F2C41;color:#FFFFFF;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#1F2C41&lt;/span&gt;&lt;b&gt;Night Shift&lt;/b&gt;&lt;code&gt;--night&lt;/code&gt;&lt;span&gt;Ink only. Never a section or band background&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#4A5466;color:#FFFFFF;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#4A5466&lt;/span&gt;&lt;b&gt;Ink 2&lt;/b&gt;&lt;code&gt;--ink-2&lt;/code&gt;&lt;span&gt;Body on white, 7.6:1&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;lib-sw&quot;&gt;&lt;span class=&quot;lib-chip&quot; style=&quot;background:#CFD8E3;color:#1F2C41;box-shadow:inset 0 0 0 1px #CFD8E3&quot;&gt;#CFD8E3&lt;/span&gt;&lt;b&gt;Line 2&lt;/b&gt;&lt;code&gt;--line-2&lt;/code&gt;&lt;span&gt;Card edges; --line #E1E7EF hairlines&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;table class=&quot;lib-tk-table&quot;&gt;&lt;caption class=&quot;sr-only&quot;&gt;Type tokens&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Token&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Value&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Use&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--fw-head&lt;/code&gt;&lt;/td&gt;&lt;td&gt;600&lt;/td&gt;&lt;td&gt;Every heading&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--fw-strong&lt;/code&gt;&lt;/td&gt;&lt;td&gt;600&lt;/td&gt;&lt;td&gt;Emphasis, numbers, names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--fw-label&lt;/code&gt;&lt;/td&gt;&lt;td&gt;500&lt;/td&gt;&lt;td&gt;Chips, choices, nav sub-labels&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;body&lt;/td&gt;&lt;td&gt;400&lt;/td&gt;&lt;td&gt;Body copy, 18px / 1.6&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--fs-h1&lt;/code&gt; / &lt;code&gt;--fs-h2&lt;/code&gt;&lt;/td&gt;&lt;td&gt;clamp(40px, 4.6vw, 66px) / clamp(28px, 2.6vw, 40px)&lt;/td&gt;&lt;td&gt;Page and section headings&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--sec&lt;/code&gt;&lt;/td&gt;&lt;td&gt;clamp(64px, 8vw, 120px)&lt;/td&gt;&lt;td&gt;Section padding: more air&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</code></pre></details>
+</article>
+<article class="lib-entry" id="v2-steps" aria-labelledby="v2-steps-h">
+<header class="lib-head"><h3 id="v2-steps-h">Steps, 1-2-3</h3><span class="lib-id">v2</span><span class="lib-new">System v2</span></header>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>ol.v2-steps.fd-steps</code> <code>.v2-step-n</code></dd><dt>Use when</dt><dd>Any short sequence of three (or four) steps.</dd><dt>Used on</dt><dd>Home (From post to hire in three steps), For workers.</dd></dl>
+<div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>A short heading per step and one or two sentences.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>More than four steps, or a paragraph per step.</li></ul></div></div>
+<p class="lib-label"><span>Desktop</span></p>
+<div class="lib-desk" data-demo="v2-steps" role="group" aria-label="Live example: Steps, 1-2-3"><ol class="v2-steps fd-steps" role="list"><li><span class="v2-step-n" aria-hidden="true">1</span><h3>Post once.</h3><p>We post it to 150+ job sites for you, so you write it one time.</p></li><li><span class="v2-step-n" aria-hidden="true">2</span><h3>We curate and verify.</h3><p>AI-driven matching finds people who fit. We check skills, availability and work history.</p></li><li><span class="v2-step-n" aria-hidden="true">3</span><h3>You interview and hire.</h3><p>Schedule interviews when it suits you, then hire the person you choose.</p></li></ol></div>
+<details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;ol class=&quot;v2-steps fd-steps&quot; role=&quot;list&quot;&gt;&lt;li&gt;&lt;span class=&quot;v2-step-n&quot; aria-hidden=&quot;true&quot;&gt;1&lt;/span&gt;&lt;h3&gt;Post once.&lt;/h3&gt;&lt;p&gt;We post it to 150+ job sites for you, so you write it one time.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;v2-step-n&quot; aria-hidden=&quot;true&quot;&gt;2&lt;/span&gt;&lt;h3&gt;We curate and verify.&lt;/h3&gt;&lt;p&gt;AI-driven matching finds people who fit. We check skills, availability and work history.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;v2-step-n&quot; aria-hidden=&quot;true&quot;&gt;3&lt;/span&gt;&lt;h3&gt;You interview and hire.&lt;/h3&gt;&lt;p&gt;Schedule interviews when it suits you, then hire the person you choose.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</code></pre></details>
+</article>
+<article class="lib-entry" id="v2-sol" aria-labelledby="v2-sol-h">
+<header class="lib-head"><h3 id="v2-sol-h">Solution cards: choose a path</h3><span class="lib-id">v2</span><span class="lib-new">System v2</span></header>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>ul.v2-sol.fd-solutions</code> <code>li.v2-sol-card</code> <code>.is-lead</code> <code>.v2-sol-ic</code> <code>.v2-sol-k</code> <code>.v2-sol-t</code> <code>.v2-sol-p</code> <code>.v2-sol-go</code></dd><dt>Use when</dt><dd>Any “choose a path” moment. Direct hire is always first and carries <code>.is-lead</code> (tint, pink rule, pink kicker). The whole card is the link.</dd><dt>Used on</dt><dd>Home (What do you need right now?).</dd></dl>
+<div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>Direct hire first, gigs last.</li><li>No prices on the cards.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>A second link or button inside a card.</li></ul></div></div>
+<p class="lib-label"><span>Desktop</span></p>
+<div class="lib-desk" data-demo="v2-sol" role="group" aria-label="Live example: Solution cards: choose a path"><ul class="v2-sol fd-solutions" role="list"><li class="v2-sol-card is-lead"><a href="direct-hiring.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="13" r="6"/><path d="M8 34c1.6-7 6.3-10 12-10s10.4 3 12 10"/></svg></span><span class="v2-sol-k">Direct hire, on your payroll</span><span class="v2-sol-t">Full&#8209;time and part&#8209;time staff</span><span class="v2-sol-p">Vetted candidates who join your payroll. You interview, you choose.</span><span class="v2-sol-go" aria-hidden="true">Explore direct hiring</span></a></li><li class="v2-sol-card"><a href="contingent-labor.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="9" width="28" height="25" rx="4"/><path d="M6 17h28M13 5v7M27 5v7M12 23h4M20 23h4M12 28h4"/></svg></span><span class="v2-sol-k">Contingent labor</span><span class="v2-sol-t">Temp and contract workers</span><span class="v2-sol-p">People for weeks or months. Jobility can be the employer of record.</span><span class="v2-sol-go" aria-hidden="true">Explore contingent labor</span></a></li><li class="v2-sol-card"><a href="gig-work.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="21" r="13"/><path d="M20 13v8l5 4M16 4h8"/></svg></span><span class="v2-sol-k">Gig work</span><span class="v2-sol-t">Shift coverage</span><span class="v2-sol-p">Cover a shift or a busy week with screened workers nearby.</span><span class="v2-sol-go" aria-hidden="true">Explore gig work</span></a></li></ul></div>
+<details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;ul class=&quot;v2-sol fd-solutions&quot; role=&quot;list&quot;&gt;&lt;li class=&quot;v2-sol-card is-lead&quot;&gt;&lt;a href=&quot;direct-hiring.html&quot;&gt;&lt;span class=&quot;v2-sol-ic&quot;&gt;&lt;svg class=&quot;v2-ico&quot; viewBox=&quot;0 0 40 40&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.7&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;&lt;circle cx=&quot;20&quot; cy=&quot;13&quot; r=&quot;6&quot;/&gt;&lt;path d=&quot;M8 34c1.6-7 6.3-10 12-10s10.4 3 12 10&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;v2-sol-k&quot;&gt;Direct hire, on your payroll&lt;/span&gt;&lt;span class=&quot;v2-sol-t&quot;&gt;Full&amp;#8209;time and part&amp;#8209;time staff&lt;/span&gt;&lt;span class=&quot;v2-sol-p&quot;&gt;Vetted candidates who join your payroll. You interview, you choose.&lt;/span&gt;&lt;span class=&quot;v2-sol-go&quot; aria-hidden=&quot;true&quot;&gt;Explore direct hiring&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;v2-sol-card&quot;&gt;&lt;a href=&quot;contingent-labor.html&quot;&gt;&lt;span class=&quot;v2-sol-ic&quot;&gt;&lt;svg class=&quot;v2-ico&quot; viewBox=&quot;0 0 40 40&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.7&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;&lt;rect x=&quot;6&quot; y=&quot;9&quot; width=&quot;28&quot; height=&quot;25&quot; rx=&quot;4&quot;/&gt;&lt;path d=&quot;M6 17h28M13 5v7M27 5v7M12 23h4M20 23h4M12 28h4&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;v2-sol-k&quot;&gt;Contingent labor&lt;/span&gt;&lt;span class=&quot;v2-sol-t&quot;&gt;Temp and contract workers&lt;/span&gt;&lt;span class=&quot;v2-sol-p&quot;&gt;People for weeks or months. Jobility can be the employer of record.&lt;/span&gt;&lt;span class=&quot;v2-sol-go&quot; aria-hidden=&quot;true&quot;&gt;Explore contingent labor&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;v2-sol-card&quot;&gt;&lt;a href=&quot;gig-work.html&quot;&gt;&lt;span class=&quot;v2-sol-ic&quot;&gt;&lt;svg class=&quot;v2-ico&quot; viewBox=&quot;0 0 40 40&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.7&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;&lt;circle cx=&quot;20&quot; cy=&quot;21&quot; r=&quot;13&quot;/&gt;&lt;path d=&quot;M20 13v8l5 4M16 4h8&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;v2-sol-k&quot;&gt;Gig work&lt;/span&gt;&lt;span class=&quot;v2-sol-t&quot;&gt;Shift coverage&lt;/span&gt;&lt;span class=&quot;v2-sol-p&quot;&gt;Cover a shift or a busy week with screened workers nearby.&lt;/span&gt;&lt;span class=&quot;v2-sol-go&quot; aria-hidden=&quot;true&quot;&gt;Explore gig work&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code></pre></details>
+</article>
+<article class="lib-entry" id="v2-checks" aria-labelledby="v2-checks-h">
+<header class="lib-head"><h3 id="v2-checks-h">Check list</h3><span class="lib-id">v2</span><span class="lib-new">System v2</span></header>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>ul.v2-checks.fd-checks</code> <code>li.is-opt</code></dd><dt>Use when</dt><dd>What we check, or any list of confirmed items with one optional row.</dd><dt>Used on</dt><dd>Home (Know who you’re hiring), For workers (healthcare).</dd></dl>
+<div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>A short label in <code>b</code>, one line in <code>span</code>.</li><li><code>.is-opt</code> for anything added on request (an outlined check).</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>A check for anything Jobility has not confirmed.</li></ul></div></div>
+<p class="lib-label"><span>Desktop</span></p>
+<div class="lib-desk" data-demo="v2-checks" role="group" aria-label="Live example: Check list"><ul class="v2-checks fd-checks" role="list"><li><b>Skills</b><span>Checked against what your job needs.</span></li><li><b>Availability</b><span>Confirmed for when you need them.</span></li><li><b>Work history</b><span>Checked before a candidate reaches you.</span></li><li class="is-opt"><b>Background checks</b><span>Where you need them, through sales.</span></li></ul></div>
+<details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;ul class=&quot;v2-checks fd-checks&quot; role=&quot;list&quot;&gt;&lt;li&gt;&lt;b&gt;Skills&lt;/b&gt;&lt;span&gt;Checked against what your job needs.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Availability&lt;/b&gt;&lt;span&gt;Confirmed for when you need them.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Work history&lt;/b&gt;&lt;span&gt;Checked before a candidate reaches you.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;is-opt&quot;&gt;&lt;b&gt;Background checks&lt;/b&gt;&lt;span&gt;Where you need them, through sales.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</code></pre></details>
+</article>
+<article class="lib-entry" id="v2-hc" aria-labelledby="v2-hc-h">
+<header class="lib-head"><h3 id="v2-hc-h">Healthcare link out</h3><span class="lib-id">v2</span><span class="lib-new">System v2</span></header>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>a.v2-hc.fd-hc</code> <code>.v2-hc-ic</code> <code>.v2-hc-t</code> <code>.v2-hc-go</code> <code>.ext</code></dd><dt>Use when</dt><dd>Healthcare clicks go to Jobility Health (Nov 5 call). One strip per page at most.</dd><dt>Used on</dt><dd>Home, For workers, offering pages.</dd></dl>
+<div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li><code>target="_blank" rel="noopener"</code>, the sr-only “(opens in a new tab)” and the <code>.ext</code> icon.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>A healthcare link that stays on jobility.com unless Adam decides otherwise.</li></ul></div></div>
+<p class="lib-label"><span>Desktop</span></p>
+<div class="lib-desk" data-demo="v2-hc" role="group" aria-label="Live example: Healthcare link out"><a class="v2-hc fd-hc" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Healthcare facilities</b> Nurses, CNAs and allied staff, with certification and license checks included.</span><span class="v2-hc-go">Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+<details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;a class=&quot;v2-hc fd-hc&quot; href=&quot;https://jobilityhealth.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;span class=&quot;v2-hc-ic&quot;&gt;&lt;svg class=&quot;v2-ico&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.7&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;&lt;path d=&quot;M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;v2-hc-t&quot;&gt;&lt;b&gt;Healthcare facilities&lt;/b&gt; Nurses, CNAs and allied staff, with certification and license checks included.&lt;/span&gt;&lt;span class=&quot;v2-hc-go&quot;&gt;Visit Jobility Health&lt;span class=&quot;sr-only&quot;&gt; (opens in a new tab)&lt;/span&gt;&lt;svg class=&quot;ext&quot; viewBox=&quot;0 0 16 16&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;&lt;path d=&quot;M6 3.5h6.5V10M12.5 3.5L4 12&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/a&gt;</code></pre></details>
+</article>
+<article class="lib-entry" id="v2-promo" aria-labelledby="v2-promo-h">
+<header class="lib-head"><h3 id="v2-promo-h">The offer (new customers)</h3><span class="lib-id">v2</span><span class="lib-new">System v2</span></header>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>div.promo.fd-promo[role=note]</code> <code>.promo-mark</code> <code>.promo-k</code> <code>.promo-t</code> <code>.promo-fine</code></dd><dt>Use when</dt><dd>The new customer offer, in the final CTA band and on Pricing. Wording: “New customer offer” and “Your second job post is complimentary.”</dd><dt>Used on</dt><dd>Home, Pricing, Gig work, lp-post-a-job, FAQ (as text).</dd></dl>
+<div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>Sentence case label, one sentence.</li><li>Terms (review chip Q21) in <code>.promo-fine</code> once confirmed.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>Retail wording on a clean page: “free”, “2 for 1”, “BOGO”.</li></ul></div></div>
+<p class="lib-label"><span>Desktop</span></p>
+<div class="lib-desk" data-demo="v2-promo" role="group" aria-label="Live example: The offer (new customers)"><div class="promo fd-promo" role="note" aria-label="New customer offer"><span class="promo-mark" aria-hidden="true"></span><p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span></p></div></div>
+<details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;div class=&quot;promo fd-promo&quot; role=&quot;note&quot; aria-label=&quot;New customer offer&quot;&gt;&lt;span class=&quot;promo-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;p&gt;&lt;span class=&quot;promo-k&quot;&gt;New customer offer&lt;/span&gt;&lt;span class=&quot;promo-t&quot;&gt;Your second job post is complimentary.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</code></pre></details>
+</article>
+<article class="lib-entry" id="v2-calc" aria-labelledby="v2-calc-h">
+<header class="lib-head"><h3 id="v2-calc-h">Calculator: one hire, three ways</h3><span class="lib-id">v2</span><span class="lib-new">System v2</span></header>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>div.qq.qq--v2.fd-calc3[data-quote][data-layout=a|b]</code> <code>.qq-switch</code> <code>details.qq-own.fd-own</code> <code>[data-own=total|days|boards|subs|check|hours|rate]</code> <code>[data-own-reset]</code> <code>[data-own-parts-view]</code> <code>.bars--v2</code> <code>.cols3</code></dd><dt>Use when</dt><dd>What one direct hire costs with Jobility, a staffing agency (20%, SIA 2021) and on your own (SHRM average cost per hire, $4,129, and 42 days to fill; one editable figure with an optional breakdown). Layout A bars is the default; B columns behind the review switch or <code>?calc=b</code>.</dd><dt>Used on</dt><dd>Home, Direct hiring (identical, synced from <code>_lib/v2_quote_block.html</code>), Pricing.</dd></dl>
+<div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>Copy the block from <code>_lib/v2_quote_block.html</code>; give <code>qq-sal</code>, <code>qq-own-a</code> and <code>qq-fn1</code> unique ids per page.</li><li>Keep chip Q20 until Parmi’s white paper.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>Edit one page’s copy by hand: change the source and rerun <code>_lib/v2_home.py</code>.</li></ul></div></div>
+<p class="lib-label"><span>Desktop</span></p>
+<div class="lib-desk" data-demo="v2-calc" role="group" aria-label="Live example: Calculator: one hire, three ways"><div class="lib-calc">    <div class="qq qq--v2 fd-calc3" data-quote data-layout="a">
+      <div class="qq-switch fd-calc-layout" role="group" aria-label="For review: calculator layout">
+        <span class="qq-switch-k">For review: layout</span>
+        <button type="button" data-layout-set="a" aria-pressed="true">A. Bars</button>
+        <button type="button" data-layout-set="b" aria-pressed="false">B. Side by side</button>
+      </div>
+      <div class="qq-inputs">
+        <fieldset>
+          <legend class="label">Role type</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="role-v2lib" value="labor" checked><span>General labor</span></label>
+            <label class="choice"><input type="radio" name="role-v2lib" value="it"><span>IT</span></label>
+            <label class="choice"><input type="radio" name="role-v2lib" value="hcadmin"><span>Healthcare admin</span></label>
+            <label class="choice"><input type="radio" name="role-v2lib" value="nursing"><span>Nursing and allied</span></label>
+            <label class="choice"><input type="radio" name="role-v2lib" value="adv"><span>Advanced practice</span></label>
+          </div>
+        </fieldset>
+        <div class="qq-salary">
+          <label class="label" for="qq-sal-lib">Full-time salary</label>
+          <span class="money">$<input id="qq-sal-lib" type="text" inputmode="numeric" autocomplete="off" maxlength="7" value="45,000" data-sal-num aria-describedby="qq-sal-help-lib"><span class="per" aria-hidden="true">a year</span></span>
+          <span class="qq-note" id="qq-sal-help-lib" data-sal-help>$20,000 to $200,000.</span>
+          <input class="range" type="range" min="20000" max="200000" step="1000" value="45000" data-sal-range aria-label="Full-time salary" aria-valuetext="$45,000 a year">
+        </div>
+        <fieldset>
+          <legend class="label">With Jobility, who does the work?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="who-v2lib" value="self" checked data-who><span>I post and schedule (8%)</span></label>
+            <label class="choice"><input type="radio" name="who-v2lib" value="managed" data-who><span>Jobility does the work (15%)</span></label>
+          </div>
+        </fieldset>
+        <details class="qq-own fd-own" id="qq-own-lib">
+          <summary>On your own: cost per hire</summary>
+          <div class="qq-own-body">
+            <label class="own-f own-f--total"><span>Your cost for one hire</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="total" value="4,129"></span></label>
+            <p class="qq-own-note">Starts at the SHRM average cost per hire.<sup class="fn"><a href="#qq-fn1-lib" aria-label="Source 2">2</a></sup> Use your own number if you know it. <button type="button" class="own-reset" data-own-reset hidden>Back to the SHRM average</button> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder until Parmi’s white paper</span></p>
+            <details class="qq-own-parts">
+              <summary>Or add it up yourself</summary>
+              <div class="qq-own-grid">
+                <label class="own-f"><span>Job board post fees</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="boards" placeholder="0"></span></label>
+                <label class="own-f"><span>Software, this hire’s share</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="subs" placeholder="0"></span></label>
+                <label class="own-f"><span>Background check</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="check" placeholder="0"></span></label>
+                <label class="own-f"><span>Hours your team spends screening and scheduling</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="hours" placeholder="0"><span class="per">hours</span></span></label>
+                <label class="own-f"><span>Cost of one hour of your team’s time</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="rate" placeholder="0"></span></label>
+              </div>
+              <p class="qq-own-how">Fill in any of these and we use their total instead.</p>
+            </details>
+            <label class="own-f own-f--days"><span>Days to fill the role (shown, not priced)</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="3" data-own="days" value="42"><span class="per">days</span></span></label>
+          </div>
+        </details>
+      </div>
+
+      <div class="qq-out">
+        <p class="qq-scale-h">One hire at <span data-out="salary">$45,000</span> a year</p>
+        <div class="qq-a">
+          <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, on your own, and the common agency fee">
+            <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
+            <li class="bar bar--us" data-tier="pick"><span class="bl"><b>Jobility, <span data-out="pickname">8% placement fee</span>.</b> Only if you hire.</span><span class="num" data-out="pick">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="pick" style="--s:.4"></span></span></li>
+            <li class="bar bar--agency"><span class="bl"><b>Staffing agency, 20%.</b> The most common fee.<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
+            <li class="bar bar--own"><span class="bl"><b>On your own.</b> <span data-out="ownSrc">SHRM average cost per hire</span>,<sup class="fn">2</sup> and about <span data-out="days">42</span> days to fill. <a class="tlink" href="#qq-own-lib" data-own-open>Change it</a></span><span class="num" data-out="own">$4,129</span><span class="track" aria-hidden="true"><span class="fill" data-bar="own" style="--s:.4588"></span></span></li>
+          </ul>
+          <div class="btn-row qq-cta"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
+        </div>
+        <div class="qq-b">
+          <ul class="cols3" role="list">
+            <li class="col3 col3--us">
+              <h3 class="col3-h">Jobility</h3>
+              <p class="col3-n" data-out="post">$150</p>
+              <p class="col3-sub">Pay per post, with no fee when you hire.</p>
+              <p class="col3-alt">Or pay only if you hire: <b data-out="pick">$3,600</b>, the <span data-out="pickname">8% placement fee</span>.</p>
+              <ul class="col3-get" role="list"><li>Post once, shared to 150+ job sites</li><li>AI-driven matching, and a person reviews every match</li><li>Skills, availability and work history checked</li><li>You book interviews in the portal</li></ul>
+              <a class="btn btn--primary btn--sm" href="https://enterprise.jobility.com/signup">Post a job</a>
+            </li>
+            <li class="col3">
+              <h3 class="col3-h">Staffing agency</h3>
+              <p class="col3-n" data-out="agency">$9,000</p>
+              <p class="col3-sub">20% of first-year salary, the most common fee.<sup class="fn">1</sup></p>
+              <ul class="col3-get" role="list"><li>The agency finds and screens candidates</li><li>You work through a recruiter</li><li>The fee is due when you hire</li></ul>
+            </li>
+            <li class="col3 col3--own">
+              <h3 class="col3-h">On your own</h3>
+              <p class="col3-n" data-out="own">$4,129</p>
+              <p class="col3-sub"><b class="col3-wk">About <span data-out="days">42</span> days to fill</b> <span data-out="ownSrc">SHRM average cost per hire</span>.<sup class="fn">2</sup> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder</span></p>
+              <dl class="col3-break" data-own-parts-view hidden><dt>Job board post fees</dt><dd data-out="ownBoards">$0</dd><dt>Software, this hire’s share</dt><dd data-out="ownSubs">$0</dd><dt>Background check</dt><dd data-out="ownCheck">$0</dd><dt>Your team’s time, <span data-out="hours">0</span> hours</dt><dd data-out="ownTime">$0</dd></dl>
+              <ul class="col3-get" role="list"><li>You post on each job board</li><li>You read every application</li><li>You screen and schedule</li></ul>
+              <a class="tlink" href="#qq-own-lib" data-own-open>Change it</a>
+            </li>
+          </ul>
+        </div>
+        <p class="sr-only" aria-live="polite" data-live></p>
+      </div>
+      <div class="qq-notes">
+        <p class="sales-line">Subscriptions, enterprise pricing, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
+        <p class="qq-foot" id="qq-fn1-lib"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%. Hourly roles: we convert the pay rate to a yearly amount.<br><sup class="fn">2</sup> SHRM average cost per hire, $4,129, and average time to fill, 42 days: SHRM Human Capital Benchmarking Report, 2016 (fiscal 2015 data). Not Jobility data; change it to your own figures above.</p>
+      </div>
+      <p class="qnote">Open: Q20. “On your own” starts at SHRM’s average cost per hire ($4,129) and time to fill (42 days), from SHRM’s 2016 benchmarking report, until Parmi’s white paper (Nov 5 call). One editable figure, with an optional breakdown. At $45,000 it sits above the 8% fee and under the 15% fee. Layout A or B: client to choose (switch above, review mode or ?calc=b). The $350 to $400 nursing and allied range as approved on Oct 15.</p>
+    </div></div></div>
+<details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;div class=&quot;lib-calc&quot;&gt;    &lt;div class=&quot;qq qq--v2 fd-calc3&quot; data-quote data-layout=&quot;a&quot;&gt;
+      &lt;div class=&quot;qq-switch fd-calc-layout&quot; role=&quot;group&quot; aria-label=&quot;For review: calculator layout&quot;&gt;
+        &lt;span class=&quot;qq-switch-k&quot;&gt;For review: layout&lt;/span&gt;
+        &lt;button type=&quot;button&quot; data-layout-set=&quot;a&quot; aria-pressed=&quot;true&quot;&gt;A. Bars&lt;/button&gt;
+        &lt;button type=&quot;button&quot; data-layout-set=&quot;b&quot; aria-pressed=&quot;false&quot;&gt;B. Side by side&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;qq-inputs&quot;&gt;
+        &lt;fieldset&gt;
+          &lt;legend class=&quot;label&quot;&gt;Role type&lt;/legend&gt;
+          &lt;div class=&quot;choices&quot;&gt;
+            &lt;label class=&quot;choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;role-v2lib&quot; value=&quot;labor&quot; checked&gt;&lt;span&gt;General labor&lt;/span&gt;&lt;/label&gt;
+            &lt;label class=&quot;choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;role-v2lib&quot; value=&quot;it&quot;&gt;&lt;span&gt;IT&lt;/span&gt;&lt;/label&gt;
+            &lt;label class=&quot;choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;role-v2lib&quot; value=&quot;hcadmin&quot;&gt;&lt;span&gt;Healthcare admin&lt;/span&gt;&lt;/label&gt;
+            &lt;label class=&quot;choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;role-v2lib&quot; value=&quot;nursing&quot;&gt;&lt;span&gt;Nursing and allied&lt;/span&gt;&lt;/label&gt;
+            &lt;label class=&quot;choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;role-v2lib&quot; value=&quot;adv&quot;&gt;&lt;span&gt;Advanced practice&lt;/span&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
+        &lt;div class=&quot;qq-salary&quot;&gt;
+          &lt;label class=&quot;label&quot; for=&quot;qq-sal-lib&quot;&gt;Full-time salary&lt;/label&gt;
+          &lt;span class=&quot;money&quot;&gt;$&lt;input id=&quot;qq-sal-lib&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;7&quot; value=&quot;45,000&quot; data-sal-num aria-describedby=&quot;qq-sal-help-lib&quot;&gt;&lt;span class=&quot;per&quot; aria-hidden=&quot;true&quot;&gt;a year&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;qq-note&quot; id=&quot;qq-sal-help-lib&quot; data-sal-help&gt;$20,000 to $200,000.&lt;/span&gt;
+          &lt;input class=&quot;range&quot; type=&quot;range&quot; min=&quot;20000&quot; max=&quot;200000&quot; step=&quot;1000&quot; value=&quot;45000&quot; data-sal-range aria-label=&quot;Full-time salary&quot; aria-valuetext=&quot;$45,000 a year&quot;&gt;
+        &lt;/div&gt;
+        &lt;fieldset&gt;
+          &lt;legend class=&quot;label&quot;&gt;With Jobility, who does the work?&lt;/legend&gt;
+          &lt;div class=&quot;choices&quot;&gt;
+            &lt;label class=&quot;choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;who-v2lib&quot; value=&quot;self&quot; checked data-who&gt;&lt;span&gt;I post and schedule (8%)&lt;/span&gt;&lt;/label&gt;
+            &lt;label class=&quot;choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;who-v2lib&quot; value=&quot;managed&quot; data-who&gt;&lt;span&gt;Jobility does the work (15%)&lt;/span&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
+        &lt;details class=&quot;qq-own fd-own&quot; id=&quot;qq-own-lib&quot;&gt;
+          &lt;summary&gt;On your own: cost per hire&lt;/summary&gt;
+          &lt;div class=&quot;qq-own-body&quot;&gt;
+            &lt;label class=&quot;own-f own-f--total&quot;&gt;&lt;span&gt;Your cost for one hire&lt;/span&gt;&lt;span class=&quot;money money--s&quot;&gt;$&lt;input type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;6&quot; data-own=&quot;total&quot; value=&quot;4,129&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+            &lt;p class=&quot;qq-own-note&quot;&gt;Starts at the SHRM average cost per hire.&lt;sup class=&quot;fn&quot;&gt;&lt;a href=&quot;#qq-fn1-lib&quot; aria-label=&quot;Source 2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Use your own number if you know it. &lt;button type=&quot;button&quot; class=&quot;own-reset&quot; data-own-reset hidden&gt;Back to the SHRM average&lt;/button&gt; &lt;span class=&quot;confirm qchip&quot; data-q=&quot;Q20&quot; data-clean=&quot;&quot; title=&quot;SHRM benchmark in place until Parmi’s white paper on the cost comparison&quot;&gt;Placeholder until Parmi’s white paper&lt;/span&gt;&lt;/p&gt;
+            &lt;details class=&quot;qq-own-parts&quot;&gt;
+              &lt;summary&gt;Or add it up yourself&lt;/summary&gt;
+              &lt;div class=&quot;qq-own-grid&quot;&gt;
+                &lt;label class=&quot;own-f&quot;&gt;&lt;span&gt;Job board post fees&lt;/span&gt;&lt;span class=&quot;money money--s&quot;&gt;$&lt;input type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;6&quot; data-own=&quot;boards&quot; placeholder=&quot;0&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+                &lt;label class=&quot;own-f&quot;&gt;&lt;span&gt;Software, this hire’s share&lt;/span&gt;&lt;span class=&quot;money money--s&quot;&gt;$&lt;input type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;6&quot; data-own=&quot;subs&quot; placeholder=&quot;0&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+                &lt;label class=&quot;own-f&quot;&gt;&lt;span&gt;Background check&lt;/span&gt;&lt;span class=&quot;money money--s&quot;&gt;$&lt;input type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;6&quot; data-own=&quot;check&quot; placeholder=&quot;0&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+                &lt;label class=&quot;own-f&quot;&gt;&lt;span&gt;Hours your team spends screening and scheduling&lt;/span&gt;&lt;span class=&quot;money money--s&quot;&gt;&lt;input type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;4&quot; data-own=&quot;hours&quot; placeholder=&quot;0&quot;&gt;&lt;span class=&quot;per&quot;&gt;hours&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+                &lt;label class=&quot;own-f&quot;&gt;&lt;span&gt;Cost of one hour of your team’s time&lt;/span&gt;&lt;span class=&quot;money money--s&quot;&gt;$&lt;input type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;4&quot; data-own=&quot;rate&quot; placeholder=&quot;0&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;p class=&quot;qq-own-how&quot;&gt;Fill in any of these and we use their total instead.&lt;/p&gt;
+            &lt;/details&gt;
+            &lt;label class=&quot;own-f own-f--days&quot;&gt;&lt;span&gt;Days to fill the role (shown, not priced)&lt;/span&gt;&lt;span class=&quot;money money--s&quot;&gt;&lt;input type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;3&quot; data-own=&quot;days&quot; value=&quot;42&quot;&gt;&lt;span class=&quot;per&quot;&gt;days&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;qq-out&quot;&gt;
+        &lt;p class=&quot;qq-scale-h&quot;&gt;One hire at &lt;span data-out=&quot;salary&quot;&gt;$45,000&lt;/span&gt; a year&lt;/p&gt;
+        &lt;div class=&quot;qq-a&quot;&gt;
+          &lt;ul class=&quot;bars bars--v2&quot; role=&quot;list&quot; aria-label=&quot;What one hire would cost: Jobility pay per post, the Jobility placement fee, on your own, and the common agency fee&quot;&gt;
+            &lt;li class=&quot;bar bar--us&quot; data-tier=&quot;post&quot;&gt;&lt;span class=&quot;bl&quot;&gt;&lt;b&gt;Jobility, pay per post.&lt;/b&gt; No fee when you hire.&lt;/span&gt;&lt;span class=&quot;num&quot; data-out=&quot;postbar&quot;&gt;$150&lt;/span&gt;&lt;span class=&quot;track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;fill&quot; data-bar=&quot;post&quot; style=&quot;--s:.0167&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+            &lt;li class=&quot;bar bar--us&quot; data-tier=&quot;pick&quot;&gt;&lt;span class=&quot;bl&quot;&gt;&lt;b&gt;Jobility, &lt;span data-out=&quot;pickname&quot;&gt;8% placement fee&lt;/span&gt;.&lt;/b&gt; Only if you hire.&lt;/span&gt;&lt;span class=&quot;num&quot; data-out=&quot;pick&quot;&gt;$3,600&lt;/span&gt;&lt;span class=&quot;track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;fill&quot; data-bar=&quot;pick&quot; style=&quot;--s:.4&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+            &lt;li class=&quot;bar bar--agency&quot;&gt;&lt;span class=&quot;bl&quot;&gt;&lt;b&gt;Staffing agency, 20%.&lt;/b&gt; The most common fee.&lt;sup class=&quot;fn&quot;&gt;1&lt;/sup&gt;&lt;/span&gt;&lt;span class=&quot;num&quot; data-out=&quot;agency&quot;&gt;$9,000&lt;/span&gt;&lt;span class=&quot;track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;fill&quot; data-bar=&quot;agency&quot; style=&quot;--s:1&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+            &lt;li class=&quot;bar bar--own&quot;&gt;&lt;span class=&quot;bl&quot;&gt;&lt;b&gt;On your own.&lt;/b&gt; &lt;span data-out=&quot;ownSrc&quot;&gt;SHRM average cost per hire&lt;/span&gt;,&lt;sup class=&quot;fn&quot;&gt;2&lt;/sup&gt; and about &lt;span data-out=&quot;days&quot;&gt;42&lt;/span&gt; days to fill. &lt;a class=&quot;tlink&quot; href=&quot;#qq-own-lib&quot; data-own-open&gt;Change it&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;num&quot; data-out=&quot;own&quot;&gt;$4,129&lt;/span&gt;&lt;span class=&quot;track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;fill&quot; data-bar=&quot;own&quot; style=&quot;--s:.4588&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;div class=&quot;btn-row qq-cta&quot;&gt;&lt;a class=&quot;btn btn--primary&quot; href=&quot;https://enterprise.jobility.com/signup&quot;&gt;Post a job&lt;/a&gt;&lt;a class=&quot;tlink&quot; href=&quot;pricing.html#pay-per-post&quot;&gt;See prices by role&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;qq-b&quot;&gt;
+          &lt;ul class=&quot;cols3&quot; role=&quot;list&quot;&gt;
+            &lt;li class=&quot;col3 col3--us&quot;&gt;
+              &lt;h3 class=&quot;col3-h&quot;&gt;Jobility&lt;/h3&gt;
+              &lt;p class=&quot;col3-n&quot; data-out=&quot;post&quot;&gt;$150&lt;/p&gt;
+              &lt;p class=&quot;col3-sub&quot;&gt;Pay per post, with no fee when you hire.&lt;/p&gt;
+              &lt;p class=&quot;col3-alt&quot;&gt;Or pay only if you hire: &lt;b data-out=&quot;pick&quot;&gt;$3,600&lt;/b&gt;, the &lt;span data-out=&quot;pickname&quot;&gt;8% placement fee&lt;/span&gt;.&lt;/p&gt;
+              &lt;ul class=&quot;col3-get&quot; role=&quot;list&quot;&gt;&lt;li&gt;Post once, shared to 150+ job sites&lt;/li&gt;&lt;li&gt;AI-driven matching, and a person reviews every match&lt;/li&gt;&lt;li&gt;Skills, availability and work history checked&lt;/li&gt;&lt;li&gt;You book interviews in the portal&lt;/li&gt;&lt;/ul&gt;
+              &lt;a class=&quot;btn btn--primary btn--sm&quot; href=&quot;https://enterprise.jobility.com/signup&quot;&gt;Post a job&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;col3&quot;&gt;
+              &lt;h3 class=&quot;col3-h&quot;&gt;Staffing agency&lt;/h3&gt;
+              &lt;p class=&quot;col3-n&quot; data-out=&quot;agency&quot;&gt;$9,000&lt;/p&gt;
+              &lt;p class=&quot;col3-sub&quot;&gt;20% of first-year salary, the most common fee.&lt;sup class=&quot;fn&quot;&gt;1&lt;/sup&gt;&lt;/p&gt;
+              &lt;ul class=&quot;col3-get&quot; role=&quot;list&quot;&gt;&lt;li&gt;The agency finds and screens candidates&lt;/li&gt;&lt;li&gt;You work through a recruiter&lt;/li&gt;&lt;li&gt;The fee is due when you hire&lt;/li&gt;&lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;col3 col3--own&quot;&gt;
+              &lt;h3 class=&quot;col3-h&quot;&gt;On your own&lt;/h3&gt;
+              &lt;p class=&quot;col3-n&quot; data-out=&quot;own&quot;&gt;$4,129&lt;/p&gt;
+              &lt;p class=&quot;col3-sub&quot;&gt;&lt;b class=&quot;col3-wk&quot;&gt;About &lt;span data-out=&quot;days&quot;&gt;42&lt;/span&gt; days to fill&lt;/b&gt; &lt;span data-out=&quot;ownSrc&quot;&gt;SHRM average cost per hire&lt;/span&gt;.&lt;sup class=&quot;fn&quot;&gt;2&lt;/sup&gt; &lt;span class=&quot;confirm qchip&quot; data-q=&quot;Q20&quot; data-clean=&quot;&quot; title=&quot;SHRM benchmark in place until Parmi’s white paper on the cost comparison&quot;&gt;Placeholder&lt;/span&gt;&lt;/p&gt;
+              &lt;dl class=&quot;col3-break&quot; data-own-parts-view hidden&gt;&lt;dt&gt;Job board post fees&lt;/dt&gt;&lt;dd data-out=&quot;ownBoards&quot;&gt;$0&lt;/dd&gt;&lt;dt&gt;Software, this hire’s share&lt;/dt&gt;&lt;dd data-out=&quot;ownSubs&quot;&gt;$0&lt;/dd&gt;&lt;dt&gt;Background check&lt;/dt&gt;&lt;dd data-out=&quot;ownCheck&quot;&gt;$0&lt;/dd&gt;&lt;dt&gt;Your team’s time, &lt;span data-out=&quot;hours&quot;&gt;0&lt;/span&gt; hours&lt;/dt&gt;&lt;dd data-out=&quot;ownTime&quot;&gt;$0&lt;/dd&gt;&lt;/dl&gt;
+              &lt;ul class=&quot;col3-get&quot; role=&quot;list&quot;&gt;&lt;li&gt;You post on each job board&lt;/li&gt;&lt;li&gt;You read every application&lt;/li&gt;&lt;li&gt;You screen and schedule&lt;/li&gt;&lt;/ul&gt;
+              &lt;a class=&quot;tlink&quot; href=&quot;#qq-own-lib&quot; data-own-open&gt;Change it&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;sr-only&quot; aria-live=&quot;polite&quot; data-live&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;qq-notes&quot;&gt;
+        &lt;p class=&quot;sales-line&quot;&gt;Subscriptions, enterprise pricing, background checks and extra verification: &lt;a data-topic=&quot;plan&quot; href=&quot;contact.html?topic=plan&quot;&gt;talk to sales&lt;/a&gt;.&lt;/p&gt;
+        &lt;p class=&quot;qq-foot&quot; id=&quot;qq-fn1-lib&quot;&gt;&lt;sup class=&quot;fn&quot;&gt;1&lt;/sup&gt; Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%. Hourly roles: we convert the pay rate to a yearly amount.&lt;br&gt;&lt;sup class=&quot;fn&quot;&gt;2&lt;/sup&gt; SHRM average cost per hire, $4,129, and average time to fill, 42 days: SHRM Human Capital Benchmarking Report, 2016 (fiscal 2015 data). Not Jobility data; change it to your own figures above.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;qnote&quot;&gt;Open: Q20. “On your own” starts at SHRM’s average cost per hire ($4,129) and time to fill (42 days), from SHRM’s 2016 benchmarking report, until Parmi’s white paper (Nov 5 call). One editable figure, with an optional breakdown. At $45,000 it sits above the 8% fee and under the 15% fee. Layout A or B: client to choose (switch above, review mode or ?calc=b). The $350 to $400 nursing and allied range as approved on Oct 15.&lt;/p&gt;
+    &lt;/div&gt;&lt;/div&gt;</code></pre></details>
+</article>
+</section>
 <section class="lib-group" id="foundations" aria-labelledby="foundations-h"><h2 class="h-sec" id="foundations-h">Foundations</h2><div class="lib-gintro"><p class="lede">Tokens live at the top of <code>site.css</code> (section 1). Change a value there and every page follows. Never paste a hex value into a Divi module; use the variable.</p></div>
 <article class="lib-entry" id="f-color" aria-labelledby="f-color-h">
-<header class="lib-head"><h3 id="f-color-h">Color roles and contrast</h3><span class="lib-old">From the built pages</span></header>
+<header class="lib-head"><h3 id="f-color-h">Color roles and contrast</h3><span class="lib-retired">Day Shift and the dark band retired in System v2</span><span class="lib-old">From the built pages</span></header>
 <dl class="lib-meta"><dt>Classes</dt><dd><code>--night</code> <code>--day</code> <code>--passion</code> <code>--passion-dk</code> <code>--purpose</code> <code>--energy</code> <code>--optimism</code> <code>--ink-2</code> <code>--edge</code> <code>--line</code> <code>--mist</code> <code>.on-dark</code> <code>.on-day</code></dd><dt>Use when</dt><dd>Every surface and text color. Roles are fixed: Passion is for actions, Night Shift is the ink and the one dark band, Day Shift is a warm band, never the page base.</dd><dt>Used on</dt><dd>Every page.</dd></dl>
 <div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>Body text in <code>--ink-2</code> on white or Day Shift; headings in Night Shift.</li><li>Links on a Day Shift band in Night Shift, underlined (<code>.on-day</code> does this).</li><li>On Night Shift, use Optimism for the focus ring and Day Shift for secondary text.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>Passion text on Day Shift (4.37:1) or on Night Shift (2.62:1).</li><li>Purpose or Energy for any word of text. Purpose is the j’s dot; Energy is the headline stop and the ribbon.</li><li>Day Shift as a full-page background, or a gradient anywhere except the brand line.</li></ul></div></div>
 <p class="lib-label"><span>Desktop</span></p>
@@ -1277,7 +1537,7 @@ body .lib-qdemo .qcallout{display:block!important}
 &lt;/div&gt;&lt;/section&gt;</code></pre></details>
 </article>
 <article class="lib-entry" id="c-ohero" aria-labelledby="c-ohero-h">
-<header class="lib-head"><h3 id="c-ohero-h">Offering hero with chips</h3><span class="lib-id">L3</span><span class="lib-old">From the built pages</span></header>
+<header class="lib-head"><h3 id="c-ohero-h">Offering hero with chips</h3><span class="lib-retired">Retired in System v2</span><span class="lib-id">L3</span><span class="lib-old">From the built pages</span></header>
 <dl class="lib-meta"><dt>Classes</dt><dd><code>.oh</code> <code>.oh-grid</code> <code>.oh-kind</code> <code>.oh-sub</code> <code>.oh-facts</code> <code>.oh-more</code> <code>.oh-visual</code> <code>.oh-stage</code></dd><dt>Hooks</dt><dd><code>data-hero</code> <code>[data-price]</code></dd><dt>Use when</dt><dd>The first screen of the three offering pages: mode label with icon, H1, subhead, two fact chips (who employs them, price), buttons, the page’s signature visual on the right, then the mode strip.</dd><dt>Used on</dt><dd>Direct hiring, Contingent labor, Gig work.</dd><dt>Prices</dt><dd>Chip prices read from <code>FD.PRICES</code> through <code>data-price="post.labor"</code>; the typed text is the no-JS fallback.</dd></dl>
 <div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>Chips are real text in a <code>dl</code>, not images.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>“See prices” on Contingent labor or Gig work; they use Get a quote.</li></ul></div></div>
 <p class="lib-label"><span>Desktop</span></p>
@@ -1881,14 +2141,14 @@ body .lib-qdemo .qcallout{display:block!important}
   <li class="tile"><p class="tile-n"><span data-price="post.labor">$150</span> to <span data-price="post.adv">$500</span><small>per post, by role</small></p><p class="tile-k">Pay per post.</p><p class="tile-v">Paid once, up front.</p></li>
   <li class="tile"><p class="tile-n">Talk to us.<small>Subscription</small></p><p class="tile-k">For teams that post every month.</p></li>
 </ul>
-<div class="tiles-after"><p>No charge per click or per applicant. Buy one job posting, get one free. Exclusive offer for new customers.</p><p>Temp and shift workers are quoted by the hour.</p></div></div>
+<div class="tiles-after"><p>No charge per click or per applicant. New customer offer: your second job post is complimentary.</p><p>Temp and shift workers are quoted by the hour.</p></div></div>
 <div class="lib-mob"><div class="lib-phone"><p class="lib-label"><span>Phone, 390px</span></p><div class="lib-frame" data-frame-for="pr-tiles"></div></div><div class="lib-mobnotes"><h4>What changes on a phone</h4><ul><li>Tiles stack, placement fee first.</li></ul></div></div>
 <details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;ul class=&quot;tiles&quot; role=&quot;list&quot;&gt;
   &lt;li class=&quot;tile tile--lead&quot;&gt;&lt;p class=&quot;tile-n&quot;&gt;$0 to post&lt;small&gt;8% or 15% when you hire&lt;/small&gt;&lt;/p&gt;&lt;p class=&quot;tile-k&quot;&gt;Placement fee.&lt;/p&gt;&lt;p class=&quot;tile-v&quot;&gt;You pay only if you hire.&lt;/p&gt;&lt;/li&gt;
   &lt;li class=&quot;tile&quot;&gt;&lt;p class=&quot;tile-n&quot;&gt;&lt;span data-price=&quot;post.labor&quot;&gt;$150&lt;/span&gt; to &lt;span data-price=&quot;post.adv&quot;&gt;$500&lt;/span&gt;&lt;small&gt;per post, by role&lt;/small&gt;&lt;/p&gt;&lt;p class=&quot;tile-k&quot;&gt;Pay per post.&lt;/p&gt;&lt;p class=&quot;tile-v&quot;&gt;Paid once, up front.&lt;/p&gt;&lt;/li&gt;
   &lt;li class=&quot;tile&quot;&gt;&lt;p class=&quot;tile-n&quot;&gt;Talk to us.&lt;small&gt;Subscription&lt;/small&gt;&lt;/p&gt;&lt;p class=&quot;tile-k&quot;&gt;For teams that post every month.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;tiles-after&quot;&gt;&lt;p&gt;No charge per click or per applicant. Buy one job posting, get one free. Exclusive offer for new customers.&lt;/p&gt;&lt;p&gt;Temp and shift workers are quoted by the hour.&lt;/p&gt;&lt;/div&gt;</code></pre></details>
+&lt;div class=&quot;tiles-after&quot;&gt;&lt;p&gt;No charge per click or per applicant. New customer offer: your second job post is complimentary.&lt;/p&gt;&lt;p&gt;Temp and shift workers are quoted by the hour.&lt;/p&gt;&lt;/div&gt;</code></pre></details>
 </article>
 <article class="lib-entry" id="pr-qline" aria-labelledby="pr-qline-h">
 <header class="lib-head"><h3 id="pr-qline-h">One-row quick quote</h3><span class="lib-new">New in this library</span></header>
@@ -1946,7 +2206,7 @@ body .lib-qdemo .qcallout{display:block!important}
       <dt>Price</dt><dd>From $150. <a href="#pr-table">See prices by role</a>.</dd>
       <dt>When you pay</dt><dd>Once, up front. No fee when you hire.</dd>
       <dt>What you do</dt><dd>Interviews, offer, onboarding.</dd>
-      <dt>Terms</dt><dd>The posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed. Buy one job posting, get one free. Exclusive offer for new customers.</dd>
+      <dt>Terms</dt><dd>The posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed. New customer offer: your second job post is complimentary.</dd>
     </dl>
     <div class="btn-row"><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
     <details class="details"><summary>Full details</summary><ul><li>If no one fits: <span class="confirm" data-q="Q14" title="To confirm with Jobility: Q14">talk to us and a person on our team will look at your post with you</span>.</li></ul></details>
@@ -1982,7 +2242,7 @@ body .lib-qdemo .qcallout{display:block!important}
       &lt;dt&gt;Price&lt;/dt&gt;&lt;dd&gt;From $150. &lt;a href=&quot;#pr-table&quot;&gt;See prices by role&lt;/a&gt;.&lt;/dd&gt;
       &lt;dt&gt;When you pay&lt;/dt&gt;&lt;dd&gt;Once, up front. No fee when you hire.&lt;/dd&gt;
       &lt;dt&gt;What you do&lt;/dt&gt;&lt;dd&gt;Interviews, offer, onboarding.&lt;/dd&gt;
-      &lt;dt&gt;Terms&lt;/dt&gt;&lt;dd&gt;The posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed. Buy one job posting, get one free. Exclusive offer for new customers.&lt;/dd&gt;
+      &lt;dt&gt;Terms&lt;/dt&gt;&lt;dd&gt;The posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed. New customer offer: your second job post is complimentary.&lt;/dd&gt;
     &lt;/dl&gt;
     &lt;div class=&quot;btn-row&quot;&gt;&lt;a class=&quot;btn btn--secondary&quot; href=&quot;https://enterprise.jobility.com/signup&quot;&gt;Post a job&lt;/a&gt;&lt;/div&gt;
     &lt;details class=&quot;details&quot;&gt;&lt;summary&gt;Full details&lt;/summary&gt;&lt;ul&gt;&lt;li&gt;If no one fits: &lt;span class=&quot;confirm&quot; data-q=&quot;Q14&quot; title=&quot;To confirm with Jobility: Q14&quot;&gt;talk to us and a person on our team will look at your post with you&lt;/span&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;/details&gt;
@@ -1996,7 +2256,7 @@ body .lib-qdemo .qcallout{display:block!important}
 </article>
 <article class="lib-entry" id="pr-table" aria-labelledby="pr-table-h">
 <header class="lib-head"><h3 id="pr-table-h">Price-by-role table and offer terms</h3><span class="lib-id">L16</span><span class="lib-old">From the built pages</span></header>
-<dl class="lib-meta"><dt>Classes</dt><dd><code>.ctable</code> <code>.ctable--price</code> <code>.offer-terms</code></dd><dt>Hooks</dt><dd><code>data-price=&quot;post.labor|post.it|post.hcadmin|post.nursing|post.adv&quot;</code> <code>#offer-terms</code></dd><dt>Use when</dt><dd>Directly under the pricing cards: one row per role, no empty cell. The offer block sits under the table: “Buy one job posting, get one free.” and “Exclusive offer for new customers.”, in Jobility’s words (Kim, Oct 28).</dd><dt>Used on</dt><dd>Pricing <code>#pay-per-post</code> and <code>#offer-terms</code>; Gig work (healthcare rows); the pay-per-post LP.</dd><dt>Rule</dt><dd>Use the client’s wording as written. The posting fee is described with the client’s sentence; refund terms are not spelled out (Kim, Oct 28).</dd></dl>
+<dl class="lib-meta"><dt>Classes</dt><dd><code>.ctable</code> <code>.ctable--price</code> <code>.offer-terms</code></dd><dt>Hooks</dt><dd><code>data-price=&quot;post.labor|post.it|post.hcadmin|post.nursing|post.adv&quot;</code> <code>#offer-terms</code></dd><dt>Use when</dt><dd>Directly under the pricing cards: one row per role, no empty cell. The offer block sits under the table: “New customer offer” and “Your second job post is complimentary.” (System v2, Nov 5 call; it supersedes Kim’s Oct 28 buy-one wording). Use the <code>.promo</code> component in the System v2 group.</dd><dt>Used on</dt><dd>Pricing <code>#pay-per-post</code> and <code>#offer-terms</code>; Gig work (healthcare rows); the pay-per-post LP.</dd><dt>Rule</dt><dd>Use the client’s wording as written. The posting fee is described with the client’s sentence; refund terms are not spelled out (Kim, Oct 28).</dd></dl>
 <div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>A visible caption on every price table.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>A shift rate in this table; these are post prices.</li></ul></div></div>
 <p class="lib-label"><span>Desktop</span></p>
 <div class="lib-desk" data-demo="pr-table" role="group" aria-label="Live example: Price-by-role table and offer terms"><table class="ctable ctable--price">
@@ -2011,7 +2271,7 @@ body .lib-qdemo .qcallout{display:block!important}
     <tr><th scope="row">Other roles (office, skilled trades, hospitality, retail)</th><td class="is-us" data-label="Price per post"><span class="confirm" data-q="Q14" title="To confirm with Jobility: Q14">Talk to us for a post price, or use the placement fee.</span></td></tr>
   </tbody>
 </table>
-<div class="offer-terms fd-offer" id="x-offer-terms"><h3>Buy one job posting, get one free.</h3><p>Exclusive offer for new customers, on pay per post.</p></div></div>
+<div class="offer-terms fd-offer" id="x-offer-terms"><h3>New customer offer</h3><p>Your second job post is complimentary, on pay per post.</p></div></div>
 <div class="lib-mob"><div class="lib-phone"><p class="lib-label"><span>Phone, 390px</span></p><div class="lib-frame" data-frame-for="pr-table"></div></div><div class="lib-mobnotes"><h4>What changes on a phone</h4><ul><li>Under 480px each row becomes a labeled pair.</li></ul></div></div>
 <details class="lib-code"><summary>Markup</summary><pre tabindex="0"><code>&lt;table class=&quot;ctable ctable--price&quot;&gt;
   &lt;caption&gt;Pay-per-post prices by role&lt;span&gt;One price per post, paid once when you publish.&lt;/span&gt;&lt;/caption&gt;
@@ -2025,7 +2285,7 @@ body .lib-qdemo .qcallout{display:block!important}
     &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Other roles (office, skilled trades, hospitality, retail)&lt;/th&gt;&lt;td class=&quot;is-us&quot; data-label=&quot;Price per post&quot;&gt;&lt;span class=&quot;confirm&quot; data-q=&quot;Q14&quot; title=&quot;To confirm with Jobility: Q14&quot;&gt;Talk to us for a post price, or use the placement fee.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class=&quot;offer-terms fd-offer&quot; id=&quot;x-offer-terms&quot;&gt;&lt;h3&gt;Buy one job posting, get one free.&lt;/h3&gt;&lt;p&gt;Exclusive offer for new customers, on pay per post.&lt;/p&gt;&lt;/div&gt;</code></pre></details>
+&lt;div class=&quot;offer-terms fd-offer&quot; id=&quot;x-offer-terms&quot;&gt;&lt;h3&gt;New customer offer&lt;/h3&gt;&lt;p&gt;Your second job post is complimentary, on pay per post.&lt;/p&gt;&lt;/div&gt;</code></pre></details>
 </article>
 <article class="lib-entry" id="pr-calc" aria-labelledby="pr-calc-h">
 <header class="lib-head"><h3 id="pr-calc-h">Fee calculator</h3><span class="lib-new">New in this library</span></header>
@@ -2153,7 +2413,7 @@ body .lib-qdemo .qcallout{display:block!important}
           </li>
           <li class="qq-row">
             <h3>Or pay per post</h3>
-            <p class="ans"><b><span data-out="post">$150</span> a post</b> <span data-out="postrole">for general labor and light industrial roles</span>, no fee when you hire. Buy one job posting, get one free. Exclusive offer for new customers.</p>
+            <p class="ans"><b><span data-out="post">$150</span> a post</b> <span data-out="postrole">for general labor and light industrial roles</span>, no fee when you hire. New customer offer: your second job post is complimentary.</p>
             <p class="small qq-small qonly" data-nurse hidden><span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14">We confirm the price before you pay.</span></p>
             <div class="act"><a class="btn btn--secondary" data-post-cta href="https://enterprise.jobility.com/signup">Post for $150</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
             <p class="micro qq-acct">Choose pay per post in the job wizard when you post.</p>
@@ -2219,7 +2479,7 @@ body .lib-qdemo .qcallout{display:block!important}
           &lt;/li&gt;
           &lt;li class=&quot;qq-row&quot;&gt;
             &lt;h3&gt;Or pay per post&lt;/h3&gt;
-            &lt;p class=&quot;ans&quot;&gt;&lt;b&gt;&lt;span data-out=&quot;post&quot;&gt;$150&lt;/span&gt; a post&lt;/b&gt; &lt;span data-out=&quot;postrole&quot;&gt;for general labor and light industrial roles&lt;/span&gt;, no fee when you hire. Buy one job posting, get one free. Exclusive offer for new customers.&lt;/p&gt;
+            &lt;p class=&quot;ans&quot;&gt;&lt;b&gt;&lt;span data-out=&quot;post&quot;&gt;$150&lt;/span&gt; a post&lt;/b&gt; &lt;span data-out=&quot;postrole&quot;&gt;for general labor and light industrial roles&lt;/span&gt;, no fee when you hire. New customer offer: your second job post is complimentary.&lt;/p&gt;
             &lt;p class=&quot;small qq-small qonly&quot; data-nurse hidden&gt;&lt;span class=&quot;confirm qchip&quot; data-q=&quot;Q14&quot; title=&quot;To confirm with Jobility: Q14&quot;&gt;We confirm the price before you pay.&lt;/span&gt;&lt;/p&gt;
             &lt;div class=&quot;act&quot;&gt;&lt;a class=&quot;btn btn--secondary&quot; data-post-cta href=&quot;https://enterprise.jobility.com/signup&quot;&gt;Post for $150&lt;/a&gt;&lt;a class=&quot;tlink&quot; href=&quot;pricing.html#pay-per-post&quot;&gt;See prices by role&lt;/a&gt;&lt;/div&gt;
             &lt;p class=&quot;micro qq-acct&quot;&gt;Choose pay per post in the job wizard when you post.&lt;/p&gt;
@@ -2384,7 +2644,7 @@ body .lib-qdemo .qcallout{display:block!important}
   <dt>Banned</dt><dd>Section fade-ins, hover lift, loops, parallax, auto-advancing tabs, scroll-jacking.</dd>
 </dl></div>
 <article class="lib-entry" id="m-hero" aria-labelledby="m-hero-h">
-<header class="lib-head"><h3 id="m-hero-h">Hero line (Home)</h3><span class="lib-id">L3</span><span class="lib-old">From the built pages</span></header>
+<header class="lib-head"><h3 id="m-hero-h">Hero line (Home)</h3><span class="lib-retired">Retired in System v2</span><span class="lib-id">L3</span><span class="lib-old">From the built pages</span></header>
 <dl class="lib-meta"><dt>Classes</dt><dd><code>.hh</code> <code>.hh-grid</code> <code>.hh-stage</code> <code>.hh-card</code> <code>.hh-panel</code> <code>.hh-dot</code> <code>.hh-seg</code> <code>.hh-line--d</code> <code>.hh-line--m</code></dd><dt>Hooks</dt><dd><code>.fd-hero-tl</code> <code>.fd-card</code> <code>.fd-draw</code> <code>.fd-node</code> <code>.fd-dot</code> <code>.fd-dlabel</code> <code>.fd-panel</code> <code>.fd-row</code> <code>#hh-stage</code> <code>#hh-seg</code></dd><dt>Use when</dt><dd>The Home hero only: the logo’s j drawn from the visitor’s request into a short list, the dot landing as the match count. The only auto-playing signature on the site.</dd><dt>Used on</dt><dd>Home. (On Home the section also carries <code>id="hero" data-hero</code> and the heading is the page’s h1; both are removed here so the library has one h1 and the header behaves.)</dd><dt>CTA by mode (r6)</dt><dd>Full-time: Post a job (filled) and Talk to us. Temp and Shift are quoted by the hour, so Talk to us leads and “Post a temp job” / “Post a shift” is the outlined secondary, as on the offering pages. The phone bar follows. The panel foot links each mode to its page: See direct hiring, See temp staffing, See shift coverage (<code>[data-hero-go]</code>).</dd><dt>Shift mode (R7)</dt><dd>Shift shows the same two CNAs as the Gig work hero, both Accepted, with the count reading “2 of 2 filled”, the shift’s day (7 a.m. clock-in to 7 p.m. clock-out, a neutral rule, not a second j line) and one note. The panel is full in every mode.</dd><dt>Picker CTAs (R9)</dt><dd>Full-time leads with <b>Post a job</b>. Temp and Shift lead with the outcome: <b>Get a temp rate</b> (contingent-labor.html#pricing) and <b>Get a shift rate</b> (gig-work.html#pricing), with <b>Post a temp job</b> / <b>Post a shift</b> as the outlined secondary and on the phone bar. The lede (<code>[data-hero-sub] [data-sub]</code>) and the small print (<code>[data-hero-note]</code>) follow the pick, so Temp and Shift never argue direct-hire pricing.</dd><dt>Phones and tablets (R9)</dt><dd>The static j down the panel now draws once, the first time the panel is 40% on screen: the stroke runs top to bottom in 0.9s, each bead appears as the stroke reaches its row and the count ticks 0 to 3 with it. Reduced motion, <code>?capture=1</code> or no IntersectionObserver: the finished picture. A pick before it plays settles it at once.</dd></dl>
 <dl class="lib-motion"><dt>Plays when</dt><dd>Once, when the stage is 35% in view (on phones it sits below the fold). Choosing Full-time, Temp or Shift replays it for that request: the old line retracts, the new one draws.</dd><dt>Sequence</dt><dd>About 4.3s: request card in 0.45s; the dot leads the line through the j 1.45s; the pen lifts in an arc and lands as the j’s dot; rows check in 0.2s apart while the count goes 1, 2, 3.</dd><dt>Reduced motion</dt><dd>The finished picture, instantly; the picker still swaps content.</dd><dt>Needs</dt><dd>GSAP 3.13 and DrawSVGPlugin, then <code>assets/home-hero.js</code>. Without them, or on any error, the finished picture shows. In the handoff, load GSAP after first paint or replace the draw with CSS <code>stroke-dashoffset</code>.</dd></dl>
 <div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>Keep the line in front of the request card and the dot above everything.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>A second auto-playing moment on Home.</li><li>Replay as a loop.</li></ul></div></div>
@@ -2607,7 +2867,7 @@ body .lib-qdemo .qcallout{display:block!important}
           </li>
           <li class="qq-row">
             <h3>Or pay per post</h3>
-            <p class="ans"><b><span data-out="post">$150</span> a post</b> <span data-out="postrole">for general labor and light industrial roles</span>, no fee when you hire. Buy one job posting, get one free. Exclusive offer for new customers.</p>
+            <p class="ans"><b><span data-out="post">$150</span> a post</b> <span data-out="postrole">for general labor and light industrial roles</span>, no fee when you hire. New customer offer: your second job post is complimentary.</p>
             <p class="small qq-small qonly" data-nurse hidden><span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14">We confirm the price before you pay.</span></p>
             <div class="act"><a class="btn btn--secondary" data-post-cta href="https://enterprise.jobility.com/signup">Post for $150</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
             <p class="micro qq-acct">Choose pay per post in the job wizard when you post.</p>
@@ -2671,7 +2931,7 @@ body .lib-qdemo .qcallout{display:block!important}
           &lt;/li&gt;
           &lt;li class=&quot;qq-row&quot;&gt;
             &lt;h3&gt;Or pay per post&lt;/h3&gt;
-            &lt;p class=&quot;ans&quot;&gt;&lt;b&gt;&lt;span data-out=&quot;post&quot;&gt;$150&lt;/span&gt; a post&lt;/b&gt; &lt;span data-out=&quot;postrole&quot;&gt;for general labor and light industrial roles&lt;/span&gt;, no fee when you hire. Buy one job posting, get one free. Exclusive offer for new customers.&lt;/p&gt;
+            &lt;p class=&quot;ans&quot;&gt;&lt;b&gt;&lt;span data-out=&quot;post&quot;&gt;$150&lt;/span&gt; a post&lt;/b&gt; &lt;span data-out=&quot;postrole&quot;&gt;for general labor and light industrial roles&lt;/span&gt;, no fee when you hire. New customer offer: your second job post is complimentary.&lt;/p&gt;
             &lt;p class=&quot;small qq-small qonly&quot; data-nurse hidden&gt;&lt;span class=&quot;confirm qchip&quot; data-q=&quot;Q14&quot; title=&quot;To confirm with Jobility: Q14&quot;&gt;We confirm the price before you pay.&lt;/span&gt;&lt;/p&gt;
             &lt;div class=&quot;act&quot;&gt;&lt;a class=&quot;btn btn--secondary&quot; data-post-cta href=&quot;https://enterprise.jobility.com/signup&quot;&gt;Post for $150&lt;/a&gt;&lt;a class=&quot;tlink&quot; href=&quot;pricing.html#pay-per-post&quot;&gt;See prices by role&lt;/a&gt;&lt;/div&gt;
             &lt;p class=&quot;micro qq-acct&quot;&gt;Choose pay per post in the job wizard when you post.&lt;/p&gt;
@@ -3002,7 +3262,7 @@ body .lib-qdemo .qcallout{display:block!important}
       &lt;/div&gt;</code></pre></details>
 </article>
 <article class="lib-entry" id="m-stub" aria-labelledby="m-stub-h">
-<header class="lib-head"><h3 id="m-stub-h">Pay stub: signature section (Contingent labor)</h3><span class="lib-old">From the built pages</span></header>
+<header class="lib-head"><h3 id="m-stub-h">Pay stub: signature section (Contingent labor)</h3><span class="lib-retired">Retired in System v2</span><span class="lib-old">From the built pages</span></header>
 <dl class="lib-meta"><dt>Classes</dt><dd><code>.paystub</code> <code>.stubsig</code> <code>.ps-top</code> <code>.ps-doc</code> <code>.ps-head</code> <code>.ps-id</code> <code>.ps-emp</code> <code>.ps-mark</code> <code>.ps-lines</code> <code>.ps-net</code> <code>.you-list</code> <code>.oh-stage--night</code> <code>.band-sig</code></dd><dt>Hooks</dt><dd><code>data-stub</code> <code>data-state=&quot;jobility|you&quot;</code> <code>data-say-jobility</code> <code>data-say-you</code> <code>data-seg</code> <code>data-stub-live</code> <code>.fd-stub</code> <code>.is-swap</code></dd><dt>Use when</dt><dd>The full stub, with “Whose name is on the pay stub?”, is the page’s signature section and replaces the who-handles-what table: its lines are what Jobility runs as employer; the “You run” list beside it is what stays with the business. Amounts left out on purpose. It sits on the page’s one Night Shift band (<code>.sec.on-dark.band-sig</code>) and appears nowhere else on the page.</dd><dt>Used on</dt><dd>Contingent labor slot D (#employer).</dd><dt>Net pay (R9)</dt><dd>The last line reads “For the hours you approved” in Ink 2, not a grey placeholder bar.</dd></dl>
 <dl class="lib-motion"><dt>On the toggle</dt><dd>User-triggered only. Names cross-fade 0.2s; the employer fill re-runs once.</dd><dt>Reduced motion</dt><dd>Instant swap.</dd></dl>
 <div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>One Q16 mark, on the employer. The “Run by” cells carry none; the page callout covers Q16.</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>Pay amounts or rates.</li><li>The ribbon gradient anywhere on the stub.</li></ul></div></div>
@@ -3105,7 +3365,7 @@ body .lib-qdemo .qcallout{display:block!important}
 </section>
 <section class="lib-group" id="signatures" aria-labelledby="signatures-h"><h2 class="h-sec" id="signatures-h">Offering signatures and compact rows</h2><div class="lib-gintro"><p class="lede">Each offering page carries one signature section built from its hero object, so the three pages stop sharing one skeleton. All static: the page’s one entry is in the hero.</p></div>
 <article class="lib-entry" id="s-s2d" aria-labelledby="s-s2d-h">
-<header class="lib-head"><h3 id="s-s2d-h">From short list to day one (Direct hiring)</h3><span class="lib-new">New in this library</span></header>
+<header class="lib-head"><h3 id="s-s2d-h">From short list to day one (Direct hiring)</h3><span class="lib-retired">Retired in System v2</span><span class="lib-new">New in this library</span></header>
 <dl class="lib-meta"><dt>Classes</dt><dd><code>.s2d</code> <code>.s2d-stop</code> <code>.s2d-k</code> <code>.s2d-doc</code> <code>.s2d-t</code> <code>.s2d-m</code> <code>.s2d-when</code> <code>.is-key</code> <code>.ol-k</code> <code>.ol-emp</code> <code>.ol-sign</code></dd><dt>Hooks</dt><dd><code>.fd-s2d</code></dd><dt>Use when</dt><dd>The direct hiring steps as five stops (you post, we shortlist, you interview, you offer, day one), each with the paper it puts on your desk, drawn in the offer letter’s language. It is the page’s one Night Shift band (<code>.on-dark.band-sig</code>): white paper on Night, a Day rail.</dd><dt>Used on</dt><dd>Direct hiring slot B.</dd><dt>Step 1 (R9)</dt><dd>Step 1 reads “Post once.” so every step title holds one line at 1440; the short list avatars overlap 6px with a 2px white ring.</dd></dl>
 <div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>The timing chip stays a mark until Jobility can date it (Q15).</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>The brand line or the ribbon as the rail.</li><li>Dates or days that are not confirmed.</li></ul></div></div>
 <p class="lib-label"><span>Desktop</span></p>
@@ -3249,7 +3509,7 @@ body .lib-qdemo .qcallout{display:block!important}
 </section>
 <section class="lib-group" id="offer-r5" aria-labelledby="offer-r5-h"><h2 class="h-sec" id="offer-r5-h">Offering heroes and bands (R5)</h2><div class="lib-gintro"><p class="lede">Round 5 of the offering pages. Each page opens on a Night Shift hero band whose hero object carries one piece of the j line doing one page-specific job, then one full-bleed photo band. Three surface tiers, each with one meaning: product objects keep the card and the one shadow; facts are ruled type pairs; navigation is a flat segmented bar. CSS: <code>site.css</code>, “R5 offering heroes and bands” (the last section).</p></div>
 <article class="lib-entry" id="r5-hero" aria-labelledby="r5-hero-h">
-<header class="lib-head"><h3 id="r5-hero-h">Offering hero on Night Shift, with one piece of the j line</h3><span class="lib-new">New in this library</span></header>
+<header class="lib-head"><h3 id="r5-hero-h">Offering hero on Night Shift, with one piece of the j line</h3><span class="lib-retired">Retired in System v2</span><span class="lib-new">New in this library</span></header>
 <dl class="lib-meta"><dt>Classes</dt><dd><code>.oh--night</code> <code>.on-dark</code> <code>.hd-dark</code> <code>.oj</code> <code>.oj-path</code> <code>.oj-wipe</code> <code>.oj-bead</code> <code>.oj-dot</code> <code>.sc-day</code> <code>.ol-day</code> <code>.oj-end</code></dd><dt>Hooks</dt><dd><code>data-jline=&quot;offer|roster|shift&quot;</code> <code>.fd-jline</code> <code>.fd-entry</code> <code>.fd-draw</code> <code>.fd-dot</code> <code>.fd-node</code> <code>html.fd-motion</code> <code>.oh-sub--m / .oh-sub--d</code> <code>data-v-healthcare</code> <code>html.fd-v-healthcare</code> <code>?v=healthcare</code></dd><dt>Use when</dt><dd>The first screen of Direct hiring, Contingent labor and Gig work. The header joins the band: the header markup is wrapped in <code>&lt;div class="hd-dark on-dark"&gt;</code>, which is <code>display:contents</code>, so the nav stays sticky. The hero section is <code>section.oh.oh--night.on-dark</code>; its stage has no panel of its own, so the white product objects sit straight on Night.</dd><dt>Used on</dt><dd>Direct hiring (offer letter), Contingent labor (crew roster), Gig work (shift card). Live on each page; the hero objects themselves are under Motion components.</dd><dt>The line, per page</dt><dd><b>Direct hiring:</b> it leaves the chosen person and ends under the letter’s Day one row; the line becomes the hire (phones: a hook under “Day one” in the one-line offer). <b>Contingent labor:</b> it marks This week on the roster. <b>Gig work:</b> it is the shift’s arc across the day, 7 a.m. clock-in bead to 7 p.m. clock-out dot.</dd><dt>How it is built</dt><dd><code>offering.js</code> <code>jline(host, route)</code> appends one SVG over the object and draws a cubic path in the object’s own pixels: ribbon gradient (Optimism, Energy, Purpose, Passion) along the path, a Night bead at the start where the line starts on something, the Purpose dot (the j’s dot) at the end. A ResizeObserver rebuilds it; it never redraws.</dd><dt>Facts</dt><dd><code>.oh-facts</code> on Night are ruled type pairs: a 2px Day rule, label in Day at 84%, value in white 800. No boxes.</dd><dt>Mode strip</dt><dd>On the Night band <code>.doors--strip</code> is a flat segmented bar; the current page is the Day segment.</dd><dt>Weight</dt><dd>One weight family: <code>--oj-w</code> 12px from 768px, 9px on phones (Home’s stroke is 20px). Contingent: the Week 2 to Week 3 gap opens by 22px (transform only) so the line runs clear of both rows, and the dot ends in the gutter right of the grid.</dd><dt>Phones</dt><dd>Under 768px: h1, a one-sentence lede (<code>.oh-sub--m</code>), the buttons, then the hero object. The facts dl and the long lede (<code>.oh-sub--d</code>) wait for wider screens.</dd><dt>Small print</dt><dd>One line under the hero buttons at most. Contingent and Gig work: “Tell us the roles, headcount and dates.” (hidden on phones).</dd><dt>Contingent hook (R8)</dt><dd>Along the opened This week gap, down a channel inside the card’s right edge (46px; 30px on phones) with an open top corner at the logo’s radius (up to 20px), then a bowl that runs left under week 3 and lifts as it ends between the last two columns, like the j’s tail, into the dot. It sits 16px under the cells; the grid keeps 60px under week 3 (58px on phones) so the stroke clears the footer rule by 24px or more.</dd><dt>Healthcare landing</dt><dd><code>gig-work.html?v=healthcare</code> swaps the eyebrow, headline and both ledes, and every primary on the page reads <b>Get a CNA shift rate</b> with <code>data-v-healthcare-role="cna"</code>: the hero, the final band and the phone sticky bar. Links go to <code>contact.html?topic=shift&amp;role=cna&amp;src=healthcare</code> plus any <code>utm_*</code> (<code>FD.srcQ()</code>). The inline script after the hero swaps the hero (no flash); site.js applies the variant again to anything after it (final band, sticky bar) before it writes the contact links.</dd></dl>
 <dl class="lib-motion"><dt>Entry (once, 40% in view)</dt><dd>The line is created already held (<code>is-pre is-snap</code>: transitions off for its first style resolution), so it never shows drawn and then rewinds. Direct: the letter settles, the employer fill runs, then the line wipes in (0.85s) and its dot lands. Contingent: the days fill week by week, then the line marks This week. Gig: the arc wipes in, then the slots fill. Transform only.</dd><dt>Reduced motion and failsafes</dt><dd>The finished line, no wipe. No IntersectionObserver, a late script (2.5s gate) or an object that never scrolls into view (4s): the finished picture.</dd><dt>Pick (direct)</dt><dd>The new name arrives first; 150ms later the line’s start glides to the new person over 0.3s (power2.inOut, path, bead and gradient rebuilt each frame), never a jump.</dd></dl>
 <div class="lib-dos"><div class="lib-do"><h4>Do</h4><ul><li>One line per view, on the hero object only.</li><li>Keep the line under or beside text, never through it.</li><li>AA on Night: body in Day (11:1), labels in Day at 84% (8:1 or better).</li></ul></div><div class="lib-dont"><h4>Don’t</h4><ul><li>The line on a photo, in a CTA band or on a second object on the same page.</li><li>A line that loops, pulses or redraws on interaction.</li><li>A Day panel behind the hero object on the Night band (the object is the card).</li></ul></div></div>

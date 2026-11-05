@@ -706,7 +706,20 @@
     else if(st.mode === 'parked') unpark(st);
     else if(st.mode === 'idle' && view === 'full') start(st);
   }
+  /* System v2 (Nov 2026, client call): picking a tab (click, or arrow / Home / End), including the tab already open and going
+     back to tab 1, restarts that tab from the beginning. Scrolling never restarts: off screen it parks and resumes as before.
+     A restart in view plays at once; partly in view it brings the frame into view first and plays once whole; out of view it
+     waits at its first frame and plays when the frame is whole on screen. */
+  var restartPick = false;
+  function restart(st){
+    if(!st) return;
+    build(st); st.mode = 'idle'; st.at = null; st.p.classList.remove('is-played'); reset(st);
+    if(view === 'full') start(st, 0);
+    else if(view !== 'out') frame(st);
+    ui(st);
+  }
   function onShow(st){
+    if(restartPick){ restartPick = false; picked = false; restart(st); return; }
     if(st.mode === 'playing') return;                 /* a control already started it (Watch again, a part marker) */
     if(!st.tl){ build(st); if(st.mode === 'idle') reset(st); else if(st.at != null){ st.tl.time(st.at, true); beatUI(st); } }
     if(st.mode === 'done') hold(st);
@@ -752,8 +765,11 @@
       ui(st);
     });
     Array.prototype.forEach.call(box.querySelectorAll('[role=tab]'), function(t){
-      t.addEventListener('click', function(){ picked = 2; }, true);   /* 2: a tab pick may scroll the frame into view; Next (true) never does */
-      t.addEventListener('keydown', function(){ picked = 2; }, true);
+      t.addEventListener('click', function(){ picked = 2; restartPick = true;
+        /* the tab already open: no panel swap, so restart it here (a swap is handled in onShow, which clears the flag) */
+        setTimeout(function(){ if(restartPick){ restartPick = false; picked = false; safe(function(){ restart(current()); }); } }, 0);
+      }, true);   /* 2: a tab pick may scroll the frame into view; Next (true) never does */
+      t.addEventListener('keydown', function(e){ picked = 2; if(/^(Arrow(Left|Right|Up|Down)|Home|End)$/.test(e.key)) restartPick = true; }, true);
     });
     Array.prototype.forEach.call(box.querySelectorAll('[data-tab-next]'), function(b){ b.addEventListener('click', function(){ picked = true; }, true); });
     /* "Watch again" on tab 3: back to tab 1 (site.js switches the tab) and play it from the start */

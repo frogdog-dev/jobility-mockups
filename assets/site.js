@@ -56,6 +56,11 @@
     salary: { min:20000, max:200000, step:1000, start:45000 },
     /* example salary each role starts at in the quote (illustrative, editable by the visitor) */
     salaryByRole: { labor:45000, it:85000, hcadmin:50000, nursing:65000, adv:125000 },
+    /* System v2 (Nov 2026, v2.1): "on your own" for one hire. Default = SHRM's average cost per hire, $4,129, and average time to
+       fill, 42 days (SHRM Human Capital Benchmarking Report, Aug 2016, fiscal 2015 data; shrm.org, "SHRM Benchmarking Report:
+       $4,129 Average Cost-per-Hire"). One editable figure; an optional breakdown (boards, subs, check, hours x rate) replaces it
+       once any part is filled. Time to fill is shown, not priced. Review chip Q20: placeholder until Parmi's white paper. */
+    own: { total:4129, days:42 },
     signup: 'https://enterprise.jobility.com/signup'   /* no query parameters (portal sign-up, 2026-10-21) */
   };
   FD.money = function(n){ return '$'+Math.round(n).toLocaleString('en-US'); };
@@ -329,61 +334,92 @@
     });
   });
 
-  /* ---- quote (L6): job = show what one direct hire would cost for the visitor's role and salary, and name the plan that
-     fits. Self-contained in div.qq[data-quote] (shared with direct-hiring.html); works with any role radios whose value is
-     a key of FD.PRICES.post, any salary pair ([data-sal-num]/[data-sal-range], or a numeric text input and a range input),
-     and an optional "who runs the interviews" pair (radios valued self / managed).
-     Q1 answered (2026-10-21): a hire from a paid post owes no placement fee, so the post sits on the one-hire scale as the
-     lowest-cost route, beside 8%, 15% and the agency's 20%. The recommendation names both honestly: the post if the role
-     fills easily, the placement fee if you want no risk (15% if Jobility does the work). Every number on screen is computed from the ONE salary on screen, every frame: a role change
-     tweens the salary (0.45s) and repaints field, header, fees and recommendation from it; slider and typing snap.
-     List prices (the post) never count through prices that do not exist: they snap with a short roll. ---- */
+  /* ---- quote (L6), System v2 (Nov 2026): one hire, three ways. Job = show what one direct hire costs with Jobility, with a
+     staffing agency and on your own, for the visitor's role and salary. Self-contained in div.qq[data-quote] (shared, identical,
+     with direct-hiring.html); also drives the one-row quote on pricing.html and the library demos. Works with any role radios
+     whose value is a key of FD.PRICES.post (or select[name=role]), any salary pair ([data-sal-num]/[data-sal-range]), an
+     optional "who does the work" pair (radios valued self / managed) and optional "on your own" assumption inputs
+     ([data-own=total|days], optional breakdown [data-own=boards|subs|check|hours|rate]; defaults in FD.PRICES.own = SHRM's
+     average cost per hire and time to fill, placeholder until Parmi's white paper; [data-own-reset], [data-own-parts-view]).
+     Every [data-out] key may appear more than once (layout A bars and layout B columns share one state). Outputs:
+     salary, post, postbar, postrole, self, managed, agency, pick (the chosen placement fee), pickname, picksub, own, ownBoards,
+     ownSubs, ownCheck, ownTime, ownSrc, hours, days, weeks. Bars: [data-bar=post|self|managed|pick|own|agency], scaled to the largest bar shown.
+     Layout: [data-layout=a|b] on the .qq; review-only switch [data-layout-set] (shown in review mode or with ?calc=a|b).
+     Every number on screen is computed from the ONE salary on screen, every frame: a role change tweens the salary (0.45s);
+     slider, typing and assumption edits snap. List prices (the post) snap with a short roll. ---- */
   FD.safe('quote', function(){
+    var qcalc = (location.search.match(/[?&]calc=([ab])\b/) || [])[1];
     $$('[data-quote]').forEach(function(qq){
-      var P = FD.PRICES, S = P.salary, DEF = P.salaryByRole || {};
+      var P = FD.PRICES, S = P.salary, DEF = P.salaryByRole || {}, OWN = P.own || {};
       var radios = $$('input[type=radio]', qq);
       var roles = radios.filter(function(i){ return !!P.post[i.value]; });
       var whos = radios.filter(function(i){ return i.value === 'self' || i.value === 'managed'; });
       var range = $('[data-sal-range]', qq) || $('input[type=range]', qq);
-      var num = $('[data-sal-num]', qq) || $('input[inputmode=numeric]', qq);
+      var num = $('[data-sal-num]', qq) || $('input[inputmode=numeric]:not([data-own])', qq);
       var help = $('[data-sal-help]', qq), helpTxt = help ? help.textContent : '';
       var live = $('[data-live]', qq), rec = $('[data-rec]', qq), nurse = $('[data-nurse]', qq), postCta = $('[data-post-cta]', qq);
-      var out = {}; $$('[data-out]', qq).forEach(function(el){ out[el.getAttribute('data-out')] = el; });
-      var bars = {}; $$('[data-bar]', qq).forEach(function(el){ bars[el.getAttribute('data-bar')] = el; });
+      var out = {}; $$('[data-out]', qq).forEach(function(el){ var k = el.getAttribute('data-out'); (out[k] = out[k] || []).push(el); });
+      var bars = {}; $$('[data-bar]', qq).forEach(function(el){ var k = el.getAttribute('data-bar'); (bars[k] = bars[k] || []).push(el); });
+      var owns = $$('[data-own]', qq);
       var tiers = $$('[data-tier]', qq);
       var rsel = $('select[name=role]', qq); if(rsel && !P.post[rsel.value]) rsel = null;   /* Buildout A: one-row quick quote */
-      var state = { role:'labor', salary:S.start, who:'self' }, shownSal = null, touched = false, lt, tw = {};
+      var state = { role:'labor', salary:S.start, who:'self', own:{} }, shownSal = null, touched = false, lt, tw = {};
+      Object.keys(OWN).forEach(function(k){ state.own[k] = OWN[k]; });
+      var PARTS = ['boards','subs','check','hours','rate'], ownMode = 'avg';   /* avg (SHRM default) | total (edited) | parts (breakdown) */
+      var partsView = $$('[data-own-parts-view]', qq), resetB = $$('[data-own-reset]', qq), totalIn = $('[data-own=total]', qq);
       function r10(n){ return Math.round(n/10)*10; }
       function clamp(n){ n = Math.round((+n||0)/S.step)*S.step; return Math.min(S.max, Math.max(S.min, n)); }
       function fmt(n){ return Math.round(n).toLocaleString('en-US'); }
       var money = FD.money;
+      function set(k, txt){ (out[k] || []).forEach(function(el){ el.textContent = txt; }); }
       function post(){ return P.post[state.role] || P.post.labor; }
       function postTxt(){ var p = post(); return p[0]===p[1] ? money(p[0]) : money(p[0])+' to '+money(p[1]); }
       function roleWords(){ var l = post()[2]; return l === 'IT' ? 'IT' : l.charAt(0).toLowerCase()+l.slice(1); }
-      function fees(sal){ var s = r10(sal); return { sal:s, post:post()[1], self:r10(s*P.placement.self), managed:r10(s*P.placement.managed), agency:r10(s*P.agency) }; }
+      function ownCost(){ var o = state.own; return { boards:+o.boards||0, subs:+o.subs||0, check:+o.check||0, time:(+o.hours||0)*(+o.rate||0) }; }
+      function partsSum(){ var oc = ownCost(); return oc.boards + oc.subs + oc.check + oc.time; }
+      function anyPart(){ return PARTS.some(function(k){ return (+state.own[k]||0) > 0; }); }
+      function ownSrc(){ return ownMode === 'parts' ? 'Your breakdown' : ownMode === 'total' ? 'Your cost per hire' : 'SHRM average cost per hire'; }
+      function fees(sal){
+        var s = r10(sal), oc = ownCost(), f = { sal:s, post:post()[1], self:r10(s*P.placement.self), managed:r10(s*P.placement.managed), agency:r10(s*P.agency) };
+        f.pick = state.who === 'managed' ? f.managed : f.self;
+        f.own = ownMode === 'parts' ? partsSum() : (+state.own.total || 0); f.oc = oc;
+        return f;
+      }
       function recHTML(f){
         return state.who === 'managed'
           ? 'Want us to do the work? <b>The 15% placement fee</b>: <b>'+money(f.managed)+'</b>, only if you hire, and we send you the candidate. Rather post and schedule yourself? Pay per post, '+postTxt()+', with no fee when you hire.'
           : 'Lowest cost if the role fills easily: <b>pay per post, '+postTxt()+'</b>, with no fee when you hire. No risk if you don’t hire: <b>the 8% placement fee</b>, <b>'+money(f.self)+'</b>, only if you hire.';
       }
       function fill(sal){ if(range) range.style.setProperty('--p', ((sal-S.min)/(S.max-S.min)*100)+'%'); }
+      function scale(f){
+        var max = 1; Object.keys(bars).forEach(function(k){ if(f[k] != null && f[k] > max) max = f[k]; });
+        Object.keys(bars).forEach(function(k){ if(f[k] != null) bars[k].forEach(function(b){ b.style.setProperty('--s', (f[k]/max).toFixed(4)); }); });
+      }
       /* one frame: everything that depends on salary, from one value */
       function frame(sal){
         var f = fees(sal);
-        ['self','managed','agency'].forEach(function(k){ if(out[k]) out[k].textContent = money(f[k]); });
-        if(out.salary) out.salary.textContent = money(f.sal);
+        ['self','managed','agency','pick','own'].forEach(function(k){ set(k, money(f[k])); });
+        set('salary', money(f.sal));
         if(rec) rec.innerHTML = recHTML(f);
         if(num && doc.activeElement !== num) num.value = fmt(f.sal);
         if(range && doc.activeElement !== range) range.value = f.sal;
-        fill(f.sal);
+        fill(f.sal); scale(f);
       }
-      function roll(el, txt){ if(!el || el.textContent === txt) return; el.textContent = txt; if(FD.reduced()) return; el.classList.remove('is-roll'); void el.offsetWidth; el.classList.add('is-roll'); }
+      function roll(k, txt){ (out[k] || []).forEach(function(el){ if(el.textContent === txt) return; el.textContent = txt; if(FD.reduced()) return; el.classList.remove('is-roll'); void el.offsetWidth; el.classList.add('is-roll'); }); }
       function paintStatic(){
-        var pt = postTxt(), f = fees(state.salary), max = f.agency || 1;
-        roll(out.post, pt); roll(out.postbar, pt);
-        if(out.postrole) out.postrole.textContent = 'for '+roleWords()+' roles';
-        Object.keys(bars).forEach(function(k){ if(f[k] != null) bars[k].style.setProperty('--s', (f[k]/max).toFixed(4)); });
-        tiers.forEach(function(t){ var k = t.getAttribute('data-tier'); t.classList.toggle('is-pick', state.who === 'managed' ? k === 'managed' : (k === 'self' || k === 'post')); });
+        var pt = postTxt(), f = fees(state.salary), oc = f.oc;
+        roll('post', pt); roll('postbar', pt);
+        set('postrole', 'for '+roleWords()+' roles');
+        set('pickname', state.who === 'managed' ? '15% placement fee' : '8% placement fee');
+        set('picksub', state.who === 'managed' ? '15% placement fee. We do the work and send you a candidate. Only if you hire.' : '8% placement fee. You post and schedule. Only if you hire.');
+        set('ownBoards', money(oc.boards)); set('ownSubs', money(oc.subs)); set('ownCheck', money(oc.check)); set('ownTime', money(oc.time));
+        set('hours', fmt(+state.own.hours || 0)); set('days', fmt(+state.own.days || 0)); set('weeks', fmt(Math.round((+state.own.days || 0)/7)));
+        set('ownSrc', ownSrc());
+        partsView.forEach(function(el){ el.hidden = ownMode !== 'parts'; });
+        resetB.forEach(function(el){ el.hidden = ownMode === 'avg'; });
+        qq.setAttribute('data-own-mode', ownMode);
+        if(totalIn && ownMode === 'parts' && doc.activeElement !== totalIn) totalIn.value = fmt(partsSum());
+        tiers.forEach(function(t){ var k = t.getAttribute('data-tier'); t.classList.toggle('is-pick', k === 'pick' || (state.who === 'managed' ? k === 'managed' : (k === 'self' || k === 'post'))); });
         if(nurse) nurse.hidden = state.role !== 'nursing';
         if(postCta) postCta.textContent = 'Post for '+pt;
         if(range){ range.setAttribute('aria-valuetext', money(state.salary)+' a year'); }
@@ -392,7 +428,7 @@
         clearTimeout(lt);
         lt = setTimeout(function(){
           var f = fees(state.salary), p = post();
-          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+'Pay per post: '+postTxt()+', no fee when you hire. '+(state.who === 'managed' ? 'Placement fee, 15%: '+money(f.managed) : 'Placement fee, 8%: '+money(f.self))+', only if you hire. Common agency fee: '+money(f.agency)+'.';
+          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+'Pay per post: '+postTxt()+', no fee when you hire. '+(state.who === 'managed' ? 'Placement fee, 15%: '+money(f.managed) : 'Placement fee, 8%: '+money(f.self))+', only if you hire. Common agency fee: '+money(f.agency)+'.'+(owns.length ? ' On your own, '+ownSrc().toLowerCase()+': '+money(f.own)+', about '+fmt(+state.own.days||0)+' days to fill.' : '');
         }, 450);
       }
       function go(how){
@@ -422,6 +458,34 @@
           num.value = fmt(state.salary); go('snap');
         });
       }
+      /* on your own: whole numbers, 0 to 99,999. The total is one editable figure (SHRM's average by default). Filling any part
+         of the optional breakdown switches the total to the sum of the parts; clearing every part returns to the total. */
+      function syncMode(){ ownMode = anyPart() ? 'parts' : (+state.own.total === OWN.total ? 'avg' : 'total'); }
+      owns.forEach(function(inp){
+        var k = inp.getAttribute('data-own');
+        if(inp.value) state.own[k] = +String(inp.value).replace(/[^0-9]/g,'') || 0;
+        else if(state.own[k] != null && PARTS.indexOf(k) < 0) inp.value = fmt(state.own[k]);
+        inp.addEventListener('input', function(){
+          var v = String(inp.value).replace(/[^0-9]/g,'');
+          state.own[k] = Math.min(99999, +v || 0);
+          if(k === 'total' && ownMode === 'parts'){ PARTS.forEach(function(pk){ state.own[pk] = 0; }); owns.forEach(function(o){ if(PARTS.indexOf(o.getAttribute('data-own')) > -1) o.value = ''; }); }
+          syncMode(); go('snap');
+        });
+        inp.addEventListener('change', function(){ if(PARTS.indexOf(k) > -1 && !(+state.own[k])) inp.value = ''; else inp.value = fmt(state.own[k]); go('snap'); });
+      });
+      syncMode();
+      resetB.forEach(function(b){ b.addEventListener('click', function(){
+        state.own.total = OWN.total; PARTS.forEach(function(pk){ state.own[pk] = 0; });
+        owns.forEach(function(o){ var k = o.getAttribute('data-own'); o.value = PARTS.indexOf(k) > -1 ? '' : fmt(state.own[k]); });
+        syncMode(); go('snap'); if(totalIn) totalIn.focus();
+      }); });
+      /* "Assumptions" link in the bars: open the disclosure and take focus to it (no jump if it is already on screen) */
+      $$('[data-own-open]', qq).forEach(function(a){ a.addEventListener('click', function(e){ var d = $('details.qq-own', qq); if(!d) return; e.preventDefault(); d.open = true; var s = $('summary', d); try{ s.focus({preventScroll:true}); }catch(x){ s.focus(); } var r = d.getBoundingClientRect(); if(r.top < 80 || r.top > innerHeight - 120) d.scrollIntoView({block:'center', behavior:FD.reduced() ? 'auto' : 'smooth'}); }); });
+      /* layout A / B (review-only switch; ?calc=a|b opens it on the clean page too) */
+      var lbtns = $$('[data-layout-set]', qq);
+      function layout(v){ qq.setAttribute('data-layout', v); lbtns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-layout-set') === v ? 'true' : 'false'); }); }
+      lbtns.forEach(function(b){ b.addEventListener('click', function(){ layout(b.getAttribute('data-layout-set')); }); });
+      if(qcalc && lbtns.length){ qq.classList.add('qq--switch-on'); layout(qcalc); }
       var checked = roles.filter(function(i){ return i.checked; })[0]; if(checked) state.role = checked.value;
       if(rsel) state.role = rsel.value;
       var w = whos.filter(function(i){ return i.checked; })[0]; if(w) state.who = w.value;

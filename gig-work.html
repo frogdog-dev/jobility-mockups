@@ -50,7 +50,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Dark theme: the hero is a Night band; .hd is display:contents, so the nav stays sticky. -->
-<div class="hd hd-dark on-dark">
+<div class="hd">
 <div class="site-util"><div class="wrap">
   <a class="u-first" data-topic="direct" href="contact.html?topic=direct">Questions? Talk to us</a>
   <a class="u-app" href="for-workers.html">Looking for work? Get the Jobility app</a>
@@ -100,7 +100,7 @@
 <!-- A. HERO (R5): Night Shift band. Healthcare-forward shift coverage. Signature: the open shift filling. The page's one
      piece of the j line (offering.js, fd-jline) is the shift's arc across the day, 7 a.m. to 7 p.m., ending on the j's
      dot at clock-out. Entry: the arc draws once, then each open slot clears and its accepted worker settles in. -->
-<section class="oh oh--night on-dark" data-hero aria-labelledby="h1">
+<section class="oh oh--v2" data-hero aria-labelledby="h1">
   <div class="wrap oh-grid">
     <div class="oh-head">
       <p class="oh-kind"><svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="21" r="13"/><path d="M20 13v8l5 4M16 4h8"/></svg><span data-v-healthcare="Healthcare shift coverage">Gig work: shift coverage</span></p>
@@ -108,15 +108,9 @@
       <p class="qnote oh-qline">January healthcare ad landing: gig-work.html?v=healthcare swaps the eyebrow, headline and lede (true claims only). Same page body.</p>
     </div>
     <div class="oh-copy">
-      <p class="oh-sub oh-sub--m" data-v-healthcare="Post an open shift, and screened CNAs and nurses nearby accept it in the app.">Post a shift, and screened workers nearby accept it in the app.</p>
-      <p class="oh-sub oh-sub--d" data-v-healthcare="Post an open shift, and screened CNAs and nurses nearby can accept it in the app. Jobility can be the employer of record: you choose it when you post, and we run payroll and taxes.">Post a shift, and screened workers nearby can accept it in the app. Jobility can be the employer of record: you choose it when you post, and we run payroll and taxes.</p>
-      <dl class="oh-facts">
-        <div><dt>Employer of record</dt><dd>Jobility, if you choose</dd></div>
-        <div><dt>Price</dt><dd><span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14">An hourly rate per shift, quoted per role</span></dd></div>
-      </dl>
+      <p class="oh-sub" data-v-healthcare="Post an open shift, and screened CNAs and nurses nearby accept it in the app. Jobility can be the employer of record.">Post a shift, and screened workers nearby accept it in the app. Jobility can be the employer of record.</p>
+      <p class="oh-price"><span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14">An hourly rate per shift, quoted per role.</span></p>
       <div class="btn-row"><a class="btn btn--primary" data-v-healthcare="Get a CNA shift rate" data-v-healthcare-role="cna" data-v-healthcare-topic="shift" href="#pricing">Get a shift rate</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a shift</a></div>
-      <p class="micro">Tell us the role, the ZIP and the shift length. Or post free in minutes.</p>
-      <p class="oh-more"><a href="#credentialing">What we check before a nurse or aide reaches you</a></p>
     </div>
     <div class="oh-visual">
       <div class="oh-stage shiftcard fd-shift fd-entry fd-jline" data-shiftfill data-jline="shift" role="group" aria-label="Example view: a Saturday CNA shift from 7 a.m. to 7 p.m. needing two people, accepted by two screened workers.">
@@ -128,7 +122,7 @@
           <div class="sc-day" aria-hidden="true"><span class="sc-day-l sc-day-l--in">7 a.m.<small>Clock-in</small></span><span class="sc-day-l sc-day-l--mid">1 p.m.<small>12 hours</small></span><span class="sc-day-l sc-day-l--out">7 p.m.<small>Clock-out</small></span></div>
           <ol class="sc-slots" role="list"><li class="sc-slot fd-slot">
             <div class="sc-open" aria-hidden="true"><span class="ring"></span><p>Open. Visible to screened CNAs nearby in the app.</p></div>
-            <div class="sc-filled"><span class="av" style="--bg:#FF6634" aria-hidden="true">AT</span><span><b>Ana T.</b><span class="role">CNA, 6 years</span><span class="tags"><span class="chip">Skills match</span><span class="chip">Available Sat.</span></span></span><span class="sc-state">Accepted</span></div>
+            <div class="sc-filled"><span class="av" style="--bg:#E8EEF5;--fg:#1F2C41" aria-hidden="true">AT</span><span><b>Ana T.</b><span class="role">CNA, 6 years</span><span class="tags"><span class="chip">Skills match</span><span class="chip">Available Sat.</span></span></span><span class="sc-state">Accepted</span></div>
           </li><li class="sc-slot fd-slot">
             <div class="sc-open" aria-hidden="true"><span class="ring"></span><p>Open. Visible to screened CNAs nearby in the app.</p></div>
             <div class="sc-filled"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">RD</span><span><b>Rob D.</b><span class="role">CNA, 9 years</span><span class="tags"><span class="chip">Skills match</span><span class="chip">Available Sat.</span></span></span><span class="sc-state">Accepted</span></div>
@@ -152,9 +146,6 @@
   [].forEach.call(d.querySelectorAll('[data-v-healthcare]'), function(el){ el.textContent = el.getAttribute('data-v-healthcare'); });
   [].forEach.call(d.querySelectorAll('[data-v-healthcare-role]'), function(el){ el.setAttribute('data-role', el.getAttribute('data-v-healthcare-role')); });
   d.title = 'Healthcare shift coverage: CNAs and nurses | Jobility'; })(document);</script>
-
-<!-- PHOTO BAND (R5): one full-bleed working moment per offering page, right after the hero. -->
-<figure class="pband fd-pband" style="--pos:50% 9%;--pos-m:86% 28%"><div class="pband-frame"><picture><source type="image/webp" srcset="assets/img/staffing-coordinator-800.webp 800w, assets/img/staffing-coordinator.webp 1536w, assets/img/staffing-coordinator-3072.webp 3072w" sizes="100vw"><img src="assets/img/staffing-coordinator-800.jpg" srcset="assets/img/staffing-coordinator-800.jpg 800w, assets/img/staffing-coordinator.jpg 1536w, assets/img/staffing-coordinator-3072.jpg 3072w" sizes="100vw" width="1536" height="1024" alt="A staffing coordinator on the phone updates the week’s shift board in a clinic office." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="wrap">One board for the week: open shifts, filled shifts, who is coming.</figcaption></figure>
 
 <!-- B. HOW SHIFTS WORK (#how). First for the healthcare buyer. The shift timeline carries the three steps. Static. -->
 <section class="sec" id="how" aria-labelledby="how-h">
@@ -210,18 +201,13 @@
      checks standard on healthcare roles (Kim, Oct 28); background and custom credentialing may be additional. One boxed photo: the night-shift aide. -->
 <section class="sec" id="credentialing" aria-labelledby="cred-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="cred-h">What we check before a nurse or aide reaches you</h2></div>
+    <div class="sec-head"><h2 class="h-sec" id="cred-h">What we check before a worker reaches you.</h2></div>
     <div class="vet-grid">
       <div>
-        <ul class="checks" role="list">
-          <li class="is-confirmed"><span class="ck-k">Skills</span><span class="ck-v">Checked against the role and the shift.</span></li>
-          <li class="is-confirmed"><span class="ck-k">Availability</span><span class="ck-v">Confirmed for your date and time.</span></li>
-          <li class="is-confirmed"><span class="ck-k">Work history</span><span class="ck-v">Reviewed before a worker sees your shift.</span></li>
-          <li class="is-confirmed"><span class="ck-k">Certifications and licenses</span><span class="ck-v">Standard checks, included.</span></li>
-          <li class="is-confirmed"><span class="ck-k">A person on our team</span><span class="ck-v">Reviews every match.</span></li>
-        </ul>
+        <ul class="v2-checks fd-checks" role="list"><li><b>Skills</b><span>Checked against the role and the shift.</span></li><li><b>Availability</b><span>Confirmed for your date and time.</span></li><li><b>Work history</b><span>Reviewed before a worker sees your shift.</span></li><li><b>Certifications and licenses</b><span>Standard checks, included.</span></li><li><b>A person on our team</b><span>Reviews every match.</span></li></ul>
         <p class="ck-after">Background checks and any custom or extensive credentialing may be additional.</p>
-        <p class="sec-links"><a href="how-it-works.html#healthcare">How we check healthcare workers, in full</a></p>
+        <p class="sec-links"><a href="how-it-works.html#healthcare">How we check healthcare workers</a></p>
+        <a class="v2-hc fd-hc" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Healthcare facilities</b> Nurses, CNAs and allied staff, with certification and license checks included.</span><span class="v2-hc-go">Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       </div>
       <figure class="photo fd-photo photo--portrait" style="--pos:40% 22%;--pos-m:40% 20%"><picture><source type="image/webp" srcset="assets/img/night-aide-800.webp 800w, assets/img/night-aide.webp 1536w" sizes="(min-width: 1200px) 400px, (min-width: 768px) 560px, 92vw"><img src="assets/img/night-aide-800.jpg" srcset="assets/img/night-aide-800.jpg 800w, assets/img/night-aide.jpg 1536w" sizes="(min-width: 1200px) 400px, (min-width: 768px) 560px, 92vw" width="1024" height="1536" alt="A nurse aide on the night shift stocks a supply cart in a quiet hospital corridor." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
     </div>
@@ -235,39 +221,27 @@
   <div class="wrap staff-row">
     <div>
       <h2 class="h-sec" id="hc-h">Hiring onto your staff?</h2>
-      <p class="lede" style="margin-top:18px">Post a nurse, aide or admin role and hire them directly. You pay a flat price per post, or post free and pay a placement fee only when you hire.</p>
+      <p class="lede" style="margin-top:18px">Post the role and hire directly: a flat price per post, or a placement fee only when you hire.</p>
       <p class="sec-links"><a href="direct-hiring.html">Direct hiring</a><a href="contingent-labor.html">Cover for weeks or months</a></p>
     </div>
     <div>
       <ul class="staff-prices" role="list" aria-label="Job post prices to hire onto your own staff">
-        <li><span class="sp-k">Admin, facilities and operations</span><span class="sp-v"><span data-price="post.hcadmin">$200</span></span></li>
+        <li><span class="sp-k">Healthcare admin, facilities and operations</span><span class="sp-v"><span data-price="post.hcadmin">$200</span></span></li>
         <li><span class="sp-k">Nursing and allied health</span><span class="sp-v"><span data-price="post.nursing">$350 to $400</span></span><span class="sp-n"><span class="confirm qchip" data-q="Q14" data-clean="CNAs and LPNs included." title="To confirm with Jobility: Q14, whether CNAs and LPNs count as nursing and allied">CNAs and LPNs included.</span></span></li>
         <li><span class="sp-k">Advanced practice, physicians and scientists</span><span class="sp-v"><span data-price="post.adv">$500</span></span></li>
       </ul>
-      <p class="staff-after">Or post free and pay only when you hire: <b>8%</b> of first-year salary if you post and schedule, or <b>15%</b> if we do the work and send you a candidate. Pay per post: buy one job posting, get one free. Exclusive offer for new customers.</p>
+      <p class="staff-after">Or pay nothing up front and pay only when you hire: <b>8%</b> of first-year salary if you post and schedule, or <b>15%</b> if we do the work and send you a candidate.</p>
+      <div class="promo fd-promo" role="note" aria-label="New customer offer">
+        <span class="promo-mark" aria-hidden="true"></span>
+        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span></p>
+      </div>
+      <p class="qnote">Open: Q21. The offer in our words for review (Nov 5 call). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call).</p>
       <p class="sales-line">Enterprise pricing, custom plans, background checks and custom credentialing: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
       <div class="btn-row" style="margin-top:22px"><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
     </div>
   </div>
 <div class="wrap"><p class="qnote"><span class="qnote-body">Open: Q14</span></p></div>
 </section>
-
-<!-- F. COMPARED WITH WHAT YOU USE NOW (L7). Stacks into cards under 768px. -->
-<section class="sec" aria-labelledby="cmp-h">
-  <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="cmp-h">An open shift shouldn’t mean mandatory overtime.</h2></div>
-    <table class="ctable ctable--two ctable--stack" aria-label="Compared with what you use now">
-      <thead><tr><th scope="col">The problem</th><th scope="col" class="is-us">With Jobility</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">Someone calls out and residents still need care</th><td class="is-us" data-label="With Jobility"><b class="pf">Post it once. Nearby workers see it.</b> Screened workers nearby can accept it in the app.</td></tr>
-        <tr><th scope="row">Overtime and outside fees add up</th><td class="is-us" data-label="With Jobility"><b class="pf">Pay by the hour, then hire them.</b> Cover the shift by the hour, and hire the people you trust onto your staff when you are ready.</td></tr>
-        <tr><th scope="row">Payroll and tax paperwork for someone who works a few shifts</th><td class="is-us" data-label="With Jobility"><b class="pf">On our payroll, if you choose.</b> Choose Jobility as the employer when you post.</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-
 
 <!-- I. FAQ -->
 <section class="sec" aria-labelledby="faq-h">
@@ -295,7 +269,7 @@
 </section>
 
 <!-- J. FINAL CTA with cross-links (L14). Talk to us primary, Post a shift (portal sign-up) beside it. -->
-<section class="cta-band on-dark" data-cta-final aria-labelledby="cta-h">
+<section class="cta-band" data-cta-final aria-labelledby="cta-h">
   <div class="wrap cta-grid">
     <div>
       <h2 class="h-sec" id="cta-h"><span data-v-healthcare="Cover your next CNA or nurse shift">Post your next open shift</span><span class="stop">.</span></h2>

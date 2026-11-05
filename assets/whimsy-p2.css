@@ -28,7 +28,7 @@
 .fd-gap-line{position:absolute;left:0;right:0;top:0;height:9px;border:2px solid var(--night);border-top:0;border-right:0;border-radius:0 0 0 3px;transform-origin:0 50%}
 .fd-gap-tick{position:absolute;right:0;top:0;width:2px;height:9px;background:var(--night);border-radius:0 0 1px 1px}
 .fd-gap-dot{position:absolute;left:-5px;top:-5px;z-index:1;width:10px;height:10px;border-radius:50%;background:var(--purpose);box-shadow:0 0 0 2px var(--white)}
-.fd-gap-n{display:block;text-align:right;font-size:var(--fs-15);line-height:1.3;font-weight:700;color:var(--night)}
+.fd-gap-n{display:block;text-align:right;font-size:var(--fs-15);line-height:1.3;font-weight:var(--fw-strong);color:var(--night)}
 .fd-p2-pre .fd-feebars .fill,.fd-gap-pre .fill{transform:scaleX(0)}
 .fd-p2-pre .fd-gap-line,.fd-gap-pre .fd-gap-line{transform:scaleX(0)}
 .fd-p2-pre .fd-gap-tick,.fd-p2-pre .fd-gap-dot,.fd-p2-pre .fd-gap-n,.fd-gap-pre .fd-gap-tick,.fd-gap-pre .fd-gap-dot,.fd-gap-pre .fd-gap-n{opacity:0}
@@ -60,7 +60,7 @@
 /* the brand guide's "Location" icon (Backstory), traced: Night stroke, Purpose dot */
 .fd-ed-pin{fill:none;stroke:var(--night);stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
 .fd-ed-pindot{fill:var(--purpose)}
-.fd-ed-l{position:absolute;padding:3px 9px;border-radius:6px;background:var(--white);box-shadow:0 0 0 1px var(--line);font-size:var(--fs-15);line-height:1.2;font-weight:700;color:var(--night);white-space:nowrap}
+.fd-ed-l{position:absolute;padding:3px 9px;border-radius:6px;background:var(--white);box-shadow:0 0 0 1px var(--line);font-size:var(--fs-15);line-height:1.2;font-weight:var(--fw-strong);color:var(--night);white-space:nowrap}
 .fd-ed-l--ed{left:56%;top:57%}
 .fd-ed-pinw{transform-box:fill-box;transform-origin:50% 100%}
 .fd-edison.is-pre .fd-ed-pinw{opacity:0;transform:translateY(-22px)}

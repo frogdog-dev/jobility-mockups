@@ -50,7 +50,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Dark theme: the hero is a Night band; .hd is display:contents, so the nav stays sticky. -->
-<div class="hd hd-dark on-dark">
+<div class="hd">
 <div class="site-util"><div class="wrap">
   <a class="u-first" data-topic="direct" href="contact.html?topic=direct">Questions? Talk to us</a>
   <a class="u-app" href="for-workers.html">Looking for work? Get the Jobility app</a>
@@ -100,22 +100,16 @@
 <!-- A. HERO (R5): Night Shift band. A three-week crew roster, the temp buyer's own planning object. The page's one piece
      of the j line (offering.js, fd-jline) marks "This week" on the roster. Entry: the days fill week by week, a Day fill
      marks the employer, then the line draws once under This week and stays still (about 1.9s in all). -->
-<section class="oh oh--night on-dark" data-hero aria-labelledby="h1">
+<section class="oh oh--v2" data-hero aria-labelledby="h1">
   <div class="wrap oh-grid">
     <div class="oh-head">
       <p class="oh-kind"><svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="9" width="28" height="25" rx="4"/><path d="M6 17h28M13 5v7M27 5v7M12 23h4M20 23h4M12 28h4"/></svg>Contingent labor</p>
-      <h1 class="h-page" id="h1">Temp and contract workers, with the payroll handled<span class="stop">.</span></h1>
+      <h1 class="h-page" id="h1">Temp and contract workers, payroll handled<span class="stop">.</span></h1>
     </div>
     <div class="oh-copy">
-      <p class="oh-sub oh-sub--m">We find and vet the workers. Jobility can be the employer of record.</p>
-      <p class="oh-sub oh-sub--d">Tell us the roles, headcount and dates, and Jobility finds and vets the workers. Jobility can be the employer of record: you choose it when you post, and we run payroll and taxes. You run the work, and you can hire the good ones onto your staff.</p>
-      <dl class="oh-facts">
-        <div><dt>Employer of record</dt><dd>Jobility, if you choose</dd></div>
-        <div><dt>Price</dt><dd>Quoted by the hour, per role</dd></div>
-      </dl>
+      <p class="oh-sub">Tell us the roles, headcount and dates. We find and vet the workers, and Jobility can be the employer of record.</p>
+      <p class="oh-price">Quoted by the hour, per role. You run the work.</p>
       <div class="btn-row"><a class="btn btn--primary" href="#pricing">Get a temp rate</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a temp job</a></div>
-      <p class="micro">Tell us the roles, headcount and dates. Or post free in minutes.</p>
-      <p class="oh-more"><a href="#employer">Whose name is on the pay stub?</a></p>
     </div>
     <div class="oh-visual">
       <div class="oh-stage roster fd-roster fd-entry fd-jline" data-roster data-jline="roster" role="group" aria-label="Example view: a crew roster for a six-week warehouse booking, weeks 1 to 3, with the number of temps on site each day. This week is marked. Employer of record: Jobility.">
@@ -142,17 +136,14 @@
 </div></nav></div>
 </section>
 
-<!-- PHOTO BAND (R5): one full-bleed working moment per offering page, right after the hero. -->
-<figure class="pband fd-pband" style="--pos:50% 14%;--pos-m:78% 30%"><div class="pband-frame"><picture><source type="image/webp" srcset="assets/img/foreman-overcast-800.webp 800w, assets/img/foreman-overcast.webp 1536w, assets/img/foreman-overcast-3072.webp 3072w" sizes="100vw"><img src="assets/img/foreman-overcast-800.jpg" srcset="assets/img/foreman-overcast-800.jpg 800w, assets/img/foreman-overcast.jpg 1536w, assets/img/foreman-overcast-3072.jpg 3072w" sizes="100vw" width="1536" height="1024" alt="Two construction workers in hard hats and safety vests walk a rooftop site on an overcast morning, one checking a tape measure." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="wrap">A second pair of hands for the busy weeks.</figcaption></figure>
-
 <!-- B. HOW CONTINGENT LABOR WORKS. Three static steps on ruled columns. -->
-<section class="sec" aria-labelledby="how-h">
+<section class="sec v2-steps-sec" aria-labelledby="how-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="how-h">How contingent labor works</h2></div>
-    <ol class="steps" role="list">
-      <li class="step"><span class="step-n" aria-hidden="true">1</span><h3>Tell us what you need.</h3><p>Roles, number of people, locations, start and end dates, pay rate.</p></li>
-      <li class="step"><span class="step-n" aria-hidden="true">2</span><h3>Review vetted workers.</h3><p>We match and screen workers and send you the ones who fit. You approve who starts.</p></li>
-      <li class="step"><span class="step-n" aria-hidden="true">3</span><h3>They work. You approve the hours.</h3><p>On Jobility’s payroll, we onboard them and handle the hiring paperwork.<span class="qonly"> <span class="confirm qchip" data-q="Q16" title="To confirm with Jobility: Q16, the hours and cost view">You see hours and costs by site in your portal.</span></span></p></li>
+    <div class="sec-head"><h2 class="h-sec" id="how-h">How contingent labor works.</h2></div>
+    <ol class="v2-steps fd-steps" role="list">
+      <li><span class="v2-step-n" aria-hidden="true">1</span><h3>Tell us what you need.</h3><p>Roles, headcount, sites, dates and pay rate.</p></li>
+      <li><span class="v2-step-n" aria-hidden="true">2</span><h3>Review vetted workers.</h3><p>We send you the workers who fit. You approve who starts.</p></li>
+      <li><span class="v2-step-n" aria-hidden="true">3</span><h3>They work. You approve the hours.</h3><p>On Jobility’s payroll, we handle onboarding and paperwork.<span class="qonly"> <span class="confirm qchip" data-q="Q16" title="To confirm with Jobility: Q16, the hours and cost view">You see hours and costs by site in your portal.</span></span></p></li>
     </ol>
     <p class="steps-after"><b>Want to keep someone?</b> Hire them onto your staff, with no conversion fee after 480 hours.</p>
   </div>
@@ -165,11 +156,10 @@
   <div class="wrap cover">
     <div>
       <h2 class="h-sec" id="ind-h">Temp crews for warehouses, production lines and job sites.</h2>
-      <p class="lede" style="margin-top:20px">Crews for a peak, a project or a long leave, on your site and under your foreman.</p>
+      <p class="lede" style="margin-top:20px">For a peak, a project or a long leave, on your site.</p>
       <div class="cover-roles">
         <h3>Roles we fill</h3>
         <ul class="role-rules" role="list"><li>Warehouse associates</li><li>Pickers and packers</li><li>Forklift operators</li><li>Production and line workers</li><li>General laborers</li><li>Construction helpers</li><li>Shift leads</li><li>Another role? Ask us</li></ul>
-        <p class="cover-ask">Tell us your sites, start date and headcount, and we’ll tell you whether we can meet them.</p>
         <p class="qonly"><span class="confirm qchip" data-q="Q9" title="To confirm with Jobility: Q9">Where we have workers: states or metros</span></p>
       </div>
     </div>
@@ -185,7 +175,7 @@
     <form class="rate-ask fd-rate-ask" data-layout="split" data-rate-ask data-rate-kind="temp" action="contact.html" aria-labelledby="price-h">
       <div class="ra-l">
         <div class="sec-head"><h2 class="h-sec" id="price-h">Get a temp rate for your roles.</h2>
-          <p class="lede">We quote one hourly rate per role before anyone starts, and we tell you what it covers.<span class="qonly"> Held until Q14: the rate covers <span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14">the worker’s pay, payroll taxes and Jobility’s fee as employer</span>.</span></p></div>
+          <p class="lede">One hourly rate per role, quoted before anyone starts.<span class="qonly"> Held until Q14: the rate covers <span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14">the worker’s pay, payroll taxes and Jobility’s fee as employer</span>.</span></p></div>
         <fieldset>
           <legend class="label">Which role?</legend>
           <div class="choices">
@@ -226,11 +216,11 @@
 
 <!-- D. SIGNATURE: the pay stub with its toggle, on Day Shift (the hero is the Night band now); the stub's own stage
      stays a Night panel. The toggle is user-triggered only. -->
-<section class="sec on-day band-sig" id="employer" aria-labelledby="who-h">
+<section class="sec on-day" id="employer" aria-labelledby="who-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="who-h">With Jobility as employer, you run the work.</h2></div>
     <div class="stubsig">
-      <div class="oh-stage oh-stage--night paystub fd-stub" data-stub data-state="jobility" data-say-jobility="With Jobility: Jobility is the employer on the pay stub and handles payroll, taxes and workers’ comp." data-say-you="Hiring temps yourself: your business is the employer, and every line is yours to run.">
+      <div class="oh-stage paystub fd-stub" data-stub data-state="jobility" data-say-jobility="With Jobility: Jobility is the employer on the pay stub and handles payroll, taxes and workers’ comp." data-say-you="Hiring temps yourself: your business is the employer, and every line is yours to run.">
         <div class="ps-top">
           <p class="ps-q" id="ps-q">Whose name is on the pay stub?</p>
           <div class="seg" role="radiogroup" aria-labelledby="ps-q" data-seg>
@@ -263,7 +253,7 @@
           <li>Reporting an injury on your site</li>
         </ul>
         <p class="label stub-k">Before a temp starts</p>
-        <p class="stub-checks">We check skills, availability and work history, and a person on our team reviews every match. References and background checks are added through sales.</p>
+        <p class="stub-checks">We check skills, availability and work history, and a person on our team reviews every match. Background checks through sales.</p>
         <p class="sec-links"><a href="how-it-works.html#vetting">How we vet workers</a><a href="how-it-works.html#who-employs">Who employs the worker, by mode</a></p>
       </div>
     </div>
@@ -300,11 +290,11 @@
 </section>
 
 <!-- J. FINAL CTA with cross-links (L14). Talk to us stays primary; Post a temp job goes to the portal sign-up. -->
-<section class="cta-band on-dark" data-cta-final aria-labelledby="cta-h">
+<section class="cta-band" data-cta-final aria-labelledby="cta-h">
   <div class="wrap cta-grid">
     <div>
       <h2 class="h-sec" id="cta-h">Get a rate for the workers you need<span class="stop">.</span></h2>
-      <p class="lede">Tell us the roles, headcount and dates, and we’ll come back with a rate.</p>
+      <p class="lede">Send the roles, headcount and dates. We reply with a rate.</p>
       <div class="btn-row"><a class="btn btn--primary" data-topic="temp" href="contact.html?topic=temp">Talk to us</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a temp job</a></div>
     </div>
     <div>

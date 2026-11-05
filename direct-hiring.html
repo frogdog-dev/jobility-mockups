@@ -50,7 +50,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Dark theme: the hero is a Night band; .hd is display:contents, so the nav stays sticky. -->
-<div class="hd hd-dark on-dark">
+<div class="hd">
 <div class="site-util"><div class="wrap">
   <a class="u-first" data-topic="direct" href="contact.html?topic=direct">Questions? Talk to us</a>
   <a class="u-app" href="for-workers.html">Looking for work? Get the Jobility app</a>
@@ -101,32 +101,26 @@
      piece of the j line (offering.js, fd-jline) leaves the chosen person and ends on the letter's Day one row: the line
      becomes the hire. Entry: the letter settles, a Day fill marks "Your business", then the line draws once (under 1.8s)
      and stays still. A pick moves the line's start to the new person (no redraw). -->
-<section class="oh oh--night on-dark" data-hero aria-labelledby="h1">
+<section class="oh oh--v2" data-hero aria-labelledby="h1">
   <div class="wrap oh-grid">
     <div class="oh-head">
       <p class="oh-kind"><svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="13" r="6"/><path d="M8 34c1.6-7 6.3-10 12-10s10.4 3 12 10"/></svg>Direct hiring</p>
-      <h1 class="h-page" id="h1">Hire full&#8209;time and part&#8209;time staff for less than an agency fee<span class="stop">.</span></h1>
+      <h1 class="h-page" id="h1">Hire full&#8209;time staff for less than an agency fee<span class="stop">.</span></h1>
     </div>
     <div class="oh-copy">
-      <p class="oh-sub oh-sub--m">Jobility finds, vets and shortlists candidates. You hire them onto your own payroll.</p>
-      <p class="oh-sub oh-sub--d">Post a job once. Jobility finds, vets and shortlists candidates, so you interview a few people who fit instead of sorting a pile of applicants. You hire them onto your own payroll.</p>
-      <dl class="oh-facts">
-        <div><dt>Who employs them</dt><dd>You, from day one</dd></div>
-        <div><dt>Price</dt><dd><span data-price="post.labor">$150</span> a post, or 8% or 15% of first-year salary when you hire</dd></div>
-      </dl>
+      <p class="oh-sub">Post once. AI-driven matching finds candidates, we vet and shortlist them, and you hire onto your own payroll, full&#8209;time or part&#8209;time.</p>
+      <p class="oh-price">From <span data-price="post.labor">$150</span> a post, or 8% or 15% of first-year salary only when you hire.</p>
       <div class="btn-row">
         <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>
-        <a class="btn btn--secondary" href="#pricing">See prices</a>
+        <a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
       </div>
-      <p class="post-note">Choose how you pay when you post.</p>
-      <p class="oh-more"><a data-topic="direct" href="contact.html?topic=direct">Prefer to talk? Send us a note.</a></p>
     </div>
     <div class="oh-visual">
       <div class="oh-stage offer fd-offer fd-entry fd-jline" data-offer data-jline="offer" role="group" aria-label="Example view: choose a person from a short list of three and see the offer letter your business sends them.">
         <div class="offer-top"><p class="offer-q" id="offer-q">Your shortlist: warehouse supervisor</p></div>
         <div class="offer-body">
           <div>
-            <div class="offer-list" role="radiogroup" aria-labelledby="offer-q" data-seg><button type="button" role="radio" aria-checked="true" class="offer-pick fd-pick" data-val="0" data-name="Maria R." data-start="Monday, in 2 weeks"><span class="av" style="--bg:#FF9241" aria-hidden="true">MR</span><span><b>Maria R.</b><span class="role">Shift supervisor, 7 years</span></span><span class="tags"><span class="chip">Skills match</span><span class="chip">In 2 weeks</span></span></button><button type="button" role="radio" aria-checked="false" class="offer-pick fd-pick" data-val="1" data-name="James O." data-start="Next Monday"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">JO</span><span><b>James O.</b><span class="role">Team lead, 5 years</span></span><span class="tags"><span class="chip">Skills match</span><span class="chip">Starts now</span></span></button><button type="button" role="radio" aria-checked="false" class="offer-pick fd-pick" data-val="2" data-name="Priya S." data-start="Monday, in 2 weeks"><span class="av" style="--bg:#FF6634" aria-hidden="true">PS</span><span><b>Priya S.</b><span class="role">Inventory supervisor, 4 years</span></span><span class="tags"><span class="chip">Skills match</span><span class="chip">In 2 weeks</span></span></button></div>
+            <div class="offer-list" role="radiogroup" aria-labelledby="offer-q" data-seg><button type="button" role="radio" aria-checked="true" class="offer-pick fd-pick" data-val="0" data-name="Maria R." data-start="Monday, in 2 weeks"><span class="av" style="--bg:#FCEBF2;--fg:#B8004F" aria-hidden="true">MR</span><span><b>Maria R.</b><span class="role">Shift supervisor, 7 years</span></span><span class="tags"><span class="chip">Skills match</span><span class="chip">In 2 weeks</span></span></button><button type="button" role="radio" aria-checked="false" class="offer-pick fd-pick" data-val="1" data-name="James O." data-start="Next Monday"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">JO</span><span><b>James O.</b><span class="role">Team lead, 5 years</span></span><span class="tags"><span class="chip">Skills match</span><span class="chip">Starts now</span></span></button><button type="button" role="radio" aria-checked="false" class="offer-pick fd-pick" data-val="2" data-name="Priya S." data-start="Monday, in 2 weeks"><span class="av" style="--bg:#E8EEF5;--fg:#1F2C41" aria-hidden="true">PS</span><span><b>Priya S.</b><span class="role">Inventory supervisor, 4 years</span></span><span class="tags"><span class="chip">Skills match</span><span class="chip">In 2 weeks</span></span></button></div>
             <p class="offer-hint">Choose who gets the offer.</p>
             <p class="offer-mini" aria-hidden="true">Offer goes to <b data-offer-mini>Maria R.</b> from your business. <span class="oj-end">Day one: on your payroll.</span></p>
           </div>
@@ -155,21 +149,23 @@
 </div></nav></div>
 </section>
 
-<!-- PHOTO BAND (R5): one full-bleed working moment per offering page, right after the hero. -->
-<figure class="pband fd-pband" style="--pos:50% 15%;--pos-m:56% 40%"><div class="pband-frame"><picture><source type="image/webp" srcset="assets/img/bakery-first-morning-800.webp 800w, assets/img/bakery-first-morning.webp 1536w, assets/img/bakery-first-morning-3072.webp 3072w" sizes="100vw"><img src="assets/img/bakery-first-morning-800.jpg" srcset="assets/img/bakery-first-morning-800.jpg 800w, assets/img/bakery-first-morning.jpg 1536w, assets/img/bakery-first-morning-3072.jpg 3072w" sizes="100vw" width="1536" height="1024" alt="A baker shows a new hire how the morning loaves are shaped at the bench on her first day." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="wrap">Day one: the new hire joins your team, on your payroll.</figcaption></figure>
-
 <!-- C. PRICE (#pricing). "Which plan fits you?" (L6): div.qq[data-quote] is synced from Home; the full prices live
      here, once. Every Post button goes to the portal sign-up with no parameters (Q12 answer). -->
 <section class="sec" id="pricing" aria-labelledby="price-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="price-h">What one hire costs, each way.</h2>
-      <p class="lede">Pick a role, a salary and who does the work. We’ll show what one direct hire would cost each way, and which fits.</p></div>
-    <div class="qq" data-quote>
+    <div class="sec-head"><h2 class="h-sec" id="price-h">What one hire costs, three ways.</h2>
+      <p class="lede">Pick a role and a salary. Compare Jobility with a staffing agency and with hiring on your own.</p></div>
+    <div class="qq qq--v2 fd-calc3" data-quote data-layout="a">
+      <div class="qq-switch fd-calc-layout" role="group" aria-label="For review: calculator layout">
+        <span class="qq-switch-k">For review: layout</span>
+        <button type="button" data-layout-set="a" aria-pressed="true">A. Bars</button>
+        <button type="button" data-layout-set="b" aria-pressed="false">B. Side by side</button>
+      </div>
       <div class="qq-inputs">
         <fieldset>
           <legend class="label">Role type</legend>
           <div class="choices">
-            <label class="choice"><input type="radio" name="role" value="labor" checked><span>General labor<em class="lbl-x">&nbsp;and light industrial</em></span></label>
+            <label class="choice"><input type="radio" name="role" value="labor" checked><span>General labor</span></label>
             <label class="choice"><input type="radio" name="role" value="it"><span>IT</span></label>
             <label class="choice"><input type="radio" name="role" value="hcadmin"><span>Healthcare admin</span></label>
             <label class="choice"><input type="radio" name="role" value="nursing"><span>Nursing and allied</span></label>
@@ -179,53 +175,81 @@
         <div class="qq-salary">
           <label class="label" for="qq-sal">Full-time salary</label>
           <span class="money">$<input id="qq-sal" type="text" inputmode="numeric" autocomplete="off" maxlength="7" value="45,000" data-sal-num aria-describedby="qq-sal-help"><span class="per" aria-hidden="true">a year</span></span>
-          <span class="qq-note" id="qq-sal-help" data-sal-help>$20,000 to $200,000. Each role starts at an example salary.</span>
+          <span class="qq-note" id="qq-sal-help" data-sal-help>$20,000 to $200,000.</span>
           <input class="range" type="range" min="20000" max="200000" step="1000" value="45000" data-sal-range aria-label="Full-time salary" aria-valuetext="$45,000 a year">
         </div>
         <fieldset>
-          <legend class="label">Who does the work?</legend>
+          <legend class="label">With Jobility, who does the work?</legend>
           <div class="choices">
-            <label class="choice"><input type="radio" name="who" value="self" checked data-who><span>I post and schedule</span></label>
-            <label class="choice"><input type="radio" name="who" value="managed" data-who><span>Jobility does the work</span></label>
+            <label class="choice"><input type="radio" name="who" value="self" checked data-who><span>I post and schedule (8%)</span></label>
+            <label class="choice"><input type="radio" name="who" value="managed" data-who><span>Jobility does the work (15%)</span></label>
           </div>
         </fieldset>
-        <p class="qq-rec" data-rec>Lowest cost if the role fills easily: <b>pay per post, $150</b>, with no fee when you hire. No risk if you don’t hire: <b>the 8% placement fee</b>, <b>$3,600</b>, only if you hire.</p>
+        <details class="qq-own fd-own" id="qq-own-a">
+          <summary>On your own: cost per hire</summary>
+          <div class="qq-own-body">
+            <label class="own-f own-f--total"><span>Your cost for one hire</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="total" value="4,129"></span></label>
+            <p class="qq-own-note">Starts at the SHRM average cost per hire.<sup class="fn"><a href="#qq-fn1" aria-label="Source 2">2</a></sup> Use your own number if you know it. <button type="button" class="own-reset" data-own-reset hidden>Back to the SHRM average</button> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder until Parmi’s white paper</span></p>
+            <details class="qq-own-parts">
+              <summary>Or add it up yourself</summary>
+              <div class="qq-own-grid">
+                <label class="own-f"><span>Job board post fees</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="boards" placeholder="0"></span></label>
+                <label class="own-f"><span>Software, this hire’s share</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="subs" placeholder="0"></span></label>
+                <label class="own-f"><span>Background check</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="check" placeholder="0"></span></label>
+                <label class="own-f"><span>Hours your team spends screening and scheduling</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="hours" placeholder="0"><span class="per">hours</span></span></label>
+                <label class="own-f"><span>Cost of one hour of your team’s time</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="rate" placeholder="0"></span></label>
+              </div>
+              <p class="qq-own-how">Fill in any of these and we use their total instead.</p>
+            </details>
+            <label class="own-f own-f--days"><span>Days to fill the role (shown, not priced)</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="3" data-own="days" value="42"><span class="per">days</span></span></label>
+          </div>
+        </details>
       </div>
 
       <div class="qq-out">
-        <p class="qq-scale-h">What one hire at <span data-out="salary">$45,000</span> a year costs you</p>
-        <ul class="bars" role="list" aria-label="What one hire would cost: pay per post, each placement fee, and the common agency fee">
-          <li class="bar bar--post is-pick" data-tier="post"><span class="bl"><b>Pay per post.</b> Paid up front, no fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
-          <li class="bar is-pick" data-tier="self"><span class="bl"><b>Placement fee, 8%.</b> You post and schedule.</span><span class="num" data-out="self">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="self" style="--s:.4"></span></span></li>
-          <li class="bar" data-tier="managed"><span class="bl"><b>Placement fee, 15%.</b> We do the work and send you a candidate.</span><span class="num" data-out="managed">$6,750</span><span class="track" aria-hidden="true"><span class="fill" data-bar="managed" style="--s:.75"></span></span></li>
-          <li class="bar bar--agency"><span class="bl">Common agency fee, 20%<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
-        </ul>
-        <ol class="qq-rows" role="list">
-          <li class="qq-row qq-row--lead">
-            <h3>Pay only if you hire</h3>
-            <p class="ans"><b>Placement fee.</b> Nothing up front. Hourly roles: we convert the pay rate to a yearly amount.</p>
-            <div class="act"><a class="btn btn--primary sec-cta" href="https://enterprise.jobility.com/signup">Post a job</a></div>
-          </li>
-          <li class="qq-row">
-            <h3>Or pay per post</h3>
-            <p class="ans"><b><span data-out="post">$150</span> a post</b> <span data-out="postrole">for general labor and light industrial roles</span>, no fee when you hire. Buy one job posting, get one free. Exclusive offer for new customers.</p>
-            <div class="act"><a class="btn btn--secondary" data-post-cta href="https://enterprise.jobility.com/signup">Post for $150</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
-            <p class="micro qq-acct">Choose pay per post in the job wizard when you post.</p>
-          </li>
-          <li class="qq-row">
-            <h3>Posting most months?</h3>
-            <p class="ans"><b>Subscription.</b> <a class="tlink" data-topic="plan" href="contact.html?topic=plan">Talk to us</a></p>
-          </li>
-        </ol>
+        <p class="qq-scale-h">One hire at <span data-out="salary">$45,000</span> a year</p>
+        <div class="qq-a">
+          <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, on your own, and the common agency fee">
+            <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
+            <li class="bar bar--us" data-tier="pick"><span class="bl"><b>Jobility, <span data-out="pickname">8% placement fee</span>.</b> Only if you hire.</span><span class="num" data-out="pick">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="pick" style="--s:.4"></span></span></li>
+            <li class="bar bar--agency"><span class="bl"><b>Staffing agency, 20%.</b> The most common fee.<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
+            <li class="bar bar--own"><span class="bl"><b>On your own.</b> <span data-out="ownSrc">SHRM average cost per hire</span>,<sup class="fn">2</sup> and about <span data-out="days">42</span> days to fill. <a class="tlink" href="#qq-own-a" data-own-open>Change it</a></span><span class="num" data-out="own">$4,129</span><span class="track" aria-hidden="true"><span class="fill" data-bar="own" style="--s:.4588"></span></span></li>
+          </ul>
+          <div class="btn-row qq-cta"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
+        </div>
+        <div class="qq-b">
+          <ul class="cols3" role="list">
+            <li class="col3 col3--us">
+              <h3 class="col3-h">Jobility</h3>
+              <p class="col3-n" data-out="post">$150</p>
+              <p class="col3-sub">Pay per post, with no fee when you hire.</p>
+              <p class="col3-alt">Or pay only if you hire: <b data-out="pick">$3,600</b>, the <span data-out="pickname">8% placement fee</span>.</p>
+              <ul class="col3-get" role="list"><li>Post once, shared to 150+ job sites</li><li>AI-driven matching, and a person reviews every match</li><li>Skills, availability and work history checked</li><li>You book interviews in the portal</li></ul>
+              <a class="btn btn--primary btn--sm" href="https://enterprise.jobility.com/signup">Post a job</a>
+            </li>
+            <li class="col3">
+              <h3 class="col3-h">Staffing agency</h3>
+              <p class="col3-n" data-out="agency">$9,000</p>
+              <p class="col3-sub">20% of first-year salary, the most common fee.<sup class="fn">1</sup></p>
+              <ul class="col3-get" role="list"><li>The agency finds and screens candidates</li><li>You work through a recruiter</li><li>The fee is due when you hire</li></ul>
+            </li>
+            <li class="col3 col3--own">
+              <h3 class="col3-h">On your own</h3>
+              <p class="col3-n" data-out="own">$4,129</p>
+              <p class="col3-sub"><b class="col3-wk">About <span data-out="days">42</span> days to fill</b> <span data-out="ownSrc">SHRM average cost per hire</span>.<sup class="fn">2</sup> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder</span></p>
+              <dl class="col3-break" data-own-parts-view hidden><dt>Job board post fees</dt><dd data-out="ownBoards">$0</dd><dt>Software, this hire’s share</dt><dd data-out="ownSubs">$0</dd><dt>Background check</dt><dd data-out="ownCheck">$0</dd><dt>Your team’s time, <span data-out="hours">0</span> hours</dt><dd data-out="ownTime">$0</dd></dl>
+              <ul class="col3-get" role="list"><li>You post on each job board</li><li>You read every application</li><li>You screen and schedule</li></ul>
+              <a class="tlink" href="#qq-own-a" data-own-open>Change it</a>
+            </li>
+          </ul>
+        </div>
         <p class="sr-only" aria-live="polite" data-live></p>
       </div>
       <div class="qq-notes">
-        <p class="sales-line">Enterprise pricing, custom plans, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
-        <p class="qq-more">Hiring for a role not listed? <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a>.</p>
-        <p class="qq-more"><a href="pricing.html#calculator">Compare the cost</a> with your agency&rsquo;s quote, for one hire or several.</p>
-        <p class="qq-foot"><sup class="fn">1</sup> Estimate only. Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%.</p>
+        <p class="sales-line">Subscriptions, enterprise pricing, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
+        <p class="qq-foot" id="qq-fn1"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%. Hourly roles: we convert the pay rate to a yearly amount.<br><sup class="fn">2</sup> SHRM average cost per hire, $4,129, and average time to fill, 42 days: SHRM Human Capital Benchmarking Report, 2016 (fiscal 2015 data). Not Jobility data; change it to your own figures above.</p>
       </div>
-      <p class="qnote">Published as approved on Oct 15: the $350 to $400 nursing and allied range. The offer is in Jobility’s own words (Kim, Oct 28): “Buy one job posting, get one free. Exclusive offer for new customers.”</p>
+      <p class="qnote">Open: Q20. “On your own” starts at SHRM’s average cost per hire ($4,129) and time to fill (42 days), from SHRM’s 2016 benchmarking report, until Parmi’s white paper (Nov 5 call). One editable figure, with an optional breakdown. At $45,000 it sits above the 8% fee and under the 15% fee. Layout A or B: client to choose (switch above, review mode or ?calc=b). The $350 to $400 nursing and allied range as approved on Oct 15.</p>
     </div>
   </div>
 <div class="wrap"><p class="qnote"><span class="qnote-body">Published as approved on Oct 15: posts stay live for up to 30 days or until all slots are filled.</span></p></div>
@@ -233,44 +257,15 @@
 
 <!-- B. SIGNATURE: from short list to day one, five stops in the offer letter's paper-and-ink language. On Day Shift
      (the hero is the Night band now). Static. -->
-<section class="sec on-day band-sig" id="how" aria-labelledby="how-h">
+<section class="sec on-day v2-steps-sec" id="how" aria-labelledby="how-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="how-h">From short list to day one</h2>
-      <p class="lede">How direct hiring works on Jobility. Each stop shows what lands on your desk.</p></div>
-    <ol class="s2d fd-s2d" role="list">
-      <li class="s2d-stop">
-        <span class="s2d-k">You post</span>
-        <div class="s2d-doc" aria-hidden="true"><p class="ol-k">Job post</p><p class="s2d-t">Warehouse supervisor, full-time</p><p class="s2d-m">Live up to 30 days</p></div>
-        <h3>Post once.</h3>
-        <p>Use a template or start fresh. Choose how you pay, and add the skills and requirements that matter.</p>
-      </li>
-      <li class="s2d-stop">
-        <span class="s2d-k">We shortlist</span>
-        <div class="s2d-doc" aria-hidden="true"><p class="ol-k">Short list</p><p class="s2d-avs"><span class="av" style="--bg:#FF9241">MR</span><span class="av" style="--bg:#1F2C41;--fg:#fff">JO</span><span class="av" style="--bg:#FF6634">PS</span></p><p class="s2d-m">3 screened candidates</p></div>
-        <h3>Review vetted matches.</h3>
-        <p>Candidates arrive already checked against your requirements. See their profile and resume, shortlist, and request interviews from one screen.</p>
-        <p class="s2d-when qonly"><span class="confirm qchip" data-q="Q15" title="To confirm with Jobility: Q15">Short list in [n] days</span></p>
-      </li>
-      <li class="s2d-stop">
-        <span class="s2d-k">You interview</span>
-        <div class="s2d-doc" aria-hidden="true"><p class="ol-k">Interviews</p><p class="s2d-row"><span class="av" style="--bg:#FF9241">MR</span>Requested</p><p class="s2d-row"><span class="av" style="--bg:#FF6634">PS</span>Requested</p></div>
-        <h3>Interview.</h3>
-        <p>Request interviews from your short list and meet the people who fit.</p>
-      </li>
-      <li class="s2d-stop">
-        <span class="s2d-k">You offer</span>
-        <div class="s2d-doc s2d-doc--letter" aria-hidden="true"><p class="ol-k">Offer of employment</p><p class="s2d-t">To Maria R.</p><p class="s2d-m">Employer: <span class="ol-emp">Your business</span></p></div>
-        <h3>Make an offer.</h3>
-        <p>To the person you choose, from your business.</p>
-      </li>
-      <li class="s2d-stop is-key">
-        <span class="s2d-k">Day one</span>
-        <div class="s2d-doc" aria-hidden="true"><p class="ol-k">Payroll</p><p class="s2d-t">Yours, from day one</p><div class="ol-sign"><span>Signed</span><i></i></div></div>
-        <h3>They join your payroll.</h3>
-        <p>From day one, with no markup on their wages.</p>
-      </li>
+    <div class="sec-head"><h2 class="h-sec" id="how-h">From post to day one.</h2></div>
+    <ol class="v2-steps fd-steps" role="list">
+      <li><span class="v2-step-n" aria-hidden="true">1</span><h3>Post once.</h3><p>Use a template or start fresh, and choose how you pay.</p></li>
+      <li><span class="v2-step-n" aria-hidden="true">2</span><h3>Review vetted matches.</h3><p>Candidates arrive checked against your requirements. Shortlist and request interviews from one screen.<span class="qonly"> <span class="confirm qchip" data-q="Q15" title="To confirm with Jobility: Q15">Short list in [n] days</span></span></p></li>
+      <li><span class="v2-step-n" aria-hidden="true">3</span><h3>Hire onto your payroll.</h3><p>Make the offer from your business. No markup on their wages.</p></li>
     </ol>
-    <p class="sec-links"><a href="how-it-works.html#walkthrough">See the full walkthrough</a></p>
+    <p class="links-row v2-steps-more"><a class="tlink" href="how-it-works.html#walkthrough">See the full walkthrough</a></p>
   </div>
 <div class="wrap"><p class="qnote" title="Held until Q14: one sentence with the replacement guarantee, if there is one."><span class="qnote-body">Open: Q14, Q15<span class="qnote-held">Held until Q14: one sentence with the replacement guarantee, if there is one.</span></span></p></div>
 </section>
@@ -280,17 +275,15 @@
      proves it: its three proofs are the "With Jobility" column. Ruled emphasis on that column, no tint. -->
 <section class="sec sec--cmp" aria-labelledby="cmp-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec h-triad" id="cmp-h">Smarter&nbsp;hiring. Lower&nbsp;cost. Better&nbsp;candidates.</h2>
-      <p class="lede">What you use now, and what changes with Jobility.</p></div>
+    <div class="sec-head"><h2 class="h-sec h-triad" id="cmp-h">Smarter&nbsp;hiring. Lower&nbsp;cost. Better&nbsp;candidates.</h2></div>
     <table class="ctable ctable--proof ctable--stack" aria-label="Compared with what you use now">
       <thead><tr><th scope="col">You use now</th><th scope="col">The catch</th><th scope="col" class="is-us">With Jobility</th></tr></thead>
       <tbody>
         <tr><th scope="row">A staffing agency</th><td data-label="The catch">20% of first-year salary, the most common fee<sup class="fn">1</sup></td><td class="is-us" data-label="With Jobility"><b class="pf">8% or 15%, not 20%.</b> Only if you hire, or a flat price per post.</td></tr>
         <tr><th scope="row">A job board</th><td data-label="The catch">Everyone who applies lands in your inbox, and you sort them</td><td class="is-us" data-label="With Jobility"><b class="pf">One post, one short list.</b> Candidates screened against your requirements, with interviews requested from the same screen and no charge per click or per applicant.</td></tr>
-        <tr><th scope="row">Doing it yourself</th><td data-label="The catch">Nobody runs the search but you.</td><td class="is-us" data-label="With Jobility"><b class="pf">A person reviews every match.</b> Post and schedule it yourself, or we do the work and send you a candidate.</td></tr>
+        <tr><th scope="row">Doing it yourself</th><td data-label="The catch">Nobody runs the search but you.</td><td class="is-us" data-label="With Jobility"><b class="pf">We run the search with you.</b> Post and schedule it yourself, or we do the work and send you a candidate.</td></tr>
       </tbody>
     </table>
-    <p class="ctable-after">Per hire, you pay less than you would on a job board or with a staffing agency: one price per post, with no charge per click or per applicant, so you aren’t paying several job boards and sorting applicants yourself.</p>
     <p class="small fn-src" style="margin-top:10px"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data.</p>
     <p class="sec-links"><a href="compare-staffing-agency.html">Jobility vs. a staffing agency, line by line</a></p>
   </div>
@@ -299,7 +292,7 @@
 <!-- D. WHO EMPLOYS THE WORKER (L8) and what we check (L9), as two equal ruled lists under the heading (R8). The "Jobility handles" list is the page's
      vetting list, so no second vetting section. -->
 <section class="sec on-day" aria-labelledby="who-h">
-  <div class="wrap who-pair">
+  <div class="wrap who-pair who-pair--photo">
     <div class="sec-head">
       <h2 class="h-sec" id="who-h">They work for you. We find and screen them.</h2>
       <p class="sec-links"><a href="how-it-works.html#vetting">How we vet workers</a><a href="how-it-works.html#who-employs">Who employs the worker, by mode</a></p>
@@ -308,6 +301,7 @@
       <div><h3>You handle</h3><ul role="list"><li>Interviews and the hiring decision</li><li>The job offer, payroll and benefits</li><li>Onboarding into your team</li></ul></div>
       <div><h3>Jobility handles</h3><ul role="list"><li>Finding and matching candidates</li><li>Screening for skills, availability and work history</li><li>References and background checks, when you add them through sales</li></ul></div>
     </div>
+    <figure class="who-photo"><div class="photo fd-photo" style="--pos:50% 20%;--pos-m:56% 40%"><picture><source type="image/webp" srcset="assets/img/bakery-first-morning-800.webp 800w, assets/img/bakery-first-morning.webp 1536w, assets/img/bakery-first-morning-3072.webp 3072w" sizes="(min-width: 1024px) 520px, 92vw"><img src="assets/img/bakery-first-morning-800.jpg" srcset="assets/img/bakery-first-morning-800.jpg 800w, assets/img/bakery-first-morning.jpg 1536w, assets/img/bakery-first-morning-3072.jpg 3072w" sizes="(min-width: 1024px) 520px, 92vw" width="1536" height="1024" alt="A baker shows a new hire how the morning loaves are shaped at the bench on her first day." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption>Day one: the new hire joins your team, on your payroll.</figcaption></figure>
   </div>
 <div class="wrap"><div class="proof is-live proof--one fd-proof" role="group" aria-label="From a customer"><figure class="proof-q fd-proof-q"><blockquote><p>“Found an accounting assistant who was qualified, available for a short period, and flexible with very little time to hire. The person was already screened and background checked so on-boarding was quick and easy.”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Bharat</span><span class="proof-org">Trading company</span></figcaption></figure></div>
 <p class="qnote">From jobility.com testimonials, as published; Kim, 10/28.</p></div>
@@ -320,7 +314,7 @@
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="ind-h">Roles businesses hire directly on Jobility</h2></div>
     <ul class="inds" role="list" aria-label="Industries and example roles">
-      <li><h3>Healthcare</h3><p>Nurses and allied roles, healthcare admin and advanced practice. <a href="gig-work.html#healthcare">Shift cover and healthcare post prices</a></p></li>
+      <li><h3>Healthcare</h3><p>Nurses and allied roles, healthcare admin and advanced practice. <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Hiring for a healthcare facility? Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></li>
       <li><h3>Light industrial and manufacturing</h3><p>Supervisors, leads and full-time associates.</p></li>
       <li><h3>Construction</h3><p>Site supervisors, foremen and project coordinators.</p></li>
       <li><h3>Aesthetic medicine</h3><p>Injectors, medical assistants and front-desk coordinators.</p></li>
@@ -360,15 +354,20 @@
 </section>
 
 <!-- J. FINAL CTA with cross-links (L14). -->
-<section class="cta-band on-dark" data-cta-final aria-labelledby="cta-h">
+<section class="cta-band" data-cta-final aria-labelledby="cta-h">
   <div class="wrap cta-grid">
     <div>
-      <h2 class="h-sec" id="cta-h">Make your next hire for less than a typical agency fee<span class="stop">.</span></h2>
-      <p class="lede">Post free and pay only if you hire, or pay a flat price per post.</p>
+      <h2 class="h-sec" id="cta-h">Make your next full&#8209;time hire<span class="stop">.</span></h2>
+      <p class="lede">Pay nothing up front and pay only if you hire, or pay a flat price per post.</p>
+      <div class="promo fd-promo" role="note" aria-label="New customer offer">
+        <span class="promo-mark" aria-hidden="true"></span>
+        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span></p>
+      </div>
       <div class="btn-row">
         <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>
         <a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
       </div>
+      <p class="qnote">Open: Q21. The offer in our words for review (Nov 5 call). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call).</p>
     </div>
     <div>
       <ul class="cta-cross" role="list" aria-label="Other ways to hire">

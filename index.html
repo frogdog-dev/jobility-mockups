@@ -1,63 +1,29 @@
 <!doctype html>
-<!-- oct28-answers -->
+<!-- System v2 (light), Nov 2026: Home rebuilt by _lib/v2_home.py from the V1 page (site_pre_v2light_backup/index.html) -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <!-- whimsy-p1 --><link rel="expect" href="#fd-parsed" blocking="render"><!-- /whimsy-p1 -->
 <!-- whimsy-p1 --><script>/* the site motion switch (accessibility page): calm before first paint */try{if(localStorage.getItem('fd-motion')==='off')document.documentElement.classList.add('fd-calm')}catch(e){}</script><!-- /whimsy-p1 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <link rel="icon" href="data:,">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>Jobility | Hire full-time, temp and shift workers</title>
-<meta name="description" content="Jobility is a direct hiring platform. Post a job once and get screened candidates. Job posts from $150, or a placement fee of 8% or 15%.">
+<title>Jobility | Hire vetted full-time, temp and shift workers</title>
+<meta name="description" content="Jobility is an AI-driven hiring platform. Post once and get vetted full-time, temp and shift workers, reviewed by a person on our team. Job posts from $150, or 8% or 15% only when you hire.">
 <script>
-/* Motion gate, before first paint. The finished picture is the default markup. From 1024px, when motion is allowed,
-   html.fd-motion holds only the line, beads, count and match rows back (request cards and the panel, with its
-   skeleton rows, stay visible: never a blank half). home-hero.js applies the real start state once GSAP is ready.
-   If GSAP or DrawSVG has not arrived within 1.2s, the finished picture shows and FD_LATE stops any replay.
-   ?capture=1 adds html.capture (static header, no intro) and turns on the capture check in site.js. */
-(function(d,w){ var h = d.documentElement; h.classList.add('js');
-  if(/[?&]capture=1/.test(location.search)){ h.classList.add('capture'); w.FD_LATE = 1; return; }
-  if(!w.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches || !matchMedia('(min-width: 1024px)').matches) return;
-  if(h.classList.contains('fd-calm')) return; h.classList.add('fd-motion');
-  setTimeout(function(){ if(!w.gsap || !w.DrawSVGPlugin){ h.classList.remove('fd-motion'); w.FD_LATE = 1; } }, 1200);
-})(document, window);
+/* Before first paint: html.js; ?capture=1 adds html.capture (static header, no intro motion, the capture check in site.js).
+   The hero's finished picture is the markup; home-v2.js only adds the rotating word when motion is allowed. */
+(function(d){ var h = d.documentElement; h.classList.add('js'); if(/[?&]capture=1/.test(location.search)){ h.classList.add('capture'); window.FD_LATE = 1; } })(document);
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
-<script defer src="assets/home-hero.js"></script>
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="page-home v2">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- L1 header (one markup on every page, _lib/integrate.py). Dark theme: the hero is a Night band; .hd is display:contents, so the nav stays sticky. -->
-<div class="hd hd-dark on-dark">
+<!-- L1 header (one markup on every page, _lib/integrate.py). System v2: light on every page; .hd is display:contents, so the nav stays sticky. -->
+<div class="hd">
 <div class="site-util"><div class="wrap">
   <a class="u-first" data-topic="direct" href="contact.html?topic=direct">Questions? Talk to us</a>
   <a class="u-app" href="for-workers.html">Looking for work? Get the Jobility app</a>
@@ -104,157 +70,87 @@
 
 <main id="main">
 
-<!-- 1. HERO (L3). Device: three request cards threaded by the logo's j line into the match panel, with a live picker.
-     The only auto-playing moment on the site (1024px and up). The finished picture is the default markup. -->
-<section class="hh on-dark" id="hero" data-hero aria-labelledby="h1">
-  <div class="wrap hh-grid">
-    <div class="hh-hd"><p class="hh-eyebrow fd-eyebrow">The hiring platform</p>
-    <h1 class="h-page hh-h1" id="h1">Hire vetted full&#8209;time, temp and shift workers<span class="stop">.</span></h1></div>
-    <div class="hh-copy">
-      <p class="hh-sub" data-hero-sub><span class="hh-subm on" data-sub="ft">Our software finds and screens candidates, and a person on our team reviews every match. For direct hires, pay per post from $150, or post free and pay 8% or 15% only when you hire, not the typical 20% agency fee.</span><span class="hh-subm" data-sub="temp">Tell us the roles and dates. We quote one hourly rate per role, and Jobility can be the employer of record.</span><span class="hh-subm" data-sub="shift">Post a shift, and screened workers nearby accept it in the app. One hourly rate, quoted per role.</span></p>
+<!-- 1. HERO (System v2). The message is the hero: eyebrow, H1 with one rotating role word (home-v2.js, once, never loops),
+     the line they liked as the lede, two buttons, a healthcare link out. Right: one working moment and one fact chip. White. -->
+<section class="v2-hero" id="hero" data-hero aria-labelledby="h1">
+  <div class="wrap v2-hero-grid">
+    <div class="v2-hero-copy">
+      <p class="v2-eyebrow fd-eyebrow"><span class="v2-jdot" aria-hidden="true"></span>A new kind of AI-driven hiring platform</p>
+      <h1 class="h-page v2-h1" id="h1">Hire vetted <span class="v2-rot fd-rotate" data-rotate="nurses|warehouse leads|office admins|CNAs|site supervisors|line cooks|nurses"><span class="v2-rot-w fd-rotate-w" aria-hidden="true"><span class="v2-word">nurses<span class="stop">.</span></span><svg class="v2-swash fd-swash" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="v2-rib" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FF9241"/><stop offset=".35" stop-color="#FF6634"/><stop offset=".7" stop-color="#FF3B58"/><stop offset="1" stop-color="#D3005B"/></linearGradient></defs><path d="M3 11 C 60 4, 140 4, 197 9" pathLength="1" fill="none" stroke="url(#v2-rib)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span><span class="sr-only">nurses, warehouse leads, office admins and more.</span></span></h1>
+      <p class="v2-h1-sub">Full&#8209;time, temp and shift workers.</p>
+      <p class="v2-lede">AI-driven matching finds them and a person on our team reviews every match. You save hours, and the agency fee.</p>
       <div class="btn-row">
         <a class="btn btn--primary" data-hero-cta href="https://enterprise.jobility.com/signup">Post a job</a>
         <a class="btn btn--secondary" data-hero-talk data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
       </div>
-      <p class="post-note" data-hero-note>Choose how you pay when you post.</p>
-      <p class="hh-more"><a href="#walkthrough">See how it works</a><a href="#plans">See prices</a><a href="how-it-works.html#tour">Watch the product tour</a></p>
+      <p class="v2-health fd-health"><a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Hiring nurses, CNAs or allied staff? Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
     </div>
-
-    <div class="hh-stagecol">
-      <div class="hh-try">
-        <p id="hh-q">See an example. What are you hiring for?</p>
-        <div class="hh-seg" role="radiogroup" aria-labelledby="hh-q" id="hh-seg">
-          <button type="button" role="radio" aria-checked="true" tabindex="0" data-mode="ft">Full-time</button>
-          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-mode="temp">Temp</button>
-          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-mode="shift">Shift</button>
-        </div>
-      </div>
-
-      <div class="hh-stage fd-hero-tl" id="hh-stage" role="group" aria-label="Example view: three hiring requests (a full-time hire, temp workers and a shift) joined by the Jobility line to one short list of example candidates.">
-        <!-- 1024px and up: the three requests and the line. Under 1024px the panel stands alone under the picker,
-             with a static j stroke down its left edge (built by home-hero.js). -->
-        <div class="hh-field" aria-hidden="true">
-          <ol class="hh-reqs">
-            <li class="hh-req fd-req is-on" data-mode="ft"><span class="k">Full-time hire</span><span class="t">Warehouse supervisor</span><span class="chip">8% or 15%, only if you hire</span></li>
-            <li class="hh-req fd-req" data-mode="temp"><span class="k">Temp, 6 weeks</span><span class="t">4 warehouse associates</span><span class="chip">Quoted by the hour</span></li>
-            <li class="hh-req fd-req" data-mode="shift"><span class="k">Shift, Saturday 7 a.m.</span><span class="t">CNA, 12 hours</span><span class="chip">Quoted by the hour</span></li>
-          </ol>
-          <svg class="hh-line hh-line--d" viewBox="0 0 720 560" aria-hidden="true" focusable="false">
-            <defs>
-              <mask id="hh-md" maskUnits="userSpaceOnUse" x="-60" y="-60" width="840" height="680"><path class="fd-draw" d="M268 80 C271 190 276 290 276 380 C276 466 242 516 188 516 C136 516 106 486 112 456" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/></mask>
-              <mask id="hh-md2" maskUnits="userSpaceOnUse" x="-60" y="-60" width="840" height="680"><path class="fd-draw" d="M112 456 C120 424 200 420 276 434 C334 445 380 452 380 404 L380 128 C380 102 392 88 416 88" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/></mask>
-            </defs>
-            <path class="jpath" d="M268 80 C271 190 276 290 276 380 C276 466 242 516 188 516 C136 516 106 486 112 456 C120 424 200 420 276 434 C334 445 380 452 380 404 L380 128 C380 102 392 88 416 88" fill="none" stroke="#FF3B58" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-            <g class="rib" mask="url(#hh-md)"></g><g class="rib" mask="url(#hh-md2)"></g>
-            <g class="hh-beads"><circle class="fd-node is-pick" cx="268" cy="84" r="8"/><circle class="fd-node" cx="271" cy="202" r="8"/><circle class="fd-node" cx="275" cy="320" r="8"/></g>
-          </svg>
-          <span class="hh-pen fd-pen" id="hh-pen"></span>
-        </div>
-
-        <div class="hh-panel fd-panel" id="hh-panel">
-          <div class="hh-head">
-            <p class="hh-ex"><span class="hh-for"><span class="on" data-mode="ft">Warehouse supervisor</span><span data-mode="temp">Warehouse, 6 weeks</span><span data-mode="shift">CNA, Saturday</span></span></p>
-            <!-- the line ends here: the count chip is the j's dot (desktop and phones) -->
-            <p class="hh-title fd-title"><b class="hh-n fd-dot" id="hh-n" aria-hidden="true"><span class="n">3</span></b><span class="hh-nl fd-dlabel" id="hh-nl" aria-hidden="true">vetted matches</span><span class="sr-only" data-hh-sr>3 vetted matches</span></p>
-          </div>
-          <p class="hh-lede"><span class="on">Screened against your requirements.</span><span data-finding aria-hidden="true">Finding matches</span></p>
-          <div class="hh-lists">
-            <!-- skeleton: the panel waits with three empty rows while the line finds the matches (desktop motion only) -->
-            <ul class="hh-skel" aria-hidden="true">
-              <li class="hh-row"><span class="av" aria-hidden="true">MR</span><span><b>Maria R.</b><span class="role">Shift supervisor, 7 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Starts in 2 weeks</span></span></span></li>
-              <li class="hh-row"><span class="av" aria-hidden="true">JO</span><span><b>James O.</b><span class="role">Team lead, 5 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Starts now</span></span></span></li>
-              <li class="hh-row"><span class="av" aria-hidden="true">PS</span><span><b>Priya S.</b><span class="role">Inventory supervisor, 4 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Starts in 2 weeks</span></span></span></li>
-            </ul>
-            <ul class="hh-list on" data-mode="ft">
-              <li class="hh-row fd-row"><span class="av" style="--bg:#FF9241" aria-hidden="true">MR</span><span><b>Maria R.</b><span class="role">Shift supervisor, 7 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Starts in 2 weeks</span></span></span></li>
-              <li class="hh-row fd-row"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">JO</span><span><b>James O.</b><span class="role">Team lead, 5 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Starts now</span></span></span></li>
-              <li class="hh-row fd-row"><span class="av" style="--bg:#FF6634" aria-hidden="true">PS</span><span><b>Priya S.</b><span class="role">Inventory supervisor, 4 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Starts in 2 weeks</span></span></span></li>
-            </ul>
-            <ul class="hh-list" data-mode="temp">
-              <li class="hh-row fd-row"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">DP</span><span><b>Dev P.</b><span class="role">Warehouse associate</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Free for 6 weeks</span></span></span></li>
-              <li class="hh-row fd-row"><span class="av" style="--bg:#FF9241" aria-hidden="true">ML</span><span><b>Marco L.</b><span class="role">Picker and packer</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Free for 6 weeks</span></span></span></li>
-              <li class="hh-row fd-row"><span class="av" style="--bg:#FF6634" aria-hidden="true">TW</span><span><b>Tasha W.</b><span class="role">Warehouse associate</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Free for 6 weeks</span></span></span></li>
-              <li class="hh-rest fd-row">And 1 more in your full list</li>
-            </ul>
-            <ul class="hh-list hh-list--shift" data-mode="shift">
-              <li class="hh-row fd-row"><span class="av" style="--bg:#FF6634" aria-hidden="true">AT</span><span><b>Ana T.</b><span class="role">CNA, 6 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Accepted</span></span></span></li>
-              <li class="hh-row fd-row"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">RD</span><span><b>Rob D.</b><span class="role">CNA, 9 years</span><span class="hh-tags"><span class="chip">Skills match</span><span class="chip">Accepted</span></span></span></li>
-              <li class="hh-shiftday" aria-hidden="true"><span>7 a.m.<small>Clock-in</small></span><i></i><span>7 p.m.<small>Clock-out</small></span></li>
-              <li class="hh-rest hh-rest--note">Both accepted in the app. Hours are recorded there.</li>
-            </ul>
-          </div>
-          <p class="hh-foot"><a class="hh-go" data-hero-go href="direct-hiring.html">See direct hiring</a><span class="ex-note">Example view. Names and numbers are made up.</span></p>
-        </div>
-      </div>
-      <p class="sr-only" id="hh-live" aria-live="polite"></p>
-    </div>
+    <figure class="v2-hero-fig fd-hero-fig">
+      <div class="photo fd-photo v2-hero-photo" style="--pos:44% 30%;--pos-m:45% 26%"><picture><source type="image/webp" srcset="assets/img/nurses-schedule-800.webp 800w, assets/img/nurses-schedule.webp 1536w" sizes="(min-width: 1024px) 520px, 92vw"><img src="assets/img/nurses-schedule-800.jpg" srcset="assets/img/nurses-schedule-800.jpg 800w, assets/img/nurses-schedule.jpg 1536w" sizes="(min-width: 1024px) 520px, 92vw" width="1536" height="1024" alt="A charge nurse points to the week’s shift schedule on a tablet while a nurse reads along at the nurses’ station." fetchpriority="high" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div>
+    </figure>
   </div>
 </section>
 
-<!-- 2. WHAT DO YOU NEED (L4 + the three ways to hire, merged). Directly under the hero at every width.
-     Device: one row of three rich cards on Day Shift, each with its own static object, plus the multi-site row. -->
-<section class="sec on-day" aria-labelledby="need-h">
+<!-- 2. THREE REASONS (System v2, client call): straight under the hero. Static. -->
+<section class="v2-reasons fd-reasons" aria-labelledby="why-h">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 class="h-sec" id="need-h">What do you need right now?</h2>
-      <p class="lede">Hire a supervisor directly, bring on temps for the busy season, and cover Saturday’s shift, all from one account.</p>
-    </div>
-    <div class="offers">
-      <article class="offer" aria-labelledby="of1">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="13" r="6"/><path d="M8 34c1.6-7 6.3-10 12-10s10.4 3 12 10"/></svg>
-        <h3 id="of1"><a class="offer-a" href="direct-hiring.html">A full-time or part-time hire</a></h3>
-        <p class="offer-l">Someone who joins your payroll.</p>
-        <p class="o-obj o-fee" aria-label="Placement fee: 8% or 15%, only when you hire"><b>8% or 15%</b><span>only when you hire</span></p>
-        <dl>
-          <dt>Who employs them</dt><dd>You do, from day one</dd>
-          <dt>How you pay</dt><dd>Per post, by subscription, or a placement fee when you hire</dd>
-        </dl>
-        <span class="offer-n" aria-hidden="true">Direct hiring</span>
-      </article>
-      <article class="offer" aria-labelledby="of2">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="9" width="28" height="25" rx="4"/><path d="M6 17h28M13 5v7M27 5v7M12 23h4M20 23h4M12 28h4"/></svg>
-        <h3 id="of2"><a class="offer-a" href="contingent-labor.html">Temp or contract workers</a></h3>
-        <p class="offer-l">People for weeks or months, without the payroll paperwork.</p>
-        <p class="o-obj o-stub" aria-label="Example pay stub"><span>Pay stub, week 2 of 6</span><b>Employer: Jobility</b></p>
-        <dl>
-          <dt>Who employs them</dt><dd>Jobility, if you choose. We run payroll.</dd>
-          <dt>How you pay</dt><dd>An hourly rate per worker, quoted before anyone starts</dd>
-        </dl>
-        <span class="offer-n" aria-hidden="true">Contingent labor</span>
-      </article>
-      <article class="offer" aria-labelledby="of3">
-        <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="21" r="13"/><path d="M20 13v8l5 4M16 4h8"/></svg>
-        <h3 id="of3"><a class="offer-a" href="gig-work.html">Someone for a shift</a></h3>
-        <p class="offer-l">Cover a shift, a weekend or a busy week.</p>
-        <p class="o-obj o-shift" aria-label="Example shift">CNA, Saturday 7 a.m. <span class="ok"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Accepted</span></p>
-        <dl>
-          <dt>Who employs them</dt><dd>Jobility, if you choose</dd>
-          <dt>How you pay</dt><dd>An hourly rate per shift, quoted up front</dd>
-        </dl>
-        <span class="offer-n" aria-hidden="true">Gig work</span>
-      </article>
-    </div>
-    <div class="doors-after">
-      <p><b>Hiring across several sites, or not sure which fits?</b> <a data-topic="plan" href="contact.html?topic=plan">Talk to us</a></p>
-    </div>
+    <h2 class="sr-only" id="why-h">Why hire with Jobility</h2>
+    <ul class="v2-reasons-list" role="list">
+      <li><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7.5 3v5.2c0 4.5-3.1 8.4-7.5 9.8-4.4-1.4-7.5-5.3-7.5-9.8V6z"/><path d="M8.6 12.2l2.4 2.4 4.4-4.8"/></svg><h3>A vetted, verified workforce</h3><p>Skills, availability and work history checked on every match.</p></li>
+      <li><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.6"/><path d="M14.6 9.3c-.5-.9-1.5-1.4-2.6-1.4-1.5 0-2.6.8-2.6 1.9s1.1 1.6 2.6 2 2.6.9 2.6 2-1.1 1.9-2.6 1.9c-1.2 0-2.3-.6-2.8-1.5M12 6.4v1.5M12 16.1v1.5"/></svg><h3>Much less than an agency</h3><p>From $150 a post, or 8% only when you hire. Agencies commonly charge 20%.<sup class="fn"><a href="#qq-fn1" aria-label="Source">1</a></sup></p></li>
+      <li><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="12.5" rx="2"/><path d="M3 9h18M9 20.5h6M12 17v3.5"/></svg><h3>You run it, on one platform</h3><p>Post, review and book interviews yourself. No agency in the middle.</p></li>
+    </ul>
   </div>
 </section>
 
-<!-- 3. WHAT ONE HIRE COSTS (L6 + L5 + L7, merged in r6). Device: an instrument, then three agency rows. The quote is self-contained in div.qq[data-quote]
-     (site.js, shared with direct-hiring.html). Inputs and a live recommendation left (sticky on desktop); the
-     one-hire scale right: pay per post (no fee when you hire, Q1 answered), 8%, 15% and the agency's 20%. -->
-<section class="sec" id="plans" aria-labelledby="plans-h">
+<!-- 3. THE 1-2-3 (System v2, client call): Post once / we curate and verify / you interview and hire. Light tint band. -->
+<section class="sec on-day v2-steps-sec" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="how-h">From post to hire in three steps.</h2></div>
+    <ol class="v2-steps fd-steps" role="list">
+      <li><span class="v2-step-n" aria-hidden="true">1</span><h3>Post once.</h3><p>We share it to <span class="confirm qchip" data-q="Q19" title="To confirm with Jobility (Kim): the exact number of job sites a post goes to">150+ job sites</span> for you.</p></li>
+      <li><span class="v2-step-n" aria-hidden="true">2</span><h3>We curate and verify.</h3><p>AI-driven matching finds people who fit, and we check them before they reach you.</p></li>
+      <li><span class="v2-step-n" aria-hidden="true">3</span><h3>You interview and hire.</h3><p>Book interviews when it suits you, and hire the person you choose.</p></li>
+    </ol>
+    <p class="links-row v2-steps-more"><a class="tlink" href="#walkthrough">Watch it in the product</a></p>
+    <p class="qnote">Open: Q19. “150+ job sites” is from the Nov 5 call (“sitting on top of 150 different job boards”). Kim to confirm the exact number before launch.</p>
+  </div>
+</section>
+
+<!-- 4. WHAT DO YOU NEED RIGHT NOW (System v2): three solution cards, direct hire first, no pricing. Then the healthcare link out. -->
+<section class="sec" id="solutions" aria-labelledby="need-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="need-h">What do you need right now?</h2></div>
+    <ul class="v2-sol fd-solutions" role="list">
+      <li class="v2-sol-card is-lead"><a href="direct-hiring.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="13" r="6"/><path d="M8 34c1.6-7 6.3-10 12-10s10.4 3 12 10"/></svg></span><span class="v2-sol-k">Direct hire, on your payroll</span><span class="v2-sol-t">Full&#8209;time and part&#8209;time staff</span><span class="v2-sol-p">Vetted candidates who join your payroll.</span><span class="v2-sol-go" aria-hidden="true">Explore direct hiring</span></a></li>
+      <li class="v2-sol-card"><a href="contingent-labor.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="9" width="28" height="25" rx="4"/><path d="M6 17h28M13 5v7M27 5v7M12 23h4M20 23h4M12 28h4"/></svg></span><span class="v2-sol-k">Contingent labor</span><span class="v2-sol-t">Temp and contract workers</span><span class="v2-sol-p">People for weeks or months, on our payroll if you like.</span><span class="v2-sol-go" aria-hidden="true">Explore contingent labor</span></a></li>
+      <li class="v2-sol-card"><a href="gig-work.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="21" r="13"/><path d="M20 13v8l5 4M16 4h8"/></svg></span><span class="v2-sol-k">Gig work</span><span class="v2-sol-t">Shift coverage</span><span class="v2-sol-p">Screened workers nearby for a shift or a busy week.</span><span class="v2-sol-go" aria-hidden="true">Explore gig work</span></a></li>
+    </ul>
+    <a class="v2-hc fd-hc" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Healthcare facilities</b> Nurses, CNAs and allied staff, with certification and license checks included.</span><span class="v2-hc-go">Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <div class="ind-wrap v2-ind"><p class="custind-k" id="roles-h" role="heading" aria-level="3">Our customers work in</p><ul class="ind-ico fd-ind-ico" role="list" aria-labelledby="roles-h"><li class="is-lead"><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 5.5h7v7h7v7h-7v7h-7v-7h-7v-7h7z"/></g><circle class="ind-dot" cx="26.5" cy="5.5" r="2.4"/></svg></span><a class="ind-t ind-out" href="https://jobilityhealth.com/" target="_blank" rel="noopener">Healthcare<span class="sr-only"> (Jobility Health, opens in a new tab)</span></a></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23.5h22"/><path d="M7.5 23.5v-3a8.5 8.5 0 0 1 17 0v3"/><path d="M13.5 12.5v5.5M18.5 12.5v5.5"/></g><circle class="ind-dot" cx="26" cy="8" r="2.4"/></svg></span><span class="ind-t">Construction</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 26.5v-12l7 4.5v-4.5l7 4.5v-4.5l7 4.5V6.5h2v20z"/></g><circle class="ind-dot" cx="6" cy="7" r="2.4"/></svg></span><span class="ind-t">Light industrial and manufacturing</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 24.5h23"/><path d="M7 24.5a9 9 0 0 1 18 0"/><path d="M16 15.5v-3M13 12.5h6"/></g><circle class="ind-dot" cx="26" cy="8" r="2.4"/></svg></span><span class="ind-t">Hospitality</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="8.5" width="19" height="12.5" rx="1.5"/><path d="M3.5 25h25"/></g><circle class="ind-dot" cx="27" cy="5" r="2.4"/></svg></span><span class="ind-t">IT</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5l2.4 7.1 7.1 2.4-7.1 2.4L15 24.5l-2.4-7.1-7.1-2.4 7.1-2.4z"/></g><circle class="ind-dot" cx="25.5" cy="24.5" r="2.4"/></svg></span><span class="ind-t">Aesthetic medicine</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11.5h18l-1.5 15h-15z"/><path d="M12 11.5V9.5a4 4 0 0 1 8 0v2"/></g><circle class="ind-dot" cx="26.5" cy="6" r="2.4"/></svg></span><span class="ind-t">Retail</span></li></ul></div>
+  </div>
+</section>
+
+<!-- 5. ONE HIRE, THREE WAYS (System v2): the shared calculator, Jobility vs a staffing agency vs on your own.
+     div.qq[data-quote] is shared, identical, with direct-hiring.html (synced by _lib/v2_home.py). Layout A (bars) is the
+     default; layout B (three columns) is behind the review-only switch, or ?calc=b. -->
+<section class="sec on-day" id="plans" aria-labelledby="plans-h">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h-sec" id="plans-h">What one hire costs, next to an agency fee.</h2>
-      <p class="lede">Pick a role, a salary and who does the work. You’ll see what one direct hire costs each way, which plan fits, and what the most common agency fee would be.</p>
+      <h2 class="h-sec" id="plans-h">What one hire costs, three ways.</h2>
+      <p class="lede">Pick a role and a salary.</p>
     </div>
-    <div class="qq" data-quote>
+    <div class="qq qq--v2 fd-calc3" data-quote data-layout="a">
+      <div class="qq-switch fd-calc-layout" role="group" aria-label="For review: calculator layout">
+        <span class="qq-switch-k">For review: layout</span>
+        <button type="button" data-layout-set="a" aria-pressed="true">A. Bars</button>
+        <button type="button" data-layout-set="b" aria-pressed="false">B. Side by side</button>
+      </div>
       <div class="qq-inputs">
         <fieldset>
           <legend class="label">Role type</legend>
           <div class="choices">
-            <label class="choice"><input type="radio" name="role" value="labor" checked><span>General labor<em class="lbl-x">&nbsp;and light industrial</em></span></label>
+            <label class="choice"><input type="radio" name="role" value="labor" checked><span>General labor</span></label>
             <label class="choice"><input type="radio" name="role" value="it"><span>IT</span></label>
             <label class="choice"><input type="radio" name="role" value="hcadmin"><span>Healthcare admin</span></label>
             <label class="choice"><input type="radio" name="role" value="nursing"><span>Nursing and allied</span></label>
@@ -264,80 +160,92 @@
         <div class="qq-salary">
           <label class="label" for="qq-sal">Full-time salary</label>
           <span class="money">$<input id="qq-sal" type="text" inputmode="numeric" autocomplete="off" maxlength="7" value="45,000" data-sal-num aria-describedby="qq-sal-help"><span class="per" aria-hidden="true">a year</span></span>
-          <span class="qq-note" id="qq-sal-help" data-sal-help>$20,000 to $200,000. Each role starts at an example salary.</span>
+          <span class="qq-note" id="qq-sal-help" data-sal-help>$20,000 to $200,000.</span>
           <input class="range" type="range" min="20000" max="200000" step="1000" value="45000" data-sal-range aria-label="Full-time salary" aria-valuetext="$45,000 a year">
         </div>
         <fieldset>
-          <legend class="label">Who does the work?</legend>
+          <legend class="label">With Jobility, who does the work?</legend>
           <div class="choices">
-            <label class="choice"><input type="radio" name="who" value="self" checked data-who><span>I post and schedule</span></label>
-            <label class="choice"><input type="radio" name="who" value="managed" data-who><span>Jobility does the work</span></label>
+            <label class="choice"><input type="radio" name="who" value="self" checked data-who><span>I post and schedule (8%)</span></label>
+            <label class="choice"><input type="radio" name="who" value="managed" data-who><span>Jobility does the work (15%)</span></label>
           </div>
         </fieldset>
-        <p class="qq-rec" data-rec>Lowest cost if the role fills easily: <b>pay per post, $150</b>, with no fee when you hire. No risk if you don’t hire: <b>the 8% placement fee</b>, <b>$3,600</b>, only if you hire.</p>
+        <details class="qq-own fd-own" id="qq-own-a">
+          <summary>On your own: cost per hire</summary>
+          <div class="qq-own-body">
+            <label class="own-f own-f--total"><span>Your cost for one hire</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="total" value="4,129"></span></label>
+            <p class="qq-own-note">Starts at the SHRM average cost per hire.<sup class="fn"><a href="#qq-fn1" aria-label="Source 2">2</a></sup> Use your own number if you know it. <button type="button" class="own-reset" data-own-reset hidden>Back to the SHRM average</button> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder until Parmi’s white paper</span></p>
+            <details class="qq-own-parts">
+              <summary>Or add it up yourself</summary>
+              <div class="qq-own-grid">
+                <label class="own-f"><span>Job board post fees</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="boards" placeholder="0"></span></label>
+                <label class="own-f"><span>Software, this hire’s share</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="subs" placeholder="0"></span></label>
+                <label class="own-f"><span>Background check</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="6" data-own="check" placeholder="0"></span></label>
+                <label class="own-f"><span>Hours your team spends screening and scheduling</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="hours" placeholder="0"><span class="per">hours</span></span></label>
+                <label class="own-f"><span>Cost of one hour of your team’s time</span><span class="money money--s">$<input type="text" inputmode="numeric" autocomplete="off" maxlength="4" data-own="rate" placeholder="0"></span></label>
+              </div>
+              <p class="qq-own-how">Fill in any of these and we use their total instead.</p>
+            </details>
+            <label class="own-f own-f--days"><span>Days to fill the role (shown, not priced)</span><span class="money money--s"><input type="text" inputmode="numeric" autocomplete="off" maxlength="3" data-own="days" value="42"><span class="per">days</span></span></label>
+          </div>
+        </details>
       </div>
 
       <div class="qq-out">
-        <p class="qq-scale-h">What one hire at <span data-out="salary">$45,000</span> a year costs you</p>
-        <ul class="bars" role="list" aria-label="What one hire would cost: pay per post, each placement fee, and the common agency fee">
-          <li class="bar bar--post is-pick" data-tier="post"><span class="bl"><b>Pay per post.</b> Paid up front, no fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
-          <li class="bar is-pick" data-tier="self"><span class="bl"><b>Placement fee, 8%.</b> You post and schedule.</span><span class="num" data-out="self">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="self" style="--s:.4"></span></span></li>
-          <li class="bar" data-tier="managed"><span class="bl"><b>Placement fee, 15%.</b> We do the work and send you a candidate.</span><span class="num" data-out="managed">$6,750</span><span class="track" aria-hidden="true"><span class="fill" data-bar="managed" style="--s:.75"></span></span></li>
-          <li class="bar bar--agency"><span class="bl">Common agency fee, 20%<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
-        </ul>
-        <ol class="qq-rows" role="list">
-          <li class="qq-row qq-row--lead">
-            <h3>Pay only if you hire</h3>
-            <p class="ans"><b>Placement fee.</b> Nothing up front. Hourly roles: we convert the pay rate to a yearly amount.</p>
-            <div class="act"><a class="btn btn--primary sec-cta" href="https://enterprise.jobility.com/signup">Post a job</a></div>
-          </li>
-          <li class="qq-row">
-            <h3>Or pay per post</h3>
-            <p class="ans"><b><span data-out="post">$150</span> a post</b> <span data-out="postrole">for general labor and light industrial roles</span>, no fee when you hire. Buy one job posting, get one free. Exclusive offer for new customers.</p>
-            <div class="act"><a class="btn btn--secondary" data-post-cta href="https://enterprise.jobility.com/signup">Post for $150</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
-            <p class="micro qq-acct">Choose pay per post in the job wizard when you post.</p>
-          </li>
-          <li class="qq-row">
-            <h3>Posting most months?</h3>
-            <p class="ans"><b>Subscription.</b> <a class="tlink" data-topic="plan" href="contact.html?topic=plan">Talk to us</a></p>
-          </li>
-        </ol>
+        <p class="qq-scale-h">One hire at <span data-out="salary">$45,000</span> a year</p>
+        <div class="qq-a">
+          <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, on your own, and the common agency fee">
+            <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
+            <li class="bar bar--us" data-tier="pick"><span class="bl"><b>Jobility, <span data-out="pickname">8% placement fee</span>.</b> Only if you hire.</span><span class="num" data-out="pick">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="pick" style="--s:.4"></span></span></li>
+            <li class="bar bar--agency"><span class="bl"><b>Staffing agency, 20%.</b> The most common fee.<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
+            <li class="bar bar--own"><span class="bl"><b>On your own.</b> <span data-out="ownSrc">SHRM average cost per hire</span>,<sup class="fn">2</sup> and about <span data-out="days">42</span> days to fill. <a class="tlink" href="#qq-own-a" data-own-open>Change it</a></span><span class="num" data-out="own">$4,129</span><span class="track" aria-hidden="true"><span class="fill" data-bar="own" style="--s:.4588"></span></span></li>
+          </ul>
+          <div class="btn-row qq-cta"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="tlink" href="pricing.html#pay-per-post">See prices by role</a></div>
+        </div>
+        <div class="qq-b">
+          <ul class="cols3" role="list">
+            <li class="col3 col3--us">
+              <h3 class="col3-h">Jobility</h3>
+              <p class="col3-n" data-out="post">$150</p>
+              <p class="col3-sub">Pay per post, with no fee when you hire.</p>
+              <p class="col3-alt">Or pay only if you hire: <b data-out="pick">$3,600</b>, the <span data-out="pickname">8% placement fee</span>.</p>
+              <ul class="col3-get" role="list"><li>Post once, shared to 150+ job sites</li><li>AI-driven matching, and a person reviews every match</li><li>Skills, availability and work history checked</li><li>You book interviews in the portal</li></ul>
+              <a class="btn btn--primary btn--sm" href="https://enterprise.jobility.com/signup">Post a job</a>
+            </li>
+            <li class="col3">
+              <h3 class="col3-h">Staffing agency</h3>
+              <p class="col3-n" data-out="agency">$9,000</p>
+              <p class="col3-sub">20% of first-year salary, the most common fee.<sup class="fn">1</sup></p>
+              <ul class="col3-get" role="list"><li>The agency finds and screens candidates</li><li>You work through a recruiter</li><li>The fee is due when you hire</li></ul>
+            </li>
+            <li class="col3 col3--own">
+              <h3 class="col3-h">On your own</h3>
+              <p class="col3-n" data-out="own">$4,129</p>
+              <p class="col3-sub"><b class="col3-wk">About <span data-out="days">42</span> days to fill</b> <span data-out="ownSrc">SHRM average cost per hire</span>.<sup class="fn">2</sup> <span class="confirm qchip" data-q="Q20" data-clean="" title="SHRM benchmark in place until Parmi’s white paper on the cost comparison">Placeholder</span></p>
+              <dl class="col3-break" data-own-parts-view hidden><dt>Job board post fees</dt><dd data-out="ownBoards">$0</dd><dt>Software, this hire’s share</dt><dd data-out="ownSubs">$0</dd><dt>Background check</dt><dd data-out="ownCheck">$0</dd><dt>Your team’s time, <span data-out="hours">0</span> hours</dt><dd data-out="ownTime">$0</dd></dl>
+              <ul class="col3-get" role="list"><li>You post on each job board</li><li>You read every application</li><li>You screen and schedule</li></ul>
+              <a class="tlink" href="#qq-own-a" data-own-open>Change it</a>
+            </li>
+          </ul>
+        </div>
         <p class="sr-only" aria-live="polite" data-live></p>
       </div>
       <div class="qq-notes">
-        <p class="sales-line">Enterprise pricing, custom plans, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
-        <p class="qq-more">Hiring for a role not listed? <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a>.</p>
-        <p class="qq-foot"><sup class="fn">1</sup> Estimate only. Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%.</p>
+        <p class="sales-line">Subscriptions, enterprise pricing, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
+        <p class="qq-foot" id="qq-fn1"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%. Hourly roles: we convert the pay rate to a yearly amount.<br><sup class="fn">2</sup> SHRM average cost per hire, $4,129, and average time to fill, 42 days: SHRM Human Capital Benchmarking Report, 2016 (fiscal 2015 data). Not Jobility data; change it to your own figures above.</p>
       </div>
-      <p class="qnote">Published as approved on Oct 15: the $350 to $400 nursing and allied range. The offer is in Jobility’s own words (Kim, Oct 28): “Buy one job posting, get one free. Exclusive offer for new customers.”</p>
+      <p class="qnote">Open: Q20. “On your own” starts at SHRM’s average cost per hire ($4,129) and time to fill (42 days), from SHRM’s 2016 benchmarking report, until Parmi’s white paper (Nov 5 call). One editable figure, with an optional breakdown. At $45,000 it sits above the 8% fee and under the 15% fee. Layout A or B: client to choose (switch above, review mode or ?calc=b). The $350 to $400 nursing and allied range as approved on Oct 15.</p>
     </div>
-    <div class="vs-agency">
-      <table class="ctable ctable--vs">
-        <caption>Jobility vs. a staffing agency, for one direct hire <a class="tlink" href="compare-staffing-agency.html">Jobility vs. a staffing agency, line by line</a></caption>
-        <thead><tr><td></td><th scope="col">Staffing agency</th><th scope="col" class="is-us">Jobility</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Price</th><td data-label="Staffing agency">20% of first-year salary, the most common fee<sup class="fn">1</sup></td><td class="is-us" data-label="Jobility">8% or 15% of first-year salary, or a flat price per post</td></tr>
-          <tr><th scope="row">When you pay</th><td data-label="Staffing agency">When you hire</td><td class="is-us" data-label="Jobility">Placement fee: when you hire. Per post: when you publish</td></tr>
-          <tr class="held"><th scope="row">If the hire leaves early</th><td data-label="Staffing agency">Often a replacement guarantee, typically 30 to 90 days</td><td class="is-us" data-label="Jobility"><span class="confirm qchip" data-q="Q14" data-clean="Ask us about our terms" title="To confirm with Jobility: Q14, the guarantee">One of two fixed wordings, held until Q14: our replacement terms, or “Jobility does not offer a replacement guarantee”</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="qnote">Open: Q14. Held until Q14: Jobility’s guarantee, in one of the two fixed wordings, never paraphrased.</p>
   </div>
 </section>
 
-<!-- 3b. PHOTO BAND (R6): Home's one full-bleed working moment, the dispatcher (Kim's image). No line on it. -->
-<figure class="pband fd-pband pband--home" style="--pos:66% 28%;--pos-m:70% 25%"><div class="pband-frame"><picture><source type="image/webp" srcset="assets/img/depot-dispatcher-800.webp 800w, assets/img/depot-dispatcher.webp 1536w, assets/img/depot-dispatcher-3072.webp 3072w" sizes="100vw"><img src="assets/img/depot-dispatcher-800.jpg" srcset="assets/img/depot-dispatcher-800.jpg 800w, assets/img/depot-dispatcher.jpg 1536w, assets/img/depot-dispatcher-3072.jpg 3072w" sizes="100vw" width="1536" height="1024" alt="A depot dispatcher in a headset and reading glasses checks the morning run sheet on a clipboard, buses lined up behind him on an overcast morning." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="wrap">Know who is coming in before the day starts.</figcaption></figure>
-
-<!-- 4. WORKERS, NOT RESUMES. Device: the Job board / Jobility switch (from Direction B), user-triggered only.
-     The j line is built from the card positions and runs IN FRONT of the cards (768px and up). -->
+<!-- 6. WORKERS, NOT RESUMES (lighter): two sentences and the Job board / Jobility switch (user-triggered only). -->
 <section class="sec" aria-labelledby="wnr-h">
-  <div class="wrap split">
+  <div class="wrap split v2-wnr fd-wnr-calm">
     <div>
       <h2 class="h-sec" id="wnr-h">Get workers, not resumes.</h2>
-      <p class="lede" style="margin-top:22px">Job boards send you everyone who clicks apply, and some charge you for each one. Jobility sends a short list of people who match what you asked for, screened by our software before they reach you.</p>
-      <ul class="wnr-facts" role="list"><li>No charge per click.</li><li>A person reviews every match.</li></ul>
-      <p class="links-row"><a class="tlink" href="pricing.html#vs-job-boards">How Jobility compares with job boards</a></p>
+      <p class="lede">Job boards send you everyone who clicks apply. Jobility sends a short list of people who match what you asked for.</p>
+      <ul class="wnr-facts" role="list"><li>No charge per click.</li><li>No pile of resumes to sort.</li></ul>
     </div>
     <div class="sw-wrap">
       <div class="sw" data-switch data-board-text="Job board: 214 applicants, every one of them yours to read." data-jobility-text="Jobility: 3 screened people who match what you asked for.">
@@ -358,7 +266,7 @@
             <div class="sw-sheet fd-sheet" style="--l:32;--t:20;--r:-3deg"><i></i><span></span><span style="width:56%"></span><em>Applied 3 min ago</em></div>
           </div>
           <ol class="sw-cards" role="list" aria-label="Example short list">
-            <li class="sw-card fd-card"><span class="av" style="--bg:#FF9241" aria-hidden="true">MR</span><p class="nm">Maria R.</p><p class="rl">Warehouse supervisor, full-time hire. 7 years running a day shift.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available now</span></p></li>
+            <li class="sw-card fd-card"><span class="av" style="--bg:#FCEBF2;--fg:#B8004F" aria-hidden="true">MR</span><p class="nm">Maria R.</p><p class="rl">Warehouse supervisor, full-time hire. 7 years running a day shift.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available now</span></p></li>
             <li class="sw-card fd-card"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">DP</span><p class="nm">Dev P.</p><p class="rl">Warehouse associate, temp for 6 weeks. Can start Monday.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available Mon.</span></p></li>
             <li class="sw-card fd-card"><span class="av" style="--bg:#D3005B;--fg:#fff" aria-hidden="true">AT</span><p class="nm">Ana T.</p><p class="rl">CNA, Saturday shift at 7 a.m. Lives 12 minutes away.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available Sat.</span></p></li>
             <li class="sw-more" aria-hidden="true">And 1 more on your short list</li>
@@ -387,7 +295,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h-sec" id="tour-h">One portal. Every hire.</h2>
-      <p class="lede">From job post to hire in three steps.</p>
+      <p class="lede">The real portal, step by step. Pick a step to watch it from the start.</p>
     </div>
     <div class="tour" data-tabs data-walkthrough>
       <svg class="wt-defs" aria-hidden="true" focusable="false"><symbol id="wt-logo" viewBox="0 0 1033 349"><path style="fill:var(--wt-jm,currentColor)" d="M273.5 150.2 L267.8 150.0 L266.0 149.0 L261.8 149.0 L260.0 148.0 L256.8 148.0 L255.0 147.0 L248.8 147.0 L247.0 146.0 L240.8 146.0 L239.0 145.0 L232.8 145.0 L231.0 144.0 L221.8 144.0 L220.0 143.0 L209.2 142.8 L208.0 141.5 L207.8 139.8 L206.8 138.0 L206.8 135.8 L205.8 134.0 L205.8 131.8 L204.8 130.0 L204.8 128.8 L202.8 125.0 L202.8 122.8 L201.8 121.0 L201.8 119.8 L200.8 118.0 L200.8 116.8 L199.8 115.0 L199.8 113.8 L198.8 112.0 L198.8 110.8 L197.8 109.0 L196.8 104.8 L193.8 99.0 L193.8 97.8 L192.5 95.2 L189.8 91.2 L185.5 88.2 L178.0 85.0 L171.8 85.0 L170.0 86.0 L167.8 86.0 L163.2 88.2 L158.0 93.2 L155.0 98.8 L155.0 100.0 L154.0 101.8 L154.0 110.0 L155.0 111.8 L155.0 113.0 L156.0 114.8 L157.0 119.0 L159.0 122.8 L159.0 124.0 L161.0 127.8 L161.0 129.0 L162.0 130.8 L162.0 133.0 L163.0 134.8 L163.0 136.0 L165.0 140.8 L165.0 143.0 L164.5 143.8 L156.8 144.0 L155.0 145.0 L148.8 145.0 L147.0 146.0 L141.8 146.0 L140.0 147.0 L135.8 147.0 L134.0 148.0 L130.8 148.0 L129.0 149.0 L126.8 149.0 L125.0 150.0 L118.8 150.0 L117.0 151.0 L114.8 151.0 L113.0 152.0 L110.8 152.0 L109.0 153.0 L107.8 153.0 L106.0 154.0 L104.8 154.0 L103.0 155.0 L98.8 156.0 L90.0 160.0 L88.8 160.0 L83.0 163.0 L81.2 163.2 L79.0 165.0 L77.8 165.0 L73.2 167.2 L71.5 168.8 L66.2 171.2 L64.5 172.8 L62.0 174.0 L60.8 174.0 L55.2 177.2 L53.5 179.0 L46.2 184.0 L42.5 188.0 L39.2 190.0 L32.5 197.0 L29.2 199.0 L27.0 202.5 L25.0 204.2 L23.8 206.5 L21.2 209.2 L15.2 218.2 L13.8 221.5 L12.2 222.2 L6.0 235.8 L6.0 237.0 L5.0 238.8 L5.0 240.0 L4.0 241.8 L4.0 243.0 L2.0 247.8 L2.0 251.0 L1.0 252.8 L1.0 257.0 L0.0 258.8 L0.0 280.0 L1.0 281.8 L1.0 286.0 L2.0 287.8 L2.0 290.0 L3.0 291.8 L4.0 296.0 L10.2 309.5 L15.0 316.5 L27.2 328.8 L38.2 336.5 L47.8 341.8 L51.0 341.8 L52.8 342.8 L54.0 342.8 L55.8 343.8 L57.0 343.8 L61.8 345.8 L64.0 345.8 L65.8 346.8 L68.0 346.8 L69.8 347.8 L75.0 347.8 L76.8 348.8 L101.0 348.8 L102.8 347.8 L107.0 347.8 L108.8 346.8 L112.0 346.8 L113.8 345.8 L116.0 345.8 L117.8 344.8 L120.0 344.8 L121.8 343.8 L123.0 343.8 L127.8 341.8 L131.0 341.8 L134.8 339.8 L136.0 339.8 L149.5 332.5 L163.5 322.8 L168.2 318.0 L170.0 317.8 L171.5 316.8 L174.8 313.5 L176.8 310.2 L181.8 305.5 L189.8 294.2 L192.5 291.5 L194.0 288.2 L195.5 286.5 L201.8 274.0 L201.8 272.8 L205.8 265.0 L205.8 263.8 L206.8 262.0 L206.8 260.8 L207.8 259.0 L207.8 257.8 L209.8 253.0 L209.8 250.8 L211.8 246.0 L211.8 243.8 L212.8 242.0 L212.8 238.8 L213.8 237.0 L213.8 232.8 L214.8 231.0 L214.8 225.8 L215.8 222.0 L215.8 207.8 L216.8 206.0 L216.8 199.8 L215.8 198.0 L216.0 185.2 L216.8 184.8 L223.0 184.8 L226.8 185.8 L233.0 185.8 L234.8 186.8 L241.0 186.8 L242.8 187.8 L248.0 187.8 L249.8 188.8 L254.0 188.8 L255.8 189.8 L260.0 189.8 L261.8 190.8 L262.5 190.5 L262.8 188.8 L263.8 187.0 L263.8 185.8 L264.8 184.0 L264.8 181.8 L265.8 180.0 L265.8 177.8 L266.8 176.0 L266.8 174.8 L268.8 170.0 L268.8 167.8 L269.8 166.0 L269.8 163.8 L270.8 162.0 L270.8 159.8 L272.8 155.0 L272.8 152.8 L273.8 151.0ZM190.8 184.0 L189.5 185.8 L184.2 188.2 L182.5 189.8 L178.2 192.0 L175.0 197.8 L175.0 206.0 L174.5 206.8 L174.5 208.0 L175.0 208.8 L175.0 212.0 L174.0 213.8 L174.0 222.0 L173.0 223.8 L173.0 228.0 L172.0 229.8 L172.0 234.0 L171.0 235.8 L171.0 238.0 L170.0 239.8 L170.0 242.0 L169.0 243.8 L168.0 248.0 L166.0 251.8 L166.0 253.0 L158.8 267.5 L156.0 270.2 L151.0 277.5 L145.0 283.2 L143.8 285.5 L141.2 287.0 L138.5 290.0 L136.2 291.2 L133.5 293.8 L131.8 294.0 L129.2 295.2 L127.5 296.8 L117.0 302.0 L115.8 302.0 L112.0 304.0 L110.8 304.0 L109.0 305.0 L106.8 305.0 L105.0 306.0 L102.8 306.0 L101.0 307.0 L94.8 307.0 L93.0 308.0 L84.8 308.0 L83.0 307.0 L76.8 307.0 L75.0 306.0 L72.8 306.0 L71.0 305.0 L66.8 304.0 L60.2 300.8 L49.0 292.5 L47.0 289.5 L42.8 281.0 L42.8 278.8 L41.8 277.0 L41.8 273.8 L40.8 272.0 L40.8 266.8 L41.8 265.0 L41.8 260.8 L42.8 259.0 L42.8 256.8 L43.8 255.0 L44.8 250.8 L53.0 236.2 L54.8 234.5 L56.8 231.2 L59.8 228.5 L61.8 225.2 L68.5 220.8 L71.2 217.8 L85.2 208.0 L100.8 199.8 L102.0 199.8 L105.8 197.8 L109.0 197.8 L110.8 196.8 L112.0 196.8 L115.8 194.8 L118.0 194.8 L119.8 193.8 L121.0 193.8 L125.8 191.8 L128.0 191.8 L129.8 190.8 L132.0 190.8 L133.8 189.8 L136.0 189.8 L137.8 188.8 L141.0 188.8 L142.8 187.8 L147.0 187.8 L148.8 186.8 L153.0 186.8 L154.8 185.8 L162.0 185.8 L163.8 184.8 L175.0 184.8 L176.8 183.8ZM143.8 0.0 L142.0 1.0 L138.8 1.0 L137.0 2.0 L135.8 2.0 L131.2 4.2 L129.5 5.8 L127.2 6.2 L124.0 9.2 L121.2 13.2 L119.0 17.8 L119.0 19.0 L117.0 23.8 L117.0 35.0 L118.0 36.8 L119.0 41.0 L121.2 45.5 L123.0 47.2 L125.0 50.5 L127.2 52.5 L139.8 57.8 L152.0 57.8 L153.8 56.8 L158.0 55.8 L160.2 54.0 L162.0 53.8 L164.5 52.5 L168.5 48.5 L172.8 41.0 L172.8 39.8 L174.8 35.0 L174.8 23.8 L173.8 22.0 L173.8 19.8 L170.5 13.2 L167.8 9.2 L165.5 7.0 L164.0 6.0 L162.2 5.8 L160.5 4.2 L156.0 2.0 L154.8 2.0 L153.0 1.0 L149.8 1.0 L148.0 0.0Z"/><path style="fill:var(--wt-jw,currentColor)" fill-rule="evenodd" d="M942.8 119.0 L937.2 121.2 L933.0 125.2 L932.0 126.8 L932.0 197.0 L933.0 198.8 L933.0 201.0 L934.0 202.8 L935.0 207.0 L937.2 211.5 L942.0 218.5 L945.2 221.5 L948.5 223.0 L953.2 226.5 L957.8 228.8 L959.0 228.8 L963.8 230.8 L966.0 230.8 L967.8 231.8 L972.0 231.8 L973.8 232.8 L988.0 232.8 L989.8 231.8 L993.0 231.8 L994.8 230.8 L996.0 230.8 L997.8 229.8 L1002.0 228.8 L1008.0 225.8 L1009.0 226.8 L1009.0 234.0 L1008.0 235.8 L1008.0 241.0 L1007.0 242.8 L1007.0 245.0 L1002.8 253.5 L1001.0 255.2 L999.0 258.5 L992.5 263.8 L986.0 267.0 L984.8 267.0 L983.0 268.0 L980.8 268.0 L979.0 269.0 L962.8 269.0 L961.0 268.0 L957.8 268.0 L956.0 267.0 L953.8 267.0 L952.0 266.0 L950.8 266.0 L947.0 264.0 L945.8 264.0 L939.2 260.8 L933.8 257.0 L932.0 258.8 L932.0 261.0 L930.0 265.8 L930.0 268.0 L928.0 271.8 L928.0 274.0 L927.0 275.8 L927.0 278.0 L926.0 279.8 L926.2 281.5 L938.8 287.8 L940.0 287.8 L944.8 289.8 L947.0 289.8 L948.8 290.8 L952.0 290.8 L953.8 291.8 L958.0 291.8 L959.8 292.8 L982.0 292.8 L983.8 291.8 L987.0 291.8 L988.8 290.8 L991.0 290.8 L992.8 289.8 L997.0 288.8 L1003.5 285.5 L1014.5 277.5 L1015.8 275.2 L1022.5 268.5 L1028.8 256.0 L1028.8 254.8 L1030.8 250.0 L1030.8 246.8 L1031.8 245.0 L1031.8 240.8 L1032.8 239.0 L1032.8 128.8 L1031.5 126.2 L1028.5 122.2 L1025.5 120.2 L1023.8 120.0 L1022.0 119.0 L1019.8 119.0 L1014.2 121.2 L1009.2 126.2 L1009.0 187.0 L1008.0 188.8 L1008.0 193.0 L1007.0 194.8 L1007.0 196.0 L999.5 204.0 L992.0 208.0 L990.8 208.0 L989.0 209.0 L974.8 209.0 L967.2 205.8 L963.2 203.0 L960.8 200.5 L959.5 198.2 L958.0 197.5 L956.8 195.0 L956.8 193.8 L955.8 192.0 L955.8 128.8 L954.5 126.2 L951.5 122.2 L948.0 120.0 L945.8 120.0 L944.0 119.0ZM815.8 119.0 L814.0 120.0 L812.8 120.0 L809.2 122.0 L805.2 126.2 L805.0 128.0 L804.0 129.8 L804.0 229.0 L804.8 229.8 L828.0 229.8 L828.8 229.0 L828.8 130.8 L827.8 129.0 L827.8 126.8 L824.5 122.2 L820.0 120.0ZM707.8 119.0 L700.2 122.2 L699.8 123.5 L697.2 126.2 L697.0 129.0 L696.0 130.8 L696.0 229.0 L696.8 229.8 L720.0 229.8 L720.8 229.0 L720.8 129.8 L719.8 128.0 L719.5 126.2 L716.5 122.2 L712.0 120.0ZM395.0 119.0 L393.8 119.0 L392.0 120.0 L389.8 120.0 L387.2 121.2 L385.0 123.2 L382.0 127.8 L382.0 241.0 L381.0 242.8 L381.0 245.0 L376.8 253.5 L375.0 255.2 L373.0 258.5 L370.5 260.8 L362.0 266.0 L360.8 266.0 L359.0 267.0 L356.8 267.0 L355.0 268.0 L349.2 268.2 L349.0 291.0 L350.8 292.8 L353.0 292.8 L354.8 291.8 L359.0 291.8 L360.8 290.8 L364.0 290.8 L365.8 289.8 L370.0 288.8 L381.5 282.5 L383.2 280.8 L386.5 278.8 L390.8 274.5 L392.8 271.2 L395.5 269.5 L397.5 266.5 L403.8 253.0 L403.8 250.8 L404.8 249.0 L404.8 246.8 L405.8 245.0 L405.8 127.8 L404.5 125.2 L401.5 122.0 L398.0 120.0 L396.8 120.0ZM474.8 117.0 L473.0 118.0 L469.8 118.0 L468.0 119.0 L463.8 120.0 L452.0 126.0 L450.2 126.2 L446.5 130.0 L443.2 132.0 L441.0 135.5 L437.2 139.2 L435.2 142.2 L431.8 149.5 L430.2 151.2 L428.0 156.8 L428.0 159.0 L427.0 160.8 L427.0 163.0 L426.0 164.8 L426.0 173.0 L425.0 174.8 L426.0 176.8 L426.0 184.0 L427.0 185.8 L427.0 189.0 L428.0 190.8 L429.0 195.0 L434.2 205.5 L439.0 212.5 L447.2 220.8 L448.8 221.8 L450.5 222.0 L452.2 223.5 L459.8 227.8 L461.0 227.8 L464.8 229.8 L466.0 229.8 L467.8 230.8 L470.0 230.8 L471.8 231.8 L474.0 231.8 L475.8 232.8 L491.0 232.8 L492.8 231.8 L496.0 231.8 L497.8 230.8 L500.0 230.8 L501.8 229.8 L503.0 229.8 L513.5 224.5 L515.2 223.0 L521.5 219.8 L527.8 213.5 L532.5 206.5 L534.0 203.2 L535.5 201.5 L535.8 199.8 L537.5 197.5 L537.8 195.8 L539.8 192.0 L539.8 189.8 L540.8 188.0 L540.8 183.8 L541.8 182.0 L541.8 166.8 L540.8 165.0 L540.8 161.8 L539.8 160.0 L539.8 157.8 L538.8 156.0 L538.8 154.8 L533.5 144.2 L528.8 137.2 L518.5 127.2 L516.0 126.0 L514.8 126.0 L512.5 124.2 L506.0 121.0 L504.8 121.0 L501.0 119.0 L498.8 119.0 L497.0 118.0 L494.8 118.0 L493.0 117.0ZM478.8 140.8 L489.0 140.8 L490.8 141.8 L493.0 141.8 L494.8 142.8 L496.0 142.8 L500.5 145.0 L508.5 150.8 L512.8 156.2 L516.0 162.8 L516.0 165.0 L517.0 166.8 L517.0 169.0 L518.0 170.8 L518.0 178.0 L517.0 179.8 L517.0 183.0 L516.0 184.8 L515.0 189.0 L513.2 191.2 L509.8 197.5 L503.2 202.0 L501.5 203.8 L495.0 207.0 L493.8 207.0 L492.0 208.0 L488.8 208.0 L487.0 209.0 L479.8 209.0 L478.0 208.0 L475.8 208.0 L474.0 207.0 L472.8 207.0 L466.2 203.8 L462.2 201.0 L460.5 199.0 L457.0 196.5 L455.0 193.5 L451.8 187.0 L451.8 185.8 L450.8 184.0 L450.8 181.8 L449.8 180.0 L449.8 168.8 L450.8 167.0 L451.8 162.8 L456.0 154.2 L459.2 150.8 L467.2 145.0 L471.8 142.8 L473.0 142.8 L474.8 141.8 L477.0 141.8ZM866.8 82.0 L865.0 83.0 L863.8 83.0 L862.2 84.0 L859.0 87.2 L857.0 90.8 L857.0 209.0 L858.0 210.8 L858.0 213.0 L861.2 220.5 L864.5 222.8 L868.2 226.5 L874.8 229.8 L877.0 229.8 L878.8 230.8 L883.0 230.8 L884.8 231.8 L891.0 231.8 L892.8 230.8 L900.0 230.8 L901.8 229.8 L905.0 229.8 L906.8 228.8 L908.5 228.5 L909.8 227.0 L909.5 206.2 L907.8 206.0 L906.0 207.0 L900.8 207.0 L899.0 208.0 L889.8 208.0 L888.0 207.0 L886.8 207.0 L885.2 206.0 L882.0 202.5 L881.8 200.8 L880.8 199.0 L880.8 140.8 L881.8 139.8 L909.5 139.5 L909.8 119.8 L909.0 119.0 L881.2 118.8 L880.8 118.0 L880.8 91.8 L878.5 87.2 L875.5 84.2 L871.0 82.0ZM811.8 71.0 L806.2 74.0 L802.0 78.2 L800.0 81.8 L800.0 86.0 L799.5 86.8 L799.5 88.0 L800.0 88.8 L800.0 92.0 L801.0 93.8 L801.0 95.0 L804.0 99.5 L806.2 101.5 L809.0 101.8 L813.8 103.8 L820.0 103.8 L823.8 101.8 L826.0 101.8 L828.8 99.5 L831.8 95.0 L831.8 93.8 L832.8 92.0 L832.8 89.8 L833.8 88.0 L833.8 85.8 L832.8 84.0 L832.8 81.8 L830.8 78.2 L825.5 73.2 L821.0 71.0 L817.8 71.0 L817.0 70.5 L815.8 70.5 L815.0 71.0ZM703.8 71.0 L698.2 74.0 L694.0 78.2 L692.0 81.8 L692.0 85.0 L691.0 86.8 L691.0 88.0 L692.0 89.8 L692.0 92.0 L693.0 93.8 L693.0 95.0 L696.0 99.5 L698.2 101.5 L701.0 101.8 L704.8 103.8 L711.0 103.8 L715.8 101.8 L718.0 101.8 L720.8 99.5 L723.8 95.0 L723.8 93.8 L724.8 92.0 L724.8 89.8 L725.8 88.0 L725.8 86.8 L724.8 85.0 L724.8 81.8 L722.8 78.2 L717.5 73.2 L713.0 71.0 L709.8 71.0 L709.0 70.5 L707.8 70.5 L707.0 71.0ZM568.8 71.0 L565.2 73.0 L563.0 75.2 L560.0 79.8 L560.0 229.0 L560.8 229.8 L583.0 229.8 L583.8 229.0 L583.8 220.8 L584.8 219.8 L588.5 222.0 L591.2 224.5 L597.5 228.0 L599.8 229.8 L601.0 229.8 L605.8 231.8 L610.0 231.8 L611.8 232.8 L625.0 232.8 L626.8 231.8 L631.0 231.8 L632.8 230.8 L637.0 229.8 L640.8 227.8 L642.0 227.8 L649.5 223.5 L651.2 222.0 L653.5 221.5 L662.8 212.5 L667.5 205.5 L671.0 198.2 L672.8 196.0 L672.8 194.8 L673.8 193.0 L673.8 190.8 L674.8 189.0 L674.8 186.8 L675.8 185.0 L675.8 164.8 L674.8 163.0 L674.8 159.8 L673.8 158.0 L673.8 156.8 L672.8 155.0 L671.8 150.8 L670.0 148.5 L667.5 143.2 L665.5 140.2 L663.8 138.5 L661.8 135.2 L655.5 129.0 L651.5 126.2 L649.8 126.0 L641.0 121.0 L639.8 121.0 L638.0 120.0 L636.8 120.0 L632.0 118.0 L628.8 118.0 L627.0 117.0 L609.8 117.0 L608.0 118.0 L604.8 118.0 L603.0 119.0 L601.8 119.0 L593.2 123.2 L590.5 125.8 L588.2 126.2 L585.5 129.0 L584.2 129.5 L583.8 129.0 L583.8 78.8 L581.8 75.2 L578.5 72.2 L576.0 71.0 L573.8 71.0 L573.0 70.5ZM608.8 140.8 L612.0 140.8 L613.8 139.8 L620.0 139.8 L621.8 140.8 L626.0 140.8 L633.5 144.0 L643.8 151.2 L647.8 157.2 L650.0 161.8 L650.0 163.0 L651.0 164.8 L651.0 167.0 L652.0 168.8 L652.0 181.0 L651.0 182.8 L651.0 184.0 L650.0 185.8 L649.0 190.0 L645.8 195.5 L644.5 197.0 L641.2 199.0 L636.5 203.8 L628.0 208.0 L626.8 208.0 L625.0 209.0 L609.8 209.0 L608.0 208.0 L606.8 208.0 L598.2 203.8 L593.5 199.0 L590.2 197.0 L589.0 195.5 L584.8 188.0 L584.8 186.8 L583.8 185.0 L583.8 182.8 L582.8 181.0 L582.8 168.8 L583.8 167.0 L583.8 164.8 L584.8 163.0 L584.8 161.8 L588.0 155.2 L592.2 150.0 L596.5 147.5 L599.2 145.0 L605.8 141.8 L607.0 141.8ZM763.0 70.0 L761.0 71.0 L758.8 71.0 L755.2 73.0 L752.2 76.2 L750.0 80.8 L750.0 229.0 L750.8 229.8 L774.0 229.8 L774.8 229.0 L774.8 79.8 L773.5 77.2 L770.5 73.2ZM393.8 70.0 L392.0 71.0 L389.8 71.0 L388.0 72.0 L386.2 72.2 L382.2 75.0 L380.8 77.5 L379.2 78.2 L377.0 83.8 L377.0 90.0 L380.2 97.5 L384.2 101.5 L386.0 101.8 L387.8 102.8 L389.0 102.8 L390.8 103.8 L397.0 103.8 L398.8 102.8 L400.0 102.8 L401.8 101.8 L403.5 101.5 L408.5 96.5 L410.8 91.0 L410.8 82.8 L408.5 78.2 L404.5 74.0 L399.0 71.0 L395.8 71.0Z"/></symbol></svg>
@@ -460,67 +368,49 @@
   </div>
 </section>
 
-<!-- 6. TRUST (L9). Device: editorial list, one sentence per check. Ticks on the standard checks Jobility confirmed (Q7); optional checks go through sales. -->
-<section class="sec" aria-labelledby="trust-h">
-  <div class="wrap split">
+<!-- 8. KNOW WHO YOU'RE HIRING (lighter): the heading, one line and four checks. Optional checks through sales. -->
+<section class="sec on-day" aria-labelledby="trust-h">
+  <div class="wrap split v2-trust">
     <div>
-      <h2 class="h-sec" id="trust-h">You know who you’re hiring.</h2>
-      <p class="lede trust-sub">Every match is checked before it reaches you.</p>
-      <p class="links-row" style="margin-top:18px"><a class="tlink" href="how-it-works.html#vetting">How we vet workers</a></p>
-      <figure class="photo fd-photo photo--wide trust-photo" style="--pos:58% 48%"><picture><source type="image/webp" srcset="assets/img/scanner-hands-800.webp 800w, assets/img/scanner-hands.webp 1536w" sizes="(min-width: 1200px) 520px, 92vw"><img src="assets/img/scanner-hands-800.jpg" srcset="assets/img/scanner-hands-800.jpg 800w, assets/img/scanner-hands.jpg 1536w" sizes="(min-width: 1200px) 520px, 92vw" width="1536" height="1024" alt="Gloved hands scan the barcode on a carton in a warehouse aisle." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
+      <h2 class="h-sec" id="trust-h">Know who you’re hiring.</h2>
+      <p class="lede">Checked before anyone reaches you.</p>
+      <p class="links-row"><a class="tlink" href="how-it-works.html#vetting">How we vet workers</a></p>
     </div>
-    <ul class="checks" role="list">
-      <li class="is-confirmed"><span class="ck-k">Skills</span><span class="ck-v">Checked against what your job needs.</span></li>
-      <li class="is-confirmed"><span class="ck-k">Availability</span><span class="ck-v">Confirmed for when you need them.</span></li>
-      <li class="is-confirmed"><span class="ck-k">Work history</span><span class="ck-v">Checked before a candidate reaches you.</span></li>
-      <li class="is-confirmed"><span class="ck-k">A person on our team</span><span class="ck-v">Reviews every match.</span></li>
-      <li><span class="ck-k">References and background checks</span><span class="ck-v">Added where you need them, through sales.</span></li>
+    <ul class="v2-checks fd-checks" role="list">
+      <li><b>Skills</b><span>Against what your job needs.</span></li>
+      <li><b>Availability</b><span>For when you need them.</span></li>
+      <li><b>Work history</b><span>Reviewed by our team.</span></li>
+      <li class="is-opt"><b>Licenses and background checks</b><span>Licenses for healthcare roles; background checks through sales.</span></li>
     </ul>
   </div>
 </section>
 
-<!-- 7. WHO'S BEHIND JOBILITY (L10). Device: proof. Parmi's own words beside a facts card (.founder-facts) with a small
-     initials mark; Parmi's photo replaces the mark when it arrives (Q1). Under it, the proof strip, live since Oct 28: three
-     jobility.com testimonials, verbatim, first name and business type only (fd-proof). -->
-<section class="sec on-day" aria-labelledby="founder-h">
-  <div class="wrap founder founder--facts">
-    <div>
-      <h2 class="h-sec" id="founder-h">Who’s behind Jobility.</h2>
-      <blockquote><p>&ldquo;I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.&rdquo;</p></blockquote>
-    </div>
-    <aside class="founder-facts fd-founder" aria-label="About the founder">
-      <div class="ff-mark" aria-hidden="true">PC</div>
-      <div class="ff-body">
-        <p class="ff-name">Parmi Cheema, founder and CEO</p>
-        <ul class="ff-list">
-          <li>More than 20 years in staffing</li>
-          <li>Our office is in Edison, NJ</li>
-        </ul>
-        <a class="link" data-topic="direct" href="contact.html?topic=direct">Talk to our team</a>
+<!-- 9. WHO'S BEHIND JOBILITY + what customers say (lighter). Parmi's words and a small facts card; three jobility.com
+     testimonials, verbatim (fd-proof). Parmi's photo replaces the PC mark when it arrives (Q1). -->
+<section class="sec" aria-labelledby="founder-h">
+  <div class="wrap v2-founder">
+    <div class="v2-founder-row">
+      <div>
+        <h2 class="h-sec" id="founder-h">Who’s behind Jobility.</h2>
+        <blockquote class="v2-founder-q"><p>“I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.”</p></blockquote>
       </div>
-    </aside>
-    <div class="coord qonly">
-      <span class="av" aria-hidden="true">?</span>
-      <p><span class="confirm" data-q="Q1" title="To confirm with Jobility: Q1, Parmi’s photo">Held until Q1: Parmi’s photo (replaces the PC mark). The site says “our team”, not a named contact (Kim, Oct 28).</span></p>
+      <aside class="founder-facts fd-founder" aria-label="About the founder">
+        <div class="ff-mark" aria-hidden="true">PC</div>
+        <div class="ff-body">
+          <p class="ff-name">Parmi Cheema, founder and CEO</p>
+          <ul class="ff-list">
+            <li>More than 20 years in staffing</li>
+          </ul>
+          <a class="link" data-topic="direct" href="contact.html?topic=direct">Talk to our team</a>
+        </div>
+      </aside>
     </div>
     <div class="proof is-live proof--trio fd-proof" role="group" aria-labelledby="proof-k"><p class="proof-k" id="proof-k">What customers say</p><figure class="proof-q fd-proof-q"><blockquote><p>“Jobility has matched me with dozens of great candidates over the past year and I have hired a bunch of them and have been pleased with the quality of the workers and the level of dedication and service the Jobility team provides. I highly recommend Jobility to any business looking for workers!”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Ariel</span><span class="proof-org">Home &amp; Office cleaning company</span></figcaption></figure><figure class="proof-q fd-proof-q"><blockquote><p>“We used Jobility to find an Admin assistant for 4 hours a day, 3 days a week for 6 weeks. We found a match within a few hours, the candidate was a great match, and we converted to a full time position.”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Henry</span><span class="proof-org">Shipping company</span></figcaption></figure><figure class="proof-q fd-proof-q"><blockquote><p>“Hired an LPN for one of my clients. The candidate matched 100% based on distance, availability, certifications, and rate. We had to do additional background checks which was also a breeze through Jobility.”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Gary</span><span class="proof-org">Staffing company</span></figcaption></figure></div>
-    <p class="qnote">From jobility.com testimonials, as published; Kim, 10/28. Open: Q1, Q3. Held until Q1: Parmi’s photo. Q3: more testimonials are in progress.</p>
+    <p class="qnote">From jobility.com testimonials, as published; Kim, 10/28. Open: Q1 (Parmi’s photo replaces the PC mark), Q3 (more testimonials in progress).</p>
   </div>
 </section>
 
-<!-- 8. WHO HIRES WITH US. Device: the customer industries line (Q12 answered: seven industries) and four working moments,
-     cast across different light, ages and distances (r6: no two golden-hour frames side by side). -->
-<section class="sec sec--tight" aria-labelledby="roles-h">
-  <div class="wrap roles roles--inds">
-    <!-- pre-mortem (Oct 27): the industries line as an icon row in the brand line style (2px round stroke, the j's dot in Energy), healthcare first and filled. fd-ind-ico -->
-    <div class="ind-wrap"><p class="custind-k" id="roles-h" role="heading" aria-level="2">Our customers work in</p><ul class="ind-ico fd-ind-ico" role="list" aria-labelledby="roles-h"><li class="is-lead"><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 5.5h7v7h7v7h-7v7h-7v-7h-7v-7h7z"/></g><circle class="ind-dot" cx="26.5" cy="5.5" r="2.4"/></svg></span><span class="ind-t">Healthcare</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23.5h22"/><path d="M7.5 23.5v-3a8.5 8.5 0 0 1 17 0v3"/><path d="M13.5 12.5v5.5M18.5 12.5v5.5"/></g><circle class="ind-dot" cx="26" cy="8" r="2.4"/></svg></span><span class="ind-t">Construction</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 26.5v-12l7 4.5v-4.5l7 4.5v-4.5l7 4.5V6.5h2v20z"/></g><circle class="ind-dot" cx="6" cy="7" r="2.4"/></svg></span><span class="ind-t">Light industrial and manufacturing</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 24.5h23"/><path d="M7 24.5a9 9 0 0 1 18 0"/><path d="M16 15.5v-3M13 12.5h6"/></g><circle class="ind-dot" cx="26" cy="8" r="2.4"/></svg></span><span class="ind-t">Hospitality</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="8.5" width="19" height="12.5" rx="1.5"/><path d="M3.5 25h25"/></g><circle class="ind-dot" cx="27" cy="5" r="2.4"/></svg></span><span class="ind-t">IT</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5l2.4 7.1 7.1 2.4-7.1 2.4L15 24.5l-2.4-7.1-7.1-2.4 7.1-2.4z"/></g><circle class="ind-dot" cx="25.5" cy="24.5" r="2.4"/></svg></span><span class="ind-t">Aesthetic medicine</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11.5h18l-1.5 15h-15z"/><path d="M12 11.5V9.5a4 4 0 0 1 8 0v2"/></g><circle class="ind-dot" cx="26.5" cy="6" r="2.4"/></svg></span><span class="ind-t">Retail</span></li></ul></div>
-  </div>
-  <div class="wrap">
-    <ul class="photo-strip photo-strip--inds" role="list" aria-label="Working moments in four of these industries"><li><figure class="photo-fig"><div class="photo fd-photo " style="--pos:45% 26%;--pos-m:45% 24%"><picture><source type="image/webp" srcset="assets/img/nurses-schedule-800.webp 800w, assets/img/nurses-schedule.webp 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw"><img src="assets/img/nurses-schedule-800.jpg" srcset="assets/img/nurses-schedule-800.jpg 800w, assets/img/nurses-schedule.jpg 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw" width="1536" height="1024" alt="A charge nurse points to the week’s shift schedule on a tablet while a nurse reads along at the nurses’ station." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="photo__cap">Healthcare</figcaption></figure></li><li><figure class="photo-fig"><div class="photo fd-photo " style="--pos:30% 22%;--pos-m:24% 20%"><picture><source type="image/webp" srcset="assets/img/construction-briefing-800.webp 800w, assets/img/construction-briefing.webp 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw"><img src="assets/img/construction-briefing-800.jpg" srcset="assets/img/construction-briefing-800.jpg 800w, assets/img/construction-briefing.jpg 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw" width="1536" height="1024" alt="A site lead walks a construction crew through the day’s plan at an early morning briefing." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="photo__cap">Construction</figcaption></figure></li><li><figure class="photo-fig"><div class="photo fd-photo " style="--pos:58% 30%;--pos-m:60% 28%"><picture><source type="image/webp" srcset="assets/img/kitchen-training-800.webp 800w, assets/img/kitchen-training.webp 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw"><img src="assets/img/kitchen-training-800.jpg" srcset="assets/img/kitchen-training-800.jpg 800w, assets/img/kitchen-training.jpg 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw" width="1536" height="1024" alt="A head chef shows a new cook how he wants the prep done at a steel counter in a restaurant kitchen." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="photo__cap">Hospitality</figcaption></figure></li><li><figure class="photo-fig"><div class="photo fd-photo " style="--pos:64% 30%;--pos-m:66% 28%"><picture><source type="image/webp" srcset="assets/img/packing-orders-800.webp 800w, assets/img/packing-orders.webp 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw"><img src="assets/img/packing-orders-800.jpg" srcset="assets/img/packing-orders-800.jpg 800w, assets/img/packing-orders.jpg 1536w" sizes="(min-width: 1200px) 290px, (min-width: 768px) 24vw, 46vw" width="1536" height="1024" alt="A young man packs customer orders into shipping boxes at a workbench in a small stockroom." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><figcaption class="photo__cap">Retail</figcaption></figure></li></ul>
-  </div>
-</section>
-
-<!-- 9. FAQ (L13). Device: typographic Q&A rows. Six questions, word for word from deck 5.8. -->
+<!-- 11. FAQ (L13). Device: typographic Q&A rows. Six questions, word for word from deck 5.8. -->
 <section class="sec" aria-labelledby="faq-h">
   <div class="wrap faq">
     <div>
@@ -531,7 +421,7 @@
       <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span class="faq-t">What is Jobility?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
         <div class="faq-a" id="fa1"><p>Jobility is a direct hiring platform. You post a job once, and Jobility finds, vets and shortlists candidates, so you get workers, not resumes. You can hire full-time and part-time staff directly, bring on temp and contract workers with Jobility as the employer of record, or cover shifts, all from one account.</p></div></div>
       <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span class="faq-t">How much does Jobility cost?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-        <div class="faq-a" id="fa2"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once when you publish, and there’s no fee when you hire. Buy one job posting, get one free. Exclusive offer for new customers.</p><p>The placement fee is 8% if you post and schedule, or 15% if we do the work and send you a candidate, and posting on that plan is free. The fee is a percentage of first-year salary; for hourly roles, we convert the pay rate to a yearly amount. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour. For post prices and placement fees, see <a href="pricing.html">Jobility pricing</a>.</p></div></div>
+        <div class="faq-a" id="fa2"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once when you publish, and there’s no fee when you hire. New customer offer: your second job post is complimentary.</p><p>The placement fee is 8% if you post and schedule, or 15% if we do the work and send you a candidate, and posting on that plan is free. The fee is a percentage of first-year salary; for hourly roles, we convert the pay rate to a yearly amount. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour. For post prices and placement fees, see <a href="pricing.html">Jobility pricing</a>.</p></div></div>
       <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span class="faq-t">How is Jobility different from a job board like Indeed?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
         <div class="faq-a" id="fa3"><p>A job board shows your post to job seekers and sends you everyone who applies; Jobility screens candidates against your requirements and sends you a short list. There is no charge per click or per applicant: you pay per post from $150, or post free and pay a placement fee only when you hire. Per hire, you pay less than you would on a job board or with a staffing agency, because you aren’t paying for clicks and applicants and then sorting them yourself.</p></div></div>
       <div class="faq-item held" data-q="Q18"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span class="faq-t">Is Jobility a staffing agency?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -545,18 +435,23 @@
   </div>
 </section>
 
-<!-- 10. FINAL CTA (L14). Device: the one dark band; text left, a shop owner's first morning with a new hire right (1024px and up; phones type only). -->
-<section class="cta-band on-dark" data-cta-final aria-labelledby="cta-h">
+<!-- 12. FINAL CTA (System v2): light tint band, the new-customer offer (.promo, fd-promo), one working moment (dispatcher). -->
+<section class="cta-band v2-cta" data-cta-final aria-labelledby="cta-h">
   <div class="wrap cta-grid cta-grid--photo">
     <div>
       <h2 class="h-sec" id="cta-h">Post your first job<span class="stop">.</span></h2>
-      <p class="lede">Tell us who you need, and we’ll send you a short list of screened people.</p>
+      <p class="lede">Tell us who you need. We send a short list of vetted people.</p>
+      <div class="promo fd-promo" role="note" aria-label="New customer offer">
+        <span class="promo-mark" aria-hidden="true"></span>
+        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span></p>
+      </div>
       <div class="btn-row">
         <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>
         <a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
       </div>
+      <p class="qnote">Open: Q21. The offer in our words for review (Nov 5 call: professional, never retail; alternates in DESIGN.md). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call).</p>
     </div>
-    <figure class="photo fd-photo " style="--pos:62% 28%;--pos-m:62% 28%"><picture><source type="image/webp" srcset="assets/img/first-morning-800.webp 800w, assets/img/first-morning.webp 1536w" sizes="(min-width: 1200px) 540px, (min-width: 1024px) 42vw, (min-width: 768px) 640px, 1px"><img src="assets/img/first-morning-800.jpg" srcset="assets/img/first-morning-800.jpg 800w, assets/img/first-morning.jpg 1536w" sizes="(min-width: 1200px) 540px, (min-width: 1024px) 42vw, (min-width: 768px) 640px, 1px" width="1536" height="1024" alt="A machine shop owner shows a new hire how to set up her workbench on her first morning." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
+    <figure class="photo fd-photo" style="--pos:66% 30%;--pos-m:66% 30%"><picture><source type="image/webp" srcset="assets/img/depot-dispatcher-800.webp 800w, assets/img/depot-dispatcher.webp 1536w" sizes="(min-width: 1200px) 540px, (min-width: 1024px) 42vw, (min-width: 768px) 640px, 1px"><img src="assets/img/depot-dispatcher-800.jpg" srcset="assets/img/depot-dispatcher-800.jpg 800w, assets/img/depot-dispatcher.jpg 1536w" sizes="(min-width: 1200px) 540px, (min-width: 1024px) 42vw, (min-width: 768px) 640px, 1px" width="1536" height="1024" alt="A depot dispatcher in a headset and reading glasses checks the morning run sheet on a clipboard, buses lined up behind him on an overcast morning." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
   </div>
 </section>
 
@@ -615,5 +510,6 @@
 
 <script src="assets/site.js"></script><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
 <script defer src="assets/walkthrough.js"></script>
+<script defer src="assets/home-v2.js"></script>
 </body>
 </html>
