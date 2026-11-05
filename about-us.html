@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css"><!-- whimsy-p2 --><link rel="stylesheet" href="assets/whimsy-p2.css"><!-- /whimsy-p2 -->
 </head>
-<body class="page-about">
+<body class="page-about pg-b pg-about">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Light theme: the page has no Night hero. -->
@@ -67,10 +67,9 @@
 </div>
 
 <main id="main">
+<!-- fv-b-about: funnel + visual pass (Package B). TX, QL, NU, LG+SP, SP (careers), SC, CTA-S. Team and News stay review only. -->
 
-<!-- 1. HERO (c-pghero). The deck H1 ("We ran a staffing firm. Then we built the cheaper way to hire.") states more than the
-     confirmed history line, so the H1 says what is confirmed: 20+ years in staffing, a cheaper route than an agency fee. -->
-<section class="pg-hero" data-hero aria-labelledby="h1"><div class="wrap">
+<section class="pg-hero" data-fv="TX" data-hero aria-labelledby="h1"><div class="wrap">
   <h1 class="h-page" id="h1">We know what agency fees cost. So we built another way to hire<span class="stop">.</span></h1>
   <p class="lede">Parmi Cheema founded Jobility after more than 20 years in staffing. It’s for owners who want to hire for themselves, for less than a typical agency fee.</p>
   <div class="btn-row"><a class="btn btn--primary" data-topic="unsure" href="contact.html?topic=unsure">Talk to us</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
@@ -78,49 +77,28 @@
 <div class="wrap"><p class="qnote" title="The deck H1 “We ran a staffing firm. Then we built the cheaper way to hire.” is held: the confirmed history line is “more than 20 years in staffing.”"><span class="qnote-body">Open: Q15<span class="qnote-held">The deck H1 “We ran a staffing firm. Then we built the cheaper way to hire.” is held: the confirmed history line is “more than 20 years in staffing.”</span></span></p></div>
 </section>
 
-<!-- 2. FOUNDER BLOCK (p-founder, About variant). Parmi's portrait is owed (Q8b): the PC mark is the designed placeholder,
-     never an AI face. The founder note in his own words is held (Q8). -->
-<section class="sec on-day" aria-labelledby="founder-h">
-  <div class="wrap founder founder--facts">
-    <div>
-      <h2 class="h-sec" id="founder-h">Who’s behind Jobility.</h2>
-      <blockquote><p>&ldquo;I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.&rdquo;</p></blockquote>
-      <p class="held" data-q="Q15">Held until Q15: a short founder note, two or three sentences in Parmi’s own words.</p>
+<!-- 2. WHO’S BEHIND JOBILITY (QL): Parmi’s line + the founder card (PC mark until his photo, Q1) -->
+<section class="sec fv-sec--rule" data-fv="QL" aria-labelledby="founder-h">
+  <div class="wrap">
+    <h2 class="h-sec b-ab-fh" id="founder-h">Who’s behind Jobility.</h2>
+    <div class="fv-quote fv-quote--solo">
+      <figure class="fv-quote-main"><blockquote><p>I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.”</p></blockquote><figcaption class="fv-quote-by"><b>Parmi Cheema</b><span>Founder and CEO. More than 20 years in staffing.</span></figcaption></figure>
+      <p class="b-ab-talk"><a class="tlink" data-topic="unsure" href="contact.html?topic=unsure">Talk to our team</a></p>
     </div>
-    <aside class="founder-facts fd-founder" aria-label="About the founder">
-      <div class="ff-mark" aria-hidden="true">PC</div>
-      <div class="ff-body">
-        <p class="ff-name">Parmi Cheema, founder and CEO</p>
-        <ul class="ff-list">
-          <li>More than 20 years in staffing</li>
-          <li>Our office is in Edison, NJ</li>
-        </ul>
-        <a class="link" data-topic="unsure" href="contact.html?topic=unsure">Talk to our team</a>
-      </div>
-    </aside>
-    <div class="coord qonly">
-      <span class="av" aria-hidden="true">?</span>
-      <p><span class="confirm qchip" data-q="Q1" title="To confirm with Jobility: Q1, Parmi’s photo">Held until Q1: Parmi’s photo (replaces the PC mark). The site says “our team”, not a named contact (Kim, Oct 28).</span></p>
-    </div>
+    <p class="held" data-q="Q15">Held until Q15: a short founder note, two or three sentences in Parmi’s own words. Held until Q1: Parmi’s photo (replaces the PC mark).</p>
   </div>
 <div class="wrap"><p class="qnote"><span class="qnote-body">Open: Q1, Q15</span></p></div>
 </section>
 
-<!-- 3. WHAT WE BELIEVE (c-ways, plain list). The third line is Q28's; the deck's fallback ships meanwhile. -->
-<section class="sec" aria-labelledby="bel-h">
-  <div class="wrap split">
+<!-- 3. WHAT WE BELIEVE (NU variant, type only) -->
+<section class="sec on-day" data-fv="NU" aria-labelledby="bel-h">
+  <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="bel-h">What we believe</h2></div>
-    <ul class="plain-list" role="list">
-      <li>Owners should see the price of a hire before they sign up.</li>
-      <li>You should hire people, not sort resumes.</li>
-      <li><span class="confirm qchip" data-q="Q17" data-clean="A person on our team reviews every match." title="To confirm with Jobility: Q17, worker pay timing. The deck’s fallback line ships until then">Workers deserve to know who employs them and when they get paid.</span></li>
-    </ul>
+    <ol class="b-believe" role="list"><li><span class="b-believe-n" aria-hidden="true">01</span><p>Owners should see the price of a hire before they sign up.</p></li><li><span class="b-believe-n" aria-hidden="true">02</span><p>You should hire people, not sort resumes.</p></li><li><span class="b-believe-n" aria-hidden="true">03</span><p><span class="confirm qchip" data-q="Q17" data-clean="A person on our team reviews every match." title="To confirm with Jobility: Q17, worker pay timing. The deck’s fallback line ships until then">Workers deserve to know who employs them and when they get paid.</span></p></li></ol>
   </div>
 <div class="wrap"><p class="qnote" title="Held until Q17: “Workers deserve to know who employs them and when they get paid.” replaces the fallback once the worker page can state pay timing."><span class="qnote-body">Open: Q17<span class="qnote-held">Held until Q17: “Workers deserve to know who employs them and when they get paid.” replaces the fallback once the worker page can state pay timing.</span></span></p></div>
 </section>
 
-<!-- 4. TEAM (c-team). Review only until people opt in: a mostly empty grid is worse than none, and no anonymous team photo. No named
-     support contact: the site says "our team" (Kim, Oct 28). -->
 <section class="sec qonly" aria-labelledby="team-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="team-h">Team</h2></div>
@@ -130,31 +108,38 @@
   </div>
 </section>
 
-<!-- 5 + 6. THE JOBILITY FAMILY and COMPANY FACTS (c-deflist): one block, the entity facts assistants and press read. -->
-<section class="sec on-day" id="facts" aria-labelledby="facts-h">
+<section class="sec" id="facts" data-fv="LG" aria-labelledby="facts-h">
   <div class="wrap split">
     <div class="sec-head"><h2 class="h-sec" id="facts-h">Company facts</h2>
-      <p class="lede">An AI-driven direct hiring platform. Post a job once, and we find, vet and shortlist candidates.</p><!-- whimsy-p2 --><div class="fd-edison" role="img" aria-label="Map: our office in Edison, NJ"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect class="fd-ed-land" width="400" height="300"/><path class="fd-ed-road" d="M24 236 C110 196 170 168 214 150 C270 126 330 86 392 40"/><path class="fd-ed-road" d="M126 0 C150 70 186 120 236 176 C262 204 276 222 290 248"/><path class="fd-ed-road" d="M338 0 C334 70 344 150 352 252"/><path class="fd-ed-road fd-ed-road--s" d="M40 92 C110 102 170 96 250 104 C300 108 340 112 400 120"/><path class="fd-ed-road fd-ed-road--s" d="M70 0 C74 60 70 140 84 230"/><path class="fd-ed-road fd-ed-road--s" d="M150 196 C200 206 250 214 300 206"/><path class="fd-ed-road fd-ed-road--s" d="M250 30 C262 60 280 90 300 100"/><path class="fd-ed-ring" d="M186 150 a24 9 0 1 0 48 0 a24 9 0 1 0 -48 0"/><g class="fd-ed-pinw"><g transform="translate(186 92.2) scale(.24)"><path class="fd-ed-pin" d="M100 245 C60 200 18 150 18 105 C18 55 55 18 100 18 C145 18 183 55 183 105 C183 150 157 192 127 222"/><circle class="fd-ed-pindot" cx="100" cy="107" r="19"/></g></g></svg><span class="fd-ed-l fd-ed-l--ed" aria-hidden="true">Edison, NJ</span></div><!-- /whimsy-p2 --></div>
-    <dl class="deflist ab-facts">
-      <dt>Company</dt><dd>Jobility, Inc.</dd>
-      <dt>Office</dt><dd><span class="confirm qchip" data-q="Q18" title="To confirm with Jobility: Q18, one address format (Kim’s signature; Google Play and BBB use 2 State Route 27)">2 Lincoln Highway, Suite 401, Edison, NJ 08820</span></dd>
-      <dt>Founder</dt><dd>Parmi Cheema, founder and CEO, with more than 20 years in staffing</dd>
-      <dt>What we do</dt><dd>Direct hiring of full-time and part-time staff, plus temp and contract workers and shift cover, from one account</dd>
-      <dt>Healthcare</dt><dd>Nurses, CNAs and allied staff: <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></dd>
-      <dt>The Jobility family</dt><dd>Jobility is the hiring platform. For full-service staffing, staff augmentation and statement-of-work projects, our sister company, Jobility Talent Solutions, does that work. <a href="https://jobilitytalent.com">Visit Jobility Talent Solutions</a></dd>
-      <dt>Contact</dt><dd><a data-topic="unsure" href="contact.html?topic=unsure">Talk to us</a></dd>
-    </dl>
+      <p class="lede">An AI-driven direct hiring platform. Post a job once, and we find, vet and shortlist candidates.</p><figure class="b-ab-map"><span class="fv-spot"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="14" width="140" height="92" rx="10" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><path d="M10 46 H150" vector-effect="non-scaling-stroke"/><path d="M10 80 H150" vector-effect="non-scaling-stroke"/><path d="M52 14 V106" vector-effect="non-scaling-stroke"/><path d="M104 14 V106" vector-effect="non-scaling-stroke"/><path d="M20 106 L150 22" vector-effect="non-scaling-stroke"/><rect x="62" y="56" width="32" height="14" rx="2" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M80 22 C70 22 64 29 64 37 C64 48 80 62 80 62 C80 62 96 48 96 37 C96 29 90 22 80 22 Z" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/><circle cx="80" cy="37" r="5" fill="#FFFFFF" stroke="none" vector-effect="non-scaling-stroke"/></svg></span><figcaption>Our office: Edison, NJ</figcaption></figure></div>
+    <ul class="fv-ledger b-ab-facts" role="list"><li><span class="fv-ledger-t">Company</span><span class="fv-ledger-d">Jobility, Inc.</span></li><li><span class="fv-ledger-t">Office</span><span class="fv-ledger-d"><span class="confirm qchip" data-q="Q18" title="To confirm with Jobility: Q18, one address format (Kim’s signature; Google Play and BBB use 2 State Route 27)">2 Lincoln Highway, Suite 401, Edison, NJ 08820</span></span></li><li><span class="fv-ledger-t">Founder</span><span class="fv-ledger-d">Parmi Cheema, founder and CEO, with more than 20 years in staffing</span></li><li><span class="fv-ledger-t">What we do</span><span class="fv-ledger-d">Direct hiring of full-time and part-time staff, plus temp and contract workers and shift cover, from one account</span></li><li><span class="fv-ledger-t">Healthcare</span><span class="fv-ledger-d">Hiring a nurse, medical assistant or clinic admin onto your staff: <a href="direct-hiring.html#ind-healthcare">post on Jobility</a>. Staffing shifts at a healthcare facility: <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span></li><li><span class="fv-ledger-t">The Jobility family</span><span class="fv-ledger-d">Jobility is the hiring platform. For full-service staffing, staff augmentation and statement-of-work projects, our sister company, Jobility Talent Solutions, does that work. <a href="https://jobilitytalent.com">Visit Jobility Talent Solutions</a></span></li><li><span class="fv-ledger-t">Contact</span><span class="fv-ledger-d"><a data-topic="unsure" href="contact.html?topic=unsure">Talk to us</a></span></li></ul>
   </div>
 <div class="wrap"><p class="qnote" title="Held until supply item 16: Founded [year]. Held: whether jobilityhealth.com is mentioned, merged or retired."><span class="qnote-body">Open: Q18<span class="qnote-held">Held until supply item 16: Founded [year].</span></span></p></div>
 </section>
 
-<!-- 7. DIRECT HIRING, DIRECT SOURCING AND RPO (#direct-hiring-vs-rpo; c-answer, t-who four columns, which one fits). Written to be
-     quoted by AI assistants: each sentence stands alone. -->
-<section class="sec" id="direct-hiring-vs-rpo" aria-labelledby="rpo-h">
+<section class="sec on-day qonly" id="news" aria-labelledby="news-h">
+  <div class="wrap">
+    <h2 class="h-sec" id="news-h">News</h2>
+    <p class="held" data-q="Q15">Held until the relaunch release exists: “Jobility relaunches as a direct hiring platform for full-time, temp and shift hiring, with published pricing. [date] · Read the release” and “Press: [email]” (Q10). A dated line with no release behind it reads as filler.</p>
+  </div>
+</section>
+
+<section class="sec on-day" id="careers" data-fv="SP" aria-labelledby="careers-h">
+  <div class="wrap careers b-ab-careers">
+    <span class="fv-spot"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M66 84 L58 108 L68 102 L74 110 L80 88" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M94 84 L102 108 L92 102 L86 110 L80 88" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><circle cx="80" cy="56" r="36" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><circle cx="80" cy="56" r="26" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M84 50 V70 Q84 78 76 78 Q71 78 69 74" vector-effect="non-scaling-stroke"/><circle cx="84" cy="40" r="4.5" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg></span>
+    <div><h2 class="h-sec" id="careers-h">Work at Jobility.</h2>
+      <p class="lede">We help businesses find the people they need, and people find work that fits. Come help us do it.</p>
+      <p class="held">Held until the team supplies two or three true statements about how we work.</p>
+      <div class="btn-row"><a class="btn btn--secondary qonly" href="#careers" title="JobDiva listing URL to confirm">See open roles</a><a class="btn btn--secondary" data-topic="else" href="contact.html?topic=else">Ask about open roles</a></div></div>
+  </div>
+<div class="wrap"><p class="qnote" title="Held: the JobDiva listing URL for “See open roles”, and whether to keep an on-site form."><span class="qnote-body">Open: Q10<span class="qnote-held">Held: the JobDiva listing URL for “See open roles”, and whether to keep an on-site form.</span></span></p></div>
+</section>
+
+<section class="sec" id="direct-hiring-vs-rpo" data-fv="SC" aria-labelledby="rpo-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="rpo-h">Direct hiring, direct sourcing and RPO: what’s the difference?</h2></div>
     <div class="answer"><p>Direct hiring means you hire the person onto your own payroll, without an agency in the middle. Jobility is a direct hiring platform: we find and vet candidates, and you hire them directly.</p></div>
-    <table class="ctable ctable--stack ab-rpo" aria-label="Direct hiring, direct sourcing and RPO compared">
+    <table class="ctable ctable--stack ab-rpo fv-compare" aria-label="Direct hiring, direct sourcing and RPO compared">
       <thead><tr><td></td><th scope="col" class="is-us">Direct hiring (Jobility)</th><th scope="col">Direct sourcing</th><th scope="col">RPO</th></tr></thead>
       <tbody>
         <tr><th scope="row">What it is</th><td class="is-us" data-label="Direct hiring (Jobility)">You hire onto your own payroll; the platform finds and vets candidates</td><td data-label="Direct sourcing">A company builds its own pool of contingent workers</td><td data-label="RPO">An outside team runs some or all of your recruiting</td></tr>
@@ -163,48 +148,34 @@
         <tr><th scope="row">Who employs the worker</th><td class="is-us" data-label="Direct hiring (Jobility)">You for direct hires; Jobility, as employer of record, for temp and shift workers if you choose it</td><td data-label="Direct sourcing">Usually a payroll partner</td><td data-label="RPO">You</td></tr>
       </tbody>
     </table>
-    <p class="ab-fit-more">Want an outside team to run your recruiting? Our sister company, Jobility Talent Solutions, offers full-service staffing.</p>
+    <p class="ab-fit-more">Want an outside team to run your recruiting? Our sister company, Jobility Talent Solutions, offers full-service staffing. <a href="https://jobilitytalent.com">Visit Jobility Talent Solutions</a></p>
+    <p class="fv-next"><span class="fv-next-k">Next:</span><a href="how-it-works.html">How it works</a></p>
   </div>
 <div class="wrap"><p class="qnote" title="Parmi to review the definitions in this table."><span class="qnote-body">Review: <span class="qnote-held">Parmi to review the definitions in this table.</span></span></p></div>
 </section>
 
-<!-- 8. NEWS (#news): hidden at launch unless the relaunch release exists. Review only. -->
-<section class="sec on-day qonly" id="news" aria-labelledby="news-h">
-  <div class="wrap">
-    <h2 class="h-sec" id="news-h">News</h2>
-    <p class="held" data-q="Q15">Held until the relaunch release exists: “Jobility relaunches as a direct hiring platform for full-time, temp and shift hiring, with published pricing. [date] · Read the release” and “Press: [email]” (Q10). A dated line with no release behind it reads as filler.</p>
-  </div>
-</section>
-
-<!-- 9. CAREERS (#careers, c-team careers block). Open roles are listed on JobDiva; the URL is owed, so the button is review only
-     and the clean page routes to Talk to us. -->
-<section class="sec" id="careers" aria-labelledby="careers-h">
-  <div class="wrap careers">
-    <div><h2 class="h-sec" id="careers-h">Work at Jobility.</h2>
-      <p class="lede">We help businesses find the people they need, and help people find work that fits. Come help us do it.</p>
-      <p class="held">Held until the team supplies two or three true statements about how we work.</p>
-      <div class="btn-row"><a class="btn btn--secondary qonly" href="#careers" title="JobDiva listing URL to confirm">See open roles</a><a class="btn btn--secondary" data-topic="else" href="contact.html?topic=else">Ask about open roles</a></div></div>
-  </div>
-<div class="wrap"><p class="qnote" title="Held: the JobDiva listing URL for “See open roles”, and whether to keep an on-site form."><span class="qnote-body">Open: Q10<span class="qnote-held">Held: the JobDiva listing URL for “See open roles”, and whether to keep an on-site form.</span></span></p></div>
-</section>
-
-<!-- 10. FINAL CTA (c-cta). Talk to us leads on About (plan 5.7). -->
-<section class="cta-band" data-cta-final aria-labelledby="cta-h">
-  <div class="wrap cta-grid">
+<section class="fv-cta fd-cta" data-cta-final data-fv="CTA-S" aria-labelledby="cta-h">
+  <div class="wrap fv-cta-grid">
     <div>
       <h2 class="h-sec" id="cta-h">Questions about Jobility? Talk to our team<span class="stop">.</span></h2>
-      <p class="lede">Post free on the placement-fee plan and pay only when you hire. Or pay per post from $150, with no fee when you hire.</p>
+      <p class="lede">Tell us what you’re hiring for. A person on our team will be in touch.</p>
+      <p class="fv-cta-price">Pay per post from $150, or a placement fee of 8% or 15%, only when you hire.</p>
       <div class="btn-row"><a class="btn btn--primary" data-topic="unsure" href="contact.html?topic=unsure">Talk to us</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
+      <ul class="fv-cta-alt" role="list" aria-label="Ways to hire"><li>Hiring someone permanent? <a href="direct-hiring.html">Direct hiring</a></li><li>Need people for weeks? <a href="contingent-labor.html">Contingent labor</a></li><li>Need a shift covered? <a href="gig-work.html">Gig work</a></li></ul>
     </div>
-    <div>
-      <ul class="cta-cross" role="list" aria-label="Ways to hire">
-        <li><span>Hiring someone permanent?</span><a href="direct-hiring.html">Direct hiring</a></li>
-        <li><span>Need someone for weeks, not years?</span><a href="contingent-labor.html">Temp and contract workers</a></li>
-        <li><span>Need a shift covered?</span><a href="gig-work.html">Shift coverage</a></li>
-      </ul>
-    </div>
+    <div class="fv-cta-media fv-cta-media--ui"><div class="fv-mini fv-mini--calendar fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Interviews</b><span>This week</span></p>
+  <div class="fv-cal">
+    <span class="fv-cal-d">Mon</span><span class="fv-cal-d">Tue</span><span class="fv-cal-d">Wed</span><span class="fv-cal-d">Thu</span><span class="fv-cal-d">Fri</span>
+    <span class="fv-cal-s is-busy"></span><span class="fv-cal-s is-pick"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span>
+    <span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span>
+    <span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span>
+  </div>
+  <p class="fv-cal-note">Tue 10:00 · Interview booked by you</p>
+</div></div>
   </div>
 </section>
+
 </main>
 
 

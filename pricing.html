@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="assets/site.css"><!-- whimsy-p2 --><link rel="stylesheet" href="assets/whimsy-p2.css"><!-- /whimsy-p2 -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Jobility direct hiring","serviceType":"Direct hiring platform","provider":{"@type":"Organization","name":"Jobility, Inc."},"areaServed":"US","url":"https://jobility.com/pricing/","offers":[{"@type":"Offer","name":"Job post: general labor and light industrial","price":150,"priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":150,"priceCurrency":"USD","unitText":"per job post"}},{"@type":"Offer","name":"Job post: IT","price":250,"priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":250,"priceCurrency":"USD","unitText":"per job post"}},{"@type":"Offer","name":"Job post: healthcare admin, facilities and operations","price":200,"priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":200,"priceCurrency":"USD","unitText":"per job post"}},{"@type":"Offer","name":"Job post: nursing and allied health","priceCurrency":"USD","priceSpecification":{"@type":"PriceSpecification","minPrice":350,"maxPrice":400,"priceCurrency":"USD"}},{"@type":"Offer","name":"Job post: advanced practice, physicians and scientists","price":500,"priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":500,"priceCurrency":"USD","unitText":"per job post"}},{"@type":"Offer","name":"Placement fee","description":"8% of first-year salary self-service or 15% Jobility managed, charged when you hire. Hourly pay is converted to a yearly amount."}]}</script>
 </head>
-<body class="page-pricing">
+<body class="page-pricing pg-b pg-pricing">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Light theme: the page has no Night hero. -->
@@ -68,39 +68,30 @@
 </div>
 
 <main id="main">
+<!-- fv-b-pricing: funnel + visual pass (Package B, Nov 2026). NU, SC, DV, LG, UI, VET, SC, PH, AC, CTA-S. -->
 
-<!-- 1. HERO (plan 5.1; deck 5.3 section 1; library #c-pghero + #pr-tiles + #pr-qline). The page looks like a price list on
-     the first screen: three tiles, placement fee first, then the one-row quick quote on [data-quote] (site.js). No photo. -->
-<section class="pg-hero pr-hero" data-hero aria-labelledby="h1">
+<section class="pg-hero pr-hero" data-fv="NU" data-hero aria-labelledby="h1">
   <div class="wrap">
     <h1 class="h-page" id="h1">What hiring with Jobility costs<span class="stop">.</span></h1>
-    <p class="lede">Vetted people ready to start: AI&#8209;driven matching, checked by a person on our team. Pay less per hire than a job board or a staffing agency.</p>
-    <ul class="tiles fd-tiles" role="list" aria-label="Jobility prices at a glance">
-      <li class="tile tile--lead"><p class="tile-k">Placement fee</p><p class="tile-n"><span class="fd-loop-t" data-p2w>$0</span> to post</p><p class="tile-v">8% or 15% of first-year salary, only when you hire.</p></li>
-      <li class="tile"><p class="tile-k">Pay per post</p><p class="tile-n"><span data-price="post.labor">$150</span> to <span data-price="post.adv">$500</span></p><p class="tile-v">Per post, by role. No placement fee when you hire.</p></li>
-      <li class="tile"><p class="tile-k">Subscription</p><p class="tile-n">Custom</p><p class="tile-v">For teams that post every month. <a data-topic="plan" href="contact.html?topic=plan">Talk to us</a>.</p></li>
-    </ul>
-    <div class="tiles-after">
-      <p>No charge per click or per applicant.</p>
-    </div>
-    <p class="sales-line">Enterprise pricing, custom plans, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to sales</a>.</p>
+    <p class="lede">Vetted people ready to start: AI&#8209;driven matching, checked by a person on our team. Pay less than a typical staffing agency fee, and get a short list instead of a pile of applicants.</p>
+    <ul class="fv-nu fd-nu" role="list" style="--n:3"><li><span class="fv-nu-n"><span class="fd-loop-t" data-p2w>$0</span><small> to post</small></span><span class="fv-nu-l">Placement fee</span><span class="fv-nu-c">8% or 15% of first-year salary, only when you hire.</span></li><li><span class="fv-nu-n"><span data-price="post.labor">$150</span><small> to </small><span data-price="post.adv">$500</span></span><span class="fv-nu-l">Pay per post</span><span class="fv-nu-c">Per post, by role. No placement fee when you hire.</span></li><li><span class="fv-nu-n">Custom</span><span class="fv-nu-l">Subscription</span><span class="fv-nu-c">For teams that post every month. <a data-topic="plan" href="contact.html?topic=plan">Talk to us</a>.</span></li></ul>
+    <p class="sales-line">Enterprise pricing, custom plans, background checks and extra verification: <a data-topic="plan" href="contact.html?topic=plan">talk to us</a>.</p>
 
     <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="btn btn--secondary" href="#calculator">Compare one hire</a></div>
-    <nav aria-label="On this page" data-jumps><ul class="jumps" role="list"><li><a href="#pay-per-post">Prices</a></li><li><a href="#calculator">One hire, three ways</a></li><li><a href="#temp-shift">Temp and shift</a></li><li><a href="#vs-job-boards">Jobility vs. job boards</a></li><li><a href="#questions">Questions</a></li></ul></nav>
+    <nav aria-label="On this page" data-jumps><ul class="jumps" role="list"><li><a href="#pay-per-post">Plans</a></li><li><a href="#prices">Prices by role</a></li><li><a href="#calculator">One hire, three ways</a></li><li><a href="#temp-shift">Temp and shift</a></li><li><a href="#vs-job-boards">Jobility vs. job boards</a></li><li><a href="#for-approvers">For approvers</a></li><li><a href="#questions">Questions</a></li></ul></nav>
   </div>
   <div class="wrap"><p class="qnote">Open: Q14, Q21. The offer in our words (Nov 5 call: professional, never retail); to confirm it applies to pay-per-post posts, and $150 vs the $100 mentioned on the call. The $350 to $400 range as approved on Oct 15. Held until Q14: “Free to sign up.” The deck’s “Book a 20-minute call” waits on Q16, as on Direct hiring.</p></div>
 </section>
 
-<!-- 2. PRICING CARDS (#pay-per-post; library #pr-plans + #pr-table, L16). Placement fee first: it is the only plan where
-     "post free" is true. Every button goes to the portal sign-up with no parameters (Q12): the plan is picked in the job wizard. -->
-<section class="sec on-day" id="pay-per-post" aria-labelledby="plans-h">
+<section class="sec on-day" id="pay-per-post" data-fv="SC" aria-labelledby="plans-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="plans-h">Two ways to pay for a direct hire.</h2>
       <p class="lede">Same vetting either way. They differ in when you pay.</p></div>
-    <div class="plans fd-plans">
+    <div class="plans fd-plans fv-compare">
       <article class="plan plan--lead" data-plan data-rate="self" aria-labelledby="pl1">
         <h3 id="pl1">Placement fee</h3>
         <p class="plan-line">$0 to post. Pay only when you hire.</p>
+        <p class="b-choose"><b>Choose this if</b> you’d rather pay nothing up front, and only if you hire.</p>
         <div class="seg" role="radiogroup" aria-label="Placement fee plan" data-seg><button type="button" role="radio" aria-checked="true" data-val="self">Self-service 8%</button><button type="button" role="radio" aria-checked="false" data-val="managed">Jobility managed 15%</button></div>
         <p class="plan-price"><span data-v="self">8%</span><span class="plan-or"> or </span><span data-v="managed">15%</span></p>
         <dl class="plan-rows">
@@ -113,59 +104,36 @@
         <div class="btn-row"><a class="btn btn--primary sec-cta" href="https://enterprise.jobility.com/signup">Post a job</a></div>
         <details class="details"><summary>Full details</summary><ul>
           <li>What counts as a Jobility hire: someone Jobility introduced to you<span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14">, hired within the period in your terms</span>.</li>
-          <li>How you pay, and any cap per hire: on the terms you agree when you sign up.</li>
+          <li>How you pay: on the terms you agree when you sign up.</li>
           <li class="held">Held until Q14: payment by card or invoice; “The most you’ll pay per hire is [amount],” or no line. Held until counsel confirms the click-through terms (Q18): “Sign up online. No long contract to negotiate.”</li>
         </ul></details>
       </article>
       <article class="plan" aria-labelledby="pl2">
         <h3 id="pl2">Pay per post</h3>
+        <p class="fv-offer fd-offer-inline" data-offer><span class="fv-offer-dot" aria-hidden="true"></span><span class="fv-offer-k">New customers:</span> your second job post is complimentary. <a href="#offer-terms">Offer terms</a></p>
         <p class="plan-line">One price for the post. No placement fee when you hire.</p>
+        <p class="b-choose"><b>Choose this if</b> you hire often or want one fixed price.</p>
         <p class="plan-price"><small>From</small><span data-price="post.labor">$150</span></p>
         <dl class="plan-rows">
-          <dt>Price</dt><dd><a href="#prices-by-role">See prices by role</a>.</dd>
+          <dt>Price</dt><dd><a href="#prices">See prices by role</a>.</dd>
           <dt>Placement fee</dt><dd>None when you hire. The post price is the whole cost.</dd>
           <dt>When you pay</dt><dd>Once, up front, when you publish.</dd>
           <dt>What you do</dt><dd>Interviews, offer, onboarding.</dd>
           <dt>Terms</dt><dd>Choose pay per post in the job wizard when you post. The posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed.</dd>
         </dl>
-        <div class="btn-row"><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
+        <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
         <details class="details"><summary>Full details</summary><ul><li>If no one fits: <a data-topic="direct" href="contact.html?topic=direct">talk to us</a> <span class="confirm qchip" data-q="Q14" data-clean="if a post isn’t bringing you the people you need." title="To confirm with Jobility: Q14, a service promise">and a person on our team will look at your post with you.</span></li></ul></details>
       </article>
     </div>
-    <div class="pr-pair">
-    <div class="pr-table">
-    <table class="ctable ctable--price fd-price-table" id="prices-by-role">
-      <caption>Pay-per-post prices by role</caption>
-      <thead><tr><th scope="col">Role</th><th scope="col" class="is-us">Price per post</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">General labor and light industrial</th><td class="is-us" data-label="Price per post"><span data-price="post.labor">$150</span></td></tr>
-        <tr><th scope="row">IT</th><td class="is-us" data-label="Price per post"><span data-price="post.it">$250</span></td></tr>
-        <tr><th scope="row">Healthcare admin, facilities and operations</th><td class="is-us" data-label="Price per post"><span data-price="post.hcadmin">$200</span></td></tr>
-        <tr><th scope="row">Nursing and allied health</th><td class="is-us" data-label="Price per post"><span data-price="post.nursing">$350 to $400</span></td></tr>
-        <tr><th scope="row">Advanced practice, physicians and scientists</th><td class="is-us" data-label="Price per post"><span data-price="post.adv">$500</span></td></tr>
-        <tr><th scope="row">Other roles (office, skilled trades, hospitality, retail)</th><td class="is-us" data-label="Price per post"><a data-topic="direct" href="contact.html?topic=direct">Talk to us</a><span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14, post prices for other roles"> for a post price, or use the placement fee</span>.</td></tr>
-      </tbody>
-    </table>
-    <div class="offer-terms" id="offer-terms"><div class="promo fd-promo" role="note" aria-label="New customer offer">
-        <span class="promo-mark" aria-hidden="true"></span>
-        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span><span class="promo-fine">On pay-per-post plans.</span></p>
-      </div></div>
     </div>
-    <div class="plan-strip">
-      <div><h3>Posting every month, or hiring across several sites?</h3><p>One monthly charge, and the more you post, the less each post costs. Talk to us for a price.</p><p class="held">Held until Q14: “Bringing in the staffing agencies you already use? We can build that in too.” Held until Q14: the volume breakpoints, term and cancellation.</p></div>
-      <a class="btn btn--secondary" data-topic="plan" href="contact.html?topic=plan">Talk to us</a>
-    </div>
-    </div>
-  </div>
-  <div class="wrap"><p class="qnote">Open: Q14, Q21. Kim, Oct 28: the posting fee sentence is Jobility’s own; the offer is in our words (Nov 5). Refund terms are not spelled out on the site (Kim: industry standard, no need).</p></div>
+  <div class="wrap"><p class="qnote">Open: Q14, Q21. The offer sits only at pay-per-post decisions (plan 4.3): this card, the calculator row, the terms panel under the price list and the final CTA line.</p></div>
 </section>
 
-<!-- 4. ONE HIRE, THREE WAYS (#calculator, System v2): the shared calculator (_lib/v2_quote_block.html, ids made unique for
-     this page by _lib/v2_pages_pr.py). Jobility vs a staffing agency vs on your own. -->
-<section class="sec" id="calculator" aria-labelledby="calc-h">
+<section class="sec" id="calculator" data-fv="DV" aria-labelledby="calc-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="calc-h">What one hire costs, three ways.</h2>
-      <p class="lede">Pick a role and a salary. Compare Jobility with a staffing agency and with hiring on your own.</p></div>
+      <p class="lede">Pick a role and a salary. Compare Jobility with a staffing agency and with hiring on your own.</p>
+      <p class="b-shared-note" data-b-shared hidden>Someone shared this estimate with you. <a href="#for-approvers">The terms an approver asks about</a></p></div>
     <div class="qq qq--v2 fd-calc3" data-quote data-layout="a" data-own-mode="empty">
       <div class="qq-switch fd-calc-layout" role="group" aria-label="For review: calculator layout">
         <span class="qq-switch-k">For review: layout</span>
@@ -216,7 +184,7 @@
         <p class="qq-scale-h">One hire at <span data-out="salary">$45,000</span> a year</p>
         <div class="qq-a">
           <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, the common agency fee, and on your own">
-            <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
+            <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span><p class="fv-offer fd-offer-inline" data-offer><span class="fv-offer-dot" aria-hidden="true"></span><span class="fv-offer-k">New customers:</span> your second job post is complimentary. <a href="pricing.html#offer-terms">Offer terms</a></p></li>
             <li class="bar bar--us" data-tier="pick"><span class="bl"><b>Jobility, <span data-out="pickname">8% placement fee</span>.</b> Only if you hire.</span><span class="num" data-out="pick">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="pick" style="--s:.4"></span></span></li>
             <li class="bar bar--agency"><span class="bl"><b>Staffing agency, 20%.</b> The most common fee.<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
             <li class="bar bar--own"><span class="bl"><b>On your own.</b> About <span data-out="days">42</span> days to fill, on average.<sup class="fn"><a href="#pr-fn1" aria-label="Source 2">2</a></sup> <span class="own-if-empty">You post on several job boards, screen every applicant, run the checks and schedule each interview.</span><span class="own-if-cost">Your costs, as you entered them.</span> <a class="tlink" href="#pr-own-a" data-own-open><span class="own-if-empty">Add your costs to compare</span><span class="own-if-cost">Change your costs</span></a></span><span class="num"><span class="own-if-cost" data-out="own">$0</span></span><span class="track" aria-hidden="true"><span class="fill" data-bar="own" style="--s:0"></span></span></li>
@@ -230,6 +198,7 @@
               <h3 class="col3-h">Jobility</h3>
               <p class="col3-n" data-out="post">$150</p>
               <p class="col3-sub">Pay per post, with no fee when you hire.</p>
+              <p class="fv-offer fd-offer-inline" data-offer><span class="fv-offer-dot" aria-hidden="true"></span><span class="fv-offer-k">New customers:</span> your second job post is complimentary. <a href="pricing.html#offer-terms">Offer terms</a></p>
               <p class="col3-alt">Or pay only if you hire: <b data-out="pick">$3,600</b>, the <span data-out="pickname">8% placement fee</span>.</p>
               <ul class="col3-get" role="list"><li>Post once, shared to 150+ job sites</li><li>AI-driven matching, and a person reviews every match</li><li>Skills, availability and work history checked</li><li>You book interviews in the portal</li></ul>
               <a class="btn btn--primary btn--sm" href="https://enterprise.jobility.com/signup">Post a job</a>
@@ -251,6 +220,7 @@
             </li>
           </ul>
         </div>
+        <p class="qq-share fd-share"><button type="button" class="qq-share-btn" data-share>Copy a link to this estimate</button><span class="qq-share-say" data-share-say role="status"></span></p>
         <p class="sr-only" aria-live="polite" data-live></p>
       </div>
       <div class="qq-notes">
@@ -262,32 +232,95 @@
   <div class="wrap"><p class="qnote">Open: Q14. Held until Q14: a cap per hire. The V1 agency-only calculator and its worked examples are retired (System v2); the agency comparison lives in this block.</p></div>
 </section>
 
-<!-- 5. TEMP AND SHIFT (library #c-ways .ways--two) and 6. ADD-ONS (#add-ons, held list). No temp markup range here (deck 1.7). -->
-<section class="sec on-day" id="temp-shift" aria-labelledby="ts-h">
+<!-- 4. PRICES BY ROLE + OFFER TERMS (LG; plan Pricing 4). fv-b-pricing -->
+<section class="sec on-day" id="prices" data-fv="LG" aria-labelledby="prices-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="ts-h">Temp and shift workers are quoted by the hour.</h2></div>
-    <ul class="ways ways--two fd-ways" role="list">
-      <li><h3>Contingent labor.</h3><p>One hourly rate per worker<span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14, what the rate covers">, covering their pay and Jobility’s employer costs</span>. Quoted before anyone starts. Jobility can be the employer of record.</p><a class="w-link" href="contingent-labor.html#pricing">Get a temp rate</a><p class="w-extra">Running several sites? Ask about a custom plan.</p></li>
-      <li><h3>Gig work.</h3><p>One hourly rate per shift, quoted per role, before anyone starts.<span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14"> Ask us about cancellation charges.</span></p><a class="w-link" href="gig-work.html#pricing">Get a shift rate</a><p class="w-extra">Healthcare facilities: <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p><p class="w-extra">Hire a shift worker onto your staff with no fee after 480 hours (about three months); before that, 8% of salary.</p></li>
-    </ul>
-    <div class="addons" id="add-ons">
-      <h2 class="h-sub">Extra screening</h2>
-      <p>Background checks and references are added where you need them, and cost extra.</p>
-      <p class="held">Held until Jobility supplies the add-on list and prices (no question number): the price per check, and “You see the price and approve it before you order.”</p>
+    <div class="sec-head"><h2 class="h-sec" id="prices-h">Pay-per-post prices by role.</h2>
+      <p class="lede">One price per post, paid once when you publish. No placement fee when you hire.</p></div>
+    <div class="b-prices">
+      <div class="b-prices-main">
+        <table class="ctable ctable--price fd-price-table" id="prices-by-role">
+      <caption class="sr-only">Pay-per-post prices by role</caption>
+      <thead><tr><th scope="col">Role</th><th scope="col" class="is-us">Price per post</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">General labor and light industrial</th><td class="is-us" data-label="Price per post"><span data-price="post.labor">$150</span></td></tr>
+        <tr><th scope="row">IT</th><td class="is-us" data-label="Price per post"><span data-price="post.it">$250</span></td></tr>
+        <tr><th scope="row">Healthcare admin, facilities and operations</th><td class="is-us" data-label="Price per post"><span data-price="post.hcadmin">$200</span></td></tr>
+        <tr><th scope="row">Nursing and allied health</th><td class="is-us" data-label="Price per post"><span data-price="post.nursing">$350 to $400</span></td></tr>
+        <tr><th scope="row">Advanced practice, physicians and scientists</th><td class="is-us" data-label="Price per post"><span data-price="post.adv">$500</span></td></tr>
+        <tr><th scope="row">Other roles (office, skilled trades, hospitality, retail)</th><td class="is-us" data-label="Price per post"><a data-topic="direct" href="contact.html?topic=direct">Talk to us</a><span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14, post prices for other roles"> for a post price, or use the placement fee</span>.</td></tr>
+      </tbody>
+    </table>
+        <div class="fv-terms" id="offer-terms"><h3>New customer offer</h3><p>Your second job post is complimentary. On pay-per-post plans.</p><p>The posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed.</p><p class="qonly"><span class="confirm qchip" data-q="Q21" title="To confirm with Jobility: Q21, the offer terms">Terms to confirm: whether temp and shift posts qualify, any time limit, and $150 vs the $100 mentioned on the call.</span></p></div>
+      </div>
+      <aside class="b-prices-aside" aria-label="Posting every month">
+        <div class="plan-strip b-strip">
+      <div><h3>Posting every month, or hiring across several sites?</h3><p>One monthly charge, and the more you post, the less each post costs. Talk to us for a price.</p><p class="held">Held until Q14: “Bringing in the staffing agencies you already use? We can build that in too.” Held until Q14: the volume breakpoints, term and cancellation.</p></div>
+      <a class="btn btn--secondary" data-topic="plan" href="contact.html?topic=plan">Talk to us</a>
+    </div>
+      </aside>
     </div>
   </div>
-  <div class="wrap"><p class="qnote">Open: Q14. Held until Q14: whether the per-post prices above apply to shift posts.</p></div>
+  <div class="wrap"><p class="qnote">Open: Q14, Q21. The $350 to $400 range as approved on Oct 15. The posting-fee sentence is Kim’s (Oct 28); “non-refundable” stays off the page.</p></div>
 </section>
 
-<!-- 8. VS. A STAFFING AGENCY, IN SHORT (#vs-agency) and 9. VS. JOB BOARDS (#vs-job-boards; library #t-compare).
-     Two blocks, one band. No agency number beside a Jobility blank: the guarantee line is held. -->
-<section class="sec" aria-labelledby="vsb-h">
+<!-- 5. TEMP AND SHIFT (UI route cards; plan Pricing 5) -->
+<section class="sec" id="temp-shift" data-fv="UI" aria-labelledby="ts-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="ts-h">Temp and shift workers are quoted by the hour.</h2>
+      <p class="lede">One hourly rate per worker, quoted before anyone starts. Jobility can be the employer of record.</p></div>
+    <ul class="fv-choose b-routes" role="list">
+      <li><a href="contingent-labor.html#pricing"><span class="fv-choose-ui"><div class="fv-mini fv-mini--roster fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Crew roster</b><span>Weeks 1 to 3</span></p>
+  <div class="fv-ros">
+    <span></span><span class="fv-ros-d">M</span><span class="fv-ros-d">T</span><span class="fv-ros-d">W</span><span class="fv-ros-d">T</span><span class="fv-ros-d">F</span><span class="fv-ros-d">S</span>
+    <span class="fv-ros-w">Wk 1</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c is-off">0</span>
+    <span class="fv-ros-w is-now">Wk 2</span><span class="is-now" style="display:contents"><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span></span>
+    <span class="fv-ros-w">Wk 3</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c is-off">0</span>
+  </div>
+</div></span><span class="fv-choose-k">Contingent labor</span><span class="fv-choose-t">Temp and contract crews</span><span class="fv-choose-p">Weeks or months, payroll handled. No conversion fee to hire them after 480 hours.</span><span class="fv-choose-go">Get a temp rate</span></a></li>
+      <li><a href="gig-work.html#pricing"><span class="fv-choose-ui"><div class="fv-mini fv-mini--shift fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Open shift · Sat</b><span class="fv-mini-pill">2 of 2 filled</span></p>
+  <svg viewBox="0 0 240 64" focusable="false"><path d="M8 56 C 60 6, 180 6, 232 56" fill="none" stroke="#CFD8E3" stroke-width="1.5" stroke-linecap="round"/><path d="M8 56 C 60 6, 180 6, 232 56" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 5"/><circle cx="8" cy="56" r="4.5" fill="#fff" stroke="#1F2C41" stroke-width="1.5"/><circle cx="232" cy="56" r="5" fill="#D3005B"/></svg>
+  <p class="fv-sh-l"><span>7 a.m.</span><span>7 p.m.</span></p>
+  <p class="fv-sh-who"><span class="fv-mini-av">AT</span><span class="fv-mini-av">RD</span></p>
+</div></span><span class="fv-choose-k">Gig work</span><span class="fv-choose-t">Single shifts covered</span><span class="fv-choose-p">A shift, a weekend or a busy week, quoted per role.</span><span class="fv-choose-go">Get a shift rate</span></a></li>
+    </ul>
+    <p class="b-route-hc">Staffing shifts at a healthcare facility? <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    <p class="b-fine">Before 480 hours (about three months), an 8% fee of the salary applies to bringing a temp or shift worker onto your staff.</p>
+  </div>
+  <div class="wrap"><p class="qnote">Open: Q14. Held until Q14: what the hourly rate covers, cancellation charges, and whether per-post prices apply to shift posts.</p></div>
+</section>
+
+<!-- 6. WHAT EVERY PLAN INCLUDES (VET compact) -->
+<section class="sec on-day" id="checks" data-fv="VET" aria-labelledby="vet-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="vet-h">What every plan includes.</h2>
+      <p class="lede">The same checks on every plan. A person on our team reviews every match before it reaches you.</p></div>
+    <div class="fv-vet fd-vet" data-variant="compact">
+  <div class="fv-vet-std" role="group" aria-labelledby="vet-std-h">
+    <p class="fv-vet-k" id="vet-std-h">Standard on every match</p>
+    <ul role="list"><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Skills</b><span>Checked against your job’s requirements.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Availability</b><span>For when you need them.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Work history</b><span>Reviewed by our team.</span></li><li class="is-hc"><span class="fv-vet-ic" aria-hidden="true"></span><b>Certifications and licenses</b><span>Standard on healthcare roles.</span><em class="fv-vet-chip">Healthcare</em></li></ul>
+    <p class="fv-vet-person"><span class="fv-mini fv-mini--avatar" aria-hidden="true">JT</span>Every match is reviewed by a person on our team.</p>
+  </div>
+  <div class="fv-vet-add" role="group" aria-labelledby="vet-add-h">
+    <p class="fv-vet-k" id="vet-add-h">Added when you need it</p>
+    <ul role="list"><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Background checks</b><span>Ask when you post, or talk to us.</span></li><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>References</b><span>Depending on your role and business.</span></li><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Custom or extensive credentialing</b><span>For senior or specialized roles.</span></li></ul>
+    <p class="fv-vet-foot">Priced separately. <a href="contact.html?topic=plan" data-topic="plan">Talk to us about extra checks</a></p>
+  </div>
+</div>
+    <p class="b-after"><a class="tlink" href="how-it-works.html#vetting">How we vet workers</a></p>
+  </div>
+  <div class="wrap"><p class="qnote">Kim, Q7 and Oct 28: background checks and custom credentialing may be additional, through sales. Held: the price per check.</p></div>
+</section>
+
+<section class="sec" data-fv="SC" aria-labelledby="vsb-h">
   <div class="wrap">
     <p class="pr-vs-agency" id="vs-agency">Comparing with a staffing agency? <a href="compare-staffing-agency.html">Jobility vs. a staffing agency, line by line</a></p>
     <div class="pr-vs pr-vs--boards" id="vs-job-boards">
       <div class="sec-head"><h2 class="h-sec" id="vsb-h">Jobility vs. job boards.</h2>
         <p class="lede">A job board gets you applicants. Jobility gets you a short list of vetted people.</p></div>
-      <table class="ctable fd-ctable" aria-labelledby="vsb-h">
+      <table class="ctable fd-ctable fv-compare" aria-labelledby="vsb-h">
         <thead><tr><td></td><th scope="col">Job board</th><th scope="col" class="is-us">Jobility</th></tr></thead>
         <tbody>
           <tr><th scope="row">What you receive</th><td data-label="Job board">Everyone who clicks apply</td><td class="is-us" data-label="Jobility">A short list of candidates screened against your requirements</td></tr>
@@ -297,22 +330,38 @@
           <tr><th scope="row">Shift cover</th><td data-label="Job board">No</td><td class="is-us" data-label="Jobility">Yes, through <a href="gig-work.html">gig work</a></td></tr>
         </tbody>
       </table>
-      <p class="small" style="margin-top:10px">In a 2025 iHire survey of 529 employers, 59.7% said job boards send too many unqualified candidates.</p>
+      <p class="small b-src">In a 2025 iHire survey of 529 employers, 59.7% said job boards send too many unqualified candidates.</p>
     </div>
   </div>
   <div class="wrap"><p class="qnote">Open: Q14. Before launch: the SIA primary report, or cite it “as reported by” the secondary source (deck 1.8).</p></div>
 </section>
 
-<!-- 10. PRICING FAQ (library #c-faq; answers from deck 5.8). Held answers stay in the markup, review mode only. -->
-<section class="sec on-day" id="questions" aria-labelledby="faq-h">
+<!-- 8. FOR APPROVERS (PH; plan Pricing 8, persona P4). Facts only: no invoicing, payment-method or contract claims (Q14). -->
+<section class="sec on-day" id="for-approvers" data-fv="PH" aria-labelledby="appr-h">
+  <div class="wrap fv-split fv-split--even">
+    <figure class="fv-split-media"><!-- b-photo:approver-desk|An office manager and a business owner review a printed one-page estimate together at a desk.|32|50% 40%|(min-width: 1024px) 560px, 92vw| --><div class="photo fd-photo is-32" style="--pos:50% 40%"><picture><source type="image/webp" srcset="assets/img/approver-desk-800.webp 800w, assets/img/approver-desk.webp 1536w" sizes="(min-width: 1024px) 560px, 92vw"><img src="assets/img/approver-desk-800.jpg" srcset="assets/img/approver-desk-800.jpg 800w, assets/img/approver-desk.jpg 1536w" sizes="(min-width: 1024px) 560px, 92vw" width="1536" height="1024" alt="An office manager and a business owner review a printed one-page estimate together at a desk." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><!-- /b-photo --></figure>
+    <div class="fv-split-body">
+      <h2 class="h-sec" id="appr-h">Sending this to someone who approves spend?</h2>
+      <p class="lede">The terms an approver asks about, in one place. Share your estimate, or print this page.</p>
+      <ul class="fv-ledger b-appr-ledger" role="list"><li><span class="fv-ledger-t">When you pay</span><span class="fv-ledger-d">Pay per post: once, when you publish. Placement fee: only when you hire someone Jobility introduced, on the terms you agree when you sign up.</span></li><li><span class="fv-ledger-t">What counts as a Jobility hire</span><span class="fv-ledger-d">Someone Jobility introduced to you<span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14, how long an introduction counts">, hired within the period in your terms</span>.</span></li><li><span class="fv-ledger-t">How long a post stays live</span><span class="fv-ledger-d">Up to 30 days, or until the position is filled and the job is closed.</span></li><li><span class="fv-ledger-t">Hiring a temp or shift worker onto staff</span><span class="fv-ledger-d">No conversion fee after 480 hours (about three months). Before 480 hours, an 8% fee of the salary applies.</span></li><li><span class="fv-ledger-t">Per click or per applicant</span><span class="fv-ledger-d">Never. Jobility does not bill per click or per applicant.</span></li></ul>
+      <div class="btn-row b-appr-btns"><a class="btn btn--secondary" href="#calculator" data-b-share>Copy a link to your estimate</a><button type="button" class="btn btn--secondary" data-b-print>Print this page</button></div>
+      <p class="b-appr-say" data-b-share-say role="status"></p>
+      <p class="b-appr-more">Questions about terms or a custom plan? <a data-topic="plan" href="contact.html?topic=plan">Talk to us</a></p>
+    </div>
+  </div>
+  <div class="wrap"><p class="qnote">Open: Q14. Not written until Jobility answers (plan P4 gaps): invoicing and payment methods, whether a card is needed at sign-up, enterprise contract terms, a cap per hire.</p></div>
+</section>
+
+<section class="sec" id="questions" data-fv="AC" aria-labelledby="faq-h">
   <div class="wrap faq">
     <div>
       <h2 class="h-sec" id="faq-h">Frequently asked questions</h2>
       <p class="links-row" style="margin-top:18px"><a class="tlink" href="faq.html#faq-pricing">See all pricing questions</a></p>
+      <p class="fv-next"><span class="fv-next-k">Next:</span><a href="how-it-works.html#vetting">How we vet workers</a></p>
     </div>
     <div class="faq-list" data-accordion>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="pfa1"><span class="faq-t">How much does Jobility cost?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="pfa1"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once when you publish. New customer offer: your second job post is complimentary.</p><p>The placement fee is 8% of first-year salary when you post and schedule yourself (self-service), or 15% when Jobility’s team does the work and sends you a candidate (Jobility managed), and posting on that plan is free. For hourly roles, Jobility converts the pay rate to a yearly amount. Pay per post has no placement fee when you hire. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour.</p></div></div>
+  <div class="faq-a" id="pfa1"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once when you publish.</p><p>The placement fee is 8% of first-year salary when you post and schedule yourself (self-service), or 15% when Jobility’s team does the work and sends you a candidate (Jobility managed), and posting on that plan is free. For hourly roles, Jobility converts the pay rate to a yearly amount. Pay per post has no placement fee when you hire. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="pfa2"><span class="faq-t">If I pay for a post and hire someone, do I also pay a placement fee?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="pfa2"><p>No. When you pay for a Jobility post and hire someone from it, there is no placement fee. The post price is the whole cost. The placement fee is a separate option: posting is free, and you pay only when you hire.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="pfa3"><span class="faq-t">Which plan should I choose?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -329,7 +378,7 @@
   <div class="faq-a" id="pfa8"><p>Yes. Every Jobility match is checked for skills, availability and work history as standard. Background checks and references are added where needed and cost extra<span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: the add-on list and prices, and the approval step">, and you see the price and approve it before you order</span>. Talk to sales for enterprise pricing, custom plans, background checks and additional verification.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="pfa9"><span class="faq-t">Can I switch plans?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="pfa9"><p><a data-topic="plan" href="contact.html?topic=plan">Talk to us</a> about changing your plan.</p></div></div>
-<div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="pfa10"><span class="faq-t">Do new customers get a discount?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
+<div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="pfa10"><span class="faq-t">Is there an offer for new customers?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="pfa10"><p>Yes. New customer offer: your second job post is complimentary, on pay-per-post plans.<span class="qonly"> <span class="confirm qchip" data-q="Q21" title="To confirm with Jobility: Q21, the offer terms">Terms to confirm</span></span></p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="pfa12"><span class="faq-t">How long does a job post stay live?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="pfa12"><p>On pay per post, the posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed.</p></div></div>
@@ -340,22 +389,24 @@
   <div class="wrap"><p class="qnote">Open: Q14, Q18. Held at launch: what counts as a hire (Q14). Not shown: “Is it free to sign up?” and “How do I pay?” (Q14), “Is there a maximum placement fee per hire?” (Q14), “Is there a commitment or contract?” (Q18, Q14). The refund question is retired (Kim, Oct 28: industry standard, no need to spell it out).</p></div>
 </section>
 
-<!-- 11. FINAL CTA (L14). -->
-<section class="cta-band" data-cta-final aria-labelledby="cta-h">
-  <div class="wrap cta-grid">
+<section class="fv-cta fd-cta" data-cta-final data-fv="CTA-S" aria-labelledby="cta-h">
+  <div class="wrap fv-cta-grid">
     <div>
-      <h2 class="h-sec" id="cta-h">On the placement-fee plan, see your matches before you pay anything<span class="stop">.</span></h2>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>
-        <a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
-      </div>
+      <h2 class="h-sec" id="cta-h">Post your first job<span class="stop">.</span></h2>
+      <p class="lede">Choose pay per post or the placement fee in the job wizard. Your vetted short list follows.</p>
+      <p class="fv-cta-price"><span class="fv-offer-dot" aria-hidden="true"></span>Pay per post from $150. New customers: your second job post is complimentary.</p>
+      <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="btn btn--secondary" data-topic="plan" href="contact.html?topic=plan">Talk to us</a></div>
+      <ul class="fv-cta-alt" role="list" aria-label="Not quite right?"><li>Need people for weeks? <a href="contingent-labor.html">Contingent labor</a></li><li>Need a shift covered? <a href="gig-work.html">Gig work</a></li></ul>
     </div>
-    <div>
-      <ul class="cta-cross" role="list" aria-label="Other ways to hire">
-        <li><span>Need people for weeks?</span><a href="contingent-labor.html">Temp and contract workers</a></li>
-        <li><span>Need a shift covered?</span><a href="gig-work.html">Shift coverage</a></li>
-      </ul>
-    </div>
+    <div class="fv-cta-media fv-cta-media--ui"><div class="fv-mini fv-mini--post fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>New job post</b></p>
+  <div class="fv-pf">
+    <span class="fv-pf-l">Job title</span><span class="fv-pf-i">Warehouse supervisor</span>
+    <span class="fv-pf-l">Location</span><span class="fv-pf-i">Edison, NJ</span>
+    <span class="fv-pf-l">Pay</span><span class="fv-pf-i is-ph">$ per year</span>
+    <span class="fv-pf-go"><span class="fv-mini-pill fv-mini-pill--sky">Template saved</span><span class="fv-mini-btn">Post</span></span>
+  </div>
+</div></div>
   </div>
 </section>
 
@@ -411,6 +462,13 @@
   </div>
 </footer>
 
-<script src="assets/site.js"></script><!-- whimsy-p2 --><script src="assets/whimsy-p2.js" defer></script><!-- /whimsy-p2 --><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
+<script src="assets/site.js"></script>
+<script>/* fv-b-pricing (page-only, Package B): the approver's "Copy a link to your estimate" reuses the calculator's own
+   [data-share] (site.js copies ?sal=&role=&fn=#calculator); "Print this page" prints with the print CSS in FV pages B. */
+(function(d){ if(/[?&]sal=\d/.test(location.search)){ var n = d.querySelector('[data-b-shared]'); if(n) n.hidden = false; }
+  var b = d.querySelector('[data-b-share]'), s = d.querySelector('#calculator [data-share]'), say = d.querySelector('[data-b-share-say]');
+  if(b && s) b.addEventListener('click', function(e){ e.preventDefault(); s.click(); if(say) say.textContent = 'Link copied. It holds the role, salary and fee set in the calculator above.'; setTimeout(function(){ if(say) say.textContent = ''; }, 4000); });
+  var p = d.querySelector('[data-b-print]'); if(p) p.addEventListener('click', function(){ window.print(); });
+})(document);</script><!-- whimsy-p2 --><script src="assets/whimsy-p2.js" defer></script><!-- /whimsy-p2 --><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
 </body>
 </html>

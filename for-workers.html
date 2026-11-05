@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css"><!-- whimsy-p2 --><link rel="stylesheet" href="assets/whimsy-p2.css"><!-- /whimsy-p2 -->
 </head>
-<body class="page-workers" data-head-outline>
+<body class="page-workers pg-b pg-workers" data-head-outline>
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Light theme: the page has no Night hero. -->
@@ -68,10 +68,9 @@
 </div>
 
 <main id="main">
+<!-- fv-b-workers: funnel + visual pass (Package B). PH, FL, QL, UI, PH+VET, AC, PH (app), link row. -->
 
-<!-- 1. HERO (c-pghero, worker variant; System v2: white). No hirer CTA above the fold. Store badges link to the two stores (Kim, Oct 28);
-     the desktop QR stays review only until a code is made. -->
-<section class="pg-hero wk-hero" data-mbar-after aria-labelledby="h1"><div class="wrap wk-hero-grid">
+<section class="pg-hero wk-hero" data-fv="PH" data-mbar-after aria-labelledby="h1"><div class="wrap wk-hero-grid">
   <div>
     <h1 class="h-page" id="h1">Find jobs and shifts near you<span class="stop">.</span></h1>
     <p class="lede">Full-time jobs, contract work and shifts with businesses near you. One profile, one app.<span class="confirm qchip" data-q="Q9" data-clean="" title="To confirm with Jobility: Q9, where work is"> Now in [states or metros].</span></p>
@@ -81,14 +80,12 @@
     <div class="badges fd-badges"><a class="badge fd-badge" data-track="app_store_click" href="https://apps.apple.com/us/app/jobility/id1474340946"><small>Download on the </small>App Store</a><a class="badge fd-badge" data-track="google_play_click" href="https://play.google.com/store/apps/details?id=com.jobility"><small>Get it on </small>Google Play</a></div>
     <p class="micro">Free to download.<!-- whimsy-p2 --><span class="fd-gigee">In the app, you’re a Gigee.</span><!-- /whimsy-p2 --><span class="confirm qchip" data-q="Q17" data-clean="" title="To confirm with Jobility: Q17, fees for workers"> No fees to use the app.</span></p>
   </div>
-  <figure class="wk-hero-photo" aria-hidden="true"><picture><source type="image/webp" srcset="assets/img/hotel-housekeeping-800.webp 800w, assets/img/hotel-housekeeping.webp 1536w" sizes="(min-width: 1024px) 46vw, 100vw"><img src="assets/img/hotel-housekeeping-800.jpg" srcset="assets/img/hotel-housekeeping-800.jpg 800w, assets/img/hotel-housekeeping.jpg 1536w" sizes="(min-width: 1024px) 46vw, 100vw" width="1536" height="1024" alt="A housekeeping lead shows a new colleague how the towels are folded and stacked on her linen cart in a hotel corridor." loading="lazy" decoding="async"></picture></figure>
+  <figure class="wk-hero-photo b-wk-photo" aria-hidden="true" style="--pos:38% 30%"><picture><source type="image/webp" srcset="assets/img/hotel-housekeeping-800.webp 800w, assets/img/hotel-housekeeping.webp 1536w" sizes="(min-width: 1024px) 46vw, 100vw"><img src="assets/img/hotel-housekeeping-800.jpg" srcset="assets/img/hotel-housekeeping-800.jpg 800w, assets/img/hotel-housekeeping.jpg 1536w" sizes="(min-width: 1024px) 46vw, 100vw" width="1536" height="1024" alt="A housekeeping lead shows a new colleague how the towels are folded and stacked on her linen cart in a hotel corridor." loading="lazy" decoding="async"></picture></figure>
   <div class="qr-wrap qonly"><span class="qr" role="img" aria-label="QR code placeholder">QR code to the app</span>Scan to get the app</div>
 </div>
 <div class="wrap"><p class="qnote"><span class="qnote-body">Open: Q9, Q17<span class="qnote-held">Store links and the worker web link are Kim’s, Oct 28. The badges are text buttons in the brand, not Apple or Google artwork; the official badge files can replace them at build.</span></span></p></div>
 </section>
-<!-- 2. OUR PROMISES (c-promises). Each promise ships only once Jobility confirms it (Q28, Q27, Q6); an unconfirmed promise is
-     removed, not softened. Every promise but one is open, so the block is review only; the confirmed one (payroll and taxes
-     under employer of record) is stated under Kinds of work. -->
+
 <section class="sec qonly" aria-labelledby="prom-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="prom-h">What you can count on</h2></div>
@@ -104,24 +101,24 @@
 <div class="wrap"><p class="qnote" title="Every promise in this block ships only once Jobility confirms it. Held until Q17: “A real person if you need help” in the hero."><span class="qnote-body">Open: Q10, Q17<span class="qnote-held">Every promise in this block ships only once Jobility confirms it. Held until Q17: “A real person if you need help” in the hero.</span></span></p></div>
 </section>
 
-<!-- 3. HOW IT WORKS FOR WORKERS (c-steps, four) -->
-<section class="sec" aria-labelledby="steps-h">
+<!-- 2. HOW JOBILITY WORKS FOR YOU (FL, four steps) -->
+<section class="sec on-day" data-fv="FL" aria-labelledby="steps-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="steps-h">How Jobility works for you.</h2></div>
-    <ol class="v2-steps fd-steps wk-steps" role="list">
-      <li><span class="v2-step-n" aria-hidden="true">1</span><h3>Download the app and build your profile.</h3><p>Your skills, experience, availability and how far you’ll travel.</p></li>
-      <li><span class="v2-step-n" aria-hidden="true">2</span><h3>Get checked.</h3><p>We check your skills, availability and work history. Healthcare workers add their license and certifications.</p></li>
-      <li><span class="v2-step-n" aria-hidden="true">3</span><h3>Get matched.</h3><p>We send you shifts and jobs that fit. Accept the ones you want.</p></li>
-      <li><span class="v2-step-n" aria-hidden="true">4</span><h3>Work and get paid.</h3><p>Clock in and out in the app.<span class="confirm qchip" data-q="Q17" data-clean="" title="To confirm with Jobility: Q17"> Pay arrives on a set schedule.</span></p></li>
-    </ol>
+    <ol class="fv-flow fd-flow" role="list" style="--n:4"><li><span class="fv-flow-n" aria-hidden="true">1</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Build your profile.</h3><p>In the app or on the web. Add your skills, experience, availability and how far you’ll travel.</p></li><li><span class="fv-flow-n" aria-hidden="true">2</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Get checked.</h3><p>We check your skills, availability and work history. Healthcare workers add their license and certifications.</p></li><li><span class="fv-flow-n" aria-hidden="true">3</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Get matched.</h3><p>We send you shifts and jobs that fit. Accept the ones you want.</p></li><li><span class="fv-flow-n" aria-hidden="true">4</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Work and get paid.</h3><p>Clock in and out in the app.<span class="confirm qchip" data-q="Q17" data-clean="" title="To confirm with Jobility: Q17"> Pay arrives on a set schedule.</span></p></li></ol>
   </div>
-<div class="wrap"><div class="proof is-live proof--one fd-proof" role="group" aria-label="From a worker"><figure class="proof-q fd-proof-q"><blockquote><p>“After speaking with my Jobility coordinator Kaye, she helped me integrate with my new gig. She was extremely helpful in figuring out the app and was very attentive to my questions. She’s professional patient and timely.”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Kiana</span><span class="proof-org">Gigee</span></figcaption></figure></div>
-<p class="qnote">From jobility.com testimonials, as published; Kim, 10/28.</p></div>
-<div class="wrap"><p class="qnote" title="Held: who pays for any check (no question number)."><span class="qnote-body">Open: Q17<span class="qnote-held">Held: who pays for any check (no question number).</span></span></p></div>
+  <div class="wrap"><p class="qnote" title="Held: who pays for any check (no question number)."><span class="qnote-body">Open: Q17<span class="qnote-held">Held: who pays for any check (no question number).</span></span></p></div>
 </section>
 
-<!-- 4. KINDS OF WORK (c-ways, segmented rows: a menu, not a sequence) -->
-<section class="sec on-day" aria-labelledby="kinds-h">
+<!-- 3. KIANA (QL) -->
+<section class="sec" data-fv="QL" aria-label="From a worker">
+  <div class="wrap">
+    <div class="fv-quote fv-quote--solo"><p class="fv-quote-k">From a worker</p><figure class="fv-quote-main"><blockquote><p>After speaking with my Jobility coordinator Kaye, she helped me integrate with my new gig. She was extremely helpful in figuring out the app and was very attentive to my questions. She’s professional patient and timely.”</p></blockquote><figcaption class="fv-quote-by"><b>Kiana</b><span>Gigee</span></figcaption></figure></div>
+  </div>
+  <div class="wrap"><p class="qnote">From jobility.com testimonials, as published; Kim, 10/28.</p></div>
+</section>
+
+<section class="sec on-day" data-fv="UI" aria-labelledby="kinds-h">
   <div class="wrap split">
     <div class="sec-head"><h2 class="h-sec" id="kinds-h">Three kinds of work, one profile.</h2>
       <p class="lede">When Jobility is your employer, it runs your payroll and taxes.</p>
@@ -148,33 +145,34 @@
   </div>
 </section>
 
-<!-- 5. HEALTHCARE (ph-photo split, cna-shift-start portrait). Certification and license checks are standard (Kim, Oct 28); the
-     deck's "verify your license once" headline is retired (a portability claim nobody confirmed). -->
-<section class="sec" id="healthcare" aria-labelledby="hc-h">
-  <div class="wrap vet-grid wk-hc">
-    <div>
+<section class="sec" id="healthcare" data-fv="PH" aria-labelledby="hc-h">
+  <div class="wrap fv-split fv-split--rev wk-hc b-wk-hc-split">
+    <div class="fv-split-body">
       <h2 class="h-sec" id="hc-h">Healthcare work for nurses and aides.</h2>
       <p class="lede">Add your license and certifications to your profile, then apply for jobs or pick up shifts with healthcare employers. We run standard certification and license checks.</p>
-      <ul class="v2-checks fd-checks" role="list">
-        <li><b>Skills</b><span>Checked against the roles you want.</span></li>
-        <li><b>Availability</b><span>Matched to the shifts you can work.</span></li>
-        <li><b>Work history</b><span>Checked on your profile.</span></li>
-        <li><b>Certifications and licenses</b><span>Standard checks for healthcare work.</span></li>
-        <li class="is-opt"><b>Background</b><span>Some employers also ask for a background check.</span></li>
-      </ul>
-      <a class="v2-hc fd-hc wk-hc-link" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Nursing and allied work</b> Healthcare roles are also on Jobility Health.</span><span class="v2-hc-go">Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <div class="fv-vet fd-vet" data-variant="worker">
+  <div class="fv-vet-std" role="group" aria-labelledby="vet-std-h">
+    <p class="fv-vet-k" id="vet-std-h">Checked on your profile</p>
+    <ul role="list"><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Skills</b><span>Checked against the roles you want.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Availability</b><span>Matched to the shifts you can work.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Work history</b><span>Checked on your profile.</span></li><li class="is-hc"><span class="fv-vet-ic" aria-hidden="true"></span><b>Certifications and licenses</b><span>Standard checks for healthcare work.</span><em class="fv-vet-chip">Healthcare</em></li></ul>
+  </div>
+  <div class="fv-vet-add" role="group" aria-labelledby="vet-add-h">
+    <p class="fv-vet-k" id="vet-add-h">Some employers also ask for</p>
+    <ul role="list"><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Background check</b><span>Some employers ask for one before you start.</span></li><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>References</b><span>Depending on the employer and the role.</span></li></ul>
+  </div>
+</div>
+      <p class="b-wk-hc">Nursing and allied work is also on <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       <p class="qnote">Open: confirm with Kim that worker-side healthcare clicks also go to jobilityhealth.com (Nov 5 call: healthcare clicks may go there).</p>
     </div>
-    <figure class="photo fd-photo photo--portrait" style="--pos:50% 18%;--pos-m:50% 16%"><picture><source type="image/webp" srcset="assets/img/cna-shift-start-800.webp 800w, assets/img/cna-shift-start.webp 1536w" sizes="(min-width: 1200px) 400px, (min-width: 768px) 560px, 92vw"><img src="assets/img/cna-shift-start-800.jpg" srcset="assets/img/cna-shift-start-800.jpg 800w, assets/img/cna-shift-start.jpg 1536w" sizes="(min-width: 1200px) 400px, (min-width: 768px) 560px, 92vw" width="1024" height="1536" alt="A nurse aide in navy scrubs clips on his badge as he walks down a hospital corridor at the start of a shift." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
+    <figure class="fv-split-media photo fd-photo photo--tall" style="--pos:50% 18%;--pos-m:50% 16%"><picture><source type="image/webp" srcset="assets/img/cna-shift-start-800.webp 800w, assets/img/cna-shift-start.webp 1536w" sizes="(min-width: 1200px) 400px, (min-width: 768px) 560px, 92vw"><img src="assets/img/cna-shift-start-800.jpg" srcset="assets/img/cna-shift-start-800.jpg 800w, assets/img/cna-shift-start.jpg 1536w" sizes="(min-width: 1200px) 400px, (min-width: 768px) 560px, 92vw" width="1024" height="1536" alt="A nurse aide in navy scrubs clips on his badge as he walks down a hospital corridor at the start of a shift." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
   </div>
 </section>
 
-<!-- 6. WORKER FAQ (c-faq). Worker questions stay here; the hirer FAQ is faq.html. Answers with an open question are held. -->
-<section class="sec on-day" id="faq-workers" aria-labelledby="wfaq-h">
+<section class="sec on-day" id="faq-workers" data-fv="AC" aria-labelledby="wfaq-h">
   <div class="wrap faq">
     <div>
       <h2 class="h-sec" id="wfaq-h">Frequently asked questions</h2>
       <p class="links-row" style="margin-top:18px"><a class="tlink" href="gigee-terms.html">Worker terms</a></p>
+      <p class="fv-next"><span class="fv-next-k">Next:</span><a href="login.html">Already signed up? Log in</a></p>
     </div>
     <div class="faq-list" data-accordion>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="wq1"><span class="faq-t">Is the Jobility app free to download?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -196,17 +194,19 @@
 <div class="faq-item held" data-q="Q10"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="wq9"><span class="faq-t">How do I delete my account?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="wq9"><p>Held until Q10. Draft: In the app under [Settings], or email [support inbox] and we’ll do it within [number of] days.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="wq10"><span class="faq-t">I can’t log in. What do I do?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="wq10"><p>Check your spam folder for the verification email, and sign in with the email you signed up with.<span class="confirm qchip" data-q="Q10" data-clean="" title="To confirm with Jobility: Q10, the support inbox"> Still stuck? Email [support inbox].</span></p></div></div>
+  <div class="faq-a" id="wq10"><p>Check your spam folder for the verification email, and sign in with the email you signed up with.<span class="b-wk-stuck"> Still stuck? <a data-topic="account" href="contact.html?topic=account">Talk to us</a>.</span><span class="confirm qchip" data-q="Q10" data-clean="" title="To confirm with Jobility: Q10, the support inbox"> Still stuck? Email [support inbox].</span></p></div></div>
 </div>
   </div>
 <div class="wrap"><p class="qnote"><span class="qnote-body">Open: Q9, Q10, Q14, Q16, Q17</span></p></div>
 </section>
 
-<!-- 7. GET THE APP (#app, c-appdl). Store badges link to the App Store and Google Play listings (Kim, Oct 28). -->
-<section class="sec" id="app" data-mbar-stop aria-labelledby="app-h">
-  <div class="wrap">
-    <div class="appdl wk-app">
-      <div class="wk-app-l"><h2 id="app-h">Download Jobility and set up your profile.</h2><p>Set up your profile once, then pick up shifts, contract work or a full-time job.</p></div>
+<!-- 7. GET THE APP (#app, PH): worker-breakroom + store badges; QR review only -->
+<section class="sec" id="app" data-fv="PH" data-mbar-stop aria-labelledby="app-h">
+  <div class="wrap fv-split b-wk-app">
+    <figure class="fv-split-media"><!-- b-photo:worker-breakroom|A warehouse associate in a hi-vis vest checks her phone on a break-room bench before a shift.|32|50% 40%|(min-width: 1024px) 560px, 92vw| --><div class="photo fd-photo is-32" style="--pos:50% 40%"><picture><source type="image/webp" srcset="assets/img/worker-breakroom-800.webp 800w, assets/img/worker-breakroom.webp 1536w" sizes="(min-width: 1024px) 560px, 92vw"><img src="assets/img/worker-breakroom-800.jpg" srcset="assets/img/worker-breakroom-800.jpg 800w, assets/img/worker-breakroom.jpg 1536w" sizes="(min-width: 1024px) 560px, 92vw" width="1536" height="1024" alt="A warehouse associate in a hi-vis vest checks her phone on a break-room bench before a shift." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><!-- /b-photo --></figure>
+    <div class="fv-split-body b-wk-app-body">
+      <h2 class="h-sec" id="app-h">Download Jobility and set up your profile.</h2>
+      <p class="lede">Set up your profile once, then pick up shifts, contract work or a full&#8209;time job.</p>
       <div class="wk-app-r">        <div class="btn-row wk-cta"><a class="btn btn--primary" href="https://gigee.jobility.com/">Create your worker profile</a></div>
 
         <p class="wk-get"><b>Get the app.</b> Free to download.</p>
@@ -218,10 +218,10 @@
 <div class="wrap"><p class="qnote" title="Held until Jobility measures it: how long setting up a profile takes."><span class="qnote-body">Open: Q10<span class="qnote-held">Held until Jobility measures it: how long setting up a profile takes.</span></span></p></div>
 </section>
 
-<!-- 8. HIRING LINE (b-links): one line for businesses that landed here. -->
-<section class="sec sec--tight" aria-label="For businesses">
+<section class="sec sec--tight fv-sec--rule" data-fv="LINK" aria-label="For businesses">
   <div class="wrap"><p class="links-row wk-hire">Hiring for your business? <a class="tlink" href="how-it-works.html">See how Jobility works for employers</a></p></div>
 </section>
+
 </main>
 
 

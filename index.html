@@ -70,71 +70,132 @@
 
 <main id="main">
 
-<!-- 1. HERO (System v2). The message is the hero: eyebrow, H1 with one rotating role word (home-v2.js, once, never loops),
-     the line they liked as the lede, two buttons, a healthcare link out. Right: one working moment and one fact chip. White. -->
-<section class="v2-hero" id="hero" data-hero aria-labelledby="h1">
+<!-- 1. HERO (PH). The message is the hero: eyebrow, H1 with the rotating role word (home-v2.js: a loop since the FV pass,
+     pause button .fv-rot-toggle, reduced motion static on "full-time staff"), the lede, Post a job / Talk to us, the
+     healthcare link out (shifts only: "Staffing shifts at a healthcare facility? Jobility Health"). Right: nurses-schedule. White. -->
+<section class="v2-hero" id="hero" data-fv="PH" data-hero aria-labelledby="h1">
   <div class="wrap v2-hero-grid">
     <div class="v2-hero-copy">
       <p class="v2-eyebrow fd-eyebrow"><span class="v2-jdot" aria-hidden="true"></span>A new kind of AI-driven hiring platform</p>
-      <h1 class="h-page v2-h1" id="h1">Hire vetted <span class="v2-rot fd-rotate" data-rotate="full&#8209;time staff|warehouse leads|office admins|nurses|site supervisors|line cooks|full&#8209;time staff"><span class="v2-rot-w fd-rotate-w" aria-hidden="true"><span class="v2-word">full&#8209;time staff<span class="stop">.</span></span><svg class="v2-swash fd-swash" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="v2-rib" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FF9241"/><stop offset=".35" stop-color="#FF6634"/><stop offset=".7" stop-color="#FF3B58"/><stop offset="1" stop-color="#D3005B"/></linearGradient></defs><path d="M3 11 C 60 4, 140 4, 197 9" pathLength="1" fill="none" stroke="url(#v2-rib)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span><span class="sr-only">full-time staff, warehouse leads, office admins, nurses and more.</span></span></h1>
+      <div class="fv-h1-wrap"><h1 class="h-page v2-h1" id="h1">Hire vetted <span class="v2-rot fd-rotate" data-rotate="full&#8209;time staff|nurses|machinists|office admins|line cooks|electricians|IT managers|store leads|estheticians|shift leads|bookkeepers|carpenters|bartenders|IT techs|cashiers|receptionists|welders"><span class="v2-rot-w fd-rotate-w" aria-hidden="true"><span class="v2-word">full&#8209;time staff<span class="stop">.</span></span><svg class="v2-swash fd-swash" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><defs><linearGradient id="v2-rib" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FF9241"/><stop offset=".35" stop-color="#FF6634"/><stop offset=".7" stop-color="#FF3B58"/><stop offset="1" stop-color="#D3005B"/></linearGradient></defs><path d="M3 11 C 60 4, 140 4, 197 9" pathLength="1" fill="none" stroke="url(#v2-rib)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span><span class="sr-only">full-time staff.</span></span></h1><button type="button" class="fv-rot-toggle fd-rot-toggle" aria-label="Pause the changing words" hidden><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5v9M10.5 3.5v9"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3.2l8 4.8-8 4.8z"/></svg></button></div>
       <p class="v2-h1-sub">Direct hire first. Temp and shift workers too.</p>
       <p class="v2-lede">AI-driven matching finds them and a person on our team reviews every match. You save hours, and the agency fee.</p>
       <div class="btn-row">
         <a class="btn btn--primary" data-hero-cta href="https://enterprise.jobility.com/signup">Post a job</a>
         <a class="btn btn--secondary" data-hero-talk data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
       </div>
-      <p class="v2-health fd-health"><a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Hiring nurses, CNAs or allied staff? Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      <p class="v2-health fd-health"><a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Staffing shifts at a healthcare facility? Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
     </div>
     <figure class="v2-hero-fig fd-hero-fig">
-      <div class="photo fd-photo v2-hero-photo" style="--pos:44% 30%;--pos-m:45% 26%"><picture><source type="image/webp" srcset="assets/img/nurses-schedule-800.webp 800w, assets/img/nurses-schedule.webp 1536w" sizes="(min-width: 1024px) 520px, 92vw"><img src="assets/img/nurses-schedule-800.jpg" srcset="assets/img/nurses-schedule-800.jpg 800w, assets/img/nurses-schedule.jpg 1536w" sizes="(min-width: 1024px) 520px, 92vw" width="1536" height="1024" alt="A charge nurse points to the week’s shift schedule on a tablet while a nurse reads along at the nurses’ station." fetchpriority="high" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div>
+      <div class="photo fd-photo v2-hero-photo" style="--pos:88% 30%;--pos-m:45% 26%"><picture><source type="image/webp" srcset="assets/img/nurses-schedule-800.webp 800w, assets/img/nurses-schedule.webp 1536w" sizes="(min-width: 1024px) 520px, 92vw"><img src="assets/img/nurses-schedule-800.jpg" srcset="assets/img/nurses-schedule-800.jpg 800w, assets/img/nurses-schedule.jpg 1536w" sizes="(min-width: 1024px) 520px, 92vw" width="1536" height="1024" alt="A charge nurse points to the week’s shift schedule on a tablet while a nurse reads along at the nurses’ station." fetchpriority="high" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div>
     </figure>
   </div>
 </section>
 
-<!-- 2. THREE REASONS (System v2, client call): straight under the hero. Static. -->
-<section class="v2-reasons fd-reasons" aria-labelledby="why-h">
-  <div class="wrap">
-    <h2 class="sr-only" id="why-h">Why hire with Jobility</h2>
-    <ul class="v2-reasons-list" role="list">
-      <li><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7.5 3v5.2c0 4.5-3.1 8.4-7.5 9.8-4.4-1.4-7.5-5.3-7.5-9.8V6z"/><path d="M8.6 12.2l2.4 2.4 4.4-4.8"/></svg><h3>A vetted, verified workforce</h3><p>Skills, availability and work history checked on every match.</p></li>
-      <li><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.6"/><path d="M14.6 9.3c-.5-.9-1.5-1.4-2.6-1.4-1.5 0-2.6.8-2.6 1.9s1.1 1.6 2.6 2 2.6.9 2.6 2-1.1 1.9-2.6 1.9c-1.2 0-2.3-.6-2.8-1.5M12 6.4v1.5M12 16.1v1.5"/></svg><h3>Much less than an agency</h3><p>From $150 a post, or 8% only when you hire. Agencies commonly charge 20%.<sup class="fn"><a href="#qq-fn1" aria-label="Source">1</a></sup></p></li>
-      <li><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="12.5" rx="2"/><path d="M3 9h18M9 20.5h6M12 17v3.5"/></svg><h3>You run it, on one platform</h3><p>Post, review and book interviews yourself. No agency in the middle.</p></li>
-    </ul>
+<!-- 2. WHY HIRE WITH JOBILITY (UI): one composite of portal snippets on the left (a vetted match, the price bars, a
+     booked interview), the three reasons as a hairline ledger on the right. Replaces the icon columns. White, top hairline. -->
+<section class="sec fv-sec--rule fv-why" data-fv="UI" aria-labelledby="why-h">
+  <div class="wrap fv-why-grid">
+    <figure class="fv-why-stage" aria-hidden="true">
+      <div class="fv-why-a"><div class="fv-mini fv-mini--match fd-mini" aria-hidden="true">
+  <div class="fv-mini-row is-sel"><span class="fv-mini-av">MR</span><span class="fv-mini-nm"><b>Maria R.</b><span>Warehouse supervisor</span></span></div>
+  <ul class="fv-mini-chk"><li><span class="fv-mini-tick"></span>Skills</li><li><span class="fv-mini-tick"></span>Availability</li><li><span class="fv-mini-tick"></span>Work history</li></ul>
+  <p class="fv-mini-foot"><span class="fv-mini-av" style="width:18px;height:18px;font-size:9px">JT</span>Reviewed by our team</p>
+</div></div><div class="fv-why-b"><div class="fv-mini fv-mini--bars fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>One hire at $45,000</b></p>
+  <div class="fv-mb fv-mb--us"><span class="fv-mb-l">Pay per post</span><span class="fv-mb-n">$150</span><span class="fv-mb-t"><i style="--w:1.7%"></i></span></div>
+  <div class="fv-mb"><span class="fv-mb-l">Agency, 20%<sup>1</sup></span><span class="fv-mb-n">$9,000</span><span class="fv-mb-t"><i style="--w:100%"></i></span></div>
+</div></div><div class="fv-why-c"><div class="fv-mini fv-mini--calendar fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Interviews</b><span>This week</span></p>
+  <div class="fv-cal">
+    <span class="fv-cal-d">Mon</span><span class="fv-cal-d">Tue</span><span class="fv-cal-d">Wed</span><span class="fv-cal-d">Thu</span><span class="fv-cal-d">Fri</span>
+    <span class="fv-cal-s is-busy"></span><span class="fv-cal-s is-pick"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span>
+    <span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span>
+    <span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span>
+  </div>
+  <p class="fv-cal-note">Tue 10:00 · Interview booked by you</p>
+</div></div>
+    </figure>
+    <div>
+      <h2 class="h-sec" id="why-h">Why businesses hire with Jobility.</h2>
+      <ul class="fv-why-list" role="list">
+        <li><h3>A vetted, verified workforce</h3><p>Skills, availability and work history checked on every match.</p><a class="tlink" href="how-it-works.html#vetting">How we vet</a></li>
+        <li><h3>Much less than an agency</h3><p>From $150 a post, or 8% only when you hire. Agencies commonly charge 20%.<sup class="fn"><a href="#qq-fn1" aria-label="Source">1</a></sup></p><a class="tlink" href="pricing.html">See prices</a></li>
+        <li><h3>You run it, on one platform</h3><p>Post, review and book interviews yourself. No agency in the middle.</p><a class="tlink" href="#walkthrough">See the portal</a></li>
+      </ul>
+      <p class="fv-cap fv-why-cap">Example views. Names and numbers are made up.</p>
+    </div>
   </div>
 </section>
 
-<!-- 3. THE 1-2-3 (System v2, client call): Post once / we curate and verify / you interview and hire. Light tint band. -->
-<section class="sec on-day v2-steps-sec" id="how" aria-labelledby="how-h">
+<!-- 3. FROM POST TO HIRE (FL): numerals on one hairline; step 1 carries a fan of six blank job-site tiles (no board logos). Sky. -->
+<section class="sec on-day" id="how" data-fv="FL" aria-labelledby="how-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="how-h">From post to hire in three steps.</h2></div>
-    <ol class="v2-steps fd-steps" role="list">
-      <li><span class="v2-step-n" aria-hidden="true">1</span><h3>Post once.</h3><p>We share it to <span class="confirm qchip" data-q="Q19" title="To confirm with Jobility (Kim): the exact number of job sites a post goes to">150+ job sites</span> for you.</p></li>
-      <li><span class="v2-step-n" aria-hidden="true">2</span><h3>We curate and verify.</h3><p>AI-driven matching finds people who fit, and we check them before they reach you.</p></li>
-      <li><span class="v2-step-n" aria-hidden="true">3</span><h3>You interview and hire.</h3><p>Book interviews when it suits you, and hire the person you choose.</p></li>
+    <div class="fv-head fv-head--row"><h2 class="h-sec" id="how-h">From post to hire in three steps.</h2><p class="fv-head-link"><a class="tlink" href="#walkthrough">Watch it in the product</a></p></div>
+    <ol class="fv-flow fd-flow" role="list" style="--n:3">
+      <li><span class="fv-flow-n" aria-hidden="true">1</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Post once.</h3><p>We share it to <span class="confirm qchip" data-q="Q19" title="To confirm with Jobility (Kim): the exact number of job sites a post goes to">150+ job sites</span> for you.</p><div class="fv-dv-fan" aria-hidden="true"><span class="fv-dv-fan-t"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i></span><span class="fv-dv-fan-l">150+ job sites</span></div></li>
+      <li><span class="fv-flow-n" aria-hidden="true">2</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>We curate and verify.</h3><p>AI-driven matching finds people who fit, and we check them before they reach you.</p></li>
+      <li><span class="fv-flow-n" aria-hidden="true">3</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>You interview and hire.</h3><p>Book interviews when it suits you, and hire the person you choose.</p></li>
     </ol>
-    <p class="links-row v2-steps-more"><a class="tlink" href="#walkthrough">Watch it in the product</a></p>
     <p class="qnote">Open: Q19. “150+ job sites” is from the Nov 5 call (“sitting on top of 150 different job boards”). Kim to confirm the exact number before launch.</p>
   </div>
 </section>
 
-<!-- 4. WHAT DO YOU NEED RIGHT NOW (System v2): three solution cards, direct hire first, no pricing. Then the healthcare link out. -->
-<section class="sec" id="solutions" aria-labelledby="need-h">
+<!-- 4. WHAT DO YOU NEED RIGHT NOW (CH): whole-tile links, each with a miniature of that offering's hero object; direct hire
+     leads (1.4x, pink wash). Then the healthcare link out for shift staffing. White. -->
+<section class="sec" id="solutions" data-fv="CH" aria-labelledby="need-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec" id="need-h">What do you need right now?</h2></div>
-    <ul class="v2-sol fd-solutions" role="list">
-      <li class="v2-sol-card is-lead"><a href="direct-hiring.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="13" r="6"/><path d="M8 34c1.6-7 6.3-10 12-10s10.4 3 12 10"/></svg></span><span class="v2-sol-k">Direct hire, on your payroll</span><span class="v2-sol-t">Full&#8209;time and part&#8209;time staff</span><span class="v2-sol-p">Vetted candidates who join your payroll.</span><span class="v2-sol-go" aria-hidden="true">Explore direct hiring</span></a></li>
-      <li class="v2-sol-card"><a href="contingent-labor.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="9" width="28" height="25" rx="4"/><path d="M6 17h28M13 5v7M27 5v7M12 23h4M20 23h4M12 28h4"/></svg></span><span class="v2-sol-k">Contingent labor</span><span class="v2-sol-t">Temp and contract workers</span><span class="v2-sol-p">People for weeks or months, on our payroll if you like.</span><span class="v2-sol-go" aria-hidden="true">Explore contingent labor</span></a></li>
-      <li class="v2-sol-card"><a href="gig-work.html"><span class="v2-sol-ic"><svg class="v2-ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="20" cy="21" r="13"/><path d="M20 13v8l5 4M16 4h8"/></svg></span><span class="v2-sol-k">Gig work</span><span class="v2-sol-t">Shift coverage</span><span class="v2-sol-p">Screened workers nearby for a shift or a busy week.</span><span class="v2-sol-go" aria-hidden="true">Explore gig work</span></a></li>
+    <div class="fv-head"><h2 class="h-sec" id="need-h">What do you need right now?</h2></div>
+    <ul class="fv-choose fd-solutions" role="list">
+      <li class="is-lead"><a href="direct-hiring.html"><span class="fv-choose-ui"><div class="fv-mini fv-mini--shortlist fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Short list</b><span>Warehouse supervisor</span></p>
+  <div class="fv-mini-row is-sel"><span class="fv-mini-av">MR</span><span class="fv-mini-nm"><b>Maria R.</b><span>Skills match · Available Mon</span></span></div>
+  <div class="fv-mini-row"><span class="fv-mini-av">JO</span><span class="fv-mini-nm"><b>James O.</b><span>Skills match · Available now</span></span></div>
+  <div class="fv-mini-row"><span class="fv-mini-av">PS</span><span class="fv-mini-nm"><b>Priya S.</b><span>Skills match · Available Mon</span></span></div>
+</div></span><span class="fv-choose-k">Direct hire, on your payroll</span><span class="fv-choose-t">Full&#8209;time and part&#8209;time staff</span><span class="fv-choose-p">Vetted candidates who join your payroll.</span><span class="fv-choose-go" aria-hidden="true">Explore direct hiring</span></a></li>
+      <li><a href="contingent-labor.html"><span class="fv-choose-ui"><div class="fv-mini fv-mini--roster fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Crew roster</b><span>Weeks 1 to 3</span></p>
+  <div class="fv-ros">
+    <span></span><span class="fv-ros-d">M</span><span class="fv-ros-d">T</span><span class="fv-ros-d">W</span><span class="fv-ros-d">T</span><span class="fv-ros-d">F</span><span class="fv-ros-d">S</span>
+    <span class="fv-ros-w">Wk 1</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c is-off">0</span>
+    <span class="fv-ros-w is-now">Wk 2</span><span class="is-now" style="display:contents"><span class="fv-ros-c">4</span><span class="fv-ros-c">4</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span></span>
+    <span class="fv-ros-w">Wk 3</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c">6</span><span class="fv-ros-c is-off">0</span>
+  </div>
+</div></span><span class="fv-choose-k">Contingent labor</span><span class="fv-choose-t">Temp and contract workers</span><span class="fv-choose-p">People for weeks or months, on our payroll if you like.</span><span class="fv-choose-go" aria-hidden="true">Explore contingent labor</span></a></li>
+      <li><a href="gig-work.html"><span class="fv-choose-ui"><div class="fv-mini fv-mini--shift fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Open shift · Sat</b><span class="fv-mini-pill">2 of 2 filled</span></p>
+  <svg viewBox="0 0 240 64" focusable="false"><path d="M8 56 C 60 6, 180 6, 232 56" fill="none" stroke="#CFD8E3" stroke-width="1.5" stroke-linecap="round"/><path d="M8 56 C 60 6, 180 6, 232 56" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 5"/><circle cx="8" cy="56" r="4.5" fill="#fff" stroke="#1F2C41" stroke-width="1.5"/><circle cx="232" cy="56" r="5" fill="#D3005B"/></svg>
+  <p class="fv-sh-l"><span>7 a.m.</span><span>7 p.m.</span></p>
+  <p class="fv-sh-who"><span class="fv-mini-av">AT</span><span class="fv-mini-av">RD</span></p>
+</div></span><span class="fv-choose-k">Gig work</span><span class="fv-choose-t">Shift coverage</span><span class="fv-choose-p">Screened workers nearby for a shift or a busy week.</span><span class="fv-choose-go" aria-hidden="true">Explore gig work</span></a></li>
     </ul>
-    <a class="v2-hc fd-hc" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Healthcare facilities</b> Nurses, CNAs and allied staff, with certification and license checks included.</span><span class="v2-hc-go">Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-    <div class="ind-wrap v2-ind"><p class="custind-k" id="roles-h" role="heading" aria-level="3">Our customers work in</p><ul class="ind-ico fd-ind-ico" role="list" aria-labelledby="roles-h"><li class="is-lead"><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 5.5h7v7h7v7h-7v7h-7v-7h-7v-7h7z"/></g><circle class="ind-dot" cx="26.5" cy="5.5" r="2.4"/></svg></span><a class="ind-t ind-out" href="https://jobilityhealth.com/" target="_blank" rel="noopener">Healthcare<span class="sr-only"> (Jobility Health, opens in a new tab)</span></a></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23.5h22"/><path d="M7.5 23.5v-3a8.5 8.5 0 0 1 17 0v3"/><path d="M13.5 12.5v5.5M18.5 12.5v5.5"/></g><circle class="ind-dot" cx="26" cy="8" r="2.4"/></svg></span><span class="ind-t">Construction</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 26.5v-12l7 4.5v-4.5l7 4.5v-4.5l7 4.5V6.5h2v20z"/></g><circle class="ind-dot" cx="6" cy="7" r="2.4"/></svg></span><span class="ind-t">Light industrial and manufacturing</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 24.5h23"/><path d="M7 24.5a9 9 0 0 1 18 0"/><path d="M16 15.5v-3M13 12.5h6"/></g><circle class="ind-dot" cx="26" cy="8" r="2.4"/></svg></span><span class="ind-t">Hospitality</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="8.5" width="19" height="12.5" rx="1.5"/><path d="M3.5 25h25"/></g><circle class="ind-dot" cx="27" cy="5" r="2.4"/></svg></span><span class="ind-t">IT</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5l2.4 7.1 7.1 2.4-7.1 2.4L15 24.5l-2.4-7.1-7.1-2.4 7.1-2.4z"/></g><circle class="ind-dot" cx="25.5" cy="24.5" r="2.4"/></svg></span><span class="ind-t">Aesthetic medicine</span></li><li><span class="ind-ic"><svg class="ind-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11.5h18l-1.5 15h-15z"/><path d="M12 11.5V9.5a4 4 0 0 1 8 0v2"/></g><circle class="ind-dot" cx="26.5" cy="6" r="2.4"/></svg></span><span class="ind-t">Retail</span></li></ul></div>
+    <a class="v2-hc fd-hc" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Staffing shifts at a healthcare facility?</b> Nurses, CNAs and allied staff for shifts, with certification and license checks.</span><span class="v2-hc-go">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
   </div>
 </section>
 
-<!-- 5. ONE HIRE, THREE WAYS (System v2): the shared calculator, Jobility vs a staffing agency vs on your own.
-     div.qq[data-quote] is shared, identical, with direct-hiring.html (synced by _lib/v2_home.py). Layout A (bars) is the
-     default; layout B (three columns) is behind the review-only switch, or ?calc=b. -->
-<section class="sec on-day" id="plans" aria-labelledby="plans-h">
+<!-- 5. INDUSTRIES (MO): eight photo tiles, the rotating words as real, crawlable text. Each tile links to the matching
+     Direct hiring row (#ind-<slug>); the Healthcare tile adds the facility-shifts link out. Desktop 4 columns (two 2x2 tiles),
+     tablet 2 columns, phone a horizontal scroll-snap row. White, top hairline (the section before is white too). -->
+<section class="sec on-day" id="industries" data-fv="MO" aria-labelledby="ind-h">
+  <div class="wrap">
+    <div class="fv-head fv-head--row"><h2 class="h-sec" id="ind-h">Our customers work in these industries.</h2><p class="lede">Pick yours to see the roles businesses hire directly.</p></div>
+    <ul class="fv-mosaic fd-mosaic" role="list">
+      <li class="fv-tile fv-tile--hc"><a href="direct-hiring.html#ind-healthcare"><div class="photo fd-photo" style="--pos:40% 24%;--pos-m:40% 22%"><picture><source type="image/webp" srcset="assets/img/night-aide-800.webp 800w, assets/img/night-aide.webp 1536w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/night-aide-800.jpg" srcset="assets/img/night-aide-800.jpg 800w, assets/img/night-aide.jpg 1536w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="A nurse aide stocks a supply cart in a quiet hospital corridor." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>Healthcare</b><span>Nurses, medical assistants</span></span></a><a class="fv-tile-out" href="https://jobilityhealth.com/" target="_blank" rel="noopener">Facility shifts: Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li class="fv-tile fv-tile--co"><a href="direct-hiring.html#ind-construction"><div class="photo fd-photo" style="--pos:45% 30%"><picture><source type="image/webp" srcset="assets/img/construction-briefing-800.webp 800w, assets/img/construction-briefing.webp 1536w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/construction-briefing-800.jpg" srcset="assets/img/construction-briefing-800.jpg 800w, assets/img/construction-briefing.jpg 1536w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="A site supervisor walks his crew through the day’s plan on a building site at sunrise." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>Construction</b><span>Electricians, carpenters</span></span></a></li>
+      <li class="fv-tile fv-tile--ho"><a href="direct-hiring.html#ind-hospitality"><div class="photo fd-photo" style="--pos:62% 34%"><picture><source type="image/webp" srcset="assets/img/kitchen-training-800.webp 800w, assets/img/kitchen-training.webp 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/kitchen-training-800.jpg" srcset="assets/img/kitchen-training-800.jpg 800w, assets/img/kitchen-training.jpg 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="A head chef shows a new cook how he wants the prep done at a steel counter." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>Hospitality</b><span>Line cooks, bartenders</span></span></a></li>
+      <li class="fv-tile fv-tile--it"><a href="direct-hiring.html#ind-it"><div class="photo fd-photo" style="--pos:50% 35%;--pos-m:22% 35%"><picture><source type="image/webp" srcset="assets/img/it-onboarding-800.webp 800w, assets/img/it-onboarding.webp 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/it-onboarding-800.jpg" srcset="assets/img/it-onboarding-800.jpg 800w, assets/img/it-onboarding.jpg 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="An IT technician sets up a laptop for a new employee in a small office." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>IT</b><span>IT managers and techs</span></span></a></li>
+      <li class="fv-tile fv-tile--li"><a href="direct-hiring.html#ind-industrial"><div class="photo fd-photo" style="--pos:58% 34%;--pos-m:60% 32%"><picture><source type="image/webp" srcset="assets/img/first-morning-800.webp 800w, assets/img/first-morning.webp 1536w, assets/img/first-morning-3072.webp 3072w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/first-morning-800.jpg" srcset="assets/img/first-morning-800.jpg 800w, assets/img/first-morning.jpg 1536w, assets/img/first-morning-3072.jpg 3072w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="A machinist shows a new hire how to set up a part at the bench." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>Light industrial and manufacturing</b><span>Machinists, shift leads</span></span></a></li>
+      <li class="fv-tile fv-tile--ae"><a href="direct-hiring.html#ind-aesthetic"><div class="photo fd-photo" style="--pos:50% 35%"><picture><source type="image/webp" srcset="assets/img/aesthetic-clinic-800.webp 800w, assets/img/aesthetic-clinic.webp 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/aesthetic-clinic-800.jpg" srcset="assets/img/aesthetic-clinic-800.jpg 800w, assets/img/aesthetic-clinic.jpg 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="A nurse prepares a treatment tray while the clinic coordinator checks the day’s schedule." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>Aesthetic medicine</b><span>Estheticians, injectors</span></span></a></li>
+      <li class="fv-tile fv-tile--re"><a href="direct-hiring.html#ind-retail"><div class="photo fd-photo" style="--pos:50% 38%;--pos-m:78% 38%"><picture><source type="image/webp" srcset="assets/img/retail-floor-800.webp 800w, assets/img/retail-floor.webp 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/retail-floor-800.jpg" srcset="assets/img/retail-floor-800.jpg 800w, assets/img/retail-floor.jpg 1536w" sizes="(min-width: 1024px) 320px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="A hardware store manager shows a new sales associate how to restock a shelf." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>Retail</b><span>Store leads, cashiers</span></span></a></li>
+      <li class="fv-tile fv-tile--ad"><a href="direct-hiring.html#ind-admin"><div class="photo fd-photo" style="--pos:68% 30%"><picture><source type="image/webp" srcset="assets/img/staffing-coordinator-800.webp 800w, assets/img/staffing-coordinator.webp 1536w, assets/img/staffing-coordinator-3072.webp 3072w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw"><img src="assets/img/staffing-coordinator-800.jpg" srcset="assets/img/staffing-coordinator-800.jpg 800w, assets/img/staffing-coordinator.jpg 1536w, assets/img/staffing-coordinator-3072.jpg 3072w" sizes="(min-width: 1024px) 640px, (min-width: 768px) 46vw, 64vw" width="1536" height="1024" alt="An office manager on a call updates the week’s board in a bright office." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><span class="fv-tile-cap"><b>Admin and office</b><span>Office admins, bookkeepers</span></span></a></li>
+    </ul>
+    <p class="qnote">Open: the roles under each industry are our examples, to confirm with Jobility.</p>
+  </div>
+</section>
+
+<!-- 6. ONE HIRE, THREE WAYS (DV): the shared calculator (_lib/v2_quote_block.html, identical on Direct hiring; Pricing
+     uses the pr_ ids). The offer lives inside the "Jobility, pay per post" row (offer-inline); no card under it. White. -->
+<section class="sec" id="plans" data-fv="DV" aria-labelledby="plans-h">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h-sec" id="plans-h">What one hire costs, three ways.</h2>
@@ -190,7 +251,7 @@
         <p class="qq-scale-h">One hire at <span data-out="salary">$45,000</span> a year</p>
         <div class="qq-a">
           <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, the common agency fee, and on your own">
-            <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span></li>
+            <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span><p class="fv-offer fd-offer-inline" data-offer><span class="fv-offer-dot" aria-hidden="true"></span><span class="fv-offer-k">New customers:</span> your second job post is complimentary. <a href="pricing.html#offer-terms">Offer terms</a></p></li>
             <li class="bar bar--us" data-tier="pick"><span class="bl"><b>Jobility, <span data-out="pickname">8% placement fee</span>.</b> Only if you hire.</span><span class="num" data-out="pick">$3,600</span><span class="track" aria-hidden="true"><span class="fill" data-bar="pick" style="--s:.4"></span></span></li>
             <li class="bar bar--agency"><span class="bl"><b>Staffing agency, 20%.</b> The most common fee.<sup class="fn">1</sup></span><span class="num" data-out="agency">$9,000</span><span class="track" aria-hidden="true"><span class="fill" data-bar="agency" style="--s:1"></span></span></li>
             <li class="bar bar--own"><span class="bl"><b>On your own.</b> About <span data-out="days">42</span> days to fill, on average.<sup class="fn"><a href="#qq-fn1" aria-label="Source 2">2</a></sup> <span class="own-if-empty">You post on several job boards, screen every applicant, run the checks and schedule each interview.</span><span class="own-if-cost">Your costs, as you entered them.</span> <a class="tlink" href="#qq-own-a" data-own-open><span class="own-if-empty">Add your costs to compare</span><span class="own-if-cost">Change your costs</span></a></span><span class="num"><span class="own-if-cost" data-out="own">$0</span></span><span class="track" aria-hidden="true"><span class="fill" data-bar="own" style="--s:0"></span></span></li>
@@ -204,6 +265,7 @@
               <h3 class="col3-h">Jobility</h3>
               <p class="col3-n" data-out="post">$150</p>
               <p class="col3-sub">Pay per post, with no fee when you hire.</p>
+              <p class="fv-offer fd-offer-inline" data-offer><span class="fv-offer-dot" aria-hidden="true"></span><span class="fv-offer-k">New customers:</span> your second job post is complimentary. <a href="pricing.html#offer-terms">Offer terms</a></p>
               <p class="col3-alt">Or pay only if you hire: <b data-out="pick">$3,600</b>, the <span data-out="pickname">8% placement fee</span>.</p>
               <ul class="col3-get" role="list"><li>Post once, shared to 150+ job sites</li><li>AI-driven matching, and a person reviews every match</li><li>Skills, availability and work history checked</li><li>You book interviews in the portal</li></ul>
               <a class="btn btn--primary btn--sm" href="https://enterprise.jobility.com/signup">Post a job</a>
@@ -225,6 +287,7 @@
             </li>
           </ul>
         </div>
+        <p class="qq-share fd-share"><button type="button" class="qq-share-btn" data-share>Copy a link to this estimate</button><span class="qq-share-say" data-share-say role="status"></span></p>
         <p class="sr-only" aria-live="polite" data-live></p>
       </div>
       <div class="qq-notes">
@@ -232,66 +295,44 @@
       </div>
       <p class="qnote">Open: Q20. “On your own” shows time to fill (SHRM, 42 days, 2016 report) and the work you take on, with cost fields that start empty, so any dollar comparison uses the visitor’s own numbers. No default dollar total (the flat SHRM $4,129 cost per hire is retired: against a percentage fee it made doing it yourself look cheaper above about $52,000). Placeholder until Parmi’s white paper (Nov 5 call). Layout A or B: client to choose (switch above, review mode or ?calc=b). The $350 to $400 nursing and allied range as approved on Oct 15.</p>
     </div>
-    <div class="promo fd-promo qq-promo" role="note" aria-label="New customer offer">
-      <span class="promo-mark" aria-hidden="true"></span>
-      <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span><span class="promo-fine">On pay-per-post plans.</span></p>
-    </div>
   </div>
 </section>
 
-<!-- 6. WORKERS, NOT RESUMES (lighter): two sentences and the Job board / Jobility switch (user-triggered only). -->
-<section class="sec" aria-labelledby="wnr-h">
-  <div class="wrap split v2-wnr fd-wnr-calm">
-    <div>
-      <h2 class="h-sec" id="wnr-h">Get workers, not resumes.</h2>
-      <p class="lede">Job boards send you everyone who clicks apply. Jobility sends a short list of people who match what you asked for.</p>
-      <ul class="wnr-facts" role="list"><li>No charge per click.</li><li>No pile of resumes to sort.</li></ul>
-    </div>
-    <div class="sw-wrap">
-      <div class="sw" data-switch data-board-text="Job board: 214 applicants, every one of them yours to read." data-jobility-text="Jobility: 3 screened people who match what you asked for.">
-        <div class="sw-top">
-          <button class="switch fd-switch" type="button" role="switch" aria-checked="true" aria-label="Show the Jobility short list. Off shows a job board pile." aria-describedby="sw-state">
-            <span class="thumb" aria-hidden="true"><span class="thumb-in"><span>Job board</span><span>Jobility</span></span></span><span class="opt o-b" aria-hidden="true">Job board</span><span class="opt o-j" aria-hidden="true">Jobility</span>
-          </button>
-        </div>
-        <p class="sw-hint">Flip the switch to compare what each one sends you.</p>
-        <div class="sw-canvas fd-canvas" data-state="jobility">
-          <div class="sw-pile" aria-hidden="true">
-            <div class="sw-sheet fd-sheet" style="--l:4;--t:10;--r:-12deg"><i></i><span></span><span style="width:80%"></span><span style="width:64%"></span></div>
-            <div class="sw-sheet fd-sheet" style="--l:46;--t:2;--r:9deg"><i></i><span></span><span style="width:88%"></span><span style="width:52%"></span></div>
-            <div class="sw-sheet fd-sheet" style="--l:20;--t:34;--r:-5deg"><i></i><span></span><span style="width:60%"></span><span style="width:76%"></span></div>
-            <div class="sw-sheet fd-sheet" style="--l:40;--t:38;--r:12deg"><i></i><span></span><span style="width:84%"></span><em>Applied 8 min ago</em></div>
-            <div class="sw-sheet fd-sheet" style="--l:10;--t:46;--r:6deg"><i></i><span></span><span style="width:92%"></span><em>Resume_final_v2.pdf</em></div>
-            <div class="sw-sheet fd-sheet" style="--l:28;--t:6;--r:-15deg"><i></i><span></span><span style="width:58%"></span><em>Applied 1 hr ago</em></div>
-            <div class="sw-sheet fd-sheet" style="--l:32;--t:20;--r:-3deg"><i></i><span></span><span style="width:56%"></span><em>Applied 3 min ago</em></div>
-          </div>
-          <ol class="sw-cards" role="list" aria-label="Example short list">
-            <li class="sw-card fd-card"><span class="av" style="--bg:#FCEBF2;--fg:#B8004F" aria-hidden="true">MR</span><p class="nm">Maria R.</p><p class="rl">Warehouse supervisor, full-time hire. 7 years running a day shift.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available now</span></p></li>
-            <li class="sw-card fd-card"><span class="av" style="--bg:#1F2C41;--fg:#fff" aria-hidden="true">DP</span><p class="nm">Dev P.</p><p class="rl">Warehouse associate, temp for 6 weeks. Can start Monday.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available Mon.</span></p></li>
-            <li class="sw-card fd-card"><span class="av" style="--bg:#D3005B;--fg:#fff" aria-hidden="true">AT</span><p class="nm">Ana T.</p><p class="rl">CNA, Saturday shift at 7 a.m. Lives 12 minutes away.</p><p class="chips"><span class="chip">Skills match</span><span class="chip">Available Sat.</span></p></li>
-            <li class="sw-more" aria-hidden="true">And 1 more on your short list</li>
-          </ol>
-          <svg class="sw-line" hidden aria-hidden="true" focusable="false">
-            <defs><linearGradient id="sw-rib" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="470"><stop offset="0" stop-color="#FF9241"/><stop offset=".3" stop-color="#FF6634"/><stop offset=".65" stop-color="#FF3B58"/><stop offset="1" stop-color="#D3005B"/></linearGradient></defs>
-            <path class="fd-draw" pathLength="1" stroke="url(#sw-rib)" d="M0 0"/>
-            <g class="sw-beads"></g>
-            <circle class="fd-dot" cx="0" cy="0" r="12"/>
-          </svg>
-        </div>
-        <p class="sw-state" id="sw-state" aria-live="polite">Jobility: 3 screened people who match what you asked for.</p>
-        <p class="sw-illo ex-note">Example view. Names and numbers are made up.</p>
-      </div>
-    </div>
+<!-- 7. KNOW WHO YOU'RE HIRING (VET): right after the price (cheap means bad?). Two groups, both positive. Sky. -->
+<section class="sec on-day" id="vetting" data-fv="VET" aria-labelledby="trust-h">
+  <div class="wrap">
+    <div class="fv-head fv-head--row"><div><h2 class="h-sec" id="trust-h">Know who you’re hiring.</h2><p class="lede" style="margin-top:14px">A person on our team reviews every match before it reaches you.</p></div><p class="fv-head-link"><a class="tlink" href="how-it-works.html#vetting">How we vet workers</a></p></div>
+    <div class="fv-vet fd-vet" data-variant="full">
+  <div class="fv-vet-std" role="group" aria-labelledby="vet-std-h">
+    <p class="fv-vet-k" id="vet-std-h">Standard on every match</p>
+    <ul role="list">
+      <li><span class="fv-vet-ic" aria-hidden="true"></span><b>Skills</b><span>Checked against your job’s requirements.</span></li>
+      <li><span class="fv-vet-ic" aria-hidden="true"></span><b>Availability</b><span>For when you need them.</span></li>
+      <li><span class="fv-vet-ic" aria-hidden="true"></span><b>Work history</b><span>Reviewed by our team.</span></li>
+      <li class="is-hc"><span class="fv-vet-ic" aria-hidden="true"></span><b>Certifications and licenses</b><span>Standard on healthcare roles.</span><em class="fv-vet-chip">Healthcare</em></li>
+    </ul>
+    <p class="fv-vet-person"><span class="fv-mini fv-mini--avatar" aria-hidden="true">JT</span>Every match is reviewed by a person on our team.</p>
+  </div>
+  <div class="fv-vet-add" role="group" aria-labelledby="vet-add-h">
+    <p class="fv-vet-k" id="vet-add-h">Added when you need it</p>
+    <ul role="list">
+      <li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Background checks</b><span>Ask when you post, or talk to us.</span></li>
+      <li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>References</b><span>Depending on your role and business.</span></li>
+      <li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Custom or extensive credentialing</b><span>For senior or specialized roles.</span></li>
+    </ul>
+    <p class="fv-vet-foot">Priced separately. <a href="contact.html?topic=plan" data-topic="plan">Talk to us about extra checks</a></p>
+  </div>
+</div>
   </div>
 </section>
 
-<!-- 5. HOW IT WORKS (L11, deck 5.6). Walkthrough v2 (2026-10-22): three tabs redrawn from Jobility's portal recordings
+<!-- 9. ONE PORTAL (UI). HOW IT WORKS (L11, deck 5.6). Walkthrough v2 (2026-10-22): three tabs redrawn from Jobility's portal recordings
      (Kim, Oct 22) in the brand, fictional data only. A player: starts once the whole frame is in view (five beats), pauses off
      screen and resumes, Pause beside Replay; holds its final frame; Next never moves the page; never auto-advances.
      One story with the hero: Warehouse supervisor in Edison; Maria R., Priya S. and James O. are among its matches; Priya is hired.
      v3 (2026-10-22): a camera zooms and pans the product per beat, wide at the start and end of each tab.
      The finished frames are the default markup (reduced motion, no JS, GSAP blocked). Markup: _lib/wt2_build.py. Behavior: assets/walkthrough.js. -->
-<section class="sec wt-sec" id="walkthrough" aria-labelledby="tour-h">
+<section class="sec wt-sec" id="walkthrough" data-fv="UI" aria-labelledby="tour-h">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h-sec" id="tour-h">One portal. Every hire.</h2>
@@ -320,7 +361,7 @@
             <p class="tour-step">Step 1 of 3</p>
             <h3>Post your job once.</h3>
             <p>Start from a template or a new post. Choose how you pay and the type of worker, add what, where and when, review, and post. Your job goes live as soon as you post, shared to <span class="confirm qchip" data-q="Q19" title="To confirm with Jobility (Kim): the exact number of job sites a post goes to">150+ job sites</span>.</p>
-            <ul><li>Pay per post, or a placement fee only if you hire; custom plans through sales</li><li>Full or part time on your payroll, or gig work</li><li>Save templates for roles you hire often</li></ul>
+            <ul><li>Pay per post, or a placement fee only if you hire; custom plans on request</li><li>Full or part time on your payroll, or gig work</li><li>Save templates for roles you hire often</li></ul>
             <button class="btn btn--secondary btn--sm tour-next" type="button" data-tab-next="tab-2">Next: Vetted matches</button>
           </div>
         </div>
@@ -339,7 +380,7 @@
             <p class="tour-step">Step 2 of 3</p>
             <h3>Your short list, already screened.</h3>
             <p>Matches arrive on your dashboard and its map, each with a match score and ratings. Open a profile for skills and reviews, then short list.</p>
-            <ul><li>Screened for skills, availability and work history</li><li>Every match reviewed by a person on our team</li><li>Background checks are an add-on through sales</li></ul>
+            <ul><li>Screened for skills, availability and work history</li><li>Every match reviewed by a person on our team</li><li>Background checks are available as an add-on</li></ul>
             <button class="btn btn--secondary btn--sm tour-next" type="button" data-tab-next="tab-3">Next: Interview and hire</button>
           </div>
         </div>
@@ -368,50 +409,28 @@
   </div>
 </section>
 
-<!-- 8. KNOW WHO YOU'RE HIRING (lighter): the heading, one line and four checks. Optional checks through sales. -->
-<section class="sec on-day" aria-labelledby="trust-h">
-  <div class="wrap split v2-trust">
-    <div>
-      <h2 class="h-sec" id="trust-h">Know who you’re hiring.</h2>
-      <p class="lede">Checked before anyone reaches you.</p>
-      <p class="links-row"><a class="tlink" href="how-it-works.html#vetting">How we vet workers</a></p>
-    </div>
-    <ul class="v2-checks fd-checks" role="list">
-      <li><b>Skills</b><span>Against what your job needs.</span></li>
-      <li><b>Availability</b><span>For when you need them.</span></li>
-      <li><b>Work history</b><span>Reviewed by our team.</span></li>
-      <li class="is-opt"><b>Licenses and background checks</b><span>Licenses for healthcare roles; background checks through sales.</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- 9. WHO'S BEHIND JOBILITY + what customers say (lighter). Parmi's words and a small facts card; three jobility.com
-     testimonials, verbatim (fd-proof). Parmi's photo replaces the PC mark when it arrives (Q1). -->
-<section class="sec" aria-labelledby="founder-h">
-  <div class="wrap v2-founder">
-    <div class="v2-founder-row">
+<!-- 10. WHO'S BEHIND JOBILITY + WHAT CUSTOMERS SAY (QL): Parmi's line large, the founder card beside it, three
+     jobility.com testimonials verbatim in one row (fd-proof). Parmi's photo replaces the PC mark when it arrives (Q8). Sky. -->
+<section class="sec on-day" id="about" data-fv="QL" aria-labelledby="founder-h">
+  <div class="wrap">
+    <div class="fv-quote fd-quote">
       <div>
-        <h2 class="h-sec" id="founder-h">Who’s behind Jobility.</h2>
-        <blockquote class="v2-founder-q"><p>“I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.”</p></blockquote>
+        <h2 class="h-sec fv-quote-h" id="founder-h">Who’s behind Jobility.</h2>
+        <figure class="fv-quote-main"><blockquote><p>I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.”</p></blockquote><figcaption class="fv-quote-by"><b>Parmi Cheema</b><span>Founder and CEO</span></figcaption></figure>
       </div>
-      <aside class="founder-facts fd-founder" aria-label="About the founder">
-        <div class="ff-mark" aria-hidden="true">PC</div>
-        <div class="ff-body">
-          <p class="ff-name">Parmi Cheema, founder and CEO</p>
-          <ul class="ff-list">
-            <li>More than 20 years in staffing</li>
-          </ul>
-          <a class="link" data-topic="direct" href="contact.html?topic=direct">Talk to our team</a>
-        </div>
+      <aside class="fv-founder fd-founder" aria-label="About the founder">
+        <span class="fv-founder-mark" aria-hidden="true">PC</span>
+        <div><p class="fv-founder-n">Parmi Cheema, founder and CEO</p><p class="fv-founder-r">More than 20 years in staffing</p><a data-topic="direct" href="contact.html?topic=direct">Talk to our team</a></div>
       </aside>
     </div>
-    <div class="proof is-live proof--trio fd-proof" role="group" aria-labelledby="proof-k"><p class="proof-k" id="proof-k">What customers say</p><figure class="proof-q fd-proof-q"><blockquote><p>“Jobility has matched me with dozens of great candidates over the past year and I have hired a bunch of them and have been pleased with the quality of the workers and the level of dedication and service the Jobility team provides. I highly recommend Jobility to any business looking for workers!”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Ariel</span><span class="proof-org">Home &amp; Office cleaning company</span></figcaption></figure><figure class="proof-q fd-proof-q"><blockquote><p>“We used Jobility to find an Admin assistant for 4 hours a day, 3 days a week for 6 weeks. We found a match within a few hours, the candidate was a great match, and we converted to a full time position.”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Henry</span><span class="proof-org">Shipping company</span></figcaption></figure><figure class="proof-q fd-proof-q"><blockquote><p>“Hired an LPN for one of my clients. The candidate matched 100% based on distance, availability, certifications, and rate. We had to do additional background checks which was also a breeze through Jobility.”</p></blockquote><figcaption class="proof-by"><span class="proof-name">Gary</span><span class="proof-org">Staffing company</span></figcaption></figure></div>
-    <p class="qnote">From jobility.com testimonials, as published; Kim, 10/28. Open: Q1 (Parmi’s photo replaces the PC mark), Q3 (more testimonials in progress).</p>
+    <div class="fd-proof" role="group" aria-labelledby="proof-k"><p class="fv-quote-k fv-quote-k--row" id="proof-k">What customers say</p>
+    <ul class="fv-quote-row" role="list"><li><figure><blockquote><p>“Jobility has matched me with dozens of great candidates over the past year and I have hired a bunch of them and have been pleased with the quality of the workers and the level of dedication and service the Jobility team provides. I highly recommend Jobility to any business looking for workers!”</p></blockquote><figcaption class="fv-quote-by"><b>Ariel</b><span>Home &amp; Office cleaning company</span></figcaption></figure></li><li><figure><blockquote><p>“We used Jobility to find an Admin assistant for 4 hours a day, 3 days a week for 6 weeks. We found a match within a few hours, the candidate was a great match, and we converted to a full time position.”</p></blockquote><figcaption class="fv-quote-by"><b>Henry</b><span>Shipping company</span></figcaption></figure></li><li><figure><blockquote><p>“Hired an LPN for one of my clients. The candidate matched 100% based on distance, availability, certifications, and rate. We had to do additional background checks which was also a breeze through Jobility.”</p></blockquote><figcaption class="fv-quote-by"><b>Gary</b><span>Staffing company</span></figcaption></figure></li></ul></div>
+    <p class="qnote">From jobility.com testimonials, as published; Kim, 10/28. Open: Q8 (Parmi’s photo replaces the PC mark), Q3 (more testimonials in progress).</p>
   </div>
 </section>
 
-<!-- 11. FAQ (L13). Device: typographic Q&A rows. Six questions, word for word from deck 5.8. -->
-<section class="sec" aria-labelledby="faq-h">
+<!-- 11. FAQ (AC): six questions. Next read: Pricing. White. -->
+<section class="sec" data-fv="AC" aria-labelledby="faq-h">
   <div class="wrap faq">
     <div>
       <h2 class="h-sec" id="faq-h">Frequently asked questions</h2>
@@ -421,7 +440,7 @@
       <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span class="faq-t">What is Jobility?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
         <div class="faq-a" id="fa1"><p>Jobility is a direct hiring platform. You post a job once, and Jobility finds, vets and shortlists candidates, so you get workers, not resumes. You can hire full-time and part-time staff directly, bring on temp and contract workers with Jobility as the employer of record, or cover shifts, all from one account.</p></div></div>
       <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span class="faq-t">How much does Jobility cost?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-        <div class="faq-a" id="fa2"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once when you publish, and there’s no fee when you hire. New customer offer: your second job post is complimentary.</p><p>The placement fee is 8% if you post and schedule, or 15% if we do the work and send you a candidate, and posting on that plan is free. The fee is a percentage of first-year salary; for hourly roles, we convert the pay rate to a yearly amount. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour. For post prices and placement fees, see <a href="pricing.html">Jobility pricing</a>.</p></div></div>
+        <div class="faq-a" id="fa2"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once when you publish, and there’s no fee when you hire.</p><p>The placement fee is 8% if you post and schedule, or 15% if we do the work and send you a candidate, and posting on that plan is free. The fee is a percentage of first-year salary; for hourly roles, we convert the pay rate to a yearly amount. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour. For post prices and placement fees, see <a href="pricing.html">Jobility pricing</a>.</p></div></div>
       <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span class="faq-t">How is Jobility different from a job board like Indeed?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
         <div class="faq-a" id="fa3"><p>A job board shows your post to job seekers and sends you everyone who applies; Jobility screens candidates against your requirements and sends you a short list. There is no charge per click or per applicant: you pay per post from $150, or post free and pay a placement fee only when you hire. Per hire, you pay less than you would on a job board or with a staffing agency, because you aren’t paying for clicks and applicants and then sorting them yourself.</p></div></div>
       <div class="faq-item held" data-q="Q18"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span class="faq-t">Is Jobility a staffing agency?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -433,25 +452,21 @@
     </div>
     <p class="qnote">Open: Q14, Q18. Held at launch until counsel confirms the wording: “Is Jobility a staffing agency?” (Q18).</p>
   </div>
+<div class="wrap"><p class="fv-next"><span class="fv-next-k">Next:</span><a href="pricing.html">See prices by role</a></p></div>
 </section>
 
-<!-- 12. FINAL CTA (System v2): light tint band, the new-customer offer (.promo, fd-promo), one working moment (dispatcher). -->
-<section class="cta-band v2-cta" data-cta-final aria-labelledby="cta-h">
-  <div class="wrap cta-grid cta-grid--photo">
+<!-- 12. FINAL CTA (CTA-S): the price line carries the offer (plan 4.3); the dispatcher, face right of center. Sky. -->
+<section class="fv-cta fd-cta" data-cta-final data-fv="CTA-S" aria-labelledby="cta-h">
+  <div class="wrap fv-cta-grid">
     <div>
       <h2 class="h-sec" id="cta-h">Post your first job<span class="stop">.</span></h2>
       <p class="lede">Tell us who you need. We send a short list of vetted people.</p>
-      <div class="promo fd-promo" role="note" aria-label="New customer offer">
-        <span class="promo-mark" aria-hidden="true"></span>
-        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span><span class="promo-fine">On pay-per-post plans.</span></p>
-      </div>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>
-        <a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
-      </div>
-      <p class="qnote">Open: Q21. The offer in our words for review (Nov 5 call: professional, never retail; alternates in DESIGN.md). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call).</p>
+      <p class="fv-cta-price"><span class="fv-offer-dot" aria-hidden="true"></span>Pay per post from $150. New customers: your second job post is complimentary.</p>
+      <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a></div>
+      <ul class="fv-cta-alt" role="list" aria-label="Not quite right?"><li>Need people for weeks? <a href="contingent-labor.html">Contingent labor</a></li><li>Need a shift covered? <a href="gig-work.html">Gig work</a></li></ul>
+      <p class="qnote">Open: Q21. The offer in our words for review (Nov 5 call). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call).</p>
     </div>
-    <figure class="photo fd-photo" style="--pos:66% 30%;--pos-m:66% 30%"><picture><source type="image/webp" srcset="assets/img/depot-dispatcher-800.webp 800w, assets/img/depot-dispatcher.webp 1536w" sizes="(min-width: 1200px) 540px, (min-width: 1024px) 42vw, (min-width: 768px) 640px, 1px"><img src="assets/img/depot-dispatcher-800.jpg" srcset="assets/img/depot-dispatcher-800.jpg 800w, assets/img/depot-dispatcher.jpg 1536w" sizes="(min-width: 1200px) 540px, (min-width: 1024px) 42vw, (min-width: 768px) 640px, 1px" width="1536" height="1024" alt="A depot dispatcher in a headset and reading glasses checks the morning run sheet on a clipboard, buses lined up behind him on an overcast morning." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
+    <figure class="fv-cta-media"><div class="photo fd-photo" style="--pos:66% 30%;--pos-m:66% 30%"><picture><source type="image/webp" srcset="assets/img/depot-dispatcher-800.webp 800w, assets/img/depot-dispatcher.webp 1536w, assets/img/depot-dispatcher-3072.webp 3072w" sizes="(min-width: 1200px) 520px, (min-width: 1024px) 40vw, 92vw"><img src="assets/img/depot-dispatcher-800.jpg" srcset="assets/img/depot-dispatcher-800.jpg 800w, assets/img/depot-dispatcher.jpg 1536w, assets/img/depot-dispatcher-3072.jpg 3072w" sizes="(min-width: 1200px) 520px, (min-width: 1024px) 40vw, 92vw" width="1536" height="1024" alt="A depot dispatcher in a headset and reading glasses checks the morning run sheet on a clipboard, buses lined up behind him on an overcast morning." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div></figure>
   </div>
 </section>
 

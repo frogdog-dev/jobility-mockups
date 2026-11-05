@@ -500,12 +500,47 @@
       if(rsel) state.role = rsel.value;
       var w = whos.filter(function(i){ return i.checked; })[0]; if(w) state.who = w.value;
       if(range){ range.min = S.min; range.max = S.max; range.step = S.step; }
-      setSalary(DEF[state.role] || (range && range.value) || S.start);
+      /* FV (Nov 2026): a shared estimate. ?sal=&role=&fn= (fn = 8 or 15) restores the visitor's role, salary and fee;
+         [data-share] copies a link to the current state (the approver reads the same numbers). */
+      var qs = location.search, qSal = (qs.match(/[?&]sal=(\d{4,7})\b/) || [])[1], qRole = (qs.match(/[?&]role=([a-z]+)\b/) || [])[1], qFn = (qs.match(/[?&]fn=(8|15)\b/) || [])[1];
+      if(qRole && P.post[qRole]){ state.role = qRole; roles.forEach(function(i){ i.checked = i.value === qRole; }); if(rsel) rsel.value = qRole; }
+      if(qFn){ state.who = qFn === '15' ? 'managed' : 'self'; whos.forEach(function(i){ i.checked = i.value === state.who; }); }
+      if(qSal){ touched = true; setSalary(+qSal); }
+      else setSalary(DEF[state.role] || (range && range.value) || S.start);
       go(null);
+      $$('[data-share]', qq).forEach(function(btn){
+        var say = $('[data-share-say]', qq), st;
+        btn.addEventListener('click', function(){
+          var sec = qq.closest('section[id]');
+          var u = location.origin + location.pathname + '?sal=' + state.salary + '&role=' + state.role + '&fn=' + (state.who === 'managed' ? '15' : '8') + (sec ? '#' + sec.id : '');
+          function done(t){ if(say) say.textContent = t; btn.classList.add('is-done'); clearTimeout(st); st = setTimeout(function(){ if(say) say.textContent = ''; btn.classList.remove('is-done'); }, 3200); }
+          function fallback(){
+            var t = doc.createElement('textarea'), ok = false; t.value = u; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; t.style.top = '0';
+            doc.body.appendChild(t); t.select(); try{ ok = doc.execCommand('copy'); }catch(e){} doc.body.removeChild(t);
+            done(ok ? 'Link copied.' : 'Copy this link: ' + u);
+          }
+          if(navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(u).then(function(){ done('Link copied.'); }, fallback); else fallback();
+        });
+      });
     });
   });
 
   /* ---- capture check: in ?capture=1, warn about any visible placeholder or production text on the clean page ---- */
+  /* ---- FV (Nov 2026): pending photos and capture. A NEW image (plan section 8) is referenced by its final filename inside
+     .photo--pending; until the file lands, the frame shows its --sky-2 placeholder (and, in review mode, the filename).
+     It swaps by itself once the file exists. ?capture=1 loads every lazy image at once so full-page captures show real
+     frames, not empty boxes. ---- */
+  FD.safe('pending', function(){
+    $$('.photo--pending img').forEach(function(img){
+      var fr = img.closest('.photo--pending');
+      function miss(){ fr.classList.add('is-missing'); }
+      function hit(){ if(img.naturalWidth > 0) fr.classList.remove('is-missing'); }
+      img.addEventListener('error', miss); img.addEventListener('load', hit);
+      if(img.complete) (img.naturalWidth > 0 ? hit : miss)();
+    });
+    if(root.classList.contains('capture')) $$('img[loading="lazy"]').forEach(function(img){ img.loading = 'eager'; });
+  });
+
   FD.safe('capturecheck', function(){
     if(!root.classList.contains('capture')) return;
     var RX = /\[|\{\{|owed|Kim['’]s|supply item|\bCall\b|1099|ID check/;

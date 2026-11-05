@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css"><!-- whimsy-p2 --><link rel="stylesheet" href="assets/whimsy-p2.css"><!-- /whimsy-p2 -->
 </head>
-<body class="page-lp">
+<body class="page-lp pg-b pg-lp-fees">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- LP1, /lp/hire-without-agency-fees/ (plan 5.3; deck 5.5 ad group 1). A no-nav variant of the comparison page: only the hero is written for the ad. January ad group 1; buyer sign-off is Q25. -->
@@ -27,10 +27,9 @@
 </div></header>
 
 <main id="main">
+<!-- fv-b-lp-fees: funnel + visual pass (Package B). DV, FL, VET, DV, QL, AC, centered CTA. No offer. -->
 
-<!-- 1. HERO (library #c-lphero): the eyebrow names the reader, the H1 mirrors the ad, one button, the fee bars as the visual
-     with the source line on the same screen. The pay-per-post offer stays out of the hero (two offers split the click). -->
-<section class="lp-hero" data-hero aria-labelledby="h1">
+<section class="lp-hero" data-fv="DV" data-hero aria-labelledby="h1">
   <div class="wrap oh-grid">
     <div>
       <span class="lp-eyebrow">For businesses hiring</span>
@@ -52,20 +51,35 @@
   <div class="wrap"><p class="qnote">Open: Q14, Q15. Held until Q14: “No credit card to post.” Q15: Parmi signs off the ad group 1 buyer (the SMB owner replacing an agency). Policy check in the ad accounts before launch (deck 5.5).</p></div>
 </section>
 
-<!-- 2. HOW IT WORKS (System v2 steps, static). -->
-<section class="sec on-day v2-steps-sec" aria-labelledby="steps-h">
+<!-- 2. HOW IT WORKS (FL, replaces the circle cards) -->
+<section class="sec fv-sec--rule" data-fv="FL" aria-labelledby="steps-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="steps-h">How it works.</h2></div>
-    <ol class="v2-steps fd-steps" role="list">
-      <li><span class="v2-step-n" aria-hidden="true">1</span><h3>Post your job once.</h3><p>Choose the placement fee when you post. Posting on it is free.</p></li>
-      <li><span class="v2-step-n" aria-hidden="true">2</span><h3>Review vetted matches.</h3><p>Checked for skills, availability and work history, and reviewed by a person on our team.</p></li>
-      <li><span class="v2-step-n" aria-hidden="true">3</span><h3>Hire, then pay.</h3><p>Interview, make the offer, and pay only when you hire.</p></li>
-    </ol>
+    <ol class="fv-flow fd-flow" role="list" style="--n:3"><li><span class="fv-flow-n" aria-hidden="true">1</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Post your job once.</h3><p>Choose the placement fee when you post. Posting on it is free.</p></li><li><span class="fv-flow-n" aria-hidden="true">2</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Review vetted matches.</h3><p>Checked for skills, availability and work history, and reviewed by a person on our team.</p></li><li><span class="fv-flow-n" aria-hidden="true">3</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Hire, then pay.</h3><p>Interview, make the offer, and pay only when you hire.</p></li></ol>
   </div>
 </section>
 
-<!-- 3. THE MATH (the comparison page's fee math: the shared calculator, salary field only, against the common 20% fee). -->
-<section class="sec" aria-labelledby="math-h">
+<!-- 3. KNOW WHO YOU’RE HIRING (VET compact) -->
+<section class="sec on-day" data-fv="VET" aria-labelledby="vet-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="vet-h">Know who you’re hiring.</h2>
+      <p class="lede">A person on our team reviews every match before it reaches you.</p></div>
+    <div class="fv-vet fd-vet" data-variant="compact">
+  <div class="fv-vet-std" role="group" aria-labelledby="vet-std-h">
+    <p class="fv-vet-k" id="vet-std-h">Standard on every match</p>
+    <ul role="list"><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Skills</b><span>Checked against your job’s requirements.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Availability</b><span>For when you need them.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Work history</b><span>Reviewed by our team.</span></li><li class="is-hc"><span class="fv-vet-ic" aria-hidden="true"></span><b>Certifications and licenses</b><span>Standard on healthcare roles.</span><em class="fv-vet-chip">Healthcare</em></li></ul>
+    <p class="fv-vet-person"><span class="fv-mini fv-mini--avatar" aria-hidden="true">JT</span>Every match is reviewed by a person on our team.</p>
+  </div>
+  <div class="fv-vet-add" role="group" aria-labelledby="vet-add-h">
+    <p class="fv-vet-k" id="vet-add-h">Added when you need it</p>
+    <ul role="list"><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Background checks</b><span>Ask when you post, or talk to us.</span></li><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>References</b><span>Depending on your role and business.</span></li><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Custom or extensive credentialing</b><span>For senior or specialized roles.</span></li></ul>
+    <p class="fv-vet-foot">Priced separately. <a href="contact.html?topic=plan" data-topic="plan">Talk to us about extra checks</a></p>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="sec" data-fv="DV" aria-labelledby="math-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="math-h">What the difference looks like on your hire.</h2>
       <p class="lede">Enter the salary. See the common agency fee next to both Jobility fees.</p></div>
@@ -94,16 +108,14 @@
   </div>
 </section>
 
-<!-- 4. PROOF (library #c-answer, pulled quote): the sourced bars carry the proof; under them, Parmi's line with his name and title. -->
-<section class="sec sec--tight on-day" aria-label="Who’s behind Jobility">
+<!-- 5. PARMI (QL) -->
+<section class="sec on-day" data-fv="QL" aria-label="Who’s behind Jobility">
   <div class="wrap">
-    <div class="pull fd-pull"><blockquote><p>&ldquo;I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.&rdquo;</p></blockquote><p class="who"><b>Parmi Cheema</b>, founder and CEO. More than 20 years in staffing.</p></div>
+    <div class="fv-quote fv-quote--solo"><p class="fv-quote-k">Who’s behind Jobility</p><figure class="fv-quote-main"><blockquote><p>I created Jobility to save businesses the cost and time of posting on multiple job boards and relying on costly staffing services.”</p></blockquote><figcaption class="fv-quote-by"><b>Parmi Cheema</b><span>Founder and CEO. More than 20 years in staffing.</span></figcaption></figure></div>
   </div>
 </section>
 
-<!-- 6. THREE QUESTIONS (library #c-faq). The deck's three (5.5) are two held at launch (Q14, Q26), so the clean page shows the
-     three confirmed placement-fee questions and keeps the held two in review mode. -->
-<section class="sec on-day" aria-labelledby="faq-h">
+<section class="sec" data-fv="AC" aria-labelledby="faq-h">
   <div class="wrap faq">
     <div><h2 class="h-sec" id="faq-h">Frequently asked questions</h2></div>
     <div class="faq-list" data-accordion>
@@ -122,8 +134,7 @@
   <div class="wrap"><p class="qnote">Open: Q14, Q18. The deck’s LP1 questions are “When do I pay?”, “What if a direct hire doesn’t work out?” and “Is there a commitment or contract?”; the last two are held, so two confirmed questions stand in.</p></div>
 </section>
 
-<!-- 7. REPEAT CTA (L14). One action. The flat-price line has no "free" wording, so no terms obligation on this page. -->
-<section class="cta-band" data-cta-final aria-labelledby="cta-h">
+<section class="cta-band" data-fv="CTA-C" data-cta-final aria-labelledby="cta-h">
   <div class="wrap cta-grid cta-grid--solo">
     <div>
       <h2 class="h-sec" id="cta-h">Try it on your next hire<span class="stop">.</span></h2>

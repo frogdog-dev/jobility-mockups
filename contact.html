@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="assets/site.css">
 <noscript><style>.tform [data-show][hidden]{display:block!important}</style></noscript>
 </head>
-<body class="page-contact">
+<body class="page-contact pg-b pg-contact">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Light theme: the page has no Night hero. -->
@@ -97,10 +97,16 @@
       <h1 class="h-page" id="h1">Talk to us<span class="stop">.</span></h1>
       <p class="lede">Hiring? Tell us what you need, and we’ll be in touch. Anything else? Send us a message.</p>
       <p class="qnote">Held until Q16 and Q10, the deck’s wording: “Hiring? Tell us what you need, then pick a time for a 20-minute call with a person on our team, not a bot. Anything else? Send a message and we’ll reply within one business day.”</p>
-      <ul class="tform-bullets" role="list">
-        <li>Get a rate for temp, contract or shift workers, or a subscription or custom plan for regular hiring.</li>
-        <li>Find out which of the three ways to hire fits.</li>
-      </ul>
+      <!-- fv-b-contact: What happens next (FL, vertical) -->
+      <div class="ct-next" data-fv="FL">
+        <h2 class="ct-next-h" id="next-h">What happens next</h2>
+        <ol class="b-flow b-flow--v" role="list" aria-labelledby="next-h">
+          <li><span class="b-flow-n" aria-hidden="true">1</span><b>We reply by email.</b><span>A person on our team reads every request.</span></li>
+          <li><span class="b-flow-n" aria-hidden="true">2</span><b>We set up a call or a demo.</b><span>Rates, plans or a look at the portal, as you prefer.</span></li>
+          <li><span class="b-flow-n" aria-hidden="true">3</span><b>You decide when you’re ready.</b><span>Temp and shift workers get one hourly rate per worker before anyone starts. Hiring full time? <a href="https://enterprise.jobility.com/signup">Post a job now</a>.</span></li>
+        </ol>
+        <p class="qnote">Open: Q10. The reply time is not promised until Jobility gives a number (plan section 10).</p>
+      </div>
       <dl class="reach">
         <dt>Office</dt><dd>Jobility, Inc., <span class="confirm qchip" data-q="Q18">2 Lincoln Highway, Suite 401, Edison, NJ 08820</span></dd>
       </dl>
@@ -113,15 +119,17 @@
       <form class="tform" action="#" method="get" aria-labelledby="h1">
         <p class="ct-req">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
         <div class="alert alert--error" data-summary tabindex="-1" hidden><div><b>Please fix these before you send:</b><ul></ul></div></div>
+        <p class="ct-worker">Looking for work? <a href="for-workers.html">Get the Jobility app</a></p>
         <fieldset>
           <legend class="label">What can we help with? <span class="req" aria-hidden="true">*</span></legend>
-          <div class="cards">
-            <label class="choice choice--card"><input type="radio" name="topic" value="direct" id="tf-tp-direct" required aria-describedby="tf-tp-err"><span>A full-time or part-time hire<small>Someone for your payroll</small></span></label>
-            <label class="choice choice--card"><input type="radio" name="topic" value="temp"><span>Temp or contract workers<small>Weeks or months</small></span></label>
-            <label class="choice choice--card"><input type="radio" name="topic" value="shift"><span>Shift workers<small>A shift, a weekend, a busy week</small></span></label>
-            <label class="choice choice--card"><input type="radio" name="topic" value="plan"><span>A subscription or custom plan<small>Regular hiring or several sites</small></span></label>
-            <label class="choice choice--card"><input type="radio" name="topic" value="unsure"><span>Not sure which fits<small>We’ll help you choose</small></span></label>
-            <label class="choice choice--card"><input type="radio" name="topic" value="else"><span>Something else<small>Your account, press, anything else</small></span></label>
+          <div class="cards ct-topics">
+            <label class="choice choice--card"><input type="radio" name="topic" value="direct" id="tf-tp-direct" required aria-describedby="tf-tp-err"><span><svg class="ct-mini" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="40" y="22" width="80" height="76" rx="9" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><circle cx="80" cy="50" r="13" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><path d="M58 82 H102" vector-effect="non-scaling-stroke"/><circle cx="112" cy="28" r="8" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg>A full-time or part-time hire<small>Someone for your payroll</small></span></label>
+            <label class="choice choice--card"><input type="radio" name="topic" value="temp"><span><svg class="ct-mini" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="24" y="24" width="112" height="76" rx="8" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M24 44 H136" vector-effect="non-scaling-stroke"/><path d="M52 44 V100" vector-effect="non-scaling-stroke"/><path d="M80 44 V100" vector-effect="non-scaling-stroke"/><path d="M108 44 V100" vector-effect="non-scaling-stroke"/><path d="M24 72 H136" vector-effect="non-scaling-stroke"/><rect x="56" y="50" width="20" height="18" rx="3" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><rect x="84" y="50" width="20" height="18" rx="3" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg>Temp or contract workers<small>Weeks or months</small></span></label>
+            <label class="choice choice--card"><input type="radio" name="topic" value="shift"><span><svg class="ct-mini" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="80" cy="62" r="40" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M80 62 V36" vector-effect="non-scaling-stroke"/><path d="M80 62 L98 72" vector-effect="non-scaling-stroke"/><path d="M80 22 A40 40 0 0 1 118 74" stroke="#D3005B" stroke-width="3" vector-effect="non-scaling-stroke"/></svg>Shift workers<small>A shift, a weekend, a busy week</small></span></label>
+            <label class="choice choice--card"><input type="radio" name="topic" value="plan"><span><svg class="ct-mini" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="44" y="18" width="76" height="30" rx="6" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><rect x="38" y="42" width="84" height="30" rx="6" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><rect x="32" y="66" width="92" height="36" rx="6" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M44 84 H90" vector-effect="non-scaling-stroke"/><rect x="100" y="78" width="14" height="12" rx="3" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg>A subscription or custom plan<small>Regular hiring or several sites</small></span></label>
+            <label class="choice choice--card ct-demo"><input type="radio" name="topic" value="direct" data-topic-k="demo"><span><svg class="ct-mini" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="22" width="116" height="70" rx="8" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M58 104 H102" vector-effect="non-scaling-stroke"/><path d="M80 92 V104" vector-effect="non-scaling-stroke"/><rect x="32" y="32" width="30" height="50" rx="4" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><path d="M72 42 H126" vector-effect="non-scaling-stroke"/><path d="M72 54 H116" vector-effect="non-scaling-stroke"/><path d="M86 64 L86 82 L102 73 Z" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg>See a demo of the portal<small>A short walk through posting and matches</small></span></label>
+            <label class="choice choice--card"><input type="radio" name="topic" value="unsure"><span><svg class="ct-mini" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 24 H130 Q138 24 138 32 V78 Q138 86 130 86 H70 L50 102 V86 H30 Q22 86 22 78 V32 Q22 24 30 24 Z" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M70 44 Q70 34 80 34 Q90 34 90 43 Q90 50 80 54 V60" vector-effect="non-scaling-stroke"/><circle cx="80" cy="70" r="3.5" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg>Not sure which fits<small>We’ll help you choose</small></span></label>
+            <label class="choice choice--card"><input type="radio" name="topic" value="else"><span><svg class="ct-mini" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="24" y="30" width="112" height="70" rx="8" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M24 36 L80 72 L136 36" vector-effect="non-scaling-stroke"/><circle cx="128" cy="34" r="8" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg>Something else<small>Your account, press, anything else</small></span></label>
           </div>
           <fieldset class="cards--more" data-more hidden>
             <legend class="label">Something else: choose one <span class="req" aria-hidden="true">*</span></legend>
@@ -144,16 +152,17 @@
         </div>
         <div class="field" data-show="hiring" hidden><label class="label" for="tf-ppl">How many people do you need in the next 3 months? <span class="req" aria-hidden="true">*</span></label><select class="input select" id="tf-ppl" name="people" required aria-describedby="tf-ppl-e"><option value="">Choose one</option><option value="1">1</option><option value="2-5">2 to 5</option><option value="6-20">6 to 20</option><option value="20+">More than 20</option></select><p class="err" id="tf-ppl-e" data-err="people"></p></div>
         <div class="field" data-show="plan" hidden><label class="label" for="tf-posts">About how many jobs do you post a month? <span class="req" aria-hidden="true">*</span></label><select class="input select" id="tf-posts" name="posts" required aria-describedby="tf-posts-e"><option value="">Choose one</option><option value="1-2">1 to 2</option><option value="3-10">3 to 10</option><option value="10+">More than 10</option></select><p class="err" id="tf-posts-e" data-err="posts"></p></div>
-        <div class="field" data-show="hiring plan" hidden><label class="label" for="tf-det">Anything else we should know? <span class="opt-tag">(optional)</span></label><textarea class="input textarea ct-det" id="tf-det" name="details" rows="3"></textarea></div>
+        <div class="field" data-show="hiring plan" hidden><label class="label" for="tf-det">Anything else we should know? <span class="opt-tag">(optional)</span></label><p class="hint b-ct-hint" data-show="temp shift" hidden>For temp or shift workers: the roles, how many people, the dates and the site address.</p><textarea class="input textarea ct-det" id="tf-det" name="details" rows="3"></textarea></div>
+        <p class="tform-note b-ct-hc" data-show="shift" hidden>Staffing shifts at a healthcare facility? <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
         <p class="tform-note" data-show="worker" hidden>For help with shifts, pay or your account, use Help in the Jobility app.</p>
         <div class="field" data-show="other" hidden><label class="label" for="tf-msg">Your message <span class="req" aria-hidden="true">*</span></label><textarea class="input textarea ct-det" id="tf-msg" name="message" rows="3" required aria-describedby="tf-msg-e"></textarea><p class="err" id="tf-msg-e" data-err="message"></p></div>
-        <input type="hidden" name="role"><input type="hidden" name="len"><input type="hidden" name="n"><input type="hidden" name="start"><input type="hidden" name="end"><input type="hidden" name="src">
+        <input type="hidden" name="interest"><input type="hidden" name="role"><input type="hidden" name="len"><input type="hidden" name="n"><input type="hidden" name="start"><input type="hidden" name="end"><input type="hidden" name="src">
         <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_term"><input type="hidden" name="utm_content"><input type="hidden" name="landing_page">
         <div class="tform-submit"><button class="btn btn--primary" type="submit" data-hire-label="Send request">Send request</button><p class="micro"><a href="privacy-policy.html">Privacy policy</a><span class="qonly"> Held until Q18: “We will never share your details.”</span></p></div>
         <p class="qnote">Prototype: this form is not wired. Submitting shows the confirmation in place and sends nothing. Live, it posts to the Contact Sales form Jobility runs today (Q18), hiring requests go on to the scheduler (Q16), and the reply time is Q10. Phone and SMS consent fields are held until Q18.</p>
       </form>
       <script>/* before first paint: show the fields for the topic on the URL (site.js keeps them in step from here) */
-      (function(f){ var t = (/[?&]topic=([a-z]+)/.exec(location.search) || [])[1], H = {direct:1, temp:1, shift:1, unsure:1}, p = H[t] ? 'hiring' : t === 'plan' ? 'plan' : ''; if(!p) return;
+      (function(f){ var t = (/[?&]topic=([a-z]+)/.exec(location.search) || [])[1], H = {direct:1, demo:1, temp:1, shift:1, unsure:1}, p = H[t] ? 'hiring' : t === 'plan' ? 'plan' : ''; if(!p) return;
         [].forEach.call(f.querySelectorAll('[data-show]'), function(el){ if(el.getAttribute('data-show').split(' ').indexOf(p) > -1) el.hidden = false; }); })(document.currentScript.previousElementSibling);</script>
       <div class="thanks" data-thanks="hiring" hidden>
         <h2 class="h-sub">Thanks. We’ll be in touch.</h2>
@@ -218,6 +227,14 @@
   </div>
 </footer>
 
-<script src="assets/site.js"></script><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
+<script src="assets/site.js"></script>
+<script>/* fv-b-contact: topic "demo" (plan: the client's "Get a demo"). It submits as topic=direct, so site.js routes it exactly like a
+   direct hire; the hidden field interest=demo tells our team it is a demo request. ?topic=demo pre-selects it. */
+(function(d){ var f = d.querySelector('[data-tform] form'); if(!f) return; var demo = f.querySelector('[data-topic-k="demo"]'); if(!demo) return;
+  function mark(){ f.elements.interest.value = demo.checked ? 'demo' : '';
+    var dl = d.querySelector('[data-tf-sum-dl]'); if(dl && demo.checked){ var dd = dl.querySelector('dd'); if(dd && dl.querySelector('dt').textContent === 'Request') dd.textContent = 'A demo of the portal'; } }
+  try{ if(new URLSearchParams(location.search).get('topic') === 'demo'){ demo.checked = true; demo.dispatchEvent(new Event('change', {bubbles:true})); } }catch(e){}
+  f.addEventListener('change', mark); f.addEventListener('input', mark); mark();
+})(document);</script><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
 </body>
 </html>

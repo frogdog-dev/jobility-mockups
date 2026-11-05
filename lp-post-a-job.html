@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body class="page-lp">
+<body class="page-lp pg-b pg-lp-post">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- Pay-per-post variant, /lp/post-a-job/ (plan 5.3; deck 5.5). Same template as LP1; source: /pricing/#pay-per-post. On since the pre-mortem pass (Oct 27); offer wording from Kim, Oct 28. Not linked from the site nav; noindex. -->
@@ -27,47 +27,86 @@
 </div></header>
 
 <main id="main">
+<!-- fv-b-lp-post: built out in the funnel + visual pass (Package B). PH, LG, FL, VET, AC, centered CTA. -->
 
-<!-- 1. HERO without bars: the price table is the visual (library #c-lphero, pay-per-post variant + #pr-table). Never
-     "cheaper than a job board" (flag F1): one price, a short list, no per-click surprises. -->
-<section class="lp-hero" data-hero aria-labelledby="h1">
-  <div class="wrap oh-grid">
-    <div>
+<!-- 1. HERO (PH): packing-orders right; the offer is the second line, not a card -->
+<section class="lp-hero" data-fv="PH" data-hero aria-labelledby="h1">
+  <div class="wrap fv-split fv-split--rev fv-split--even b-lp-split">
+    <figure class="fv-split-media"><!-- b-photo:packing-orders|A warehouse associate packs a customer order at a workbench stacked with boxes and mailers.|32|50% 45%|(min-width: 1024px) 600px, 92vw|eager --><div class="photo fd-photo is-32" style="--pos:50% 45%"><picture><source type="image/webp" srcset="assets/img/packing-orders-800.webp 800w, assets/img/packing-orders.webp 1536w" sizes="(min-width: 1024px) 600px, 92vw"><img src="assets/img/packing-orders-800.jpg" srcset="assets/img/packing-orders-800.jpg 800w, assets/img/packing-orders.jpg 1536w" sizes="(min-width: 1024px) 600px, 92vw" width="1536" height="1024" alt="A warehouse associate packs a customer order at a workbench stacked with boxes and mailers." fetchpriority="high" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div><!-- /b-photo --></figure>
+    <div class="fv-split-body">
       <span class="lp-eyebrow">For businesses hiring</span>
       <h1 class="h-page" id="h1">Post a job from $150<span class="stop">.</span></h1>
+      <p class="fv-offer fd-offer-inline" data-offer><span class="fv-offer-dot" aria-hidden="true"></span><span class="fv-offer-k">New customers:</span> your second job post is complimentary. <a href="pricing.html#offer-terms">Offer terms</a></p>
+      <p class="b-offer-fine">On pay-per-post plans.</p>
       <p class="oh-sub">One price per post, paid once. No charge per click, and no placement fee when you hire.</p>
-      <div class="promo fd-promo" role="note" aria-label="New customer offer">
-        <span class="promo-mark" aria-hidden="true"></span>
-        <p><span class="promo-k">New customer offer</span><span class="promo-t">Your second job post is complimentary.</span><span class="promo-fine">On pay-per-post plans.</span></p>
-      </div>
-      <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a></div>
-      <p class="micro">Choose pay per post when you post. Your job stays promoted for up to 30 days, or until the position is filled and the job is closed.</p>
-    </div>
-    <div class="lp-visual">
-    <table class="ctable ctable--price fd-price-table" id="lp-prices">
-      <caption>Pay-per-post prices by role<span>One price per post, paid once when you publish. No placement fee when you hire.</span></caption>
-      <thead><tr><th scope="col">Role</th><th scope="col" class="is-us">Price per post</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">General labor and light industrial</th><td class="is-us" data-label="Price per post"><span data-price="post.labor">$150</span></td></tr>
-        <tr><th scope="row">IT</th><td class="is-us" data-label="Price per post"><span data-price="post.it">$250</span></td></tr>
-        <tr><th scope="row">Healthcare admin, facilities and operations</th><td class="is-us" data-label="Price per post"><span data-price="post.hcadmin">$200</span></td></tr>
-        <tr><th scope="row">Nursing and allied health</th><td class="is-us" data-label="Price per post"><span data-price="post.nursing">$350 to $400</span></td></tr>
-        <tr><th scope="row">Advanced practice, physicians and scientists</th><td class="is-us" data-label="Price per post"><span data-price="post.adv">$500</span></td></tr>
-        <tr><th scope="row">Other roles (office, skilled trades, hospitality, retail)</th><td class="is-us" data-label="Price per post"><a data-topic="direct" href="contact.html?topic=direct">Talk to us</a><span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14, post prices for other roles"> for a post price, or use the placement fee</span>.</td></tr>
-      </tbody>
-    </table>
+      <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
+      <p class="b-lp-how">In the job wizard, choose <b>Pay per post</b>.</p>
+      <p class="micro">Questions first? <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a></p>
     </div>
   </div>
-  <div class="wrap"><p class="qnote">Open: Q14. Q21: the offer in our words for review (Nov 5 call: professional, never retail). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call). The 30-day sentence is shortened from Kim’s Oct 28 wording.</p></div>
+  <div class="wrap"><p class="qnote">Open: Q14, Q21. The offer in our words (Nov 5 call: professional, never retail). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call).</p></div>
 </section>
 
-<!-- 2. REPEAT CTA. -->
-<section class="cta-band" data-cta-final aria-labelledby="cta-h">
+<!-- 2. PRICES BY ROLE (LG, from FD.PRICES) -->
+<section class="sec on-day" id="prices" data-fv="LG" aria-labelledby="prices-h">
+  <div class="wrap b-lp-prices">
+    <div class="sec-head"><h2 class="h-sec" id="prices-h">Prices by role.</h2>
+      <p class="lede">One price per post, paid once when you publish. No placement fee when you hire.</p></div>
+    <ul class="fv-ledger fv-ledger--price" role="list"><li><span class="fv-ledger-t">General labor and light industrial</span><span class="fv-ledger-v"><span data-price="post.labor">$150</span></span></li><li><span class="fv-ledger-t">IT</span><span class="fv-ledger-v"><span data-price="post.it">$250</span></span></li><li><span class="fv-ledger-t">Healthcare admin, facilities and operations</span><span class="fv-ledger-v"><span data-price="post.hcadmin">$200</span></span></li><li><span class="fv-ledger-t">Nursing and allied health</span><span class="fv-ledger-v"><span data-price="post.nursing">$350 to $400</span></span></li><li><span class="fv-ledger-t">Advanced practice, physicians and scientists</span><span class="fv-ledger-v"><span data-price="post.adv">$500</span></span></li></ul>
+    <p class="b-lp-other">Office, skilled trades, hospitality or retail? <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a><span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14, post prices for other roles"> for a post price, or use the placement fee</span>.</p>
+  </div>
+</section>
+
+<!-- 3. HOW IT WORKS (FL) -->
+<section class="sec" data-fv="FL" aria-labelledby="steps-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="steps-h">How it works.</h2></div>
+    <ol class="fv-flow fd-flow" role="list" style="--n:3"><li><span class="fv-flow-n" aria-hidden="true">1</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Post your job once.</h3><p>Pick pay per post in the job wizard. Your job goes live as soon as you post.</p></li><li><span class="fv-flow-n" aria-hidden="true">2</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Review vetted matches.</h3><p>Checked for skills, availability and work history, and reviewed by a person on our team.</p></li><li><span class="fv-flow-n" aria-hidden="true">3</span><span class="fv-flow-dot" aria-hidden="true"></span><h3>Hire, with no placement fee.</h3><p>Interview, make the offer. The post price is the whole cost.</p></li></ol>
+  </div>
+</section>
+
+<!-- 4. STANDARD ON EVERY MATCH (VET compact) -->
+<section class="sec on-day" data-fv="VET" aria-labelledby="vet-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="vet-h">Standard on every match.</h2>
+      <p class="lede">A person on our team reviews every match before it reaches you.</p></div>
+    <div class="fv-vet fd-vet" data-variant="compact">
+  <div class="fv-vet-std" role="group" aria-labelledby="vet-std-h">
+    <p class="fv-vet-k" id="vet-std-h">Standard on every match</p>
+    <ul role="list"><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Skills</b><span>Checked against your job’s requirements.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Availability</b><span>For when you need them.</span></li><li><span class="fv-vet-ic" aria-hidden="true"></span><b>Work history</b><span>Reviewed by our team.</span></li><li class="is-hc"><span class="fv-vet-ic" aria-hidden="true"></span><b>Certifications and licenses</b><span>Standard on healthcare roles.</span><em class="fv-vet-chip">Healthcare</em></li></ul>
+    <p class="fv-vet-person"><span class="fv-mini fv-mini--avatar" aria-hidden="true">JT</span>Every match is reviewed by a person on our team.</p>
+  </div>
+  <div class="fv-vet-add" role="group" aria-labelledby="vet-add-h">
+    <p class="fv-vet-k" id="vet-add-h">Added when you need it</p>
+    <ul role="list"><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Background checks</b><span>Ask when you post, or talk to us.</span></li><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>References</b><span>Depending on your role and business.</span></li><li><span class="fv-vet-ic fv-vet-ic--add" aria-hidden="true"></span><b>Custom or extensive credentialing</b><span>For senior or specialized roles.</span></li></ul>
+    <p class="fv-vet-foot">Priced separately. <a href="contact.html?topic=plan" data-topic="plan">Talk to us about extra checks</a></p>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- 5. THREE QUESTIONS (AC) -->
+<section class="sec" data-fv="AC" aria-labelledby="faq-h">
+  <div class="wrap faq">
+    <div><h2 class="h-sec" id="faq-h">Frequently asked questions</h2></div>
+    <div class="faq-list" data-accordion>
+<div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="lpa1"><span class="faq-t">How long does a job post stay live?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
+  <div class="faq-a" id="lpa1"><p>On pay per post, the posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed.</p></div></div>
+<div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="lpa2"><span class="faq-t">What if no one fits?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
+  <div class="faq-a" id="lpa2"><p><a data-topic="direct" href="contact.html?topic=direct">Talk to us</a> if a post isn’t bringing you the people you need.<span class="confirm qchip" data-q="Q14" data-clean="" title="To confirm with Jobility: Q14, a service promise"> A person on our team will look at your post with you.</span></p></div></div>
+<div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="lpa3"><span class="faq-t">What are the offer terms?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
+  <div class="faq-a" id="lpa3"><p>New customers: your second job post is complimentary, on pay-per-post plans. <a href="pricing.html#offer-terms">Offer terms</a><span class="qonly"> <span class="confirm qchip" data-q="Q21" title="To confirm with Jobility: Q21, the offer terms">Terms to confirm</span></span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" data-fv="CTA-C" data-cta-final aria-labelledby="cta-h">
   <div class="wrap cta-grid cta-grid--solo">
     <div>
       <h2 class="h-sec" id="cta-h">One price, a short list<span class="stop">.</span></h2>
       <p class="lede">Post once, review vetted matches, and hire with no placement fee.</p>
       <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
+      <p class="cta-small lp-alt">Questions first? <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a></p>
     </div>
   </div>
 </section>

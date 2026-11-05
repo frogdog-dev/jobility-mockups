@@ -73,7 +73,7 @@
    "name": "How much does Jobility cost?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once, when you publish. New customer offer: your second job post is complimentary, on pay-per-post plans. The placement fee is 8% of first-year salary when you post and schedule yourself (self-service), or 15% when Jobility’s team does the work and sends you a candidate (Jobility managed), and posting on that plan is free. For hourly roles, Jobility converts the pay rate to a yearly amount. Pay per post has no placement fee when you hire. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour. Jobility pricing"
+    "text": "Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once, when you publish. The placement fee is 8% of first-year salary when you post and schedule yourself (self-service), or 15% when Jobility’s team does the work and sends you a candidate (Jobility managed), and posting on that plan is free. For hourly roles, Jobility converts the pay rate to a yearly amount. Pay per post has no placement fee when you hire. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour. Jobility pricing"
    }
   },
   {
@@ -142,7 +142,7 @@
   },
   {
    "@type": "Question",
-   "name": "Do new customers get a discount?",
+   "name": "Is there an offer for new customers?",
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Yes. New customer offer: your second job post is complimentary, on pay-per-post plans."
@@ -273,7 +273,7 @@
    "name": "What healthcare roles can I fill?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Jobility fills nursing and allied health roles, healthcare admin, facilities and operations roles, and advanced practice roles, by the shift or on your staff."
+    "text": "Jobility fills nursing and allied health roles, healthcare admin, facilities and operations roles, and advanced practice roles, on your staff. For shifts at a healthcare facility, see Jobility Health."
    }
   },
   {
@@ -281,7 +281,7 @@
    "name": "What does it cost to hire healthcare workers?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Jobility’s healthcare job posts cost $200 for admin, facilities and operations roles, $350 to $400 for nursing and allied health roles, and $500 for advanced practice roles such as physicians and scientists. Or post free and pay a placement fee only when you hire: 8% on self-service or 15% on Jobility managed, a good fit for nursing, advanced practice and other specialized roles. Shift workers are quoted by the hour."
+    "text": "Jobility’s healthcare job posts cost $200 for admin, facilities and operations roles, $350 to $400 for nursing and allied health roles, and $500 for advanced practice roles such as physicians and scientists. Or post free and pay a placement fee only when you hire: 8% on self-service or 15% on Jobility managed, a good fit for nursing, advanced practice and other specialized roles. For shifts at a healthcare facility, see Jobility Health."
    }
   },
   {
@@ -298,7 +298,7 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css"><!-- whimsy-p2 --><link rel="stylesheet" href="assets/whimsy-p2.css"><!-- /whimsy-p2 -->
 </head>
-<body class="page-faq">
+<body class="page-faq pg-b pg-faq">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Light theme: the page has no Night hero. -->
@@ -348,22 +348,23 @@
 </div>
 
 <main id="main">
+<!-- fv-b-faq: funnel + visual pass (Package B). Hero, sticky group nav, five groups (spot + accordion, sides alternate), CTA-S. -->
 
-<!-- 1. HERO (c-pghero, FAQ variant): breadcrumbs, Last updated (matches dateModified in the FAQPage JSON-LD), group links. -->
-<section class="pg-hero fq-hero" data-hero aria-labelledby="h1"><div class="wrap">
+<section class="pg-hero fq-hero" data-fv="TX" data-hero aria-labelledby="h1"><div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Frequently asked questions</span></li></ol></nav>
   <h1 class="h-page" id="h1">Frequently asked questions</h1>
   <p class="lede">What Jobility costs, how we vet people and who employs them.</p>
-  <p class="stamp">Last updated <time datetime="2026-10-23">October 23, 2026</time></p><!-- whimsy-p2 --><p class="fd-by">Answers from the Jobility team.</p><!-- /whimsy-p2 -->
-  <nav aria-label="Question groups" data-jumps><ul class="jumps fd-jumps" role="list"><li><a href="#faq-about">About Jobility</a></li><li><a href="#faq-pricing">Pricing</a></li><li><a href="#faq-hiring">How hiring works</a></li><li><a href="#faq-employer">Who employs the worker</a></li><li><a href="#faq-healthcare">Healthcare</a></li></ul></nav>
+  <p class="stamp">Last updated <time datetime="2026-11-05">November 5, 2026</time></p><!-- whimsy-p2 --><p class="fd-by">Answers from the Jobility team.</p><!-- /whimsy-p2 -->
   <p class="fq-worker">Looking for work? <a href="for-workers.html#faq-workers">Worker questions are on our worker page</a></p>
 </div></section>
 
-<!-- 2. FIVE GROUPS (c-faq, one per group, each with its fixed anchor). Every answer is in the HTML. An answer whose question is
-     still open is .held (review only) and drops out of every block at launch. Other pages quote these answers word for word. -->
-<section class="sec fq-group" id="faq-about" aria-labelledby="faq-about-h">
+<!-- sticky group nav (1024 and up) -->
+<nav class="b-fq-nav" aria-label="Question groups" data-jumps><div class="wrap"><ul class="jumps fd-jumps" role="list"><li><a href="#faq-about">About Jobility</a></li><li><a href="#faq-pricing">Pricing</a></li><li><a href="#faq-hiring">How hiring works</a></li><li><a href="#faq-employer">Who employs the worker</a></li><li><a href="#faq-healthcare">Healthcare</a></li></ul></div></nav>
+
+<section data-fv="AC" class="sec fq-group fv-sec--rule" id="faq-about" aria-labelledby="faq-about-h">
   <div class="wrap faq">
     <div class="fq-side">
+      <span class="fv-spot fv-spot--96"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M66 84 L58 108 L68 102 L74 110 L80 88" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M94 84 L102 108 L92 102 L86 110 L80 88" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><circle cx="80" cy="56" r="36" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><circle cx="80" cy="56" r="26" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M84 50 V70 Q84 78 76 78 Q71 78 69 74" vector-effect="non-scaling-stroke"/><circle cx="84" cy="40" r="4.5" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg></span>
       <h2 class="h-sec" id="faq-about-h">About Jobility</h2>
       <p class="fq-count">6 questions</p>
     </div>
@@ -389,15 +390,16 @@
 <div class="wrap"><p class="qnote" title="Held: “Is Jobility a staffing agency?” (Q18) Held: “Where is Jobility available?” (Q9)"><span class="qnote-body">Open: Q9, Q18<span class="qnote-held">Held: “Is Jobility a staffing agency?” (Q18)</span><span class="qnote-held">Held: “Where is Jobility available?” (Q9)</span></span></p></div>
 </section>
 
-<section class="sec on-day fq-group" id="faq-pricing" aria-labelledby="faq-pricing-h">
-  <div class="wrap faq">
+<section data-fv="AC-R" class="sec on-day fq-group" id="faq-pricing" aria-labelledby="faq-pricing-h">
+  <div class="wrap faq b-faq-rev">
     <div class="fq-side">
+      <span class="fv-spot fv-spot--96"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 42 H96 L126 60 L96 78 H30 Q24 78 24 72 V48 Q24 42 30 42 Z" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M38 54 H78" vector-effect="non-scaling-stroke"/><path d="M38 66 H64" vector-effect="non-scaling-stroke"/><path d="M110 60 Q128 40 146 30" vector-effect="non-scaling-stroke"/><circle cx="104" cy="60" r="5.5" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg></span>
       <h2 class="h-sec" id="faq-pricing-h">Pricing</h2>
-      <p class="fq-count">12 questions</p>
+      <p class="fq-count">14 questions</p>
     </div>
     <div class="faq-list" data-accordion>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-pricing-1"><span class="faq-t">How much does Jobility cost?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="fq-pricing-1"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once, when you publish. New customer offer: your second job post is complimentary, on pay-per-post plans. The placement fee is 8% of first-year salary when you post and schedule yourself (self-service), or 15% when Jobility’s team does the work and sends you a candidate (Jobility managed), and posting on that plan is free. For hourly roles, Jobility converts the pay rate to a yearly amount. Pay per post has no placement fee when you hire. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour.</p><p><a href="pricing.html">Jobility pricing</a></p></div></div>
+  <div class="faq-a" id="fq-pricing-1"><p>Jobility charges either a flat price per job post, from $150, or a placement fee of 8% or 15% that you pay only when you hire. Job posts cost $150 for general labor and light industrial roles, $250 for IT, and $200 to $500 for healthcare roles; you pay once, when you publish. The placement fee is 8% of first-year salary when you post and schedule yourself (self-service), or 15% when Jobility’s team does the work and sends you a candidate (Jobility managed), and posting on that plan is free. For hourly roles, Jobility converts the pay rate to a yearly amount. Pay per post has no placement fee when you hire. Teams that post every month can ask about a subscription. Temp and shift workers are quoted by the hour.</p><p><a href="pricing.html">Jobility pricing</a></p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-pricing-2"><span class="faq-t">If I pay for a post and hire someone, do I also pay a placement fee?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="fq-pricing-2"><p>No. When you pay for a Jobility post and hire someone from it, there is no placement fee. The post price is the whole cost. The placement fee is a separate option: posting is free, and you pay only when you hire.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-pricing-3"><span class="faq-t">Which plan should I choose?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -422,7 +424,7 @@
   <div class="faq-a" id="fq-pricing-12"><p>On pay per post, the posting fee secures your job’s visibility on the platform and supports ongoing promotion of the position for up to 30 days, or until the position is filled and the job is closed.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-pricing-13"><span class="faq-t">What does a post cost for roles not listed?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="fq-pricing-13"><p>For roles outside Jobility’s listed categories, such as office, skilled trades, hospitality and retail, <span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14, post prices for other roles">talk to us for a post price, or use the placement fee</span>.</p></div></div>
-<div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-pricing-14"><span class="faq-t">Do new customers get a discount?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
+<div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-pricing-14"><span class="faq-t">Is there an offer for new customers?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="fq-pricing-14"><p>Yes. New customer offer: your second job post is complimentary, on pay-per-post plans.<span class="qonly"> <span class="confirm qchip" data-q="Q21" title="To confirm with Jobility: Q21, the offer terms (pay-per-post posts only?) and the starting post price ($150 vs $100)">Q21: the offer terms and the starting post price</span>.</span></p></div></div>
 <div class="faq-item held" data-q="Q18"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-pricing-16"><span class="faq-t">Is there a commitment or contract?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="fq-pricing-16"><p>Held until Q18 and Q14. Draft: Jobility’s pay-per-post plan has no commitment. The placement fee is charged per hire, and you sign up online with no long contract to negotiate. For a subscription, talk to us about the term.</p></div></div>
@@ -441,11 +443,12 @@
 <div class="wrap"><p class="qnote" title="Held: “Is it free to sign up?” (Q14) Held: “How do I pay: card or invoice? Do you need a card to sign up?” (Q14) Held: “What counts as a Jobility hire, and for how long after an introduction?” (Q14) Held: “Is there a maximum placement fee per hire?” (Q14) Held: “Is there a commitment or contract?” (Q18) Held: “What if a direct hire doesn’t work out?” (Q14)"><span class="qnote-body">Open: Q14, Q18<span class="qnote-held">Held: “Is it free to sign up?” (Q14)</span><span class="qnote-held">Held: “How do I pay: card or invoice? Do you need a card to sign up?” (Q14)</span><span class="qnote-held">Held: “What counts as a Jobility hire, and for how long after an introduction?” (Q14)</span><span class="qnote-held">Held: “Is there a maximum placement fee per hire?” (Q14)</span><span class="qnote-held">Held: “Is there a commitment or contract?” (Q18)</span><span class="qnote-held">Held: “What if a direct hire doesn’t work out?” (Q14)</span></span></p></div>
 </section>
 
-<section class="sec fq-group" id="faq-hiring" aria-labelledby="faq-hiring-h">
+<section data-fv="AC" class="sec fq-group" id="faq-hiring" aria-labelledby="faq-hiring-h">
   <div class="wrap faq">
     <div class="fq-side">
+      <span class="fv-spot fv-spot--96"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="54" y="14" width="78" height="46" rx="8" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><rect x="42" y="30" width="78" height="46" rx="8" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><rect x="30" y="46" width="84" height="54" rx="8" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><circle cx="50" cy="66" r="8" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><path d="M64 62 H92" vector-effect="non-scaling-stroke"/><path d="M64 72 H84" vector-effect="non-scaling-stroke"/><path d="M42 88 H102" vector-effect="non-scaling-stroke"/><circle cx="112" cy="50" r="10" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/><path d="M107 50 L111 54 L118 46" stroke="#FFFFFF" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></span>
       <h2 class="h-sec" id="faq-hiring-h">How hiring works</h2>
-      <p class="fq-count">4 questions</p>
+      <p class="fq-count">5 questions</p>
     </div>
     <div class="faq-list" data-accordion>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-hiring-0"><span class="faq-t">When does my job go live?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -469,9 +472,10 @@
 <div class="wrap"><p class="qnote" title="Held: “How fast will I see candidates?” (Q15) Held: “Where do candidates come from?” (Q15) Held: “Does Jobility work with my applicant tracking system?” (Q16)"><span class="qnote-body">Open: Q15, Q16<span class="qnote-held">Held: “How fast will I see candidates?” (Q15)</span><span class="qnote-held">Held: “Where do candidates come from?” (Q15)</span><span class="qnote-held">Held: “Does Jobility work with my applicant tracking system?” (Q16)</span></span></p></div>
 </section>
 
-<section class="sec on-day fq-group" id="faq-employer" aria-labelledby="faq-employer-h">
-  <div class="wrap faq">
+<section data-fv="AC-R" class="sec on-day fq-group" id="faq-employer" aria-labelledby="faq-employer-h">
+  <div class="wrap faq b-faq-rev">
     <div class="fq-side">
+      <span class="fv-spot fv-spot--96"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M46 12 H114 V100 L106 106 L98 100 L90 106 L82 100 L74 106 L66 100 L58 106 L50 100 L46 104 Z" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M56 26 H88" vector-effect="non-scaling-stroke"/><path d="M56 40 H104" vector-effect="non-scaling-stroke"/><path d="M56 52 H104" vector-effect="non-scaling-stroke"/><path d="M56 64 H104" vector-effect="non-scaling-stroke"/><path d="M56 76 H96" vector-effect="non-scaling-stroke"/><rect x="56" y="84" width="48" height="8" rx="3" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg></span>
       <h2 class="h-sec" id="faq-employer-h">Who employs the worker</h2>
       <p class="fq-count">6 questions</p>
     </div>
@@ -499,22 +503,25 @@
 <div class="wrap"><p class="qnote" title="Held: “Can I use my existing staffing agencies?” (Q14) Held: “Where do you have workers?” (Q9) Held: “What if a temp doesn’t show?” (Q14)"><span class="qnote-body">Open: Q9, Q14<span class="qnote-held">Held: “Can I use my existing staffing agencies?” (Q14)</span><span class="qnote-held">Held: “Where do you have workers?” (Q9)</span><span class="qnote-held">Held: “What if a temp doesn’t show?” (Q14)</span></span></p></div>
 </section>
 
-<section class="sec fq-group" id="faq-healthcare" aria-labelledby="faq-healthcare-h">
+<section data-fv="AC" class="sec fq-group" id="faq-healthcare" aria-labelledby="faq-healthcare-h">
   <div class="wrap faq">
     <div class="fq-side">
+      <span class="fv-spot fv-spot--96"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="26" width="116" height="72" rx="9" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><rect x="34" y="40" width="30" height="36" rx="4" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><path d="M76 44 H122" vector-effect="non-scaling-stroke"/><path d="M76 56 H112" vector-effect="non-scaling-stroke"/><path d="M76 68 H100" vector-effect="non-scaling-stroke"/><path d="M34 86 H70" vector-effect="non-scaling-stroke"/><circle cx="118" cy="82" r="9" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/></svg></span>
       <h2 class="h-sec" id="faq-healthcare-h">Healthcare</h2>
       <p class="fq-count">3 questions</p>
-      <p class="fq-hc"><a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Hiring nurses, CNAs or allied staff? Visit Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      <p class="fv-next"><span class="fv-next-k">Next:</span><a href="pricing.html">Pricing</a></p>
+      <p class="fq-hc">Hiring a nurse, medical assistant or clinic admin onto your staff? <a href="direct-hiring.html#ind-healthcare">Post here</a></p>
+      <p class="fq-hc">Staffing shifts at a healthcare facility? <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
     </div>
     <div class="faq-list" data-accordion>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-healthcare-0"><span class="faq-t">Do you check nurse and CNA licenses?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="fq-healthcare-0"><p>Yes. Standard certification and license checks are included. Background checks and any custom or extensive credentialing may be additional. Every match is also checked for skills, availability and work history, and reviewed by a person on our team before it reaches you. <a data-topic="shift" href="contact.html?topic=shift">Talk to us</a>.</p></div></div>
+  <div class="faq-a" id="fq-healthcare-0"><p>Yes. Standard certification and license checks are included. Background checks and any custom or extensive credentialing may be additional. Every match is also checked for skills, availability and work history, and reviewed by a person on our team before it reaches you. <a href="direct-hiring.html#ind-healthcare">Hiring onto your staff</a>.</p></div></div>
 <div class="faq-item held" data-q="Q15"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-healthcare-1"><span class="faq-t">Can Jobility help me hire travel nurses?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="fq-healthcare-1"><p>Held until Jobility confirms travel nursing as a service and defines its model. Travel nursing is usually a contract assignment, not a direct hire.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-healthcare-3"><span class="faq-t">What healthcare roles can I fill?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="fq-healthcare-3"><p><span class="confirm qchip" data-q="Q14" data-clean="Jobility fills nursing and allied health roles, healthcare admin, facilities and operations roles, and advanced practice roles, by the shift or on your staff." title="To confirm with Jobility: Q14, whether CNAs and LPNs are nursing and allied">Jobility fills nursing and allied roles, including CNAs and LPNs, plus healthcare admin, facilities and operations roles, by the shift or on your staff.</span></p></div></div>
+  <div class="faq-a" id="fq-healthcare-3"><p><span class="confirm qchip" data-q="Q14" data-clean="Jobility fills nursing and allied health roles, healthcare admin, facilities and operations roles, and advanced practice roles, on your staff." title="To confirm with Jobility: Q14, whether CNAs and LPNs are nursing and allied">Jobility fills nursing and allied roles, including CNAs and LPNs, plus healthcare admin, facilities and operations roles, on your staff.</span> <span class="b-hc-out">For shifts at a healthcare facility, see <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>.</span></p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-healthcare-4"><span class="faq-t">What does it cost to hire healthcare workers?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="fq-healthcare-4"><p>Jobility’s healthcare job posts cost $200 for admin, facilities and operations roles, $350 to $400 for nursing and allied health roles, and $500 for advanced practice roles such as physicians and scientists. Or post free and pay a placement fee only when you hire: 8% on self-service or 15% on Jobility managed, a good fit for nursing, advanced practice and other specialized roles. Shift workers are <span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14, how shifts are priced">quoted by the hour</span>.</p></div></div>
+  <div class="faq-a" id="fq-healthcare-4"><p>Jobility’s healthcare job posts cost $200 for admin, facilities and operations roles, $350 to $400 for nursing and allied health roles, and $500 for advanced practice roles such as physicians and scientists. Or post free and pay a placement fee only when you hire: 8% on self-service or 15% on Jobility managed, a good fit for nursing, advanced practice and other specialized roles. For shifts at a healthcare facility, see <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>.</p></div></div>
 <div class="faq-item held" data-q="Q14"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fq-healthcare-5"><span class="faq-t">What happens if a worker cancels or doesn’t show?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="fq-healthcare-5"><p>Held until Q14. Draft: [Jobility’s replacement process and any credit to the employer].</p></div></div>
 </div>
@@ -522,22 +529,27 @@
 <div class="wrap"><p class="qnote" title="Held: “Can Jobility help me hire travel nurses?” (Q15) Held: “What happens if a worker cancels or doesn’t show?” (Q14)"><span class="qnote-body">Open: Q14, Q15<span class="qnote-held">Held: “Can Jobility help me hire travel nurses?” (Q15)</span><span class="qnote-held">Held: “What happens if a worker cancels or doesn’t show?” (Q14)</span></span></p></div>
 </section>
 
-<!-- 3. DIDN'T FIND YOUR ANSWER? (c-cta, question variant): Talk to us is the primary here. -->
-<section class="cta-band" data-cta-final aria-labelledby="cta-h">
-  <div class="wrap cta-grid">
+<section class="fv-cta fd-cta" data-cta-final data-fv="CTA-S" aria-labelledby="cta-h">
+  <div class="wrap fv-cta-grid">
     <div>
       <h2 class="h-sec" id="cta-h">Didn’t find your answer?</h2>
       <p class="lede">Send us your question, and we’ll be in touch.<span class="confirm qchip" data-q="Q16" data-clean="" title="To confirm with Jobility: Q16, the scheduler and who takes the calls"> Or book a 20-minute call with a person on our team.</span></p>
       <div class="btn-row"><a class="btn btn--primary" data-topic="else" href="contact.html?topic=else">Talk to us</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a job</a></div>
+      <ul class="fv-cta-alt" role="list" aria-label="Where to look next"><li>Want to see the product? <a href="how-it-works.html#walkthrough">See how it works</a></li><li>Looking for work? <a href="for-workers.html">Get the Jobility app</a></li></ul>
     </div>
-    <div>
-      <ul class="cta-cross" role="list" aria-label="Where to look next">
-        <li><span>Want to see the product?</span><a href="how-it-works.html#walkthrough">See how it works</a></li>
-        <li><span>Looking for work?</span><a href="for-workers.html">Get the Jobility app</a></li>
-      </ul>
-    </div>
+    <div class="fv-cta-media fv-cta-media--ui"><div class="fv-mini fv-mini--calendar fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Interviews</b><span>This week</span></p>
+  <div class="fv-cal">
+    <span class="fv-cal-d">Mon</span><span class="fv-cal-d">Tue</span><span class="fv-cal-d">Wed</span><span class="fv-cal-d">Thu</span><span class="fv-cal-d">Fri</span>
+    <span class="fv-cal-s is-busy"></span><span class="fv-cal-s is-pick"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span>
+    <span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span><span class="fv-cal-s is-busy"></span>
+    <span class="fv-cal-s is-busy"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span><span class="fv-cal-s"></span>
+  </div>
+  <p class="fv-cal-note">Tue 10:00 · Interview booked by you</p>
+</div></div>
   </div>
 </section>
+
 </main>
 
 

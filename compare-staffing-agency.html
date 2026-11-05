@@ -20,7 +20,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jobility.com/"},{"@type":"ListItem","position":2,"name":"Pricing","item":"https://jobility.com/pricing/"},{"@type":"ListItem","position":3,"name":"Jobility vs. a staffing agency"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is Jobility different from a staffing agency?","acceptedAnswer":{"@type":"Answer","text":"Jobility's placement fee is 8% or 15%, and in a Staffing Industry Analysts survey (2021 data) the most common agency direct-hire fee was 20% of first-year salary. With either, you usually pay only when you hire. The difference is the split of work: an agency recruiter typically runs the search and the first interviews and offers a replacement guarantee. On Jobility managed (15%), our team does the work and sends you a candidate; on self-service (8%), you post and schedule yourself."}},{"@type":"Question","name":"How much do staffing agencies charge?","acceptedAnswer":{"@type":"Answer","text":"In a Staffing Industry Analysts survey of US staffing firms (2021 data), agency direct-hire fees commonly ran 15 to 25% of first-year salary, and 20% was the most common. For temp workers, agencies bill the worker's pay plus a markup; the markup varies by role and region. Jobility's placement fee is 8% on self-service or 15% on Jobility managed."}},{"@type":"Question","name":"When do I pay the placement fee?","acceptedAnswer":{"@type":"Answer","text":"You pay Jobility's placement fee only after you hire someone we introduced, on the terms you agree when you sign up. Posting on the placement-fee plan is free, and you can post as many jobs as you like."}}]}</script>
 </head>
-<body class="page-compare">
+<body class="page-compare pg-b pg-compare">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Light theme: the page has no Night hero. -->
@@ -70,16 +70,15 @@
 </div>
 
 <main id="main">
+<!-- fv-b-compare: funnel + visual pass (Package B). DV, TX, NU+LG, SC, DV, SP+SC, CH, AC, CTA-S. -->
 
-<!-- 1. HERO (plan 5.2; deck 5.9 section 1; library #c-pghero with the stamp, plus the three fee bars #p-bars as the visual).
-     No photo: the number is why the visitor came. No eyebrow (library rule for .pg-hero). -->
-<section class="pg-hero pg-hero--vis" data-hero aria-labelledby="h1">
+<section class="pg-hero pg-hero--vis" data-fv="DV" data-hero aria-labelledby="h1">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="pricing.html">Pricing</a></li><li><span aria-current="page">Jobility vs. a staffing agency</span></li></ol></nav>
     <div class="pg-grid">
       <div>
         <h1 class="h-page" id="h1">Staffing agency or Jobility<span class="stop">?</span></h1>
-        <p class="stamp">Fees last reviewed: <time datetime="2026-10">October 2026</time></p>
+        <p class="stamp">Agency fee data: Staffing Industry Analysts, 2021. Page reviewed <time datetime="2026-10">October 2026</time>.</p>
         <p class="lede">What you pay and what you get. Agencies most commonly charge 20% of first-year salary;<sup class="fn">1</sup> Jobility charges 8% or 15%, only when you hire.</p>
         <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="btn btn--secondary" href="pricing.html">See prices</a></div>
         <p class="micro">Post free on the placement-fee plan and pay only when you hire. Or pay per post from $150.</p>
@@ -99,35 +98,28 @@
   <div class="wrap"><p class="qnote">Set at launch: the “Fees last reviewed” month, matched by dateModified in the schema. Before launch: the SIA primary report, or “as reported by” the secondary source (deck 1.8).</p></div>
 </section>
 
-<!-- 2. THE SHORT ANSWER (library #c-answer): written to be quoted on its own, each sentence with its own figure and date. -->
-<section class="sec on-day" aria-labelledby="short-h">
+<section class="sec fv-sec--rule b-short" data-fv="TX" aria-labelledby="short-h">
   <div class="wrap">
     <h2 class="h-sec" id="short-h">Jobility vs. a staffing agency, in short.</h2>
-    <div class="answer fd-answer">
+    <div class="answer fd-answer b-answer">
       <p>Jobility is a direct hiring platform: it finds and vets candidates, and you hire the person onto your own payroll. Its placement fee is 8% of first-year salary when you post and schedule, or 15% when Jobility’s team does the work, charged only when you hire. The most common agency direct-hire fee in 2021 was 20%,<sup class="fn">1</sup> and for it a recruiter usually runs the search. Jobility also sells job posts from $150, with no fee when you hire.</p>
     </div>
   </div>
 </section>
 
-<!-- 3. HOW MUCH DO STAFFING AGENCIES CHARGE? (#agency-fees; library #c-deflist). The H2 is the literal query. The 25 to 75%
-     temp markup appears only here on the site, labeled as estimates and never beside a Jobility rate (deck 1.7). -->
-<section class="sec" id="agency-fees" aria-labelledby="fees-h">
+<section class="sec on-day" id="agency-fees" data-fv="NU" aria-labelledby="fees-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="fees-h">How much do staffing agencies charge?</h2></div>
-    <dl class="deflist fd-deflist">
-      <dt>Direct hire: a one-time fee</dt><dd>A percentage of first-year salary. 20% was the most common in 2021; firms commonly charged 15 to 25%.<sup class="fn">1</sup></dd>
-      <dt>Temp and contract: a markup on hourly pay</dt><dd>The agency employs the worker and bills their pay plus a markup for payroll taxes, insurance and margin. Ask your agency for both rates.</dd>
-      <dt>What the fee usually buys</dt><dd>A recruiter who runs the search and often the interviews, and a replacement guarantee if the hire leaves early, typically 30 to 90 days.</dd>
-      <dt>Converting a temp to staff</dt><dd>Many agencies charge a fee when you hire a temp permanently.</dd>
-    </dl>
+    <ul class="fv-nu fd-nu" role="list" style="--n:2"><li><span class="fv-nu-n">20<i>%</i></span><span class="fv-nu-l">The most common direct-hire fee</span><span class="fv-nu-c">Of first-year salary, in a 2021 survey of US staffing firms.<sup class="fn">1</sup></span></li><li><span class="fv-nu-n">15 to 25<i>%</i></span><span class="fv-nu-l">What firms commonly charged</span><span class="fv-nu-c">The typical range, same survey.<sup class="fn">1</sup></span></li></ul>
+    <ul class="fv-ledger b-fees-ledger" role="list"><li><span class="fv-ledger-t">Direct hire: a one-time fee</span><span class="fv-ledger-d">A percentage of first-year salary. 20% was the most common in 2021; firms commonly charged 15 to 25%.<sup class="fn">1</sup></span></li><li><span class="fv-ledger-t">Temp and contract: a markup on hourly pay</span><span class="fv-ledger-d">The agency employs the worker and bills their pay plus a markup for payroll taxes, insurance and margin. Ask your agency for both rates.</span></li><li><span class="fv-ledger-t">What the fee usually buys</span><span class="fv-ledger-d">A recruiter who runs the search and often the interviews, and a replacement guarantee if the hire leaves early, typically 30 to 90 days.</span></li><li><span class="fv-ledger-t">Converting a temp to staff</span><span class="fv-ledger-d">Many agencies charge a fee when you hire a temp permanently.</span></li></ul>
+    <p class="small fn-src b-src"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data.</p>
       </div>
 </section>
 
-<!-- 4. SIDE BY SIDE (#side-by-side; library #t-compare, two columns). Verifiable rows only; the guarantee row is held (Q14). -->
-<section class="sec on-day" id="side-by-side" aria-labelledby="sbs-h">
+<section class="sec" id="side-by-side" data-fv="SC" aria-labelledby="sbs-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="sbs-h">Jobility and a staffing agency, line by line.</h2></div>
-    <table class="ctable fd-ctable" aria-labelledby="sbs-h">
+    <table class="ctable fd-ctable fv-compare" aria-labelledby="sbs-h">
       <thead><tr><td></td><th scope="col">Staffing agency</th><th scope="col" class="is-us">Jobility</th></tr></thead>
       <tbody>
         <tr><th scope="row">Direct-hire fee</th><td data-label="Staffing agency">Commonly 15 to 25% of first-year salary; 20% was the most common<sup class="fn">1</sup></td><td class="is-us" data-label="Jobility">8% self-service or 15% Jobility managed, paid only when you hire. Or pay per post, from $150</td></tr>
@@ -143,8 +135,7 @@
   <div class="wrap"><p class="qnote">Open: Q14. Held until Q14: the guarantee row. The fee before 480 hours (8% of the salary) is Kim’s answer of Oct 28.</p></div>
 </section>
 
-<!-- 5. THE FEE MATH (#fee-math; library #pr-calc, salary and agency quote only) + the first three worked examples. -->
-<section class="sec" id="fee-math" aria-labelledby="math-h">
+<section class="sec on-day" id="fee-math" data-fv="DV" aria-labelledby="math-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="math-h">What the difference looks like on your hire.</h2>
       <p class="lede">Enter the salary, or your agency’s quote.</p></div>
@@ -193,32 +184,34 @@
   </div>
 </section>
 
-<!-- 6. WHAT AN AGENCY FEE BUYS (#the-catch; library #t-ctseg). Three columns on desktop; on phones a segmented control shows
-     the agency beside one Jobility plan at a time, and the fee row is cut (the bars and the calculator carry it). -->
-<section class="sec on-day" id="the-catch" aria-labelledby="catch-h">
+<section class="sec" id="the-catch" data-fv="SP" aria-labelledby="catch-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="catch-h">What an agency fee buys, and what each Jobility plan includes.</h2>
       <p class="lede">A lower fee means a different split of the work. Jobility managed (15%) is the closer match to an agency; self-service (8%) costs least.</p></div>
+    <div class="b-catch">
+    <span class="fv-spot"><svg class="fv-spot-svg" viewBox="0 0 160 120" aria-hidden="true" focusable="false" fill="none" stroke="#1F2C41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="24" width="56" height="80" rx="6" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><rect x="30" y="18" width="24" height="12" rx="3" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><path d="M24 44 H60" vector-effect="non-scaling-stroke"/><path d="M24 56 H60" vector-effect="non-scaling-stroke"/><path d="M24 68 H52" vector-effect="non-scaling-stroke"/><path d="M24 80 H60" vector-effect="non-scaling-stroke"/><path d="M24 92 H46" vector-effect="non-scaling-stroke"/><rect x="86" y="34" width="62" height="60" rx="8" fill="#FFFFFF" vector-effect="non-scaling-stroke"/><circle cx="104" cy="54" r="8" fill="#E8EEF5" vector-effect="non-scaling-stroke"/><path d="M118 50 H138" vector-effect="non-scaling-stroke"/><path d="M118 59 H132" vector-effect="non-scaling-stroke"/><path d="M96 76 H138" vector-effect="non-scaling-stroke"/><circle cx="146" cy="36" r="9" fill="#D3005B" stroke="none" vector-effect="non-scaling-stroke"/><path d="M142 36 L145 39 L151 33" stroke="#FFFFFF" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></span>
+    <div class="b-catch-body">
     <div class="ctseg fd-ctseg" data-ctseg data-col="managed">
       <div class="ctseg-ctl"><p id="cs-l">Compare the agency with:</p><div class="seg" role="radiogroup" aria-labelledby="cs-l" data-seg><button type="button" role="radio" aria-checked="true" data-val="managed">Jobility managed</button><button type="button" role="radio" aria-checked="false" data-val="self">Self-service</button></div></div>
-      <table class="ctable" aria-labelledby="catch-h">
+      <table class="ctable fv-compare" aria-labelledby="catch-h">
         <thead><tr><td></td><th scope="col">Staffing agency (20%, the most common fee in 2021)<sup class="fn">1</sup></th><th scope="col" class="is-us" data-col="managed">Jobility managed (15%)</th><th scope="col" class="is-us" data-col="self">Jobility self-service (8%)</th></tr></thead>
         <tbody>
           <tr><th scope="row">Who does the work</th><td data-label="Staffing agency">The agency’s recruiter: writes the brief, finds candidates</td><td class="is-us" data-col="managed" data-label="Jobility managed">Our team does the work and sends you a candidate</td><td class="is-us" data-col="self" data-label="Jobility self-service">You post and schedule; our matching software finds and screens candidates</td></tr>
           <tr><th scope="row">Who runs the interviews</th><td data-label="Staffing agency">Usually the recruiter, at least the first round</td><td class="is-us" data-col="managed" data-label="Jobility managed">You meet the candidate we send</td><td class="is-us" data-col="self" data-label="Jobility self-service">You</td></tr>
           <tr><th scope="row">The offer and the salary conversation</th><td data-label="Staffing agency">Often the recruiter</td><td class="is-us" data-col="managed" data-label="Jobility managed">You</td><td class="is-us" data-col="self" data-label="Jobility self-service">You</td></tr>
-          <tr><th scope="row">Someone to talk to</th><td data-label="Staffing agency">Your recruiter</td><td class="is-us" data-col="managed" data-label="Jobility managed">A person on our team, through <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a></td><td class="is-us" data-col="self" data-label="Jobility self-service">A person on our team, through <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a></td></tr>
           <tr class="held"><th scope="row">Replacement guarantee</th><td data-label="Staffing agency">Typically 30 to 90 days</td><td class="is-us" data-col="managed" data-label="Jobility managed">Held until Q14</td><td class="is-us" data-col="self" data-label="Jobility self-service">Held until Q14</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="small fn-src" style="margin-top:12px"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%.</p>
+    <p class="b-catch-talk">On either Jobility plan, a person on our team is there when you need one: <a data-topic="direct" href="contact.html?topic=direct">Talk to us</a>.</p>
+    </div>
+    </div>
+    <p class="small fn-src b-src"><sup class="fn">1</sup> Source: Staffing Industry Analysts survey of US staffing firms, 2021 data. 20% was the most common direct-hire fee; firms commonly charged 15 to 25%.</p>
       </div>
   <div class="wrap"><p class="qnote">Open: Q14. Whether Jobility managed also covers first interviews or a replacement guarantee was not answered, so the page claims neither. If Jobility confirms both, this page can say it buys what an agency fee buys, for a quarter less than the most common fee.</p></div>
 </section>
 
-<!-- 7. WHEN AN AGENCY IS THE BETTER CHOICE (#when-agency; library #c-choose). Kept high and specific: the page's best trust asset. -->
-<section class="sec" id="when-agency" aria-labelledby="when-h">
+<section class="sec on-day" id="when-agency" data-fv="CH" aria-labelledby="when-h">
   <div class="wrap">
     <div class="sec-head"><h2 class="h-sec" id="when-h">When a staffing agency is the better choice.</h2></div>
     <div class="choose fd-choose">
@@ -229,12 +222,12 @@
   </div>
 </section>
 
-<!-- 8. FREQUENTLY ASKED QUESTIONS (library #c-faq; six from deck 5.8, two held). -->
-<section class="sec on-day" id="questions" aria-labelledby="faq-h">
+<section class="sec" id="questions" data-fv="AC" aria-labelledby="faq-h">
   <div class="wrap faq">
     <div>
       <h2 class="h-sec" id="faq-h">Frequently asked questions</h2>
       <p class="links-row" style="margin-top:18px"><a class="tlink" href="faq.html">See all questions</a></p>
+      <p class="fv-next"><span class="fv-next-k">Next:</span><a href="pricing.html#calculator">What one hire costs, three ways</a></p>
     </div>
     <div class="faq-list" data-accordion>
 <div class="faq-item held" data-q="Q18"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="cfa1"><span class="faq-t">Is Jobility a staffing agency?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -254,23 +247,21 @@
   <div class="wrap"><p class="qnote">Open: Q14, Q18. Held at launch until counsel confirms the wording: “Is Jobility a staffing agency?” (Q18; shown here as on Home, kept out of the FAQPage schema). Held: “What if a direct hire doesn’t work out?” (Q14) and “Is there a commitment or contract?” (Q18, Q14).</p></div>
 </section>
 
-<!-- 9. FINAL CTA (L14). -->
-<section class="cta-band" data-cta-final aria-labelledby="cta-h">
-  <div class="wrap cta-grid">
+<section class="fv-cta fd-cta" data-cta-final data-fv="CTA-S" aria-labelledby="cta-h">
+  <div class="wrap fv-cta-grid">
     <div>
       <h2 class="h-sec" id="cta-h">Try it on your next hire<span class="stop">.</span></h2>
       <p class="lede">Post a job, review your vetted matches, and decide before you pay a placement fee.</p>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>
-        <a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
-      </div>
+      <p class="fv-cta-price">Placement fee: 8% or 15% of first-year salary, only when you hire.</p>
+      <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a></div>
+      <ul class="fv-cta-alt" role="list" aria-label="Not quite right?"><li>Need people for weeks? <a href="contingent-labor.html">Contingent labor</a></li><li>Need a shift covered? <a href="gig-work.html">Gig work</a></li></ul>
     </div>
-    <div>
-      <ul class="cta-cross" role="list" aria-label="Other ways to hire">
-        <li><span>Need people for weeks?</span><a href="contingent-labor.html">Temp and contract workers</a></li>
-        <li><span>Need a shift covered?</span><a href="gig-work.html">Shift coverage</a></li>
-      </ul>
-    </div>
+    <div class="fv-cta-media fv-cta-media--ui"><div class="fv-mini fv-mini--shortlist fd-mini" aria-hidden="true">
+  <p class="fv-mini-h"><b>Short list</b><span>Warehouse supervisor</span></p>
+  <div class="fv-mini-row is-sel"><span class="fv-mini-av">MR</span><span class="fv-mini-nm"><b>Maria R.</b><span>Skills match · Available Mon</span></span></div>
+  <div class="fv-mini-row"><span class="fv-mini-av">JO</span><span class="fv-mini-nm"><b>James O.</b><span>Skills match · Available now</span></span></div>
+  <div class="fv-mini-row"><span class="fv-mini-av">PS</span><span class="fv-mini-nm"><b>Priya S.</b><span>Skills match · Available Mon</span></span></div>
+</div><p class="fv-cap">Example view. Names and numbers are made up.</p></div>
   </div>
 </section>
 
