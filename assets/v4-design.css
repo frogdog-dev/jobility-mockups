@@ -1,0 +1,137 @@
+/* =====================================================================
+   v4 design fixes (2026-11-09), from jobility_redteam/v4_design.md. Linked on every page AFTER site.css (and after
+   whimsy-p2.css where present), so it wins on equal specificity without editing site.css or its _lib sources.
+   Numbers in brackets are the report's fix numbers. Structural/CSS only: no copy.
+   ===================================================================== */
+
+/* ---------- [2] No orange anywhere (Parmi: "hates peach"). The logo ribbon itself is untouched (it is not drawn here).
+   Tokens: Energy (the old headline stop, bullets, the egg) becomes Passion; Optimism (the focus halo, a few portal
+   fills) becomes a pale pink; the ribbon becomes Purpose to Passion. */
+:root{
+  --energy:var(--passion,#D3005B);
+  --optimism:#F6CFE0;
+  --ribbon:linear-gradient(90deg,#FF3B58 0%,#D3005B 100%);
+}
+/* every SVG gradient built with the old ribbon stops (hero swash, offering connectors, the gig arc, the workers line,
+   the pen loops, the switch line): the orange stops become Passion at reduced strength, so each line reads
+   Passion .55 to Passion 1. CSS beats the presentation attribute, including stops created later by JS. */
+body:not(.page-lib) stop[stop-color="#FF9241" i]{stop-color:#D3005B;stop-opacity:.55}
+body:not(.page-lib) stop[stop-color="#FF6634" i]{stop-color:#D3005B;stop-opacity:.7}
+body:not(.page-lib) stop[stop-color="#FF3B58" i]{stop-color:#D3005B;stop-opacity:.88}
+
+/* focus: 3px Night outline (13:1 on white) plus a pale Passion halo; never orange */
+:focus-visible{box-shadow:0 0 0 6px rgba(211,0,91,.18)}
+.choice input:focus-visible+span,.offer:has(.offer-a:focus-visible),.alert:focus{box-shadow:0 0 0 6px rgba(211,0,91,.18)}
+.money:focus-within{box-shadow:0 0 0 5px rgba(211,0,91,.18)}
+.range:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 1.5px var(--night),0 0 0 4px var(--white),0 0 0 7px rgba(211,0,91,.35)}
+.range:focus-visible::-moz-range-thumb{box-shadow:0 0 0 1.5px var(--night),0 0 0 4px var(--white),0 0 0 7px rgba(211,0,91,.35)}
+.fd-motion-switch:focus-visible{box-shadow:0 0 0 6px rgba(211,0,91,.18)}
+.v1-dark :focus-visible{outline-color:#fff}
+
+/* ---------- [11] Walkthrough portal (Home, How it works): an illustration, so it is toned to the light system.
+   App bar white with a hairline; tiles pale blue with dark text; only "Action required" keeps Passion, as a 3px left
+   rule and a Passion numeral. */
+.wt-top{background:var(--white);color:var(--night);border-bottom:1px solid var(--line)}
+.wt-top .wt-logo{color:var(--night)}
+.wt-tile--a,.wt-tile--h{background:var(--sky-2);color:var(--night)}
+.wt-tile--r{background:var(--sky-2);color:var(--night);box-shadow:inset 3px 0 0 var(--passion)}
+.wt-tile--r>b{color:var(--passion)}
+.wt-star{color:var(--passion)}
+.wt-av--mr{background:var(--passion-tint);color:var(--passion-dk)}
+.wt-av--ps{background:var(--sky-2);color:var(--night)}
+.wt-mb{background:var(--passion-tint);color:var(--night)}
+
+/* ---------- [3] Header: the offering nav (with its sub-labels, the "ribbon" the client loved) stays visible down to
+   900px; the menu button takes over at 899px and below. 900 to 1279: "Talk to us" lives in the utility bar only,
+   sub-labels a step smaller, tighter gaps. */
+@media (min-width:900px) and (max-width:1279px){
+  .site-nav .nav-links{display:flex;gap:18px;margin-left:0}
+  .site-nav .nav-cta .talk{display:none}
+  .site-nav .menu-btn{display:none}
+  .site-nav .menu-panel{display:none!important}
+  .nav-links .nl{font-size:16px}
+  .nav-links .ns{font-size:13px}
+}
+@media (min-width:900px) and (max-width:1100px){
+  .site-nav .nav-links{gap:14px}
+  .site-nav .logo svg{width:112px;height:auto}
+  .site-util .u-first{display:none}
+}
+
+/* ---------- [4] Home hero swash: it takes the width of the visible word (it stopped under "staf"). */
+.v2-rot-w{position:relative;display:inline-block}
+.v2-rot .v2-swash{left:0;width:calc(100% - .45em);bottom:-.08em}
+/* the dash pattern (pathLength 1) was being read in screen space because of non-scaling-stroke: the line stopped early */
+.v2-rot .v2-swash path{vector-effect:none}
+
+/* ---------- [22] Home hero (phones): "Jobility Health" and its arrow never split */
+.v2-hero .v2-health a{white-space:nowrap}
+
+/* ---------- [5] Home "What do you need right now?": card titles on one line across the row (the minis differ in
+   height, so the miniature well is one fixed height at desktop). [25] whole-card hover in Passion. */
+@media (min-width:1024px){
+  .fv-choose-ui{height:228px;min-height:0}
+}
+.fv-choose>li>a:hover,.fv-choose>li>a:focus-visible{border-color:color-mix(in srgb,var(--passion) 45%,var(--line-2));box-shadow:var(--shadow-s)}
+.fv-choose>li.is-lead>a:hover,.fv-choose>li.is-lead>a:focus-visible{border-color:color-mix(in srgb,var(--passion) 55%,#F5C7DA)}
+
+/* ---------- [7] Home mosaic (desktop): captions sit inside each tile on a white chip, so every photo fills its cell and
+   no caption baseline can drift. The Healthcare link out rides in the same tile, right-aligned. [25] a hover you can see. */
+@media (min-width:1024px){
+  .page-home .fv-mosaic .fv-tile{position:relative}
+  .page-home .fv-mosaic .fv-tile>a:not(.fv-tile-out){position:relative;height:100%}
+  .page-home .fv-mosaic .fv-tile .photo{flex:1 1 auto;min-height:0}
+  .page-home .fv-mosaic .fv-tile-cap{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);padding:8px 12px 9px;border-radius:10px;background:#fff;box-shadow:0 6px 16px -10px rgba(31,44,65,.45)}
+  .page-home .fv-mosaic .fv-tile-cap b{color:var(--passion)}
+  .page-home .fv-mosaic .fv-tile--hc>a:not(.fv-tile-out){flex:1 1 auto}
+  .page-home .fv-mosaic .fv-tile--hc>a.fv-tile-out{z-index:2;position:absolute;right:12px;bottom:12px;margin:0;padding:8px 12px;min-height:0;border-radius:10px;background:#fff;box-shadow:0 6px 16px -10px rgba(31,44,65,.45)}
+}
+.fv-tile .photo img{transition:transform .5s var(--ease-land,cubic-bezier(.19,1,.22,1))}
+.fv-tile>a:hover .photo img,.fv-tile>a:focus-visible .photo img{transform:scale(1.05)}
+@media (prefers-reduced-motion:reduce){ .fv-tile>a:hover .photo img,.fv-tile>a:focus-visible .photo img{transform:none} }
+.fd-calm .fv-tile>a:hover .photo img,.fd-calm .fv-tile>a:focus-visible .photo img{transform:none}
+
+/* ---------- [8] Home "Get workers, not resumes": no dead space. Columns align to the top, the canvas is only as tall as
+   the shortlist, the cards use the panel's width. */
+.fv-wnr .fv-wnr-grid{align-items:start}
+@media (min-width:1024px){ .fv-wnr .split>div:first-child:has(#wnr-h){align-self:start} }
+.fv-wnr .sw-canvas{min-height:0}
+.fv-wnr .sw-cards{width:auto;padding-bottom:8px}
+@media (min-width:1200px){ .fv-wnr .fv-wnr-grid>div:first-child{padding-top:clamp(24px,3vw,48px)} }
+
+/* ---------- [10] Two H1 sizes only: Home, and every other page (LPs included) */
+body:not(.page-home) main h1.h-page{font-size:clamp(38px,3.9vw,56px)}
+
+/* ---------- [17] Compare + LP agency fees: the bars follow the shared calculator (agency ink-2, managed Passion 55%,
+   self-service Passion; 14px track, round ends). */
+.fd-feebars .bar .fill{background:var(--passion)}
+.fd-feebars .bar--agency .fill{background:var(--ink-2)}
+.fd-feebars .bar[data-tier]:not(.is-pick) .fill{background:color-mix(in srgb,var(--passion) 55%,#fff)}
+
+/* ---------- [19] Pricing plan cards: equal heights, both buttons on one line */
+.plans{align-items:stretch}
+.plans .plan{display:flex;flex-direction:column}
+.plans .plan>.btn,.plans .plan>.btn-row{margin-top:auto}
+
+/* ---------- [20] Pricing prices table (phones): role and price on one row */
+@media (max-width:699px){
+  .prices tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline}
+  .prices td:last-child,.prices th+td{white-space:nowrap;text-align:right}
+}
+
+/* ---------- [23] FAQ page: the group label and spot sit in the left column every time */
+.pg-faq .b-faq-rev>.fq-side{order:0}
+@media (min-width:900px){ .pg-faq .b-faq-rev{grid-template-columns:minmax(0,4fr) minmax(0,8fr)} }
+
+/* ---------- [24] Footnote markers: a 24px target (WCAG 2.5.8) without moving the text */
+sup.fn a,sup>a[href^="#"]{display:inline-block;padding:10px 6px;margin:-10px -6px;line-height:1}
+
+/* ---------- [26] Home "Why" composite: top aligned to the heading */
+.fv-why-stage{margin-top:6px}
+
+/* ---------- [30] Footer: one Passion hairline under the logo, the only pink in the footer */
+.site-foot .foot-logo,.site-foot .f-logo{position:relative}
+.fd-feebars .bar:not(.bar--agency):not(:last-child):not([data-tier]) .fill{background:color-mix(in srgb,var(--passion) 55%,#fff)}
+
+/* FAQ: a question opened from the contents never hides under the sticky header and group nav */
+.pg-faq details,.pg-faq [id]{scroll-margin-top:150px}

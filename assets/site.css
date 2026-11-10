@@ -4809,3 +4809,31 @@ caption.sr-only{display:block;width:1px!important;max-width:1px;inset:0 auto aut
 .pg-contact .b-ct-hc[hidden],.pg-contact .b-ct-hint[hidden]{display:none}
 /* --- /B:critic --- */
 /* ===== /FV pages B ===== */
+
+/* ---- v4 copy + funnel (2026-11-09, _lib/v4_copy.py) ---- */
+.site-util .u-short{display:none}
+.site-util .u-q{margin-right:.3em}
+@media (max-width:699px){
+  .site-util .u-app{display:inline-flex}
+  .site-util .u-long,.site-util .u-q{display:none}
+  .site-util .u-short{display:inline}
+}
+.v4-handoff{margin:10px 0 0;font-size:var(--fs-15);line-height:1.45;color:var(--ink-2);max-width:46ch}
+.fv-cta .v4-handoff,.cta-band .v4-handoff{margin-inline:auto}
+.fv-cta .v4-handoff{margin-inline:0}
+.v2-hero .v4-health+.v4-health{margin-top:4px}
+.v4-noprice{display:block;margin-top:4px;font-size:var(--fs-15);color:var(--ink-2)}
+/* Home founder: one attribution, no initials disc */
+#about .fv-quote{grid-template-columns:minmax(0,1fr);max-width:960px}
+.v4-founder-by span{color:var(--ink-2)}
+/* the mosaic without the Admin tile: seven industries */
+.fv-mosaic{grid-template-areas:"hc hc co co" "hc hc ho it" "li li ae re" "li li ae re"}
+@media (max-width:1023px){ .fv-mosaic{grid-template-areas:"hc co" "ho it" "li ae" "re re"} }
+/* Contingent: two quotes */
+.v4-quote-row--2{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}
+@media (max-width:1023px){ .v4-quote-row--2{grid-template-columns:minmax(0,1fr)} }
+/* calculator: Other role (no published post price) */
+.qq-other-note{display:none;margin:6px 0 12px;font-size:var(--fs-15);color:var(--ink-2)}
+.qq--other .qq-other-note{display:block}
+.qq--other [data-tier="post"],.qq--other .col3--us .col3-n,.qq--other .col3--us .col3-sub,.qq--other .col3--us>.fv-offer{display:none}
+/* ---- /v4 copy + funnel ---- */

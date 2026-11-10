@@ -45,15 +45,15 @@
 </script>
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
-</head>
+<!-- v4-design --><link rel="stylesheet" href="assets/v4-design.css"><link rel="stylesheet" href="assets/v4-whimsy.css"><!-- /v4-design --></head>
 <body class="page-contingent" data-page-topic="temp">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Dark theme: the hero is a Night band; .hd is display:contents, so the nav stays sticky. -->
 <div class="hd">
 <div class="site-util"><div class="wrap">
-  <a class="u-first" data-topic="direct" href="contact.html?topic=direct">Questions? Talk to us</a>
-  <a class="u-app" href="for-workers.html">Looking for work? Get the Jobility app</a>
+  <a class="u-first" data-topic="direct" href="contact.html?topic=direct"><span class="u-q">Questions? </span>Talk to us</a>
+  <a class="u-app" href="for-workers.html"><span class="u-long">Looking for work? Get the Jobility app</span><span class="u-short">Find work</span></a>
   <a href="login.html">Log in</a>
 </div></div>
 
@@ -108,7 +108,7 @@
     </div>
     <div class="oh-copy">
       <p class="oh-sub">Tell us the roles, headcount and dates. AI&#8209;driven matching finds the workers, a person on our team checks them, and Jobility can be the employer of record.</p>
-      <p class="oh-price">Quoted by the hour, per role. You run the work.</p>
+      <p class="oh-price">Quoted by the hour, per role, before anyone starts. You run the work.</p>
       <div class="btn-row"><a class="btn btn--primary" href="#pricing">Get a temp rate</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a temp job</a></div>
     </div>
     <div class="oh-visual">
@@ -136,15 +136,15 @@
 </div></nav></div>
 </section>
 
-<!-- 3. HOW CONTINGENT LABOR WORKS (DV): a week ruler, Day 0 to the 480-hour mark (hire them onto your staff). Sky. -->
+<!-- 3. HOW CONTINGENT LABOR WORKS (DV): a ruler, First / Then / Each pay period to the 480-hour mark (v4: no week-one or weekly claims) (hire them onto your staff). Sky. -->
 <section class="sec on-day" id="how" data-fv="DV" aria-labelledby="how-h">
   <div class="wrap">
     <div class="fv-head fv-head--row"><h2 class="h-sec" id="how-h">How contingent labor works.</h2><p class="fv-head-link"><a class="tlink" href="#pricing">Get a temp rate</a></p></div>
     <ol class="fv-dv-ruler fd-ruler" role="list">
-      <li><span class="fv-dv-ruler-k">Day 0</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>Tell us roles, headcount and dates.</h3><p>Sites and pay rate too.</p></li>
-      <li><span class="fv-dv-ruler-k">Week 1</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>Vetted workers start.</h3><p>We send the workers who fit. You approve who starts.</p></li>
-      <li><span class="fv-dv-ruler-k">Every week</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>You approve hours, we run payroll.</h3><p>On Jobility’s payroll, we handle onboarding and paperwork.<span class="qonly"> <span class="confirm qchip" data-q="Q16" title="To confirm with Jobility: Q16, the hours and cost view">You see hours and costs by site in your portal.</span></span></p></li>
-      <li class="is-end"><span class="fv-dv-ruler-k">480 hours</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>Hire them onto your staff, no conversion fee.</h3><p class="fv-dv-fine">Before 480 hours, an 8% fee of the salary applies.</p></li>
+      <li><span class="fv-dv-ruler-k">First</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>Tell us roles, headcount and dates.</h3><p>Sites and pay rate too.</p></li>
+      <li><span class="fv-dv-ruler-k">Then</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>Vetted workers start.</h3><p>We send the workers who fit, and you approve who starts.</p></li>
+      <li><span class="fv-dv-ruler-k">Each pay period</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>You approve hours, and we run payroll.</h3><p>On Jobility’s payroll, we handle onboarding and paperwork.<span class="qonly"> <span class="confirm qchip" data-q="Q16" title="To confirm with Jobility: Q16, the hours and cost view">You see hours and costs by site in your portal.</span></span></p></li>
+      <li class="is-end"><span class="fv-dv-ruler-k">480 hours</span><span class="fv-dv-ruler-m" aria-hidden="true"></span><h3>Hire them onto your staff, no conversion fee.</h3><p class="fv-dv-fine">Before 480 hours, the fee is 8% of the worker’s salary.</p></li>
     </ol>
   </div>
 </section>
@@ -158,11 +158,11 @@
       <div class="cover-roles">
         <h3>Roles we fill</h3>
         <ul class="fv-ledger fv-ledger--2col role-rules" role="list"><li>Warehouse associates</li><li>Pickers and packers</li><li>Forklift operators</li><li>Production and line workers</li><li>General laborers</li><li>Construction helpers</li><li>Shift leads</li><li>Another role? Ask us</li></ul>
-        <a class="v2-hc fd-hc" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Staffing shifts at a healthcare facility?</b> Nurses, CNAs and allied staff for shifts, with certification and license checks.</span><span class="v2-hc-go">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="v2-hc fd-hc" href="https://jobilityhealth.com/" target="_blank" rel="noopener"><span class="v2-hc-ic"><svg class="v2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><span class="v2-hc-t"><b>Need nurses or aides for facility shifts?</b> Nurses, CNAs and allied staff for shifts, with certification and license checks.</span><span class="v2-hc-go">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         <p class="qonly"><span class="confirm qchip" data-q="Q9" title="To confirm with Jobility: Q9">Where we have workers: states or metros</span></p>
       </div>
     </div>
-    <figure class="photo fd-photo photo--portrait" style="--pos:60% 22%;--pos-m:62% 20%"><picture><source type="image/webp" srcset="assets/img/forklift-operator-800.webp 800w, assets/img/forklift-operator.webp 1536w" sizes="(min-width: 1200px) 480px, (min-width: 768px) 760px, 92vw"><img src="assets/img/forklift-operator-800.jpg" srcset="assets/img/forklift-operator-800.jpg 800w, assets/img/forklift-operator.jpg 1536w" sizes="(min-width: 1200px) 480px, (min-width: 768px) 760px, 92vw" width="1024" height="1536" alt="A forklift operator in a safety vest looks back over his shoulder as he reverses through a bright warehouse aisle." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
+    <figure class="photo fd-photo photo--portrait" style="--pos:60% 22%;--pos-m:62% 20%"><picture><source type="image/webp" srcset="assets/img/forklift-operator-800.webp 533w, assets/img/forklift-operator.webp 1024w" sizes="(min-width: 1200px) 480px, (min-width: 768px) 760px, 92vw"><img src="assets/img/forklift-operator-800.jpg" srcset="assets/img/forklift-operator-800.jpg 533w, assets/img/forklift-operator.jpg 1024w" sizes="(min-width: 1200px) 480px, (min-width: 768px) 760px, 92vw" width="1024" height="1536" alt="A forklift operator in a safety vest looks back over his shoulder as he reverses through a bright warehouse aisle." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></figure>
   </div>
 <div class="wrap"><p class="qnote" title="Held until Q14: “When a temp doesn’t show, the line stops,” followed by Jobility’s replacement policy. Without a policy this is not raised."><span class="qnote-body">Open: Q9, Q14<span class="qnote-held">Held until Q14: “When a temp doesn’t show, the line stops,” followed by Jobility’s replacement policy. Without a policy this is not raised.</span></span></p></div>
 </section>
@@ -258,12 +258,10 @@
 <div class="wrap"><p class="qnote" title="Held until Q18: counsel review of the wording in this section and on the stub. Held until Q14: a stub line. Jobility handles “Replacing a worker who doesn’t show.”"><span class="qnote-body">Open: Q14, Q18<span class="qnote-held">Held until Q18: counsel review of the wording in this section and on the stub.</span><span class="qnote-held">Held until Q14: a stub line. Jobility handles “Replacing a worker who doesn’t show.”</span></span></p></div>
 </section>
 
-<!-- 7. CUSTOMER QUOTE (QL): Henry, verbatim (temp to full time). Sky. -->
-<section class="sec on-day fv-sec--short" data-fv="QL" aria-label="From a customer">
+<!-- 7. CUSTOMER QUOTES (QL): Bharat (short-term, moved from Direct hiring in v4) and Henry (temp to full time), verbatim. Sky. -->
+<section class="sec on-day fv-sec--short" data-fv="QL" aria-label="From customers">
   <div class="wrap">
-    <div class="fv-quote fv-quote--solo fd-proof">
-      <figure class="fv-quote-main"><blockquote><p>We used Jobility to find an Admin assistant for 4 hours a day, 3 days a week for 6 weeks. We found a match within a few hours, the candidate was a great match, and we converted to a full time position.”</p></blockquote><figcaption class="fv-quote-by"><b>Henry</b><span>Shipping company</span></figcaption></figure>
-    </div>
+    <div class="fd-proof v4-quote-pair"><ul class="fv-quote-row v4-quote-row--2" role="list"><li><figure><blockquote><p>“Found an accounting assistant who was qualified, available for a short period, and flexible with very little time to hire. The person was already screened and background checked so on-boarding was quick and easy.”</p></blockquote><figcaption class="fv-quote-by"><b>Bharat</b><span>Trading company</span></figcaption></figure></li><li><figure><blockquote><p>“We used Jobility to find an Admin assistant for 4 hours a day, 3 days a week for 6 weeks. We found a match within a few hours, the candidate was a great match, and we converted to a full time position.”</p></blockquote><figcaption class="fv-quote-by"><b>Henry</b><span>Shipping company</span></figcaption></figure></li></ul></div>
     <p class="qnote">From jobility.com testimonials, as published; Kim, 10/28.</p>
   </div>
 </section>
@@ -287,7 +285,7 @@
 <div class="faq-item held" data-q="Q14"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="cfa5"><span class="faq-t">Can I use my existing staffing agencies?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="cfa5"><p>Held until Q14: whether you can bring the agencies you already use into the same account, and on which plans.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="cfa6"><span class="faq-t">Can I hire a temp permanently?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="cfa6"><p>Yes, you can hire them onto your staff. No conversion fee after 480 hours (about three months). Before 480 hours, an 8% fee of the salary applies.</p></div></div>
+  <div class="faq-a" id="cfa6"><p>Yes, you can hire them onto your staff. No conversion fee after 480 hours (about three months).</p></div></div>
 </div>
   </div>
 <div class="wrap"><p class="qnote"><span class="qnote-body">Open: Q9, Q14</span></p></div>
@@ -300,7 +298,7 @@
     <div>
       <h2 class="h-sec" id="cta-h">Get a rate for the workers you need<span class="stop">.</span></h2>
       <p class="lede">Send the roles, headcount and dates. We reply with a rate.</p>
-      <p class="fv-cta-price">One hourly rate per worker, quoted before anyone starts.</p>
+      <p class="fv-cta-price">One hourly rate per role, quoted before anyone starts.</p>
       <div class="btn-row"><a class="btn btn--primary" href="#pricing">Get a temp rate</a><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a temp job</a><a class="tlink fv-cta-talk" data-topic="temp" href="contact.html?topic=temp">Talk to us</a></div>
       <ul class="fv-cta-alt" role="list" aria-label="Not quite right?"><li>Need one shift covered? <a href="gig-work.html">Gig work</a></li><li>Hiring for keeps? <a href="direct-hiring.html">Direct hiring</a></li></ul>
     </div>
@@ -351,7 +349,6 @@
       <a href="gigee-terms.html">Worker terms</a>
       <a href="accessibility.html">Accessibility</a>
       <a href="login.html">Log in</a>
-      <p class="foot-family">Part of the Jobility family. Need full-service staffing or a statement of work? <a href="https://jobilitytalent.com">Visit Jobility Talent Solutions</a></p>
     </div>
   </div>
 </footer>
@@ -362,7 +359,7 @@
   <a class="btn btn--secondary mbar-call" tabindex="-1" href="https://enterprise.jobility.com/signup">Post a temp job</a>
 </div>
 
-<script src="assets/site.js"></script><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
+<script src="assets/site.js"></script><!-- v4-design --><script defer src="assets/v4-whimsy.js"></script><!-- /v4-design --><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
 <script src="assets/offering.js"></script>
 </body>
 </html>

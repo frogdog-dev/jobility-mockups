@@ -45,15 +45,15 @@
 </script>
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
-</head>
+<!-- v4-design --><link rel="stylesheet" href="assets/v4-design.css"><link rel="stylesheet" href="assets/v4-whimsy.css"><!-- /v4-design --></head>
 <body class="page-direct">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Dark theme: the hero is a Night band; .hd is display:contents, so the nav stays sticky. -->
 <div class="hd">
 <div class="site-util"><div class="wrap">
-  <a class="u-first" data-topic="direct" href="contact.html?topic=direct">Questions? Talk to us</a>
-  <a class="u-app" href="for-workers.html">Looking for work? Get the Jobility app</a>
+  <a class="u-first" data-topic="direct" href="contact.html?topic=direct"><span class="u-q">Questions? </span>Talk to us</a>
+  <a class="u-app" href="for-workers.html"><span class="u-long">Looking for work? Get the Jobility app</span><span class="u-short">Find work</span></a>
   <a href="login.html">Log in</a>
 </div></div>
 
@@ -113,9 +113,10 @@
         <a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a>
         <a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
       </div>
+      <p class="v4-handoff">Create your free account. You choose pay per post or the placement fee when you post.</p>
     </div>
     <div class="oh-visual">
-      <div class="oh-stage offer fd-offer fd-entry fd-jline" data-offer data-jline="offer" role="group" aria-label="Example view: choose a person from a short list of three and see the offer letter your business sends them.">
+      <div class="oh-stage offer fd-offer fd-entry fd-jline" data-offer data-jline="offer" role="group" aria-label="Example view: choose a person from a shortlist of three and see the offer letter your business sends them.">
         <div class="offer-top"><p class="offer-q" id="offer-q">Your shortlist: warehouse supervisor</p></div>
         <div class="offer-body">
           <div>
@@ -168,6 +169,7 @@
             <label class="choice"><input type="radio" name="role" value="hcadmin"><span>Healthcare admin</span></label>
             <label class="choice"><input type="radio" name="role" value="nursing"><span>Nursing and allied</span></label>
             <label class="choice"><input type="radio" name="role" value="adv"><span>Advanced practice</span></label>
+            <label class="choice"><input type="radio" name="role" value="other"><span>Other role</span></label>
           </div>
         </fieldset>
         <div class="qq-salary">
@@ -179,8 +181,8 @@
         <fieldset>
           <legend class="label">With Jobility, who does the work?</legend>
           <div class="choices">
-            <label class="choice"><input type="radio" name="who" value="self" checked data-who><span>I post and schedule (8%)</span></label>
-            <label class="choice"><input type="radio" name="who" value="managed" data-who><span>Jobility does the work (15%)</span></label>
+            <label class="choice"><input type="radio" name="who" value="self" checked data-who><span>Self-service, 8%: you post and schedule</span></label>
+            <label class="choice"><input type="radio" name="who" value="managed" data-who><span>Jobility managed, 15%: we do the work and send you a candidate</span></label>
           </div>
         </fieldset>
         <details class="qq-own fd-own" id="qq-own-a">
@@ -201,6 +203,7 @@
 
       <div class="qq-out">
         <p class="qq-scale-h">One hire at <span data-out="salary">$45,000</span> a year</p>
+        <p class="qq-other-note">Other roles: <a data-topic="direct" href="contact.html?topic=direct">talk to us</a> for a post price, or post free and pay a placement fee only when you hire.</p>
         <div class="qq-a">
           <ul class="bars bars--v2" role="list" aria-label="What one hire would cost: Jobility pay per post, the Jobility placement fee, the common agency fee, and on your own">
             <li class="bar bar--us" data-tier="post"><span class="bl"><b>Jobility, pay per post.</b> No fee when you hire.</span><span class="num" data-out="postbar">$150</span><span class="track" aria-hidden="true"><span class="fill" data-bar="post" style="--s:.0167"></span></span><p class="fv-offer fd-offer-inline" data-offer><span class="fv-offer-dot" aria-hidden="true"></span><span class="fv-offer-k">New customers:</span> your second job post is complimentary. <a href="pricing.html#offer-terms">Offer terms</a></p></li>
@@ -266,11 +269,11 @@
   </div>
 </div><span class="fv-ministrip-n" aria-hidden="true">1</span><h3>Post once.</h3><p>Use a template or start fresh, and choose how you pay.</p></li>
       <li><div class="fv-mini fv-mini--shortlist fd-mini" aria-hidden="true">
-  <p class="fv-mini-h"><b>Short list</b><span>Warehouse supervisor</span></p>
+  <p class="fv-mini-h"><b>Shortlist</b><span>Warehouse supervisor</span></p>
   <div class="fv-mini-row is-sel"><span class="fv-mini-av">MR</span><span class="fv-mini-nm"><b>Maria R.</b><span>Skills match · Available Mon</span></span></div>
   <div class="fv-mini-row"><span class="fv-mini-av">JO</span><span class="fv-mini-nm"><b>James O.</b><span>Skills match · Available now</span></span></div>
   <div class="fv-mini-row"><span class="fv-mini-av">PS</span><span class="fv-mini-nm"><b>Priya S.</b><span>Skills match · Available Mon</span></span></div>
-</div><span class="fv-ministrip-n" aria-hidden="true">2</span><h3>Review vetted matches.</h3><p>Candidates arrive checked against your requirements. Shortlist and request interviews from one screen.<span class="qonly"> <span class="confirm qchip" data-q="Q15" title="To confirm with Jobility: Q15">Short list in [n] days</span></span></p></li>
+</div><span class="fv-ministrip-n" aria-hidden="true">2</span><h3>Review vetted matches.</h3><p>Candidates arrive checked against your requirements. Shortlist and request interviews from one screen.<span class="qonly"> <span class="confirm qchip" data-q="Q15" title="To confirm with Jobility: Q15">Shortlist in [n] days</span></span></p></li>
       <li><div class="fv-mini fv-mini--offer fd-mini" aria-hidden="true">
   <div class="fv-of"><span class="fv-mini-av">MR</span><span class="fv-mini-nm"><b>Maria R.</b><span>Warehouse supervisor</span></span><span class="fv-mini-pill" style="margin-left:auto">Offer sent</span></div>
   <dl class="fv-of-d"><dt>Starts</dt><dd>Monday</dd><dt>Employer</dt><dd>Your business</dd><dt>Payroll</dt><dd>Yours, from day one</dd></dl>
@@ -281,15 +284,15 @@
 <div class="wrap"><p class="qnote" title="Held until Q14: one sentence with the replacement guarantee, if there is one."><span class="qnote-body">Open: Q14, Q15<span class="qnote-held">Held until Q14: one sentence with the replacement guarantee, if there is one.</span></span></p></div>
 </section>
 
-<!-- 5. SMARTER HIRING (SC): the three-row table; the Jobility column carries the pink top rule. Sky. -->
+<!-- 5. HOW JOBILITY COMPARES (SC): the three-row table; the Jobility column carries the pink top rule. Sky. -->
 <section class="sec sec--cmp on-day" data-fv="SC" aria-labelledby="cmp-h">
   <div class="wrap">
-    <div class="sec-head"><h2 class="h-sec h-triad" id="cmp-h">Smarter&nbsp;hiring. Lower&nbsp;cost. Better&nbsp;candidates.</h2></div>
+    <div class="sec-head"><h2 class="h-sec" id="cmp-h">How Jobility compares with what you use now.</h2></div>
     <table class="ctable ctable--proof ctable--stack fv-compare" aria-label="Compared with what you use now">
       <thead><tr><th scope="col">You use now</th><th scope="col">The catch</th><th scope="col" class="is-us">With Jobility</th></tr></thead>
       <tbody>
         <tr><th scope="row">A staffing agency</th><td data-label="The catch">20% of first-year salary, the most common fee<sup class="fn">1</sup></td><td class="is-us" data-label="With Jobility"><b class="pf">8% or 15%, not 20%.</b> Only if you hire, or a flat price per post.</td></tr>
-        <tr><th scope="row">A job board</th><td data-label="The catch">Everyone who applies lands in your inbox, and you sort them</td><td class="is-us" data-label="With Jobility"><b class="pf">One post, one short list.</b> Candidates screened against your requirements, with interviews requested from the same screen and no charge per click or per applicant.</td></tr>
+        <tr><th scope="row">A job board</th><td data-label="The catch">Everyone who applies lands in your inbox, and you sort them</td><td class="is-us" data-label="With Jobility"><b class="pf">One post, one shortlist.</b> Candidates screened against your requirements, with interviews requested from the same screen and no charge per click or per applicant.</td></tr>
         <tr><th scope="row">Doing it yourself</th><td data-label="The catch">Nobody runs the search but you.</td><td class="is-us" data-label="With Jobility"><b class="pf">We run the search with you.</b> Post and schedule it yourself, or we do the work and send you a candidate.</td></tr>
       </tbody>
     </table>
@@ -310,11 +313,11 @@
 <div class="wrap"><p class="qnote" title="Held until Q14: a fourth line."><span class="qnote-body">Open: Q14<span class="qnote-held">Held until Q14: a fourth line. You handle “Replacing someone who leaves” / Jobility handles [the guarantee wording], or no line.</span></span></p></div>
 </section>
 
-<!-- 7. CUSTOMER QUOTE (QL): Bharat, verbatim, in its own short section. Sky. -->
+<!-- 7. CUSTOMER QUOTE (QL): Ariel, verbatim, in its own short section. Sky. -->
 <section class="sec on-day fv-sec--short" data-fv="QL" aria-label="From a customer">
   <div class="wrap">
     <div class="fv-quote fv-quote--solo fd-proof">
-      <figure class="fv-quote-main"><blockquote><p>Found an accounting assistant who was qualified, available for a short period, and flexible with very little time to hire. The person was already screened and background checked so on-boarding was quick and easy.”</p></blockquote><figcaption class="fv-quote-by"><b>Bharat</b><span>Trading company</span></figcaption></figure>
+      <figure class="fv-quote-main"><blockquote><p>Jobility has matched me with dozens of great candidates over the past year and I have hired a bunch of them and have been pleased with the quality of the workers and the level of dedication and service the Jobility team provides. I highly recommend Jobility to any business looking for workers!”</p></blockquote><figcaption class="fv-quote-by"><b>Ariel</b><span>Home &amp; Office cleaning company</span></figcaption></figure>
     </div>
     <p class="qnote">From jobility.com testimonials, as published; Kim, 10/28.</p>
   </div>
@@ -331,21 +334,21 @@
         <div class="fv-ledger-d fv-hc-split">
           <figure class="fv-hc-media"><div class="photo fd-photo" style="--pos:50% 35%"><picture><source type="image/webp" srcset="assets/img/clinic-frontdesk-800.webp 800w, assets/img/clinic-frontdesk.webp 1536w" sizes="(min-width: 1024px) 420px, 92vw"><img src="assets/img/clinic-frontdesk-800.jpg" srcset="assets/img/clinic-frontdesk-800.jpg 800w, assets/img/clinic-frontdesk.jpg 1536w" sizes="(min-width: 1024px) 420px, 92vw" width="1536" height="1024" alt="A practice manager trains a new patient coordinator at a clinic’s reception desk." loading="lazy" decoding="async"></picture><span class="photo__note qonly">Illustrative photo, AI-generated, fictional people. Credits in the handoff package.</span></div></figure>
           <div class="fv-hc-body">
-            <p class="fv-hc-lead">Hiring a nurse, medical assistant or clinic admin onto your staff? Post here.</p>
+            <p class="fv-hc-lead">Hiring a nurse or medical assistant onto your staff? Post a job.</p>
             <p>Certification and license checks are standard on healthcare roles.</p>
             <ul class="fv-ledger fv-ledger--price" role="list" aria-label="Job post prices for healthcare roles">
               <li><span>Healthcare admin, facilities and operations</span><span class="fv-ledger-v" data-price="post.hcadmin">$200</span></li>
               <li><span>Nursing and allied health</span><span class="fv-ledger-v" data-price="post.nursing">$350 to $400</span></li>
               <li><span>Advanced practice, physicians and scientists</span><span class="fv-ledger-v" data-price="post.adv">$500</span></li>
             </ul>
-            <div class="btn-row"><a class="btn btn--primary btn--sm" href="https://enterprise.jobility.com/signup">Post a job</a><a class="tlink" href="https://jobilityhealth.com/" target="_blank" rel="noopener">Staffing shifts at a facility? Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+            <div class="btn-row"><a class="btn btn--primary btn--sm" href="https://enterprise.jobility.com/signup">Post a job</a><a class="tlink" href="https://jobilityhealth.com/" target="_blank" rel="noopener">Need nurses or aides for facility shifts? Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
           </div>
         </div>
       </li>
-      <li id="ind-industrial"><span class="fv-ledger-t">Light industrial and manufacturing</span><span class="fv-ledger-d">Machinists, shift leads, supervisors and full-time associates.</span></li><li id="ind-construction"><span class="fv-ledger-t">Construction</span><span class="fv-ledger-d">Electricians, carpenters, site supervisors, foremen and project coordinators.</span></li><li id="ind-aesthetic"><span class="fv-ledger-t">Aesthetic medicine</span><span class="fv-ledger-d">Estheticians, injectors, medical assistants and front-desk coordinators.</span></li><li id="ind-hospitality"><span class="fv-ledger-t">Hospitality</span><span class="fv-ledger-d">Line cooks, bartenders, managers and front desk staff.</span></li><li id="ind-retail"><span class="fv-ledger-t">Retail</span><span class="fv-ledger-d">Store leads, cashiers, store managers and sales associates.</span></li><li id="ind-it"><span class="fv-ledger-t">IT</span><span class="fv-ledger-d">IT managers, IT techs and other specialized roles, where a managed search often fits best.</span></li><li id="ind-admin"><span class="fv-ledger-t">Admin and office</span><span class="fv-ledger-d">Office admins, bookkeepers and receptionists.</span></li>
+      <li id="ind-industrial"><span class="fv-ledger-t">Light industrial and manufacturing</span><span class="fv-ledger-d">Machinists, shift leads, supervisors and full-time associates.</span></li><li id="ind-construction"><span class="fv-ledger-t">Construction</span><span class="fv-ledger-d">Electricians, carpenters, site supervisors, foremen and project coordinators. <span class="v4-noprice">Post price: talk to us. Or post free and pay a placement fee only when you hire.</span></span></li><li id="ind-aesthetic"><span class="fv-ledger-t">Aesthetic medicine</span><span class="fv-ledger-d">Estheticians, injectors, medical assistants and front-desk coordinators. <span class="v4-noprice">Post price: talk to us. Or post free and pay a placement fee only when you hire.</span></span></li><li id="ind-hospitality"><span class="fv-ledger-t">Hospitality</span><span class="fv-ledger-d">Line cooks, bartenders, managers and front desk staff. <span class="v4-noprice">Post price: talk to us. Or post free and pay a placement fee only when you hire.</span></span></li><li id="ind-retail"><span class="fv-ledger-t">Retail</span><span class="fv-ledger-d">Store leads, cashiers, store managers and sales associates. <span class="v4-noprice">Post price: talk to us. Or post free and pay a placement fee only when you hire.</span></span></li><li id="ind-it"><span class="fv-ledger-t">IT</span><span class="fv-ledger-d">IT managers, IT techs and other specialized roles, where a managed search often fits best.</span></li>
     </ul>
   </div>
-<div class="wrap"><p class="qnote"><span class="qnote-body">Open: Q14<span class="qnote-held">The industries are Kim’s list (Oct 21) plus Admin and office (plan, Nov 5). The roles under each are our examples, to confirm in the meeting.</span><span class="qnote-held">Held until Q14: post prices for construction, hospitality, retail, aesthetic medicine and admin roles (the quote shows the general $150 meanwhile).</span></span></p></div>
+<div class="wrap"><p class="qnote"><span class="qnote-body">Open: Q14<span class="qnote-held">The industries are Kim’s list of seven (Oct 21); Admin and office left the list in v4 (open item for Kim). The roles under each are our examples, to confirm in the meeting.</span><span class="qnote-held">Held until Q14: post prices for construction, hospitality, retail and aesthetic medicine roles (the rows say “talk to us” meanwhile; the calculator has “Other role”).</span></span></p></div>
 </section>
 
 <!-- 9. QUESTIONS ABOUT DIRECT HIRING (AC). Next read: Compare. White, top hairline. -->
@@ -359,9 +362,9 @@
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="dfa1"><span class="faq-t">How is Jobility different from a staffing agency?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="dfa1"><p>The difference is the split of work. An agency recruiter typically runs the search and the first interviews, and often offers a replacement guarantee. On the 15% placement fee, we do the work and send you a candidate. On the 8% fee, you post and schedule, and you run the interviews yourself. With either, you pay only when you hire.</p><p><a href="compare-staffing-agency.html">Jobility vs. a staffing agency, in full</a></p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="dfa2"><span class="faq-t">Which plan should I choose?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="dfa2"><p>Choose pay per post if the role is likely to fill easily: you pay once when you publish, and there’s no fee when you hire. Choose the placement fee if you’d rather pay nothing up front and pay only if you hire. The quote on this page shows both for your role and salary.</p></div></div>
+  <div class="faq-a" id="dfa2"><p>Choose pay per post if you want one fixed price, paid up front, with no fee when you hire. Choose the placement fee if you’d rather pay nothing up front and pay only if you hire. The quote on this page shows both for your role and salary.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="dfa3"><span class="faq-t">What’s the difference between 8% and 15%?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
-  <div class="faq-a" id="dfa3"><p>8%: you post and schedule. 15%: we do the work and send you a candidate. Both are a share of first-year salary, our matching software finds and screens candidates either way, and you pay only when you hire. Hourly roles: we convert the pay rate to a yearly amount.</p></div></div>
+  <div class="faq-a" id="dfa3"><p>8%: you post and schedule. 15%: we do the work and send you a candidate. Both are a share of first-year salary, AI-driven matching finds and screens candidates either way, and you pay only when you hire. Hourly roles: we convert the pay rate to a yearly amount.</p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="dfa4"><span class="faq-t">When do I pay the placement fee?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
   <div class="faq-a" id="dfa4"><p>You pay Jobility’s placement fee only after you hire someone we introduced, on the terms you agree when you sign up. Posting on the placement-fee plan is free.<span class="qonly"> Held until Q14: <span class="confirm qchip" data-q="Q14" title="To confirm with Jobility: Q14">the payment date, how long an introduction counts, and how you pay</span>.</span></p></div></div>
 <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="dfa5"><span class="faq-t">What if I don’t get candidates I like?</span><span class="faq-ico" aria-hidden="true"></span></button></h3>
@@ -382,6 +385,7 @@
       <p class="lede">Pay nothing up front and pay only if you hire, or pay a flat price per post.</p>
       <p class="fv-cta-price"><span class="fv-offer-dot" aria-hidden="true"></span>Pay per post from $150. New customers: your second job post is complimentary.</p>
       <div class="btn-row"><a class="btn btn--primary" href="https://enterprise.jobility.com/signup">Post a job</a><a class="btn btn--secondary" data-topic="direct" href="contact.html?topic=direct">Talk to us</a></div>
+      <p class="v4-handoff">Create your free account. You choose pay per post or the placement fee when you post.</p>
       <ul class="fv-cta-alt" role="list" aria-label="Not quite right?"><li>Need people for weeks? <a href="contingent-labor.html">Contingent labor</a></li><li>Need a shift covered? <a href="gig-work.html">Gig work</a></li></ul>
       <p class="qnote">Open: Q21. The offer in our words for review (Nov 5 call). To confirm: it applies to pay-per-post job posts, and the starting post price ($150 on the site; $100 was mentioned on the call).</p>
     </div>
@@ -436,7 +440,6 @@
       <a href="gigee-terms.html">Worker terms</a>
       <a href="accessibility.html">Accessibility</a>
       <a href="login.html">Log in</a>
-      <p class="foot-family">Part of the Jobility family. Need full-service staffing or a statement of work? <a href="https://jobilitytalent.com">Visit Jobility Talent Solutions</a></p>
     </div>
   </div>
 </footer>
@@ -447,7 +450,7 @@
   <a class="btn btn--secondary mbar-call" tabindex="-1" data-topic="direct" href="contact.html?topic=direct">Talk to us</a>
 </div>
 
-<script src="assets/site.js"></script><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
+<script src="assets/site.js"></script><!-- v4-design --><script defer src="assets/v4-whimsy.js"></script><!-- /v4-design --><!-- whimsy-p1 --><i id="fd-parsed" hidden></i><!-- /whimsy-p1 -->
 <script src="assets/offering.js"></script>
 </body>
 </html>

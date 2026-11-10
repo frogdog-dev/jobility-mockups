@@ -106,6 +106,10 @@
     new IntersectionObserver(function(es){ es.forEach(function(e){ e.isIntersecting ? resume('offscreen', 400) : pause('offscreen'); }); }, {threshold:0}).observe(h1);
   }
   box.classList.add('is-live');
-  draw();
-  schedule(FIRST);
+  /* v4 (2026-11-09): the hero animation ("Dot finds three", hero-dot.js) plays first; the word and its swash wait for it
+     (html[data-hd="play"] while it runs; 'fd:herodot' when it ends), so only one thing moves at a time. */
+  if(root.getAttribute('data-hd') === 'play'){
+    var go = false, begin = function(){ if(go) return; go = true; draw(); schedule(900); };
+    window.addEventListener('fd:herodot', begin); setTimeout(begin, 9000);
+  } else { draw(); schedule(FIRST); }
 })();

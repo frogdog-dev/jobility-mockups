@@ -49,13 +49,14 @@
       it:      [250,250,'IT'],
       hcadmin: [200,200,'Healthcare admin'],
       nursing: [350,400,'Nursing and allied health'],  /* what sets 350 vs 400: Q18 */
-      adv:     [500,500,'Advanced practice']
+      adv:     [500,500,'Advanced practice'],
+      other:   [0,0,'Other roles']                        /* v4: no published post price (Q: Kim); the calculator hides pay per post */
     },
     placement: { self:.08, managed:.15 },             /* of first-year salary; 8% you post and schedule, 15% we do the work */
     agency: .20,                                      /* SIA survey of US staffing firms, 2021 data */
     salary: { min:20000, max:200000, step:1000, start:45000 },
     /* example salary each role starts at in the quote (illustrative, editable by the visitor) */
-    salaryByRole: { labor:45000, it:85000, hcadmin:50000, nursing:65000, adv:125000 },
+    salaryByRole: { labor:45000, it:85000, hcadmin:50000, nursing:65000, adv:125000, other:45000 },
     /* System v2 (Nov 2026, v2.2): "on your own" for one hire shows SHRM's average time to fill (42 days) and the work the visitor
        takes on; its cost fields start EMPTY, so any dollar comparison is the visitor's own numbers (no default dollar total). The
        flat SHRM $4,129 cost per hire (v2.1) is retired: against a percentage fee it made DIY look cheaper above about $52k.
@@ -431,6 +432,7 @@
         partsView.forEach(function(el){ el.hidden = ownMode !== 'parts'; });
         resetB.forEach(function(el){ el.hidden = ownMode !== 'parts'; });
         qq.setAttribute('data-own-mode', ownMode);
+        qq.classList.toggle('qq--other', state.role === 'other');   /* v4: Other role, placement fee only */
         tiers.forEach(function(t){ var k = t.getAttribute('data-tier'); t.classList.toggle('is-pick', k === 'pick' || (state.who === 'managed' ? k === 'managed' : (k === 'self' || k === 'post'))); });
         if(nurse) nurse.hidden = state.role !== 'nursing';
         if(postCta) postCta.textContent = 'Post for '+pt;
@@ -440,7 +442,7 @@
         clearTimeout(lt);
         lt = setTimeout(function(){
           var f = fees(state.salary), p = post();
-          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+'Pay per post: '+postTxt()+', no fee when you hire. '+(state.who === 'managed' ? 'Placement fee, 15%: '+money(f.managed) : 'Placement fee, 8%: '+money(f.self))+', only if you hire. Common agency fee: '+money(f.agency)+'.'+(owns.length ? ' On your own: about '+fmt(+state.own.days||0)+' days to fill, on average.'+(ownMode === 'parts' ? ' '+cmpTxt(f) : ' Add your costs to compare.') : '');
+          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+(state.role === 'other' ? 'Post price: talk to us. ' : 'Pay per post: '+postTxt()+', no fee when you hire. ')+(state.who === 'managed' ? 'Placement fee, 15%: '+money(f.managed) : 'Placement fee, 8%: '+money(f.self))+', only if you hire. Common agency fee: '+money(f.agency)+'.'+(owns.length ? ' On your own: about '+fmt(+state.own.days||0)+' days to fill, on average.'+(ownMode === 'parts' ? ' '+cmpTxt(f) : ' Add your costs to compare.') : '');
         }, 450);
       }
       function go(how){
@@ -888,7 +890,7 @@
       }
       var RULES = {
         name: function(v){ return v.trim() ? '' : 'Please enter your name.'; },
-        email: function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Please enter an email address, like name@company.com.'; },
+        email: function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Please enter an email address, like name@example.com.'; },
         company: function(v){ return v.trim() ? '' : 'Please enter your company name.'; },
         people: function(v){ return v ? '' : 'Please choose how many people you need.'; },
         posts: function(v){ return v ? '' : 'Please choose about how many jobs you post a month.'; },

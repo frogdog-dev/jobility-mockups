@@ -1,0 +1,76 @@
+/* =====================================================================
+   v4 Home hero: "Dot finds three" (2026-11-09, hero2 pass). Markup: _lib/hero_dot_build.py -> figure.hd-stage (two
+   inline SVGs). The markup is the FINAL frame. html.hd-arm (set before first paint only when motion is allowed) turns it
+   into the start frame with CSS alone; assets/hero-dot.js plays the GSAP timeline and removes the class (or removes it
+   with no animation if GSAP never arrives). Transform and opacity only. Fixed aspect box: no layout shift.
+   ===================================================================== */
+.hd-stage{position:relative;margin:0;width:100%;aspect-ratio:4/5;border-radius:24px;background:var(--sky,#F4F7FB);overflow:hidden;contain:layout paint}
+.hd-svg{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible;font-family:var(--f);-webkit-user-select:none;user-select:none}
+.hd-svg--phone{display:none}
+@media (max-width:1023px){
+  .hd-stage{aspect-ratio:5/4;max-width:560px}
+  .hd-svg--desk{display:none}
+  .hd-svg--phone{display:block}
+}
+
+/* palette: white, pale blues and greys, navy ink, the j's pink for the dot, checks and stops. No orange. */
+.av-bg{fill:var(--bg,#E3EBF5)}
+.av-fg{fill:var(--fg,#A9BCD3)}
+.av-hr{fill:var(--hr,#5B4A3F)}
+.av-sk{fill:var(--sk,#EBC7AE)}
+.hd-more circle{fill:#E6ECF4;stroke:#D5DEE9;stroke-width:1}
+.hd-more text{font-weight:600;fill:var(--ink-2,#4A5466)}
+.hd-more{opacity:.34}
+.hd-ai circle{fill:var(--passion,#D3005B)}
+.hd-ai text{font-weight:500;fill:var(--ink-2,#4A5466)}
+.hd-was{opacity:0}
+.hd-was-t{font-weight:600;fill:var(--night,#1F2C41);opacity:.55}
+.hd-strike{stroke:var(--passion,#D3005B);stroke-width:2.4;stroke-linecap:round}
+.hd-role circle{fill:#fff;stroke:#D5DEE9;stroke-width:.8}
+.hd-rg{fill:none;stroke:var(--night,#1F2C41);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+.hd-no circle{fill:#8A93A3}
+.hd-no path{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round}
+.hd-no{opacity:0}
+.hd-c{opacity:.34}
+.hd-p-edge{fill:none;stroke:#C9D5E3;stroke-width:1}
+.hd-p-ring{fill:none;stroke:var(--passion,#D3005B);stroke-width:1.6;opacity:0}
+.hd-badge circle{fill:var(--passion,#D3005B)}
+.hd-badge path{fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.hd-stamp circle{fill:var(--night,#1F2C41);stroke:#fff;stroke-width:1}
+.hd-stamp text{fill:#fff;font-weight:700;letter-spacing:.02em}
+.hd-card-bg{fill:#fff;stroke:#D5DEE9;stroke-width:1}
+.hd-num{font-weight:600;fill:var(--night,#1F2C41);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.hd-stop,.hd-num.hd-stop{fill:var(--passion,#D3005B)}
+.hd-head{font-weight:600;fill:var(--night,#1F2C41)}
+.hd-head-a{opacity:0}
+.hd-slot{fill:none;stroke:#C3CFDE;stroke-width:1.2;stroke-dasharray:3 3;opacity:0}
+.hd-fly circle{fill:var(--night,#1F2C41);opacity:0}
+.hd-pick .hd-role{opacity:0}
+.hd-rev-t{font-weight:500;fill:var(--ink-2,#4A5466)}
+.hd-rule{stroke:var(--line,#E1E7EF);stroke-width:1}
+.hd-name{font-weight:600;fill:var(--night,#1F2C41)}
+.hd-sub{font-weight:400;fill:var(--ink-2,#4A5466)}
+.hd-jt circle{fill:var(--night,#1F2C41)}
+.hd-jt text{fill:#fff;font-weight:600;letter-spacing:.02em}
+.hd-tag{font-weight:600;fill:var(--night,#1F2C41)}
+.hd-j,.hd-dot-b{fill:var(--passion,#D3005B)}
+
+/* ---- the start frame (html.hd-arm): a calm, complete picture that paints before any JS.
+   The j stands whole with its dot, the whole crowd is at full strength, the three picks sit in the crowd at crowd size,
+   and the card waits with "24. applied" and three empty seats. */
+.hd-arm .hd-stage .hd-c,
+.hd-arm .hd-stage .hd-more,
+.hd-arm .hd-stage .hd-head-a,
+.hd-arm .hd-stage .hd-slot,
+.hd-arm .hd-stage .hd-pick .hd-role{opacity:1}
+.hd-arm .hd-stage .hd-roll{transform:translateY(var(--roll))}
+.hd-arm .hd-stage .hd-head-b,
+.hd-arm .hd-stage .hd-row,
+.hd-arm .hd-stage .hd-tag,
+.hd-arm .hd-stage .hd-rev,
+.hd-arm .hd-stage .hd-ai,
+.hd-arm .hd-stage .hd-lit,
+.hd-arm .hd-stage .hd-badge,
+.hd-arm .hd-stage .hd-stamp{opacity:0}
+.hd-arm .hd-stage .hd-pick{transform:translate(var(--fx),var(--fy))}
+.hd-arm .hd-stage .hd-pick-s{transform-origin:var(--ox) var(--oy);transform:scale(var(--s))}

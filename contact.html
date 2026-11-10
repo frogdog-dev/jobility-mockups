@@ -38,15 +38,15 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 <noscript><style>.tform [data-show][hidden]{display:block!important}</style></noscript>
-</head>
+<!-- v4-design --><link rel="stylesheet" href="assets/v4-design.css"><link rel="stylesheet" href="assets/v4-whimsy.css"><!-- /v4-design --></head>
 <body class="page-contact pg-b pg-contact">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- L1 header (one markup on every page, _lib/integrate.py). Light theme: the page has no Night hero. -->
 <div class="hd">
 <div class="site-util"><div class="wrap">
-  <a class="u-first" data-topic="direct" href="contact.html?topic=direct">Questions? Talk to us</a>
-  <a class="u-app" href="for-workers.html">Looking for work? Get the Jobility app</a>
+  <a class="u-first" data-topic="direct" href="contact.html?topic=direct"><span class="u-q">Questions? </span>Talk to us</a>
+  <a class="u-app" href="for-workers.html"><span class="u-long">Looking for work? Get the Jobility app</span><span class="u-short">Find work</span></a>
   <a href="login.html">Log in</a>
 </div></div>
 
@@ -103,7 +103,7 @@
         <ol class="b-flow b-flow--v" role="list" aria-labelledby="next-h">
           <li><span class="b-flow-n" aria-hidden="true">1</span><b>We reply by email.</b><span>A person on our team reads every request.</span></li>
           <li><span class="b-flow-n" aria-hidden="true">2</span><b>We set up a call or a demo.</b><span>Rates, plans or a look at the portal, as you prefer.</span></li>
-          <li><span class="b-flow-n" aria-hidden="true">3</span><b>You decide when you’re ready.</b><span>Temp and shift workers get one hourly rate per worker before anyone starts. Hiring full time? <a href="https://enterprise.jobility.com/signup">Post a job now</a>.</span></li>
+          <li><span class="b-flow-n" aria-hidden="true">3</span><b>You decide.</b><span>Temp and shift rates are quoted before anyone starts. Hiring full time? You can <a href="https://enterprise.jobility.com/signup">post a job now</a>.</span></li>
         </ol>
         <p class="qnote">Open: Q10. The reply time is not promised until Jobility gives a number (plan section 10).</p>
       </div>
@@ -153,7 +153,7 @@
         <div class="field" data-show="hiring" hidden><label class="label" for="tf-ppl">How many people do you need in the next 3 months? <span class="req" aria-hidden="true">*</span></label><select class="input select" id="tf-ppl" name="people" required aria-describedby="tf-ppl-e"><option value="">Choose one</option><option value="1">1</option><option value="2-5">2 to 5</option><option value="6-20">6 to 20</option><option value="20+">More than 20</option></select><p class="err" id="tf-ppl-e" data-err="people"></p></div>
         <div class="field" data-show="plan" hidden><label class="label" for="tf-posts">About how many jobs do you post a month? <span class="req" aria-hidden="true">*</span></label><select class="input select" id="tf-posts" name="posts" required aria-describedby="tf-posts-e"><option value="">Choose one</option><option value="1-2">1 to 2</option><option value="3-10">3 to 10</option><option value="10+">More than 10</option></select><p class="err" id="tf-posts-e" data-err="posts"></p></div>
         <div class="field" data-show="hiring plan" hidden><label class="label" for="tf-det">Anything else we should know? <span class="opt-tag">(optional)</span></label><p class="hint b-ct-hint" data-show="temp shift" hidden>For temp or shift workers: the roles, how many people, the dates and the site address.</p><textarea class="input textarea ct-det" id="tf-det" name="details" rows="3"></textarea></div>
-        <p class="tform-note b-ct-hc" data-show="shift" hidden>Staffing shifts at a healthcare facility? <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        <p class="tform-note b-ct-hc" data-show="shift" hidden>Need nurses or aides for facility shifts? <a href="https://jobilityhealth.com/" target="_blank" rel="noopener">Jobility Health<span class="sr-only"> (opens in a new tab)</span><svg class="ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3.5h6.5V10M12.5 3.5L4 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
         <p class="tform-note" data-show="worker" hidden>For help with shifts, pay or your account, use Help in the Jobility app.</p>
         <div class="field" data-show="other" hidden><label class="label" for="tf-msg">Your message <span class="req" aria-hidden="true">*</span></label><textarea class="input textarea ct-det" id="tf-msg" name="message" rows="3" required aria-describedby="tf-msg-e"></textarea><p class="err" id="tf-msg-e" data-err="message"></p></div>
         <input type="hidden" name="interest"><input type="hidden" name="role"><input type="hidden" name="len"><input type="hidden" name="n"><input type="hidden" name="start"><input type="hidden" name="end"><input type="hidden" name="src">
@@ -166,12 +166,14 @@
         [].forEach.call(f.querySelectorAll('[data-show]'), function(el){ if(el.getAttribute('data-show').split(' ').indexOf(p) > -1) el.hidden = false; }); })(document.currentScript.previousElementSibling);</script>
       <div class="thanks" data-thanks="hiring" hidden>
         <h2 class="h-sub">Thanks. We’ll be in touch.</h2>
-        <div class="wait" data-for="direct unsure solo" hidden><h3>Want to start now?</h3><p>Post your job free on the placement-fee plan, and pay only if you hire.</p><div class="btn-row"><a class="btn btn--secondary" href="https://enterprise.jobility.com/signup">Post a job</a></div></div>
+        <p class="lede v4-next">Next: a person on our team replies by email to set up a call or a demo, as you prefer. Hiring full time? You can <a href="https://enterprise.jobility.com/signup">post a job now</a>.</p>
+        
         <div class="wait" data-for="temp shift" hidden><h3>Before we talk</h3><p>List the roles, how many people, the dates and the address.</p></div>
         <p class="qnote">Prototype: nothing was sent. Live: the scheduler loads here, pre-filled (Q16).</p>
       </div>
       <div class="thanks" data-thanks="message" hidden>
         <h2 class="h-sub">Thanks. We’ll be in touch.</h2>
+        <p class="lede v4-next-m">Next: a person on our team reads your message and replies by email.</p>
         <p class="qnote">Prototype: nothing was sent. Live: the message goes to the right inbox (Q10).</p>
       </div>
       <div class="thanks" data-thanks="worker" hidden>
@@ -222,12 +224,11 @@
       <a href="gigee-terms.html">Worker terms</a>
       <a href="accessibility.html">Accessibility</a>
       <a href="login.html">Log in</a>
-      <p class="foot-family">Part of the Jobility family. Need full-service staffing or a statement of work? <a href="https://jobilitytalent.com">Visit Jobility Talent Solutions</a></p>
     </div>
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/site.js"></script><!-- v4-design --><script defer src="assets/v4-whimsy.js"></script><!-- /v4-design -->
 <script>/* fv-b-contact: topic "demo" (plan: the client's "Get a demo"). It submits as topic=direct, so site.js routes it exactly like a
    direct hire; the hidden field interest=demo tells our team it is a demo request. ?topic=demo pre-selects it. */
 (function(d){ var f = d.querySelector('[data-tform] form'); if(!f) return; var demo = f.querySelector('[data-topic-k="demo"]'); if(!demo) return;
