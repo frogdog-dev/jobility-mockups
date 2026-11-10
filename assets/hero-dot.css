@@ -53,7 +53,7 @@
 .hd-jt circle{fill:var(--night,#1F2C41)}
 .hd-jt text{fill:#fff;font-weight:600;letter-spacing:.02em}
 .hd-tag{font-weight:600;fill:var(--night,#1F2C41)}
-.hd-j,.hd-dot-b{fill:var(--passion,#D3005B)}
+.hd-dot-b{fill:var(--passion,#D3005B)}   /* the j body + ribbon carry the logo's own gradients (hero_dot_build.py), never transformed */
 
 /* ---- the start frame (html.hd-arm): a calm, complete picture that paints before any JS.
    The j stands whole with its dot, the whole crowd is at full strength, the three picks sit in the crowd at crowd size,

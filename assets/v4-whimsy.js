@@ -138,27 +138,24 @@
 
   /* ---- W6: the footer logo's dot hops once a session ---- */
   safe('foothop', function(){
-    var logo = $('.site-foot .logo svg'), jm = logo && $('.jm', logo); if(!jm || !('IntersectionObserver' in W)) return;
+    /* 2026-11-10: the logo is the true vector; its dot is its own path (.jm-dot). Only the dot moves (squash while
+       airborne); the animation ends on the identity transform, so the logo is exact again. Units are the logo's viewBox
+       (148 wide: 1 unit is about 0.84px at the 124px footer width). */
+    var logo = $('.site-foot .logo svg'), dot = logo && $('.jm-dot', logo); if(!dot || !('IntersectionObserver' in W)) return;
     var KEY = 'fd-foothop'; try{ if(sessionStorage.getItem(KEY)) return; }catch(e){}
     if(calm() || !canAnim) return;
-    var d = jm.getAttribute('d'), parts = d.split(/(?=M)/).filter(function(x){ return x.trim(); });
-    if(parts.length < 3) return;
-    var dotD = parts.pop();
     var io = new IntersectionObserver(function(es){
       if(!es[0].isIntersecting) return; io.disconnect();
       try{ sessionStorage.setItem(KEY, '1'); }catch(e){}
-      /* split the dot off for the hop only, then put the logo back exactly as it was */
-      jm.setAttribute('d', parts.join(''));
-      var dot = doc.createElementNS(NS, 'path'); dot.setAttribute('d', dotD); dot.setAttribute('class', 'jm v4-footdot');
-      jm.parentNode.insertBefore(dot, jm.nextSibling);
+      dot.classList.add('v4-footdot');
       var a = dot.animate([
         { transform: 'translateY(0) scale(1)' },
-        { transform: 'translateY(6px) scale(1.18,.8)', offset: .16 },
-        { transform: 'translateY(-80px) scale(.9,1.12)', offset: .52 },
-        { transform: 'translateY(6px) scale(1.22,.78)', offset: .86 },
+        { transform: 'translateY(.86px) scale(1.18,.8)', offset: .16 },
+        { transform: 'translateY(-11.5px) scale(.9,1.12)', offset: .52 },
+        { transform: 'translateY(.86px) scale(1.22,.78)', offset: .86 },
         { transform: 'translateY(0) scale(1)' }
       ], { duration: 560, delay: 250, easing: 'ease-in-out' });
-      a.onfinish = a.oncancel = function(){ jm.setAttribute('d', d); if(dot.parentNode) dot.parentNode.removeChild(dot); };
+      a.onfinish = a.oncancel = function(){ dot.classList.remove('v4-footdot'); };
     }, { threshold: .9 });
     io.observe(logo);
   });
