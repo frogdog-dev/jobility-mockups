@@ -52,9 +52,9 @@
       adv:     [500,500,'Advanced practice'],
       other:   [0,0,'Other roles']                        /* v4: no published post price (Q: Kim); the calculator hides pay per post */
     },
-    placement: { self:.08, managed:.15 },             /* of first-year salary; 8% you post and schedule, 15% we do the work */
+    placement: { self:.08, managed:.12 },             /* of first-year salary; 8% you post and schedule, 12% we do the work */
     agency: .20,                                      /* SIA survey of US staffing firms, 2021 data */
-    salary: { min:20000, max:200000, step:1000, start:45000 },
+    salary: { min:20000, max:200000, step:5000, start:45000 },   /* Kim 11/20: $5,000 steps */
     /* example salary each role starts at in the quote (illustrative, editable by the visitor) */
     salaryByRole: { labor:45000, it:85000, hcadmin:50000, nursing:65000, adv:125000, other:45000 },
     /* System v2 (Nov 2026, v2.2): "on your own" for one hire shows SHRM's average time to fill (42 days) and the work the visitor
@@ -352,6 +352,20 @@
      Layout: [data-layout=a|b] on the .qq; review-only switch [data-layout-set] (shown in review mode or with ?calc=a|b).
      Every number on screen is computed from the ONE salary on screen, every frame: a role change tweens the salary (0.45s);
      slider, typing and assumption edits snap. List prices (the post) snap with a short roll. ---- */
+  /* ---- tone (v5, Kim 11/19 and 11/10): three header and hero color options for review. ?tone=a|b|c or the chooser
+     (shown in review mode); the pick is remembered in this browser. Default A, Night Shift header. ---- */
+  FD.safe('tone', function(){
+    var html = doc.documentElement, q = (location.search.match(/[?&]tone=([abc])\b/) || [])[1], saved = null;
+    try { saved = localStorage.getItem('jb-tone'); } catch(e){}
+    function setTone(v){ html.setAttribute('data-tone', v); $$('.v5-tone button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-tone-set') === v ? 'true' : 'false'); }); try { localStorage.setItem('jb-tone', v); } catch(e){} }
+    var box = doc.createElement('div'); box.className = 'v5-tone'; box.setAttribute('role', 'group'); box.setAttribute('aria-label', 'For review: header color');
+    box.innerHTML = '<b>For review: header color</b><button type="button" data-tone-set="a">A. Night Shift</button><button type="button" data-tone-set="b">B. Ombre</button><button type="button" data-tone-set="c">C. Lighter</button>';
+    doc.body.appendChild(box);
+    $$('button', box).forEach(function(b){ b.addEventListener('click', function(){ setTone(b.getAttribute('data-tone-set')); }); });
+    if(q) box.classList.add('is-on');
+    setTone(q || (/^[abc]$/.test(saved || '') ? saved : 'a'));
+  });
+
   FD.safe('quote', function(){
     var qcalc = (location.search.match(/[?&]calc=([ab])\b/) || [])[1];
     $$('[data-quote]').forEach(function(qq){
@@ -387,7 +401,7 @@
       function diff(a, b, label){ var d = a - b; return d > 0 ? money(d)+' more than '+label : d < 0 ? money(-d)+' less than '+label : 'the same as '+label; }
       function cmpTxt(f){
         if(ownMode !== 'parts') return '';
-        var pp = 'Jobility pay per post ('+money(f.post)+')', pk = 'the '+(state.who === 'managed' ? '15%' : '8%')+' placement fee ('+money(f.pick)+')';
+        var pp = 'Jobility pay per post ('+money(f.post)+')', pk = 'the '+(state.who === 'managed' ? '12%' : '8%')+' placement fee ('+money(f.pick)+')';
         var t = 'Your costs: '+money(f.own)+' for one hire. That is '+diff(f.own, f.post, pp)+', and '+diff(f.own, f.pick, pk)+'.';
         if((+state.own.hours||0) > 0 && !(+state.own.rate||0)) t += ' Add the cost of one hour to count your team’s time.';
         return t;
@@ -400,7 +414,7 @@
       }
       function recHTML(f){
         return state.who === 'managed'
-          ? 'Want us to do the work? <b>The 15% placement fee</b>: <b>'+money(f.managed)+'</b>, only if you hire, and we send you the candidate. Rather post and schedule yourself? Pay per post, '+postTxt()+', with no fee when you hire.'
+          ? 'Want us to do the work? <b>The 12% placement fee</b>: <b>'+money(f.managed)+'</b>, only if you hire, and we send you the candidate. Rather post and schedule yourself? Pay per post, '+postTxt()+', with no fee when you hire.'
           : 'Lowest cost if the role fills easily: <b>pay per post, '+postTxt()+'</b>, with no fee when you hire. No risk if you don’t hire: <b>the 8% placement fee</b>, <b>'+money(f.self)+'</b>, only if you hire.';
       }
       function fill(sal){ if(range) range.style.setProperty('--p', ((sal-S.min)/(S.max-S.min)*100)+'%'); }
@@ -424,8 +438,8 @@
         var pt = postTxt(), f = fees(state.salary), oc = f.oc;
         roll('post', pt); roll('postbar', pt);
         set('postrole', 'for '+roleWords()+' roles');
-        set('pickname', state.who === 'managed' ? '15% placement fee' : '8% placement fee');
-        set('picksub', state.who === 'managed' ? '15% placement fee. We do the work and send you a candidate. Only if you hire.' : '8% placement fee. You post and schedule. Only if you hire.');
+        set('pickname', state.who === 'managed' ? '12% placement fee' : '8% placement fee');
+        set('picksub', state.who === 'managed' ? '12% placement fee. We do the work and send you a candidate. Only if you hire.' : '8% placement fee. You post and schedule. Only if you hire.');
         set('ownBoards', money(oc.boards)); set('ownSubs', money(oc.subs)); set('ownCheck', money(oc.check)); set('ownTime', money(oc.time));
         set('hours', fmt(+state.own.hours || 0)); set('days', fmt(+state.own.days || 0)); set('weeks', fmt(Math.round((+state.own.days || 0)/7)));
         set('ownSrc', ownSrc());
@@ -442,7 +456,7 @@
         clearTimeout(lt);
         lt = setTimeout(function(){
           var f = fees(state.salary), p = post();
-          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+(state.role === 'other' ? 'Post price: talk to us. ' : 'Pay per post: '+postTxt()+', no fee when you hire. ')+(state.who === 'managed' ? 'Placement fee, 15%: '+money(f.managed) : 'Placement fee, 8%: '+money(f.self))+', only if you hire. Common agency fee: '+money(f.agency)+'.'+(owns.length ? ' On your own: about '+fmt(+state.own.days||0)+' days to fill, on average.'+(ownMode === 'parts' ? ' '+cmpTxt(f) : ' Add your costs to compare.') : '');
+          if(live) live.textContent = p[2]+', '+money(f.sal)+' a year. '+(state.role === 'other' ? 'Post price: talk to us. ' : 'Pay per post: '+postTxt()+', no fee when you hire. ')+'Placement fee, 8% self managed: '+money(f.self)+', or 12% Jobility managed: '+money(f.managed)+', only if you hire. Common agency fee: '+money(f.agency)+'.'+(owns.length ? ' On your own: about '+fmt(+state.own.days||0)+' days to fill, on average.'+(ownMode === 'parts' ? ' '+cmpTxt(f) : ' Add your costs to compare.') : '');
         }, 450);
       }
       function go(how){
@@ -506,7 +520,7 @@
          [data-share] copies a link to the current state (the approver reads the same numbers). */
       var qs = location.search, qSal = (qs.match(/[?&]sal=(\d{4,7})\b/) || [])[1], qRole = (qs.match(/[?&]role=([a-z]+)\b/) || [])[1], qFn = (qs.match(/[?&]fn=(8|15)\b/) || [])[1];
       if(qRole && P.post[qRole]){ state.role = qRole; roles.forEach(function(i){ i.checked = i.value === qRole; }); if(rsel) rsel.value = qRole; }
-      if(qFn){ state.who = qFn === '15' ? 'managed' : 'self'; whos.forEach(function(i){ i.checked = i.value === state.who; }); }
+      if(qFn){ state.who = (qFn === '12' || qFn === '15') ? 'managed' : 'self'; whos.forEach(function(i){ i.checked = i.value === state.who; }); }
       if(qSal){ touched = true; setSalary(+qSal); }
       else setSalary(DEF[state.role] || (range && range.value) || S.start);
       go(null);
@@ -514,7 +528,7 @@
         var say = $('[data-share-say]', qq), st;
         btn.addEventListener('click', function(){
           var sec = qq.closest('section[id]');
-          var u = location.origin + location.pathname + '?sal=' + state.salary + '&role=' + state.role + '&fn=' + (state.who === 'managed' ? '15' : '8') + (sec ? '#' + sec.id : '');
+          var u = location.origin + location.pathname + '?sal=' + state.salary + '&role=' + state.role + '&fn=' + (state.who === 'managed' ? '12' : '8') + (sec ? '#' + sec.id : '');
           function done(t){ if(say) say.textContent = t; btn.classList.add('is-done'); clearTimeout(st); st = setTimeout(function(){ if(say) say.textContent = ''; btn.classList.remove('is-done'); }, 3200); }
           function fallback(){
             var t = doc.createElement('textarea'), ok = false; t.value = u; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; t.style.top = '0';
@@ -791,7 +805,7 @@
         clearTimeout(lt);
         lt = setTimeout(function(){
           var t = target();
-          if(live) live.textContent = 'Agency fee at '+pct(st.rate)+': '+money(t.a)+'. Jobility managed, 15%: '+money(t.m)+'. Jobility self-service, 8%: '+money(t.s)+'.';
+          if(live) live.textContent = 'Agency fee at '+pct(st.rate)+': '+money(t.a)+'. Jobility managed, 12%: '+money(t.m)+'. Jobility self-service, 8%: '+money(t.s)+'.';
         }, 450);
       }
       function update(instant){
@@ -973,8 +987,8 @@
          src; ads: utm_*). Fields are filled only when empty; the optional details box gets a pre-written line; the
          "What our team receives" card mirrors the form as it changes. Nothing is sent anywhere. */
       var Q = {}; try{ new URLSearchParams(location.search).forEach(function(v, k){ Q[k] = v; }); }catch(e){}
-      var ROLE = {cna:'CNA', lpn:'LPN', rn:'RN', 'med-aide':'Med aide', warehouse:'Warehouse associate', picker:'Picker and packer', forklift:'Forklift operator', production:'Production worker', laborer:'General laborer', other:'Another role'};
-      var TOPIC = {direct:'A full-time or part-time hire', temp:'Temp or contract workers', shift:'Shift workers', plan:'A subscription or custom plan', unsure:'Not sure which fits', account:'A question about my account', worker:'I work through Jobility', press:'Press or partnerships', other:'Anything else', 'else':'Something else'};
+      var ROLE = {cna:'CNA', lpn:'LPN', rn:'RN', 'med-aide':'Med aide', ma:'Medical assistant', allied:'Allied health technologist', warehouse:'Warehouse associate', picker:'Picker and packer', forklift:'Forklift operator', production:'Production worker', laborer:'General laborer', other:'Another role'};
+      var TOPIC = {direct:'A full-time or part-time hire', temp:'Contract healthcare workers', shift:'Shift workers', plan:'A subscription or custom plan', unsure:'Not sure which fits', account:'A question about my account', worker:'I work through Jobility', press:'Press or partnerships', other:'Anything else', 'else':'Something else'};
       function fill(name, v){ var el = form.elements[name]; if(el && el.tagName && v != null && v !== '' && !el.value) el.value = v; }
       function day(v){ var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || ''); if(!m) return ''; try{ return new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}); }catch(e){ return v; } }
       ['role','len','n','start','end','src'].forEach(function(k){ fill(k, Q[k]); });

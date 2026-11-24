@@ -1,0 +1,85 @@
+/* =====================================================================
+   v5 round 2 (2026-11-24): Kim's Atarim comments, Nov 10 to Nov 23. Linked on every page after v4-design.css.
+   ===================================================================== */
+
+/* [7] pale blue boxes one step darker */
+:root{--sky:#ECF1F8;--sky-2:#DDE5F0}
+
+/* [1][7] header and hero color, three options for review (html[data-tone], set by site.js 'tone'; default A).
+   A Night Shift header, hero fades from a pale Night Shift tint to white.
+   B White header under a Night Shift top strip, hero is a blue-to-white ombre.
+   C Lighter Night Shift header and hero. */
+html[data-tone="a"] .site-util,html[data-tone="b"] .site-util{background:var(--night);color:#fff;border-bottom-color:rgba(232,238,245,.16)}
+html[data-tone="a"] .site-nav{background:var(--night)}
+html[data-tone="a"] .site-nav .logo{color:#fff}
+html[data-tone="a"] .site-nav .nav-links a{color:#fff}
+html[data-tone="a"] .site-nav .nav-links .ns{color:rgba(232,238,245,.82)}
+html[data-tone="a"] .site-nav .nav-links a[aria-current] .nl,html[data-tone="a"] .site-nav .nav-links a:hover .nl{text-decoration-color:#FF7FAE}
+html[data-tone="a"] .site-nav.is-scrolled{box-shadow:0 1px 0 rgba(232,238,245,.14),0 12px 24px -16px rgba(0,0,0,.5)}
+html[data-tone="a"] .site-nav .btn--secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+html[data-tone="a"] .site-nav .btn--secondary:hover{border-color:#fff;color:#fff}
+html[data-tone="a"] .site-nav .btn--outline,html[data-tone="a"] .site-nav .nav-cta .btn:not(.btn--secondary){background:var(--passion);color:#fff;border-color:var(--passion)}
+html[data-tone="a"] .v2-hero{background:linear-gradient(180deg,#DCE4EF 0%,#F2F5FA 55%,#fff 100%)}
+html[data-tone="b"] .v2-hero{background:linear-gradient(180deg,#BFCDE1 0%,#E4EAF3 50%,#fff 100%)}
+html[data-tone="c"] .site-util{background:#3B4D6B;color:#fff;border-bottom-color:rgba(232,238,245,.16)}
+html[data-tone="c"] .site-nav{background:#E2E9F3}
+html[data-tone="c"] .v2-hero{background:#EEF2F8}
+
+/* review chooser for the three options (review mode, or ?tone=a|b|c) */
+.v5-tone{position:fixed;left:16px;bottom:16px;z-index:80;display:none;align-items:center;gap:6px;padding:6px;border-radius:999px;background:#fff;box-shadow:0 0 0 1.5px var(--edge),0 10px 24px -12px rgba(31,44,65,.5);font:500 14px/1 var(--f);color:var(--night)}
+.show-q .v5-tone,.v5-tone.is-on{display:flex}
+.v5-tone b{padding:0 6px 0 10px;font-weight:600;color:var(--ink-2)}
+.v5-tone button{min-height:34px;padding:0 12px;border:0;border-radius:999px;background:transparent;font:500 14px var(--f);color:var(--night);cursor:pointer}
+.v5-tone button[aria-pressed="true"]{background:var(--night);color:#fff}
+
+/* [8] the hero card ends at the shortlist: no "No agency fee." line */
+.hd-stage .hd-was,.hd-stage .hd-tag{display:none!important}
+
+/* [2][3] hero copy */
+.v5-dh{font-weight:700;color:var(--passion);text-transform:uppercase;letter-spacing:.05em;font-size:.9em}
+.v5-hero-list{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:var(--fs-17);font-weight:600;color:var(--night)}
+.v5-hero-list li,.v5-facts li,.v5-check li{position:relative;padding-left:28px}
+.v5-hero-list li::before,.v5-facts li::before,.v5-check li::before{content:"";position:absolute;left:0;top:.2em;width:18px;height:18px;border-radius:50%;background:var(--passion) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.6L12 5.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* [13] the three steps as boxes */
+.v5-steps::before,.v5-steps .fv-flow-dot{display:none}
+.v5-steps{gap:clamp(14px,1.8vw,24px)}
+.v5-steps>li{background:#fff;border:1px solid var(--line-2);border-radius:var(--r);padding:clamp(22px,2.2vw,30px)}
+.v5-steps .fv-flow-n{height:auto;font-size:44px}
+.v5-steps h3{margin:14px 0 8px}
+@media (max-width:767px){
+  .v5-steps{padding-left:0;gap:12px}
+  .v5-steps>li{padding-bottom:24px}
+  .v5-steps .fv-flow-n{position:static;width:auto;text-align:left;font-size:36px;background:none}
+}
+
+/* [18] facts read as a checked list, not rows that look expandable */
+.v5-facts{border-top:0!important;display:grid;gap:12px;margin-top:24px}
+.v5-facts li{border:0!important;padding-top:0!important;padding-bottom:0!important;font-size:var(--fs-19);font-weight:600;line-height:1.35}
+.v5-check{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+
+/* [16] the switch caption never sits under the cards */
+.sw-state{position:relative;z-index:4;margin-top:18px}
+.sw-canvas[data-state="jobility"]{padding-bottom:4px}
+
+/* [20] offer cards: title first, picture in the middle */
+.fd-solutions .fv-choose-ui{margin:16px 0 18px}
+
+/* [35] testimonials only */
+.v5-proof-h{margin:0 0 clamp(20px,2.4vw,32px)}
+
+/* calculator: two placement-fee bars */
+.bars--v2 .bar[data-tier="managed"] .fill{background:var(--passion-dk,#B8004F)}
+
+/* direct hiring [42]: one pricing note under the industry list */
+.v5-ind-note{margin-top:18px;color:var(--ink-2);font-size:var(--fs-15)}
+
+/* how it works [47]: portal image */
+.v5-portal{margin:0;border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px -24px rgba(31,44,65,.45);border:1px solid var(--line-2);background:#fff}
+.v5-portal img{display:block;width:100%;height:auto}
+
+/* contingent labor [44]: pointer to Jobility Talent Solutions for every other temp role */
+.v5-jts{margin-top:14px;font-size:var(--fs-15);color:var(--ink-2)}
+.v5-jts a{font-weight:600}
+.fv-hiw-hero-grid .v5-portal{max-width:560px;justify-self:end;align-self:center}
+@media (max-width:767px){.fv-hiw-hero-grid .v5-portal{margin-top:24px;justify-self:stretch}}

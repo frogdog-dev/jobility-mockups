@@ -124,7 +124,7 @@
     window.addEventListener('resize', function(){ if(!played || window.innerWidth === rw) return; rw = window.innerWidth; build(false); });
   });
 
-  /* ---- honest: when the visitor's own agency quote is below 15%, say so, kindly, on the managed row ---- */
+  /* ---- honest: when the visitor's own agency quote is below 12%, say so, kindly, on the managed row ---- */
   safe('honest', function(){
     $$('#calculator [data-calc], #fee-math [data-calc]').forEach(function(box){
       var dm = $('[data-out="dm"]', box), ar = $('[data-out="arate"]', box); if(!dm) return;

@@ -248,7 +248,7 @@
     var form = $('[data-rate-ask]'); if(!form) return;
     var a = $('[data-rate-link]', form), kind = form.getAttribute('data-rate-kind') || 'shift';
     var ROLE = kind === 'temp'
-      ? { warehouse: 'a warehouse associate', picker: 'a picker and packer', forklift: 'a forklift operator', production: 'a production worker', laborer: 'a general laborer' }
+      ? { rn: 'a registered nurse', lpn: 'an LPN or LVN', cna: 'a certified nursing assistant', ma: 'a medical assistant', allied: 'an allied health technologist' }
       : { warehouse: 'a warehouse associate', labor: 'a general labor', event: 'an event staff', cleaning: 'a cleaning', admin: 'an admin',
           cna: 'a CNA', lpn: 'an LPN', rn: 'an RN', 'med-aide': 'a med aide' };
     /* v2 fix (Nov 5): Gig work's role chips are general; the healthcare chips (?v=healthcare, the January ad landing) sit in a
@@ -263,7 +263,7 @@
       var zip = val('zip').replace(/\D/g, '').slice(0, 5); if(zip.length === 5) q += '&zip=' + zip;
       if(kind === 'shift'){ var len = val('len'); if(len) q += '&len=' + e(len); }
       else { var n = parseInt(val('n'), 10); if(n > 0 && n < 1000) q += '&n=' + n; if(val('start')) q += '&start=' + e(val('start')); if(val('end')) q += '&end=' + e(val('end')); }
-      var full = ROLE[v] ? 'Get ' + ROLE[v] + (kind === 'temp' ? ' rate' : ' shift rate') : (kind === 'temp' ? 'Get a temp rate' : 'Get a shift rate');
+      var full = ROLE[v] ? 'Get ' + ROLE[v] + (kind === 'temp' ? ' rate' : ' shift rate') : (kind === 'temp' ? 'Get a contract rate' : 'Get a shift rate');
       if(a){ a.setAttribute('href', q + (FD.srcQ ? FD.srcQ() : ''));
         /* R9: under 420px a long role would wrap the button; the chosen chip already names the role */
         a.textContent = narrow.matches && full.length > 24 ? (kind === 'temp' ? 'Get this rate' : 'Get this shift rate') : full;
