@@ -83,3 +83,4 @@ html[data-tone="c"] .v2-hero{background:#EEF2F8}
 .v5-jts a{font-weight:600}
 .fv-hiw-hero-grid .v5-portal{max-width:560px;justify-self:end;align-self:center}
 @media (max-width:767px){.fv-hiw-hero-grid .v5-portal{margin-top:24px;justify-self:stretch}}
+.v5-steps + .btn-row{margin-top:clamp(24px,2.6vw,36px)}
